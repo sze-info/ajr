@@ -1,0 +1,2897 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A course at Széchenyi István University, Győr, Hungary">
+      
+      
+        <meta name="author" content="sze">
+      
+      
+        <link rel="canonical" href="https://sze-info.github.io/ajr/erzekeles/practice/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../feleves_beadando/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+    
+    
+      
+        <title>Gyakorlat - Érzékelés - Autonóm járművek és robotok programozása</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Gyakorlat - Érzékelés - Autonóm járművek és robotok programozása" >
+      
+        <meta  property="og:description"  content="A course at Széchenyi István University, Győr, Hungary" >
+      
+        <meta  property="og:image"  content="https://sze-info.github.io/ajr/assets/images/social/erzekeles/practice.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://sze-info.github.io/ajr/erzekeles/practice/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Gyakorlat - Érzékelés - Autonóm járművek és robotok programozása" >
+      
+        <meta  name="twitter:description"  content="A course at Széchenyi István University, Győr, Hungary" >
+      
+        <meta  name="twitter:image"  content="https://sze-info.github.io/ajr/assets/images/social/erzekeles/practice.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="youtube" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gyakorlat" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Autonóm járművek és robotok programozása" class="md-header__button md-logo" aria-label="Autonóm járművek és robotok programozása" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 14V5h12c5.5 0 10 4.5 10 10v2h-2.17A2.99 2.99 0 0 1 18 19a2.99 2.99 0 0 1-2.83-2H10a5.002 5.002 0 0 1-9-3m5-3c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3m9-1v2h5.25c-.33-.73-.75-1.4-1.25-2h-4Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Autonóm járművek és robotok programozása
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gyakorlat - Érzékelés
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="youtube" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="https://sze-info.github.io/ajr/" hreflang="hu" class="md-select__link">
+              Magyar
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://sze-info.github.io/avr/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sze-info/ajr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../bevezetes/" class="md-tabs__link">
+          
+  
+  Tananyag
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feleves_beadando/" class="md-tabs__link">
+          
+  
+  Nagy féléves, kis beadandó
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ros2halado/py_cpp/" class="md-tabs__link">
+          
+  
+  Önálló
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../linkek/" class="md-tabs__link">
+        
+  
+    
+  
+  Linkek
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://szelearning.sze.hu/course/view.php?id=13973" class="md-tabs__link">
+        
+  
+    
+  
+  Moodle
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Autonóm járművek és robotok programozása" class="md-nav__button md-logo" aria-label="Autonóm járművek és robotok programozása" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 14V5h12c5.5 0 10 4.5 10 10v2h-2.17A2.99 2.99 0 0 1 18 19a2.99 2.99 0 0 1-2.83-2H10a5.002 5.002 0 0 1-9-3m5-3c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3m9-1v2h5.25c-.33-.73-.75-1.4-1.25-2h-4Z"/></svg>
+
+    </a>
+    Autonóm járművek és robotok programozása
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sze-info/ajr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tananyag
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tananyag
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. Bevezetés
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            1. Bevezetés
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - Bevezetés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/gepterem/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gépterem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/copilot/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    GitHub Copilot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/linux/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Linux, git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. ROS 2 koncepciók, telepítés
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. ROS 2 koncepciók, telepítés
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/ros2/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - ROS 2 alapfogalmak
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/ros2gyak/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakrolat - ROS 2 alapok
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/vscode/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    VS code, git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telepites/ubuntu/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Ubuntu dual boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telepites/win10/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Windows WSL2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telepites/ros_humble/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    ROS 2 humble telepítése
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Érzékelés
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            3. Érzékelés
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - Érzékelés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Érzékelés
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Érzékelés
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elokeszuletek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Előkészületek
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4. Féléves, ROS 2 további koncepiók
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            4. Féléves, ROS 2 további koncepiók
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feleves_beadando/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Kis beadandó és nagy féléves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feleves_beadando/kisbeadando/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19.88V22l-1.8-1.17-4.79-9c.66-.21 1.26-.55 1.78-1L20 19.88M15 7a3 3 0 0 1-3 3h-.44L5.8 20.83 4 22v-2.12L9.79 9c-1.1-1.23-1-3.13.24-4.24C10.57 4.28 11.27 4 12 4V2a1 1 0 0 1 1 1v1.18c1.2.42 2 1.55 2 2.82m-2 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Kis beadandó
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feleves_beadando/nagyfeleves/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Nagy féléves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/copilot/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    GitHub Copilot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bevezetes/linux/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Linux, git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/ros2launch/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    ROS 2 launch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5. Transzformációk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            5. Transzformációk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transzformaciok/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - Transzformációk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transzformaciok/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Transzformációk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    6. Észlelés
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            6. Észlelés
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eszleles/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélelt - Észlelés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eszleles/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Észlelés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eszleles/ground_filter/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Ground filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eszleles/road_filter/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Road filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eszleles/slam/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    SLAM és LOAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7. Szimuláció
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            7. Szimuláció
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../szimulacio/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - Szimuláció
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../szimulacio/gazebo_fortress/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Gazebo Fortress ROS 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../szimulacio/gyakorlat/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Gazebo saját robotszimuláció készítése
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workshops/f1tenth_sim_a/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    ROS 2 F1/10 Wheeltec Gazebo simulation workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8. Tervezés
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            8. Tervezés
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tervezes/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - Tervezés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tervezes/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Tervezés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    9. Szabályozás
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            9. Szabályozás
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../szabalyozas/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - szabályozás
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../szabalyozas/ros2practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - szabályozás
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    10. AI (mesterséges intelligencia)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            10. AI (mesterséges intelligencia)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mesterseges_intelligencia/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1.2-.1.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5l-.6 1.3Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Elmélet - Mesterséges intelligencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mesterseges_intelligencia/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2v2m8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Mesterséges intelligencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nagy féléves, kis beadandó
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Nagy féléves, kis beadandó
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feleves_beadando/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Kis beadandó és nagy féléves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feleves_beadando/kisbeadando/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19.88V22l-1.8-1.17-4.79-9c.66-.21 1.26-.55 1.78-1L20 19.88M15 7a3 3 0 0 1-3 3h-.44L5.8 20.83 4 22v-2.12L9.79 9c-1.1-1.23-1-3.13.24-4.24C10.57 4.28 11.27 4 12 4V2a1 1 0 0 1 1 1v1.18c1.2.42 2 1.55 2 2.82m-2 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Kis beadandó
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feleves_beadando/nagyfeleves/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Nagy féléves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Önálló
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Önálló
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/py_cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python és C++ összehasonlítása
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../onallo/ros2git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git és ROS 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../onallo/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../onallo/ros2launchmarker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS 2 marker és launch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../onallo/mermaid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mermaid gráf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/rqt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rqt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/qos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QoS szolgáltatásminőség
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/mcap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MCAP fájlok
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Behavior tree, State machine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/vizualizacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2 vizualizáció
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2halado/pointcloud_to_grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pointcloud to grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kalman_filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elmélet - Kálmán filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kalman_filter/practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Kálmán filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linkek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linkek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://szelearning.sze.hu/course/view.php?id=13973" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moodle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elokeszuletek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Előkészületek
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="gyakorlat">Gyakorlat<a class="headerlink" href="#gyakorlat" title="Permanent link">&para;</a></h1>
+<p>A gyakorlat Ubuntu 22.04 <code>ROS humble</code>, Windows 10/11 WSL <code>humble</code> mellett működik. A különböző verziók telepítésének leírása <a href="https://sze-info.github.io/ajr/telepites/">itt található</a>.</p>
+<div class="admonition success">
+<p class="admonition-title">Előzetes ellenőrzés</p>
+<p>Otthoni gépen a gyakorlat előtt érdemes ellenőrizni, hogy a megfelelő <code>ROS 2</code> szoftvercsomagok telepítve vannak-e.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">ros</span><span class="o">-</span><span class="n">humble</span><span class="o">-</span><span class="n">rosbag2</span><span class="w"> </span><span class="n">ros</span><span class="o">-</span><span class="n">humble</span><span class="o">-</span><span class="n">rosbag2</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">mcap</span>
+</code></pre></div>
+<p>Gépteremben is ellenőrizzük a <code>check_all.sh</code> segítségével:
+<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">kozos</span><span class="o">/</span><span class="n">script</span>
+<span class="n">.</span><span class="o">/</span><span class="n">bag_mcap.sh</span>
+<span class="n">.</span><span class="o">/</span><span class="n">check_all.sh</span>
+</code></pre></div></p>
+<h2 id="elokeszuletek">Előkészületek<a class="headerlink" href="#elokeszuletek" title="Permanent link">&para;</a></h2>
+<p>Az előző gyakorlaton megismerkedtünk a következő rosbag-gel (ROS 2-ben a formátum már <code>.mcap</code>):</p>
+<p><img alt="foxglove01" src="https://sze-info.github.io/arj/bevezetes/foxglove01.png" /></p>
+<p>Előkészületként nézzük meg, hogy létezik-e a <code>C:\temp</code> könyvtár</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">test</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="s">&quot;/mnt/c/temp&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="n">Letezik</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="n">Nem</span><span class="w"> </span><span class="n">letezik</span>
+</code></pre></div>
+Vagy egyszerűbben:
+<div class="highlight"><pre><span></span><code><span class="n">ls</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span>
+</code></pre></div></p>
+<ul>
+<li>Ha nem létezik (<code>No such file or directory</code>), akkor hozzuk létre: <code>mkdir /mnt/c/temp</code></li>
+<li>Ha létezik, akkor nincs teendőnk, lépjünk a következő lépésre, másoljuk át ide az <code>.mcap</code> fájlokat</li>
+</ul>
+<p>Tanteremben a másolás a következő parancsok <strong>egyike</strong> legyen:</p>
+<div class="highlight"><pre><span></span><code><span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">avzh</span><span class="w"> </span><span class="o">--</span><span class="n">progress</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">kozos</span><span class="o">/</span><span class="n">measurement_files</span><span class="o">/</span><span class="n">lexus3sample01.mcap</span><span class="w">  </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+<span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">avzh</span><span class="w"> </span><span class="o">--</span><span class="n">progress</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">kozos</span><span class="o">/</span><span class="n">measurement_files</span><span class="o">/</span><span class="n">lexus3sample02.mcap</span><span class="w">  </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+<span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">avzh</span><span class="w"> </span><span class="o">--</span><span class="n">progress</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">kozos</span><span class="o">/</span><span class="n">measurement_files</span><span class="o">/</span><span class="n">lexus3sample03.mcap</span><span class="w">  </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+<span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">avzh</span><span class="w"> </span><span class="o">--</span><span class="n">progress</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">kozos</span><span class="o">/</span><span class="n">measurement_files</span><span class="o">/</span><span class="n">lexus3sample04.mcap</span><span class="w">  </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+<span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">avzh</span><span class="w"> </span><span class="o">--</span><span class="n">progress</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">kozos</span><span class="o">/</span><span class="n">measurement_files</span><span class="o">/</span><span class="n">lexus3sample05.mcap</span><span class="w">  </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+</code></pre></div>
+<p>Otthon a következő linkről (zöld gomb), vagy parancsként <code>wget</code>-el lehet letölteni:</p>
+<div class="highlight"><pre><span></span><code><span class="n">wget</span><span class="w">  </span><span class="o">-</span><span class="n">O</span><span class="w"> </span><span class="n">lexus3sample02.mcap</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">laesze</span><span class="o">-</span><span class="n">my.sharepoint.com</span><span class="o">/:</span><span class="n">u</span><span class="o">:/</span><span class="n">g</span><span class="o">/</span><span class="n">personal</span><span class="o">/</span><span class="n">herno_o365_sze_hu</span><span class="o">/</span><span class="n">EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w</span><span class="o">?</span><span class="n">download</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p><a class="md-button" href="https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1">MCAP letöltése <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span> 553 MB</a></p>
+<p><a class="md-button" href="https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w?download=1">MCAP sample letöltése <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span> 300 MB</a> </p>
+<p>Listázzuk a <strong>megfelelő</strong> átmásolt <code>.mcap</code> fájl alap információit, hasonlóan:  </p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">bag</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="n">lexus3sample06.mcap</span>
+
+<span class="n">closing.</span>
+
+<span class="n">Files</span><span class="o">:</span><span class="w">             </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="n">lexus3sample06.mcap</span>
+<span class="n">Bag</span><span class="w"> </span><span class="n">size</span><span class="o">:</span><span class="w">          </span><span class="m">286.7</span><span class="w"> </span><span class="n">MiB</span>
+<span class="n">Storage</span><span class="w"> </span><span class="n">id</span><span class="o">:</span><span class="w">        </span><span class="n">mcap</span>
+<span class="n">Duration</span><span class="o">:</span><span class="w">          </span><span class="m">3.367</span><span class="n">s</span>
+<span class="n">Start</span><span class="o">:</span><span class="w">             </span><span class="n">Jul</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">2023</span><span class="w"> </span><span class="m">15</span><span class="o">:</span><span class="m">37</span><span class="o">:</span><span class="m">09.211</span><span class="w"> </span><span class="p">(</span><span class="m">1689687429.211</span><span class="p">)</span>
+<span class="n">End</span><span class="o">:</span><span class="w">               </span><span class="n">Jul</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">2023</span><span class="w"> </span><span class="m">15</span><span class="o">:</span><span class="m">38</span><span class="o">:</span><span class="m">03.314</span><span class="w"> </span><span class="p">(</span><span class="m">1689687483.314</span><span class="p">)</span>
+<span class="n">Messages</span><span class="o">:</span><span class="w">          </span><span class="m">29598</span>
+<span class="n">Topic</span><span class="w"> </span><span class="n">information</span><span class="o">:</span><span class="w"> </span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">zed2i</span><span class="o">/</span><span class="n">zed_node</span><span class="o">/</span><span class="n">right_raw</span><span class="o">/</span><span class="n">image_raw_color</span><span class="o">/</span><span class="n">compressed</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">CompressedImage</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_left</span><span class="o">/</span><span class="n">points</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">PointCloud2</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_right</span><span class="o">/</span><span class="n">points</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">PointCloud2</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_center</span><span class="o">/</span><span class="n">imu</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">Imu</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">tf_static</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">tf2_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">TFMessage</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_center</span><span class="o">/</span><span class="n">points</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">PointCloud2</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">tf</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">tf2_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">TFMessage</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">mag</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">MagneticField</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">imu</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">Imu</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">status_string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">std_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">String</span>
+<span class="w">  </span><span class="n">Topic</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">current_pose</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Type</span><span class="o">:</span><span class="w"> </span><span class="n">geometry_msgs</span><span class="o">/</span><span class="n">msg</span><span class="o">/</span><span class="n">PoseStamped</span>
+</code></pre></div>
+<h1 id="jatsszuk-vissza-az-mcap-fajlt">Játsszuk vissza az <code>.mcap</code> fájlt<a class="headerlink" href="#jatsszuk-vissza-az-mcap-fajlt" title="Permanent link">&para;</a></h1>
+<p>A következőken a mérésadatfájlt visszajátsszuk és ellenőrizzük, hogy milyen adatok jelennek meg, milyen típusban és sebességgel. A <code>--loop</code> kapcsoló a végtelen ismétlést, a <code>--clock</code> kapcsoló pedig egy <code>/clock</code> topic hirdetéséért felel, ehhez igazítja a lejátszást.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">bag</span><span class="w"> </span><span class="n">play</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="n">lexus3sample06.mcap</span><span class="w"> </span><span class="o">--</span><span class="n">clock</span><span class="w"> </span><span class="o">--</span><span class="n">loop</span>
+</code></pre></div>
+Ugyanez, csak lassabban visszajátszva pl.:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">bag</span><span class="w"> </span><span class="n">play</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="n">lexus3sample06.mcap</span><span class="w"> </span><span class="o">--</span><span class="n">clock</span><span class="w"> </span><span class="o">--</span><span class="n">loop</span><span class="w"> </span><span class="o">--</span><span class="n">rate</span><span class="w"> </span><span class="m">0.2</span>
+</code></pre></div>
+<p>A következő topic-ok jelennek meg:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="n">list</span>
+
+<span class="o">/</span><span class="n">clock</span>
+<span class="o">/</span><span class="n">events</span><span class="o">/</span><span class="n">read_split</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">current_pose</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">imu</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">mag</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">status_string</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_center</span><span class="o">/</span><span class="n">imu</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_center</span><span class="o">/</span><span class="n">points</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_left</span><span class="o">/</span><span class="n">points</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_right</span><span class="o">/</span><span class="n">points</span>
+<span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">zed2i</span><span class="o">/</span><span class="n">zed_node</span><span class="o">/</span><span class="n">right_raw</span><span class="o">/</span><span class="n">image_raw_color</span>
+<span class="o">/</span><span class="n">parameter_events</span>
+<span class="o">/</span><span class="n">rosout</span>
+<span class="o">/</span><span class="n">tf</span>
+<span class="o">/</span><span class="n">tf_static</span>
+</code></pre></div>
+<p>A <code>ros2 topic hz</code> az adott topic frekvenciáját mutatja. A pozíció ebben az esetben ~20Hz.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="n">hz</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">current_pose</span>
+<span class="n">average</span><span class="w"> </span><span class="n">rate</span><span class="o">:</span><span class="w"> </span><span class="m">20.133</span>
+<span class="w">        </span><span class="n">min</span><span class="o">:</span><span class="w"> </span><span class="m">0.002</span><span class="n">s</span><span class="w"> </span><span class="n">max</span><span class="o">:</span><span class="w"> </span><span class="m">0.101</span><span class="n">s</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="n">dev</span><span class="o">:</span><span class="w"> </span><span class="m">0.03451</span><span class="n">s</span><span class="w"> </span><span class="n">window</span><span class="o">:</span><span class="w"> </span><span class="m">22</span>
+</code></pre></div>
+<h1 id="ros-2-idokezeles"><code>ROS 2</code> időkezelés<a class="headerlink" href="#ros-2-idokezeles" title="Permanent link">&para;</a></h1>
+<p>Az <code>ROS</code> idő kezelésre a Unix-időt, vagy a POSIX-időt használja. Ez a UTC (greenwichi idő) szerinti 1970. január 1. 00:00:00 óta eltelt másodpercek és nanoszekundumok számát jelenti (<code>int32 sec</code>, <code>int32 nsec</code>). Ez egyrészt relatív kis helyet foglal a memóriában, másrészt könnyen számolható két időpont között eltelt idő, mégpedig egy egyszerű kivonással. </p>
+<p><a class="md-button md-button-purple mr-4" href="https://github.com/sze-info/arj/blob/main/docs/erzekeles/ros2time.ipynb">ros2time.ipynb</a> </p>
+<p>Hátránya, hogy nem túl intuitív, nem olvasható az ember számára. Pl. a Foxglove Studio ezért is gyakran átalakítja olvashatóbb formátumra. </p>
+<p><img alt="foxglove_a" src="../foxglove04.png#only-light" />
+<img alt="foxglove_a" src="../foxglove03.png#only-dark" /></p>
+<p>A másodpercek és nanoszekundumok a következőképp képzelhetők el:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="n">current_time</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">get_clock</span><span class="p">()</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">current_time</span><span class="o">.</span><span class="n">to_msg</span><span class="p">())</span>
+
+<span class="n">Output</span><span class="p">:</span> 
+<span class="n">sec</span><span class="o">=</span><span class="mi">1694595162</span><span class="p">,</span> <span class="n">nanosec</span><span class="o">=</span><span class="mi">945886859</span>
+</code></pre></div>
+<p>Az időbélyeg több helyen is szerepet kap:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="o">/</span><span class="n">clock</span><span class="w"> </span><span class="o">--</span><span class="n">once</span>
+<span class="n">clock</span><span class="o">:</span>
+<span class="w">  </span><span class="n">sec</span><span class="o">:</span><span class="w"> </span><span class="m">1689687476</span>
+<span class="w">  </span><span class="n">nanosec</span><span class="o">:</span><span class="w"> </span><span class="m">770421827</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="o">--</span><span class="n">once</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">current_pose</span>
+
+<span class="n">header</span><span class="o">:</span>
+<span class="w">  </span><span class="n">stamp</span><span class="o">:</span>
+<span class="w">    </span><span class="n">sec</span><span class="o">:</span><span class="w"> </span><span class="m">1694595162</span>
+<span class="w">    </span><span class="n">nanosec</span><span class="o">:</span><span class="w"> </span><span class="m">945886859</span>
+<span class="w">  </span><span class="n">frame_id</span><span class="o">:</span><span class="w"> </span><span class="n">map</span>
+<span class="n">pose</span><span class="o">:</span>
+<span class="w">  </span><span class="n">position</span><span class="o">:</span>
+<span class="w">    </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">640142.9676535318</span>
+<span class="w">    </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">5193606.439717201</span>
+<span class="w">    </span><span class="n">z</span><span class="o">:</span><span class="w"> </span><span class="m">1.7999999523162842</span>
+<span class="w">  </span><span class="n">orientation</span><span class="o">:</span>
+<span class="w">    </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">0.008532664424537166</span>
+<span class="w">    </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">0.0018914791588597107</span>
+<span class="w">    </span><span class="n">z</span><span class="o">:</span><span class="w"> </span><span class="m">0.44068499630505714</span>
+<span class="w">    </span><span class="n">w</span><span class="o">:</span><span class="w"> </span><span class="m">0.8976192678279703</span>
+</code></pre></div>
+<p>Ha szeretnénk átválatni a másodperceket és nanoszekundumokat, azt a következő módon tehetjük meg:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">current_time_float</span> <span class="o">=</span> <span class="n">current_time</span><span class="o">.</span><span class="n">to_msg</span><span class="p">()</span><span class="o">.</span><span class="n">sec</span> <span class="o">+</span> <span class="n">current_time</span><span class="o">.</span><span class="n">to_msg</span><span class="p">()</span><span class="o">.</span><span class="n">nanosec</span> <span class="o">/</span> <span class="mf">1e9</span> <span class="c1"># 1e9 is 1,000,000,000: nanosec to sec</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;As a float:</span><span class="se">\t</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">current_time_float</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ISO format:&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">current_time_float</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">())</span>
+
+
+<span class="n">Output</span><span class="p">:</span>
+<span class="n">As</span> <span class="n">a</span> <span class="nb">float</span><span class="p">:</span> <span class="mf">1694595162.94589</span>
+<span class="n">ISO</span> <span class="nb">format</span><span class="p">:</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">13</span><span class="n">T08</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mf">42.945887</span>
+</code></pre></div>
+<p><strong>Emlékeztető</strong>: a nanoszekundum a másodperc egy milliárdodrésze (10^-9 s).</p>
+<h1 id="global-navigation-satellite-system-gnss-global-positioning-system-gps">Global Navigation Satellite System (GNSS) / Global Positioning System (GPS)<a class="headerlink" href="#global-navigation-satellite-system-gnss-global-positioning-system-gps" title="Permanent link">&para;</a></h1>
+<p>A köveztkezőkben átnézünk pár jellemző szenzort (GPS, kamera, LIDAR) és azok topic-jait, node-jait (driver package-ekbe szervezve). Vessünk egy pillantást a saját fejlesztésű Duro GPS (GNSS) driverre: <a href="https://github.com/szenergy/duro_gps_driver/tree/ros2-humble">github.com/szenergy/duro_gps_driver</a>. A GPS-t etherneten a számítógéphez csatlakoztatva, az ROS drivert indítva a következő topicokat fogja hirdetni:</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/gps/duro/current_pose</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PoseStamped.html"><code>[geometry_msgs/PoseStamped]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/fix</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/NavSatFix.html"><code>[sensor_msgs/NavSatFix]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/imu</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Imu.html"><code>[sensor_msgs/Imu]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/mag</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/MagneticField.html"><code>[sensor_msgs/MagneticField]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/odom</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/nav_msgs/html/msg/Odometry.html"><code>[nav_msgs/Odometry]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/rollpitchyaw</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Vector3.html"><code>[geometry_msgs/Vector3]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/status_flag</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/std_msgs/html/msg/UInt8.html"><code>[std_msgs/UInt8]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/status_string</code></td>
+<td><a href="http://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html"><code>[std_msgs/String]</code></a></td>
+</tr>
+<tr>
+<td><code>/gps/duro/time_ref</code></td>
+<td><a href="http://docs.ros.org/en/api/sensor_msgs/html/msg/TimeReference.html"><code>[sensor_msgs/TimeReference]</code></a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="inertial-measurement-unit-imu">Inertial Measurement Unit (IMU)<a class="headerlink" href="#inertial-measurement-unit-imu" title="Permanent link">&para;</a></h1>
+<p><em>Jellemző <code>ROS 2</code> topic típusok:</em> <a href="https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Imu.msg"><code>sensor_msgs/msg/Imu</code></a>, <a href="https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/MagneticField.msg"><code>sensor_msgs/msg/MagneticField</code></a></p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="o">--</span><span class="n">once</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">gps</span><span class="o">/</span><span class="n">duro</span><span class="o">/</span><span class="n">imu</span>
+
+<span class="n">header</span><span class="o">:</span>
+<span class="w">  </span><span class="n">stamp</span><span class="o">:</span>
+<span class="w">    </span><span class="n">sec</span><span class="o">:</span><span class="w"> </span><span class="m">1695039048</span>
+<span class="w">    </span><span class="n">nanosec</span><span class="o">:</span><span class="w"> </span><span class="m">44466475</span>
+<span class="w">  </span><span class="n">frame_id</span><span class="o">:</span><span class="w"> </span><span class="n">duro</span>
+<span class="n">orientation</span><span class="o">:</span>
+<span class="w">  </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">0.0</span>
+<span class="w">  </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">0.0</span>
+<span class="w">  </span><span class="n">z</span><span class="o">:</span><span class="w"> </span><span class="m">0.7071067811865475</span>
+<span class="w">  </span><span class="n">w</span><span class="o">:</span><span class="w"> </span><span class="m">0.7071067811865476</span>
+<span class="n">orientation_covariance</span><span class="o">:</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="p">[</span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">]</span>
+<span class="n">angular_velocity</span><span class="o">:</span>
+<span class="w">  </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">0.01330030487804878</span>
+<span class="w">  </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">0.015893864329268294</span>
+<span class="w">  </span><span class="n">z</span><span class="o">:</span><span class="w"> </span><span class="m">0.037307355182926834</span>
+<span class="n">angular_velocity_covariance</span><span class="o">:</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="p">[</span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">]</span>
+<span class="n">linear_acceleration</span><span class="o">:</span>
+<span class="w">  </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">-0.5291185668945312</span>
+<span class="w">  </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">0.031124621582031248</span>
+<span class="w">  </span><span class="n">z</span><span class="o">:</span><span class="w"> </span><span class="m">-9.610325463867188</span>
+<span class="n">linear_acceleration_covariance</span><span class="o">:</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="p">[</span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">]</span>
+</code></pre></div>
+<h1 id="kamera">Kamera<a class="headerlink" href="#kamera" title="Permanent link">&para;</a></h1>
+<p><em>Jellemző <code>ROS 2</code> topic típusok:</em> <a href="https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Image.msg"><code>sensor_msgs/msg/Image</code></a>, <a href="https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/CameraInfo.msg"><code>sensor_msgs/msg/CameraInfo</code></a></p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="o">--</span><span class="n">once</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">zed2i</span><span class="o">/</span><span class="n">zed_node</span><span class="o">/</span><span class="n">right_raw</span><span class="o">/</span><span class="n">image_raw_color</span>
+
+<span class="n">header</span><span class="o">:</span>
+<span class="w">  </span><span class="n">stamp</span><span class="o">:</span>
+<span class="w">    </span><span class="n">sec</span><span class="o">:</span><span class="w"> </span><span class="m">1695039047</span>
+<span class="w">    </span><span class="n">nanosec</span><span class="o">:</span><span class="w"> </span><span class="m">340698516</span>
+<span class="w">  </span><span class="n">frame_id</span><span class="o">:</span><span class="w"> </span><span class="n">zed2i_right_camera_optical_frame</span>
+<span class="n">height</span><span class="o">:</span><span class="w"> </span><span class="m">720</span>
+<span class="n">width</span><span class="o">:</span><span class="w"> </span><span class="m">1280</span>
+<span class="n">encoding</span><span class="o">:</span><span class="w"> </span><span class="n">bgra8</span>
+<span class="n">is_bigendian</span><span class="o">:</span><span class="w"> </span><span class="m">0</span>
+<span class="n">step</span><span class="o">:</span><span class="w"> </span><span class="m">5120</span>
+<span class="n">data</span><span class="o">:</span><span class="w"> </span><span class="m">21</span><span class="p">,</span><span class="m">66</span><span class="p">,</span><span class="m">93</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">21</span><span class="p">,</span><span class="m">66</span><span class="p">,</span><span class="m">94</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">25</span><span class="p">,</span><span class="m">69</span><span class="p">,</span><span class="m">94</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">14</span><span class="p">,</span><span class="m">63</span><span class="p">,</span><span class="m">90</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">31</span><span class="p">,</span><span class="m">55</span><span class="p">,</span><span class="m">80</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">19</span><span class="p">,</span><span class="m">49</span><span class="p">,</span><span class="m">75</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">26</span><span class="p">,</span><span class="m">55</span><span class="p">,</span><span class="m">76</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">57</span><span class="p">,</span><span class="m">80</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">35</span><span class="p">,</span><span class="m">51</span><span class="p">,</span><span class="m">72</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">52</span><span class="p">,</span><span class="m">74</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">57</span><span class="p">,</span><span class="m">73</span><span class="p">,</span><span class="m">88</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">55</span><span class="p">,</span><span class="m">74</span><span class="p">,</span><span class="m">90</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">64</span><span class="p">,</span><span class="m">74</span><span class="p">,</span><span class="m">93</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">52</span><span class="p">,</span><span class="m">66</span><span class="p">,</span><span class="m">86</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">56</span><span class="p">,</span><span class="m">61</span><span class="p">,</span><span class="m">76</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">25</span><span class="p">,</span><span class="m">34</span><span class="p">,</span><span class="m">48</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">25</span><span class="p">,</span><span class="m">31</span><span class="p">,</span><span class="m">52</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">16</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">43</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">14</span><span class="p">,</span><span class="m">22</span><span class="p">,</span><span class="m">41</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">19</span><span class="p">,</span><span class="m">27</span><span class="p">,</span><span class="m">46</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">13</span><span class="p">,</span><span class="m">20</span><span class="p">,</span><span class="m">38</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">23</span><span class="p">,</span><span class="m">28</span><span class="p">,</span><span class="m">45</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">31</span><span class="p">,</span><span class="m">41</span><span class="p">,</span><span class="m">65</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">36</span><span class="p">,</span><span class="m">37</span><span class="p">,</span><span class="m">59</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">23</span><span class="p">,</span><span class="m">59</span><span class="p">,</span><span class="m">82</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">45</span><span class="p">,</span><span class="m">71</span><span class="p">,</span><span class="m">91</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">51</span><span class="p">,</span><span class="m">84</span><span class="p">,</span><span class="m">116</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">70</span><span class="p">,</span><span class="m">94</span><span class="p">,</span><span class="m">122</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">57</span><span class="p">,</span><span class="m">105</span><span class="p">,</span><span class="m">141</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">42</span><span class="p">,</span><span class="m">84</span><span class="p">,</span><span class="m">117</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">42</span><span class="p">,</span><span class="m">90</span><span class="p">,</span><span class="m">126</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">36</span><span class="p">,</span><span class="m">81</span><span class="p">,</span><span class="m">116</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="n">..</span>
+</code></pre></div>
+<h1 id="lidar">LIDAR<a class="headerlink" href="#lidar" title="Permanent link">&para;</a></h1>
+<p><em>Jellemző <code>ROS 2</code> topic típusok:</em> <a href="https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/PointCloud2.msg"><code>sensor_msgs/msg/PointCloud2</code></a>, <a href="https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/LaserScan.msg"><code>sensor_msgs/msg/LaserScan</code></a></p>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="o">--</span><span class="n">once</span><span class="w"> </span><span class="o">/</span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_center</span><span class="o">/</span><span class="n">points</span>
+
+<span class="n">header</span><span class="o">:</span>
+<span class="w">  </span><span class="n">stamp</span><span class="o">:</span>
+<span class="w">    </span><span class="n">sec</span><span class="o">:</span><span class="w"> </span><span class="m">1695039048</span>
+<span class="w">    </span><span class="n">nanosec</span><span class="o">:</span><span class="w"> </span><span class="m">390894137</span>
+<span class="w">  </span><span class="n">frame_id</span><span class="o">:</span><span class="w"> </span><span class="n">lexus3</span><span class="o">/</span><span class="n">os_center_a_laser_data_frame</span>
+<span class="n">height</span><span class="o">:</span><span class="w"> </span><span class="m">64</span>
+<span class="n">width</span><span class="o">:</span><span class="w"> </span><span class="m">1024</span>
+<span class="n">fields</span><span class="o">:</span>
+<span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">intensity</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">reflectivity</span><span class="p">,</span><span class="w"> </span><span class="n">ring</span><span class="p">,</span><span class="w"> </span><span class="n">ambient</span><span class="p">,</span><span class="w"> </span><span class="n">range</span>
+<span class="n">data</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">128</span><span class="p">,</span><span class="m">63</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">16</span><span class="p">,</span><span class="m">65</span><span class="p">,</span><span class="m">96</span><span class="p">,</span><span class="m">211</span><span class="p">,</span><span class="m">241</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">12</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">128</span><span class="p">,</span><span class="m">63</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">16</span><span class="p">,</span><span class="m">65</span><span class="p">,</span><span class="m">116</span><span class="p">,</span><span class="m">145</span><span class="p">,</span><span class="m">242</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">128</span><span class="p">,</span><span class="m">63</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">32</span><span class="p">,</span><span class="m">65</span><span class="p">,</span><span class="m">18</span><span class="p">,</span><span class="m">92</span><span class="p">,</span><span class="m">243</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">253</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="kc">...</span><span class="p">,</span>
+</code></pre></div>
+<h1 id="vizualizacio">Vizualizáció<a class="headerlink" href="#vizualizacio" title="Permanent link">&para;</a></h1>
+<h2 id="rviz2">RVIZ2<a class="headerlink" href="#rviz2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">rviz2</span><span class="w"> </span><span class="n">rviz2</span>
+</code></pre></div>
+<p>Alakítsunk ki hasonló elrendezést:</p>
+<p><img alt="" src="../rviz01.png" /></p>
+<h2 id="foxglove-studio">Foxglove studio<a class="headerlink" href="#foxglove-studio" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">ros2</span><span class="w"> </span><span class="n">launch</span><span class="w"> </span><span class="n">foxglove_bridge</span><span class="w"> </span><span class="n">foxglove_bridge_launch.xml</span><span class="w"> </span><span class="n">port</span><span class="o">:=</span><span class="m">8765</span>
+</code></pre></div>
+<p><img alt="" src="https://foxglove.dev/images/blog/introducing-foxglove-studios-new-navigation/breakdown.jpeg" /></p>
+<p>Alakítsunk ki hasonló elrendezést:</p>
+<p><img alt="" src="../foxglove04.png" /></p>
+<p>Forrás: <a href="https://foxglove.dev/blog/introducing-foxglove-studios-new-navigation">foxglove.dev/blog/introducing-foxglove-studios-new-navigation</a></p>
+<h1 id="hozzuk-letre-a-simple_sub_cpp-package-t">Hozzuk létre a <code>simple_sub_cpp</code> package-t<a class="headerlink" href="#hozzuk-letre-a-simple_sub_cpp-package-t" title="Permanent link">&para;</a></h1>
+<p>A következőkben egy egyszerű subscriber node fog feliratkozni <code>geometry_msgs/PoseStamped</code> üzenetekre, majd kiírni az X és az Y koordinátákat. A gyakorlat a <a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">hivatalos ROS 2 tutorialokon alapszik</a> felépítését tekintve.</p>
+<p>Nyissunk egy új terminált, és source-oljuk a telepítést, hogy a <code>ros2</code> parancsok működjenek.</p>
+<p>Navigáljunk az már létrehozott <code>ros2_ws</code> könyvtárba.</p>
+<p>Fontos, hogy a csomagokat az <code>src</code> könyvtárban kell létrehozni, nem a munkaterület gyökerében. Tehát navigáljunk a <code>ros2_ws/src</code> mappába, és futtassuk a package létrehozó parancsot:</p>
+<div class="highlight"><pre><span></span><code>cd ~/ros2_ws/src
+ros2 pkg create --build-type ament_cmake simple_sub_cpp
+</code></pre></div>
+<p>A terminál egy üzenetet küld vissza, amely megerősíti a <code>simple_sub_cpp</code> csomag és az összes szükséges fájl és mappa létrehozását.</p>
+<h2 id="irjuk-meg-a-subscriber-node-ot-print_posecpp-simple_sub_node">Írjuk meg a subscriber node-ot (<code>print_pose.cpp</code> &gt;&gt; <code>simple_sub_node</code>)<a class="headerlink" href="#irjuk-meg-a-subscriber-node-ot-print_posecpp-simple_sub_node" title="Permanent link">&para;</a></h2>
+<p>Lépjünk a <code>ros2_ws/src/simple_sub_cpp/src</code> mappába.</p>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">simple_sub_cpp</span><span class="o">/</span><span class="n">src</span>
+</code></pre></div>
+<p>Ez az a könyvtár minden CMake package-ben, ahová a forrásfájlok tartoznak (pl. <code>.cpp</code> kiterjesztéssel).</p>
+<p>Töltsük le a példa feliratkozó kódját:</p>
+<div class="highlight"><pre><span></span><code>wget -O print_pose.cpp https://raw.githubusercontent.com/sze-info/arj_packages/main/etc/print_pose.cpp
+</code></pre></div>
+<p>Ez a parancs létrehozta a  <code>print_pose.cpp</code> fájlt.</p>
+<p>Lépjünk vissza egy szinttel: <code>cd ~/ros2_ws/src/simple_sub_cpp</code> könyvtárba, ahol a <code>CMakeLists.txt</code> és a <code>package.xml</code> fájlok már létrejöttek.
+Nyissuk meg pl. VS code segítségével a mappát: <code>code .</code> parancs. Itt a <code>.</code> a <code>code</code> után az aktuális mappát jelenti. <strong>Tipp</strong>: ha nem a könyvtárban állnánk, akkor is lehetséges teljes könyvtárat megnyitni, ami később pár dolgot egyszerűsít:</p>
+<div class="highlight"><pre><span></span><code><span class="n">code</span><span class="w"> </span><span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">simple_sub_cpp</span><span class="o">/</span>
+</code></pre></div>
+<p><img alt="" src="../vscode05.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ros2 topic type /lexus3/gps/duro/current_pose</span>
+<span class="c1">// geometry_msgs/msg/PoseStamped</span>
+<span class="c1">// ros2 interface show geometry_msgs/msg/PoseStamped</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometry_msgs/msg/pose_stamped.hpp&quot;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SimplePoseSub</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="n">SimplePoseSub</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;simple_pose_sub&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sub1_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PoseStamped</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/lexus3/gps/duro/current_pose&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SimplePoseSub</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">topic_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PoseStamped</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;x: %.3f, y: %.3f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PoseStamped</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">sub1_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">SimplePoseSub</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Python megfelelője</p>
+<p>A <a href="https://github.com/sze-info/arj_packages/blob/main/etc/print_pose.cpp">C++ kód</a> python verziója szintén elérhető a <a href="https://github.com/sze-info/arj_packages/blob/main/etc/print_pose.py">github.com/sze-info/arj_packages</a> címen. Érdemes összehasonlítani a C++ és a python kódokat.</p>
+</div>
+<h2 id="fuggosegek-hozzaadasa">Függőségek hozzáadása<a class="headerlink" href="#fuggosegek-hozzaadasa" title="Permanent link">&para;</a></h2>
+<p>Mindig érdemes kitölteni a <code>&lt;description&gt;</code>, <code>&lt;maintainer&gt;</code> és <code>&lt;license&gt;</code> tag-eket:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;description&gt;</span>Examples<span class="w"> </span>of<span class="w"> </span>minimal<span class="w"> </span>publisher/subscriber<span class="w"> </span>using<span class="w"> </span>rclcpp<span class="nt">&lt;/description&gt;</span>
+<span class="nt">&lt;maintainer</span><span class="w"> </span><span class="na">email=</span><span class="s">&quot;you@email.com&quot;</span><span class="nt">&gt;</span>Your<span class="w"> </span>Name<span class="nt">&lt;/maintainer&gt;</span>
+<span class="nt">&lt;license&gt;</span>Apache<span class="w"> </span>License<span class="w"> </span>2.0<span class="nt">&lt;/license&gt;</span>
+</code></pre></div>
+<p>Adjunk hozzá egy új sort az <code>ament_cmake</code> buildtool függősége után, és illesszük be a következő függőségeket a node include utasításainak megfelelően:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;depend&gt;</span>rclcpp<span class="nt">&lt;/depend&gt;</span>
+<span class="nt">&lt;depend&gt;</span>geometry_msgs<span class="nt">&lt;/depend&gt;</span>
+</code></pre></div>
+<p>Ez deklarálja, hogy a pacakge-nek szükséges az <code>rclcpp</code> és a <code>geometry_msgs</code> fordításkor és futtatáskor.</p>
+<h2 id="cmakeliststxt">CMakeLists.txt<a class="headerlink" href="#cmakeliststxt" title="Permanent link">&para;</a></h2>
+<p>Most nyissuk meg a <code>CMakeLists.txt</code> fájlt.
+A meglévő <code>find_package(ament_cmake REQUIRED)</code> függőség alá adjuk hozzá a következő sorokat:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">find_package</span><span class="p">(</span><span class="s">rclcpp</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">geometry_msgs</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+</code></pre></div>
+<p>Ezután adjuk hozzá a végrehajtható fájlt (ez most a <code>print_pose.cpp</code>-ből fog csak állni), és nevezzük el <code>simple_sub_node</code>-nak, hogy az <code>ros2 run</code> használatával futtassa a node-ot:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">add_executable</span><span class="p">(</span><span class="s">simple_sub_node</span><span class="w"> </span><span class="s">src/print_pose.cpp</span><span class="p">)</span>
+<span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">simple_sub_node</span><span class="w"> </span><span class="s">rclcpp</span><span class="w"> </span><span class="s">geometry_msgs</span><span class="p">)</span>
+</code></pre></div>
+<p>Végül az <code>install(TARGETS...)</code> részt adjuk hozzá, hogy az <code>ros 2</code> megtalálja a futtatható állományt, amit lefordítottunk:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">install</span><span class="p">(</span><span class="s">TARGETS</span>
+<span class="s">simple_sub_node</span>
+<span class="s">DESTINATION</span><span class="w"> </span><span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="p">)</span>
+</code></pre></div>
+<p>A <code>CMakeLists.txt</code> megtisztítható néhány felesleges szakasz és megjegyzés eltávolításával, így a következőképpen néz ki:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.8</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">simple_sub_cpp</span><span class="p">)</span>
+
+<span class="c"># Default to C++14</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span><span class="w"> </span><span class="s">CMAKE_CXX_STANDARD</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span><span class="w"> </span><span class="s">14</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">if</span><span class="p">(</span><span class="s">CMAKE_COMPILER_IS_GNUCXX</span><span class="w"> </span><span class="s">OR</span><span class="w"> </span><span class="s">CMAKE_CXX_COMPILER_ID</span><span class="w"> </span><span class="s">MATCHES</span><span class="w"> </span><span class="s2">&quot;Clang&quot;</span><span class="p">)</span>
+<span class="nb">add_compile_options</span><span class="p">(</span><span class="s">-Wall</span><span class="w"> </span><span class="s">-Wextra</span><span class="w"> </span><span class="s">-Wpedantic</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">rclcpp</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">geometry_msgs</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">simple_sub_node</span><span class="w"> </span><span class="s">src/print_pose.cpp</span><span class="p">)</span>
+<span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">simple_sub_node</span><span class="w"> </span><span class="s">rclcpp</span><span class="w"> </span><span class="s">geometry_msgs</span><span class="p">)</span>
+
+<span class="nb">install</span><span class="p">(</span><span class="s">TARGETS</span>
+<span class="s">simple_sub_node</span>
+<span class="s">DESTINATION</span><span class="w"> </span><span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="p">)</span>
+
+<span class="nb">ament_package</span><span class="p">()</span>
+</code></pre></div>
+<p>Összefoglalásképp, a következő módosításokat hajtottuk végre:</p>
+<p><img alt="" src="../package_xml01.png" /></p>
+<p><img alt="" src="../cmakelists01.png" /></p>
+<h2 id="build-es-futtatas">Build és futtatás<a class="headerlink" href="#build-es-futtatas" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Már buildelhető a package:</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span>
+<span class="n">colcon</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="o">--</span><span class="n">packages</span><span class="o">-</span><span class="n">select</span><span class="w"> </span><span class="n">simple_sub_cpp</span>
+</code></pre></div>
+<p>Futtassuk a szokásos módon:</p>
+<div class="highlight"><pre><span></span><code><span class="n">source</span><span class="w"> </span><span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">setup.bash</span>
+<span class="n">ros2</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">simple_sub_cpp</span><span class="w"> </span><span class="n">simple_sub_node</span>
+</code></pre></div>
+<p>Kimenet:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">simple_pose_sub</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">697201.725</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">5285679.845</span>
+<span class="p">[</span><span class="n">simple_pose_sub</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">697201.796</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">5285679.548</span>
+<span class="p">[</span><span class="n">simple_pose_sub</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">697201.838</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">5285679.251</span>
+<span class="p">[</span><span class="n">simple_pose_sub</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="m">697201.886</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="m">5285678.949</span>
+</code></pre></div>
+<h1 id="forrasok">Források<a class="headerlink" href="#forrasok" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html">docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html</a></li>
+<li><a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html</a></li>
+<li><a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html">docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; Széchenyi István Egyetem 
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://jkk-research/jkk-research.github.io" target="_blank" rel="noopener" title="jkk-research" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "content.code.copy", "content.code.select", "content.tabs.link", "navigation.tabs", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../pymdownx.inlinehilite"></script>
+      
+        <script src="../../pymdownx.snippets"></script>
+      
+        <script src="../../pymdownx.superfences"></script>
+      
+        <script src="../.."></script>
+      
+    
+  </body>
+</html>

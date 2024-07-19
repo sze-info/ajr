@@ -1,0 +1,37 @@
+[data-md-color-scheme="youtube"] {
+  /* Primary color shades */
+  --md-primary-fg-color: #43AEC5;
+  --md-primary-fg-color--light: #9fd4e0;
+  --md-primary-fg-color--dark: #182744;
+  --md-primary-bg-color:        #ffffff;
+  /* Accent color shades */
+  --md-accent-fg-color: #43AEC5;
+  --md-accent-fg-color: #43AEC5;
+  --md-accent-fg-color--light: #9fd4e0;
+  --md-accent-fg-color--dark: #182744;
+}
+
+:root {
+  --md-primary-fg-color:        #43AEC5;
+  --md-primary-fg-color--light: #9fd4e0;
+  --md-primary-fg-color--dark:  #182744;
+  --md-primary-bg-color:        #182744;
+}
+
+[data-md-color-scheme="youtube"] img[src$="#only-dark"],
+[data-md-color-scheme="youtube"] img[src$="#gh-dark-mode-only"] {
+  display: none; /* Hide dark images in light mode */
+}
+
+:root>* {
+
+
+
+
+  /* Footer */
+  --md-footer-bg-color: #182744;
+  --md-footer-bg-color--dark: #182744;
+  --md-footer-fg-color: #43AEC5;
+  --md-footer-fg-color--light: #b9e7f2;
+  --md-footer-fg-color--lighter: #d9eef3;
+}

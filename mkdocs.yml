@@ -1,0 +1,226 @@
+site_name: Autonóm járművek és robotok programozása
+site_description: 'A course at Széchenyi István University, Győr, Hungary'
+site_author: 'sze'
+site_url: 'https://sze-info.github.io/ajr/' # Uncomment to set a canonical URL
+copyright: |
+  &copy; Széchenyi István Egyetem 
+docs_dir: docs/
+
+repo_url: https://github.com/sze-info/ajr/
+nav:
+  - Kezdőlap: index.md
+  - Tananyag:
+    - 1. Bevezetés: 
+      - bevezetes/README.md
+      - bevezetes/practice.md
+      - bevezetes/gepterem.md
+      - GitHub Copilot: bevezetes/copilot.md
+      - Linux, git: bevezetes/linux.md
+    - 2. ROS 2 koncepciók, telepítés: 
+      - bevezetes/ros2.md
+      - bevezetes/ros2gyak.md
+      - VS code, git: bevezetes/vscode.md
+      - telepites/ubuntu.md
+      - telepites/win10.md
+      - telepites/ros_humble.md
+    - 3. Érzékelés: 
+      - erzekeles/README.md
+      - erzekeles/practice.md
+    - 4. Féléves, ROS 2 további koncepiók: 
+      - feleves_beadando/README.md
+      - feleves_beadando/kisbeadando.md
+      - feleves_beadando/nagyfeleves.md
+      - bevezetes/copilot.md
+      - bevezetes/linux.md  
+      - ros2halado/ros2launch.md    
+    - 5. Transzformációk: 
+      - transzformaciok/README.md
+      - transzformaciok/practice.md
+    - 6. Észlelés: 
+      - eszleles/README.md
+      - eszleles/practice.md
+      - eszleles/ground_filter.md
+      - eszleles/road_filter.md
+      - eszleles/slam.md
+    - 7. Szimuláció:
+      - szimulacio/README.md
+      - szimulacio/gazebo_fortress.md
+      - szimulacio/gyakorlat.md
+      - workshops/f1tenth_sim_a.md
+    - 8. Tervezés:
+      - tervezes/README.md
+      - tervezes/practice.md
+    - 9. Szabályozás:
+      - szabalyozas/README.md
+      - szabalyozas/ros2practice.md
+    - 10. AI (mesterséges intelligencia):
+      - mesterseges_intelligencia/README.md
+      - mesterseges_intelligencia/practice.md
+  - Nagy féléves, kis beadandó:
+    - feleves_beadando/README.md
+    - feleves_beadando/kisbeadando.md
+    - feleves_beadando/nagyfeleves.md
+  - Önálló:
+    - ros2halado/py_cpp.md    
+    - onallo/ros2git.md
+    - onallo/linux.md
+    - onallo/ros2launchmarker.md
+    - onallo/mermaid.md
+    - ros2halado/rqt.md    
+    - ros2halado/qos.md    
+    - ros2halado/mcap.md    
+    - ros2halado/docker.md    
+    - ros2halado/state.md    
+    - ros2halado/vizualizacio.md    
+    - ros2halado/pointcloud_to_grid.md
+    - kalman_filter/README.md
+    - kalman_filter/practice.md
+  - linkek/README.md
+  - Moodle: https://szelearning.sze.hu/course/view.php?id=13973
+theme:
+  # logo: ../img/jkk03.svg
+  name: 'material'
+  favicon: 'assets/images/favicon.svg'
+  palette:
+    - scheme: youtube
+      primary: 'custom'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      # primary: black
+      primary: 'custom'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+  - search.suggest
+  - content.code.copy
+  - content.code.select
+  - content.tabs.link
+  # - navigation.expand      # Expand all collapsable sections.
+  #- navigation.instant     # Instant loading pages.
+  # - navigation.indexes     # Attach pages directly to Sections. Incompatible with "toc.integrate"
+  #- navigation.sections    # Render top sections as groups.
+  - navigation.tabs         # Render top sections as tabs at the top.
+  #- navigation.tabs.sticky # Tabs won't disappear when scrolling down. Requires "navigation.tabs".
+  - navigation.top         # Adds a "Back to top" that is shown when scrolling up.
+  #- navigation.tracking    # Updates the url with highlighted section anchor.
+  
+  # Search
+  #
+  #- search.highlight # Search will highlight the searched word(s) on the page.*
+  #- search.share     # Adds an option to share a search query link.*
+  #- search.suggest   # Search will suggest the likeliest completion for a word.*
+  
+  # Table of Contents
+  #
+  # - toc.integrate          # Include the TOC sections in the left navugation.
+  - toc.follow
+  icon:
+    logo: 'material/robot-mower'
+    repo: 'material/github'
+  #admonition:
+  #    note: 'octicons/tag-16'
+  #    abstract: 'octicons/checklist-16'
+  #    info: 'octicons/info-16'
+  #    tip: 'octicons/squirrel-16'
+  #    success: 'octicons/check-16'
+  #    question: 'octicons/question-16'
+  #    warning: 'octicons/alert-16'
+  #    failure: 'octicons/x-circle-16'
+  #    danger: 'octicons/zap-16'
+  #    bug: 'octicons/bug-16'
+  #    example: 'octicons/beaker-16'
+  #    quote: 'octicons/quote-16'
+extra_css:
+- stylesheets/extra.css
+# - https://unpkg.com/katex@0/dist/katex.min.css # KATEX
+extra:
+  social:
+    - icon: 'fontawesome/brands/github'
+      link: 'https://jkk-research/jkk-research.github.io'
+  alternate:
+    - name: Magyar
+      link: https://sze-info.github.io/ajr/ 
+      lang: hu
+    - name: English
+      link: https://sze-info.github.io/avr/ 
+      lang: en
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg    
+  - md_in_html
+  - markdown.extensions.admonition:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# extra_javascript: 
+#   - javascripts/katex.js # KATEX
+#   - https://unpkg.com/katex@0/dist/katex.min.js # KATEX
+#   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js # KATEX
+
+
+  #- pymdownx.arithmex:
+  #- pymdownx.b64:
+  #- pymdownx.betterem:
+  #- pymdownx.caret:
+  #- pymdownx.critic:
+  #- pymdownx.details:
+  #- pymdownx.emoji:
+  #- pymdownx.escapeall:
+  #- pymdownx.extra:
+  #- pymdownx.extrarawhtml:
+  #- pymdownx.highlight:
+  #- pymdownx.inlinehilite:
+  #- pymdownx.keys:
+  #- pymdownx.magiclink:
+  #- pymdownx.mark:
+  #- pymdownx.pathconverter:
+  #- pymdownx.progressbar:
+  #- pymdownx.smartsymbols:
+  #- pymdownx.snippets:
+  #- pymdownx.striphtml:
+  #- pymdownx.superfences:
+  #- pymdownx.tabbed:
+  #- pymdownx.tasklist:
+  #- pymdownx.tilde:
+
+  # - pymdownx.highlight:
+  #   anchor_linenums: true
+  #   line_spans: __span
+  #   pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - social:
+      cards_layout: default/only/image
+      cards_layout_options:
+        background_image: 'assets/images/social1.png'
+        background_color: "#43AEC5"
+        color: "#ffffff" 
+        font_family: Ubuntu

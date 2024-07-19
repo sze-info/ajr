@@ -1,0 +1,4 @@
+- [youtube.com/jkk-sze-research](https://www.youtube.com/jkk-sze-research)
+- [instagram.com/jkk.sze](https://www.instagram.com/jkk.sze)
+- [youtube.com/szenergyteam](https://www.youtube.com/szenergyteam)
+- [instagram.com/szenergyteam](https://www.instagram.com/szenergyteam)
