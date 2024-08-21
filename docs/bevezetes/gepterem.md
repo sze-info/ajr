@@ -14,7 +14,7 @@ A közös meghajtó a `K:\` meghajtóként található meg Winodws Fájlkezelőb
 
 ![gepterem01](gepterem01.png)
 
-A tantárgyhoz kapcsolódó fájlok pontosan a [`\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása`](\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása) címen érhetőek el.
+A tantárgyhoz kapcsolódó fájlok pontosan a [`\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása`](file://fs-kab.eik.sze.hu/C100/kozos/GKNB_AUTM078_Auton%C3%B3m_robotok_%C3%A9s_j%C3%A1rm%C5%B1vek_programoz%C3%A1sa/) címen érhetőek el.
 
 ### WSL és közös meghajtó
 

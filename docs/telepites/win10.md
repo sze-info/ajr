@@ -5,9 +5,36 @@ icon: material/code-block-tags # kiegészítő tananyag
 
 # Windows WSL2
 
-A **Windows Subsystem for Linux** egy kompatibilitási réteg Linux-alapú elemek natív futtatásához Windows 10, vagy Windows 11 alapú rendszereken. Akkor érdemes választani a WSL használatát, ha nem szeretnétek natív Ubuntu-t (pl 18.04 / 22.04) telepíteni a számítógépeitekre.
+![wsl](wsl01.svg){ align=right width="200" }
 
-A WSL telepítését bemutató Windows 11-es videó (Windows 10 lejjebb, de nagyrészt ugyanez):
+A **Windows Subsystem for Linux** egy kompatibilitási réteg Linux-alapú elemek natív futtatásához Windows 10, vagy Windows 11 alapú rendszereken. Akkor érdemes választani a WSL használatát, ha nem szeretnétek natív Ubuntu-t (pl 18.04 / 22.04) telepíteni a számítógépeitekre. A tantárgyban használható rendszer többféle módon is létrehozható:
+
+- WSL telepítése és Snapshot importálása [link](#wsl-telepitese-es-snapshot-importalasa)
+- WSL telepítése és ROS installálása Script segítségével [link](#wsl-telepitese-es-ros-installalasa-script-segitsegevel) 
+
+## WSL telepítése és Snapshot importálása
+
+A telepítést bemutató videó: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DIYktkx3XLM?si=-cjaTd6PbhuFkXfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+A videó lépései szövegesen:
+
+1. WSL snapshot (backup fájl) letöltése: [WSL snapshot letöltése :material-download: ~2.5 GB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EYxEY_oJa7ZEursLIBMZeZ4BWUvT_LbkHbOIsPToBgRxbg?download=1){ .md-button}
+2. Snapshot kicsomagolása `.zip` >> `.tar`
+3. Powershell (Admin): 
+``` powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+4. Powershell: 
+``` powershell
+wsl --import ajr1 .\ajr1\ .\ajr24a.tar
+```
+
+
+## WSL telepítése és ROS installálása Script segítségével
+
+A WSL telepítését bemutató Windows 11-es videó (Windows 10 verzió lejjebb, de nagyrészt megegyező tartalommal):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DIYktkx3XLM?si=-cjaTd6PbhuFkXfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
