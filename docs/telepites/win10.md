@@ -22,11 +22,14 @@ A videó lépései szövegesen:
 
 1. WSL snapshot (backup fájl) letöltése: [WSL snapshot letöltése :material-download: ~2.5 GB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EYxEY_oJa7ZEursLIBMZeZ4BWUvT_LbkHbOIsPToBgRxbg?download=1){ .md-button}
 2. Snapshot kicsomagolása `.zip` >> `.tar`
-3. Powershell (Admin): 
+3. Powershell (Admin) WSL feature bekapcsolása, majd WSL telepítése: 
 ``` powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
-4. Powershell: 
+``` powershell
+wsl --install --no-distribution
+```
+4. Powershell, WSL Snapshot fájl (tar) importálás: 
 ``` powershell
 wsl --import ajr1 .\ajr1\ .\ajr24a.tar
 ```
