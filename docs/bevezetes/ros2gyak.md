@@ -34,8 +34,10 @@ A második ablakból publikáljunk egy parancsot, melynek hatására körbe ford
 ``` r
 ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.2}}'
 ```
-
-<center><img src="turtlesim01.gif" width="80%" /></center>
+<figure markdown="span">
+  ![](turtlesim01.gif)
+  <figcaption>Turtlesim animáció</figcaption>
+</figure>
 
 A háttérben a `turtlesim_node` node (kerek jelölés) feliratkozik a `/turtle1/cmd_vel` topicra (szögletes jelölés), ennek hatására indul a mozgás. 
 

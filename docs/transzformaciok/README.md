@@ -48,6 +48,69 @@ Például a Nissan Leaf `base_link` framejéhez képest a következő fontosabb 
 
 Például a járműves és mobil robotos környezetben gyakran szeretnénk tartani magunkat ahhoz a konvencióhoz, hogy a globális térképet `map` frame-nek, a jármű / robot hátsó tengelyét `base_link`-nek hívjuk. A `map` és a `base_link` közötti megfeleltetés történehet GPS, NDT matching, Kálmán filter, odometria és számos további módon. Ezt a követező példa szemlélteti:
 
+```mermaid
+
+graph TD
+    %% Define first column
+        direction TB
+        map1([  /map]):::light
+        gps([ /gps]):::light
+        base_link1([ /base_link]):::light
+        velodyne_left([ /velodyne_left]):::light
+        zed_front([ /zed_front]):::light
+        laser([ /laser]):::light
+        
+        %% Connections for the first column
+        map1 -.->|dynamic| gps
+        gps -->|static| base_link1
+        base_link1 -->|static| velodyne_left
+        base_link1 -->|static| zed_front
+        base_link1 -->|static| laser
+
+    %% Define second column
+        direction TB
+        map2([ /map]):::light
+        ndt_map([ ndt_map]):::light
+        base_link2([ base_link]):::light
+        sensor_a([ sensor_a]):::light
+        sensor_b([ sensor_b]):::light
+        
+        %% Additional sensors can be represented by dots
+        dots2([ ...]):::light
+
+        %% Connections for the second column
+        map2 -.->|dynamic| ndt_map
+        ndt_map --> base_link2
+        base_link2 --> sensor_a
+        base_link2 --> sensor_b
+        base_link2 --> dots2
+
+    %% Define third column
+        direction TB
+        map3([ lexus3/map]):::light
+        kalman_f([ lexus3/kalman_f]):::light
+        base_link3([ lexus3/base_link]):::light
+
+        %% Representing additional connections with dots
+        dots3a([ lexus3/...]):::light
+        dots3b([ lexus3/...]):::light
+        dots3c([ lexus3/...]):::light
+        dots3d([ lexus3/...]):::light
+
+        %% Connections for the third column
+        map3 -.->|dynamic| kalman_f
+        kalman_f --> base_link3
+        base_link3 --> dots3a
+        base_link3 --> dots3b
+        base_link3 --> dots3c
+        dots3c --> dots3d
+
+classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+```
+
 ![img](tf_examples01.svg)
 *Példa TF tree*
 
@@ -59,6 +122,62 @@ GPS használata esetén nagyvonalakban a következő példa alapján kell elkép
 A transformok a `tf` topicaban hirdetődnek, azonban például az MPC szabályzó egy `current_pose` nevű topicot használ a szabályzás megvalósításához. Ezt úgy oldottuk meg, hogy a `base_link` frame értékeit `current_pose` topic-ként is hirdetjük. A frame transzlációja a topic pozícója, illetve a frame rotációja a topic orientációja.
 
 Nagy transzformoknál az RVIZ megjelenítője nem működik pontosan (https://github.com/ros-visualization/rviz/issues/502). Mivel az ROS SI mértékegységeket használ, így métert is, a GPS esetén célszerű az UTM ([wikipedia-utm](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system)) koordinátarendszer használata. Ez értelemszerűen nagy értékű koorinátákkal számol. Ahhoz, hogy ezt az ellentmondást feloldjuk célszerű kisebb traszformokat megjeleníteni. Így például Győrhöz (`map_gyor_0`) és Zalához (`map_zala_0`) egy fix statikus transformot, hirdetni, amihez képest már szépen működik az RVIZ megjelenítője. A következő ábra ezt szemlélteti, illetve egy kicsit részletesebb szenzorrendszert mutat be.
+
+
+```mermaid
+graph TB
+    %% Define main components
+    map([ map]):::red
+    map_gyor_0([ map_gyor_0]):::dark
+    map_zala_0([ map_zala_0]):::dark
+    gps([ gps]):::light
+    base_link([ base_link]):::red
+    
+    %% Define sensors and other components
+    velodyne_left([ velodyne_left]):::light
+    velodyne_right([ velodyne_right]):::light
+    laser([ laser]):::light
+    zed_camera_front([ zed_camera_front]):::light
+    duro_gps_imu([ duro_gps_imu]):::light
+    
+    %% OS1 sensors and their subcomponents
+    left_os1_sensor([ left_os1/os1_sensor]):::light
+    left_os1_lidar([ left_os1/os1_lidar]):::light
+    left_os1_imu([ left_os1/os1_imu]):::light
+
+    right_os1_sensor([ right_os1/os1_sensor]):::light
+    right_os1_lidar([ ...]):::light
+    right_os1_imu([ ...]):::light
+
+    %% Connections among main components
+    map --> map_gyor_0
+    map --> map_zala_0
+    map ---> gps
+    gps --> base_link
+
+    %% Connections from base_link to sensors
+    base_link ---> velodyne_left
+    base_link ---> velodyne_right
+    base_link ---> laser
+    base_link --> zed_camera_front
+    base_link --> duro_gps_imu
+    base_link ----> left_os1_sensor
+    base_link ----> right_os1_sensor
+
+    %% Connections for OS1 sensors
+    left_os1_sensor --> left_os1_lidar
+    left_os1_sensor --> left_os1_imu
+
+    right_os1_sensor --> right_os1_lidar
+    right_os1_sensor --> right_os1_imu
+
+
+classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+```
+
 ![img](tf_examples03.svg)
 *Az `rqt_tf_tree` által megjelenített TF fa*
 

@@ -104,11 +104,17 @@ A fejlesztőkörnyezet beépített terminálja, mind Windowson, mind Linuxon mű
 
 ROS 2 C++ fejlesztésnél alapvetően a VS code nem ismeri fel az ROS header fájlokat, így az pl az [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) se működik megfelelően:
 
-<center><img src="includepath_settings01.png" width="60%" /></center>
+<figure markdown="span">
+  ![](includepath_settings01.png)
+  <figcaption>Includepath VS code-ban</figcaption>
+</figure>
 
 Erre egyszerű megoldás az `includePath settings`-re kattintva beállítani az `/opt/ros/humble/**` elérési utat. (Természetesen ugyanez működik nem `humble` verziónál is, ott a megfelelő elérési utat szükséges megadni). Ez a következőképp néz ki:
 
-<center><img src="includepath_settings02.png" width="60%" /></center>
+<figure markdown="span">
+  ![](includepath_settings02.png)
+  <figcaption>Includepath settings VS code-ban</figcaption>
+</figure>
 
 Amennyiben mentette a VS code, az [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) és egyéb funkciók is ennek megfelelően fognak működni.
 
