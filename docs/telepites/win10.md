@@ -33,7 +33,9 @@ wsl --install --no-distribution
 ``` powershell
 wsl --import ajr1 .\ajr1\ .\ajr24a.tar
 ```
+5. VS code és WSL kiegészítő telepítése: 
 
+![wsl03](wsl03.png)
 
 ## WSL telepítése és ROS installálása Script segítségével
 

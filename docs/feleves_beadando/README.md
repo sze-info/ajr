@@ -22,11 +22,11 @@ flowchart TD
 
 K([Kötelező</br>kis beadandó ]):::light ------> |sikertelen| X0
 K --> A([Aláírás]):::green 
-A -->|ZH irány| ZH1([1. ZH]):::light
+A -->|ZH irány| ZH1([ZH1]):::light
 A --> |féléves irány| N([Nagy féléves]):::light
 PZH --> |sikertelen| X1
 ZH2 --> |sikertelen| PZH([Pót ZH]):::light
-ZH1 --> ZH2([2. ZH]):::light
+ZH1 --> ZH2([ZH2]):::light
 ZH2 --> |siker| OK1
 PZH --> |siker| OK1
 N ----> |siker| OK2
@@ -50,12 +50,12 @@ Fontos, tudni, hogy a kis beadandó **aláírás feltétel**. A GitHub regisztr�
 ```mermaid
 flowchart LR
 
-H2([2. alkalom]) --- H2A([Github<br>regisztráció])--- H2B([Copilot regisztráció<br>indítása])
-H3([3. alkalom]) --- H3A([Beadandó Github<br>link elküldése]) --- H3B([Copilot<br>regisztráció kész])
-H5([5. alkalom]) --- H5A([Kis beadandó<br>véglegestése])
-H7([7. alkalom]) --- H7A([1. ZH]) --- H7B([Nagy féléves Github<br>link elküldése])
-H10([10. alkalom]) --- H10A([2. ZH])
-H13([13. alkalom]) --- H13A([PótZH])
+H2([2 alkalom]) --- H2A([Github<br>regisztráció])--- H2B([Copilot regisztráció<br>indítása])
+H3([3 alkalom]) --- H3A([Beadandó Github<br>link elküldése]) --- H3B([Copilot<br>regisztráció kész])
+H5([5 alkalom]) --- H5A([Kis beadandó<br>véglegestése])
+H7([7 alkalom]) --- H7A([ZH1]) --- H7B([Nagy féléves Github<br>link elküldése])
+H10([10 alkalom]) --- H10A([ZH2])
+H13([13 alkalom]) --- H13A([PótZH])
 V2([Vizsgaidőszak 2. hét]) --- V2A([Nagy féléves<br>véglegesítés])
 
 

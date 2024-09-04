@@ -19,7 +19,7 @@ icon: material/math-integral-box # elméleti tananyag
 Az `ROS 2`, a `ROS` legújabb kiadása, olyan szoftverkönyvtárak és eszközök készlete (middleware), amelyek segítenek robotalkalmazások fejlesztésében. Definíció szerint a middleware egy szoftver komponenseket összekötő szoftver. Ez egy olyan réteg, amely az operációs rendszer és az alkalmazások között helyezkedik el az elosztott számítógépes hálózat mindkét oldalán. Az `ROS 2` megengedő, nyílt forráskódú, [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/) licenszelést használ. 
 
 <figure markdown="span">
-  [![Image title](/bevezetes/ros_overview01.svg){ width="100%" }](/bevezetes/ros_overview01.svg)
+  ![Image title](ros_overview01.svg){ width="100%" }
   <figcaption>ROS 2 áttekintés</figcaption>
 </figure>
 
