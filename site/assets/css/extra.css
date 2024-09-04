@@ -1,1 +1,4 @@
 @import "extensions/tabbed.css";
+.mermaid .task {
+    margin-bottom: 2220px; /* Adjust the value to increase the space between tasks */
+}

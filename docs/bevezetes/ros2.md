@@ -190,6 +190,29 @@ Forrás: [husarnet.com/blog/ros2-docker](https://husarnet.com/blog/ros2-docker)
 
 [ROS verziók és telepítés](https://sze-info.github.io/ajr/telepites/)
 
+
+```mermaid
+
+
+gantt
+    dateFormat  YY-MM
+    title       ROS 2 Distros
+    excludes    weekends
+    tickInterval 365days
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+    axisFormat %y
+
+    section ROS 2
+    Jazzy   :active, r012, 2024-05-23, 5y
+    .       :active, r011, 2021-01-01, 0d %% placeholder
+    Iron    :active, r010, 2023-11-01, 188d
+    .       :active, r011, 2021-01-01, 0d %% placeholder
+    Humble  :active, r009, 2022-05-23, 5y
+    .       :active, r011, 2021-01-01, 0d %% placeholder
+    Galactic:active, r008, 2021-05-23, 1y
+```
+
+
 ![Alt text](ros2distros.svg)
 
 Distrok százalékos megoszlása az időben: [metrics.ros.org/rosdistro_rosdistro.html](https://metrics.ros.org/rosdistro_rosdistro.html)
@@ -200,7 +223,7 @@ A `Humble Hawksbill` vagy röviden `Humble` egy long term support (LTS) release,
 
 További release-ek: [docs.ros.org/en/humble/Releases.html](https://docs.ros.org/en/humble/Releases.html)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0aPbWsyENA8?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0aPbWsyENA8?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share allowfullscreen></iframe>
 
 # Koncepciók
 

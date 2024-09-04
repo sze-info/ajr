@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -231,7 +231,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -280,7 +280,7 @@
   
     
   
-  Start
+  Kezdőlap
 
       </a>
     </li>
@@ -444,7 +444,7 @@
         
   
   <span class="md-ellipsis">
-    Start
+    Kezdőlap
   </span>
   
 
@@ -805,6 +805,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Windows WSL2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -816,6 +829,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wsl-telepitese-es-snapshot-importalasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL telepítése és Snapshot importálása
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsl-telepitese-es-ros-installalasa-script-segitsegevel" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL telepítése és ROS installálása Script segítségével
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2316,6 +2366,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wsl-telepitese-es-snapshot-importalasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL telepítése és Snapshot importálása
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsl-telepitese-es-ros-installalasa-script-segitsegevel" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL telepítése és ROS installálása Script segítségével
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2333,8 +2409,33 @@
 
 
 <h1 id="windows-wsl2">Windows WSL2<a class="headerlink" href="#windows-wsl2" title="Permanent link">&para;</a></h1>
-<p>A <strong>Windows Subsystem for Linux</strong> egy kompatibilitási réteg Linux-alapú elemek natív futtatásához Windows 10, vagy Windows 11 alapú rendszereken. Akkor érdemes választani a WSL használatát, ha nem szeretnétek natív Ubuntu-t (pl 18.04 / 22.04) telepíteni a számítógépeitekre.</p>
-<p>A WSL telepítését bemutató Windows 11-es videó (Windows 10 lejjebb, de nagyrészt ugyanez):</p>
+<p><img align="right" alt="wsl" src="../wsl01.svg" width="200" /></p>
+<p>A <strong>Windows Subsystem for Linux</strong> egy kompatibilitási réteg Linux-alapú elemek natív futtatásához Windows 10, vagy Windows 11 alapú rendszereken. Akkor érdemes választani a WSL használatát, ha nem szeretnétek natív Ubuntu-t (pl 18.04 / 22.04) telepíteni a számítógépeitekre. A tantárgyban használható rendszer többféle módon is létrehozható:</p>
+<ul>
+<li>WSL telepítése és Snapshot importálása <a href="#wsl-telepitese-es-snapshot-importalasa">link</a></li>
+<li>WSL telepítése és ROS installálása Script segítségével <a href="#wsl-telepitese-es-ros-installalasa-script-segitsegevel">link</a> </li>
+</ul>
+<h2 id="wsl-telepitese-es-snapshot-importalasa">WSL telepítése és Snapshot importálása<a class="headerlink" href="#wsl-telepitese-es-snapshot-importalasa" title="Permanent link">&para;</a></h2>
+<p>A telepítést bemutató videó: </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yBLtg2c4yA4?si=PO7NefOrQJQV0tG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>A videó lépései szövegesen:</p>
+<ol>
+<li>WSL snapshot (backup fájl) letöltése: <a class="md-button" href="https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EYxEY_oJa7ZEursLIBMZeZ4BWUvT_LbkHbOIsPToBgRxbg?download=1">WSL snapshot letöltése <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span> ~2.5 GB</a></li>
+<li>Snapshot kicsomagolása <code>.zip</code> &gt;&gt; <code>.tar</code></li>
+<li>Powershell (Admin) WSL feature bekapcsolása, majd WSL telepítése: 
+<div class="highlight"><pre><span></span><code><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-install</span> <span class="p">-</span><span class="n">-no-distribution</span>
+</code></pre></div></li>
+<li>Powershell, WSL Snapshot fájl (tar) importálás: 
+<div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">ajr1</span> <span class="p">.\</span><span class="n">ajr1</span><span class="p">\</span> <span class="p">.\</span><span class="n">ajr24a</span><span class="p">.</span><span class="n">tar</span>
+</code></pre></div></li>
+<li>VS code és WSL kiegészítő telepítése: </li>
+</ol>
+<p><img alt="wsl03" src="../wsl03.png" /></p>
+<h2 id="wsl-telepitese-es-ros-installalasa-script-segitsegevel">WSL telepítése és ROS installálása Script segítségével<a class="headerlink" href="#wsl-telepitese-es-ros-installalasa-script-segitsegevel" title="Permanent link">&para;</a></h2>
+<p>A WSL telepítését bemutató Windows 11-es videó (Windows 10 verzió lejjebb, de nagyrészt megegyező tartalommal):</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DIYktkx3XLM?si=-cjaTd6PbhuFkXfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <p>A videó lépései szövegesen:</p>
@@ -2439,7 +2540,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "content.code.copy", "content.code.select", "content.tabs.link", "navigation.tabs", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

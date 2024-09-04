@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -231,7 +231,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -280,7 +280,7 @@
   
     
   
-  Start
+  Kezdőlap
 
       </a>
     </li>
@@ -444,7 +444,7 @@
         
   
   <span class="md-ellipsis">
-    Start
+    Kezdőlap
   </span>
   
 
@@ -2484,7 +2484,7 @@
 <p><a href="https://sze-info.github.io/ajr/telepites/">ROS verziók és telepítés</a></p>
 <p>Az <code>ROS 2</code>, a <code>ROS</code> legújabb kiadása, olyan szoftverkönyvtárak és eszközök készlete (middleware), amelyek segítenek robotalkalmazások fejlesztésében. Definíció szerint a middleware egy szoftver komponenseket összekötő szoftver. Ez egy olyan réteg, amely az operációs rendszer és az alkalmazások között helyezkedik el az elosztott számítógépes hálózat mindkét oldalán. Az <code>ROS 2</code> megengedő, nyílt forráskódú, <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a> licenszelést használ. </p>
 <figure>
-  <a href="/bevezetes/ros_overview01.svg"><img alt="Image title" src="/bevezetes/ros_overview01.svg" width="100%" /></a>
+  <img alt="Image title" src="../ros_overview01.svg" width="100%" />
   <figcaption>ROS 2 áttekintés</figcaption>
 </figure>
 <p>A <code>ROS</code> 2007-es kiadása óta inkrementális frissítéseken esett át, tehát fundamentális változások nem, nagyobb fejlesztések viszont folyamatosan történtek. 2017-ben jött rá a robotikai közösség, hogy olyan alapvető limitációi vannak az eredeti 2007-es elképzelésnek, amit ilyen inkrementális módon sajnos nem lehet javítani. Így végül a Noetic Ninjemis (2025-ig támogatva) az <code>ROS 1</code> utolsó kiadása, helyette párhuzamosan elkezdték fejleszteni az <code>ROS 2</code>-t. Ez egyben azt is jelenteti, hogy a korábbi forráskódokat nehezebben lehet portolni az új verzióra, cserébe rengeteg újdonságot, javítást, támogatást kaphatunk a fejlesztendő robotok, járművek számára.</p>
@@ -2622,6 +2622,51 @@ Forrás: <a href="https://husarnet.com/blog/ros2-docker">husarnet.com/blog/ros2-
 </ul>
 <h2 id="verziok">Verziók<a class="headerlink" href="#verziok" title="Permanent link">&para;</a></h2>
 <p><a href="https://sze-info.github.io/ajr/telepites/">ROS verziók és telepítés</a></p>
+<pre class="mermaid"><code>
+
+gantt
+    dateFormat  YY-MM
+    title       Adding GANTT diagram functionality to mermaid
+    excludes    weekends
+    tickInterval 365days
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+    axisFormat %y
+
+    section ROS 2
+    Jazzy Jalisco           :active, r012, 2024-05-23, 5y
+    Iron Irwini             :active, r010, 2023-11-01, 6m
+    Humble Hawksbill        :active, r009, 2022-05-23, 5y
+    Galactic Geochelone     :active, r008, 2021-05-23, 1y
+    Foxy Fitzroy            :active, r007, 2020-06-05, 3y
+    Eloquent Elusor         :active, r006, 2019-11-22, 1y
+    Dashing Diademata       :active, r005, 2019-05-31, 2y
+    Crystal Clemmys         :active, r004, 2018-12-14, 1y</code></pre>
+<pre class="mermaid"><code>gantt
+    dateFormat  YY-MM
+    title       Adding GANTT diagram functionality to mermaid
+    excludes    weekends
+    tickInterval 365days
+
+    section ROS 2
+    Jazzy Jalisco           :active, r012, 2024-05-23, 5y
+    Iron Irwini             :active, r010, 2023-11-01, 6m
+
+    section " "  %% Add an empty section to create spacing
+    section ROS 2
+    Humble Hawksbill        :active, r009, 2022-05-23, 5y
+    Galactic Geochelone     :active, r008, 2021-05-23, 1y
+
+    section " "  %% Add another empty section
+    section ROS 2
+    Foxy Fitzroy            :active, r007, 2020-06-05, 3y
+    Eloquent Elusor         :active, r006, 2019-11-22, 1y
+
+    section " "  %% Repeat for more spacing
+    section ROS 2
+    Dashing Diademata       :active, r005, 2019-05-31, 2y
+    Crystal Clemmys         :active, r004, 2018-12-14, 1y
+
+</code></pre>
 <p><img alt="Alt text" src="../ros2distros.svg" /></p>
 <p>Distrok százalékos megoszlása az időben: <a href="https://metrics.ros.org/rosdistro_rosdistro.html">metrics.ros.org/rosdistro_rosdistro.html</a></p>
 <p><a href="https://docs.ros.org/en/humble/"><img alt="Static Badge" src="https://img.shields.io/badge/ROS_2-Humble-34aec5" /></a></p>
@@ -2694,8 +2739,8 @@ geometry_msgs/Pose<span class="w"> </span>pose
 <span class="w">    </span>float64<span class="w"> </span>w
 </code></pre></div></p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Ez már ismerős lehet: a <code>geometry_msgs/msg/Point</code>-ről már beszéltünk.</li>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> <code>geometry_msgs/Quaternion</code> egyfajta 3D orientáció reprezentáció, erről később részletesen.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Ez már ismerős lehet: a <code>geometry_msgs/msg/Point</code>-ről már beszéltünk.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> <code>geometry_msgs/Quaternion</code> egyfajta 3D orientáció reprezentáció, erről később részletesen.</li>
 </ol>
 <h2 id="publishing-subscribing">Publishing / Subscribing<a class="headerlink" href="#publishing-subscribing" title="Permanent link">&para;</a></h2>
 <p>A következőkben az <code>urban_road_filt</code> nevű node a <code>points</code> adatokra iratkozik fel, ami <code>PointCloud2</code> típusú, és hirdet <code>PointCloud2</code>, <code>MarkerArray</code> típusú üzeneteket:</p>
@@ -2818,7 +2863,7 @@ classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
     <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "content.code.copy", "content.code.select", "content.tabs.link", "navigation.tabs", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
