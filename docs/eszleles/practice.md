@@ -1,5 +1,5 @@
 ---
-title: Gyakorlat - Észlelés
+title: Gyakorlat A - Észlelés
 parent: Észlelés
 icon: material/code-braces-box # gyakorlati tananyag
 ---

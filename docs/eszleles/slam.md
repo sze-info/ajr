@@ -108,5 +108,7 @@ colcon build --packages-select kiss_icp
 ros2 launch kiss_icp odometry.launch.py topic:=/lexus3/os_left/points
 ```
 
-## fastcampus_slam_codes oktatóanyag
-[github.com/changh95/fastcampus_slam_codes](https://github.com/changh95/fastcampus_slam_codes/)
+
+## Linkek
+- fastcampus_slam_codes oktatóanyag: [github.com/changh95/fastcampus_slam_codes](https://github.com/changh95/fastcampus_slam_codes/)
+- learn opencv: [learnopencv.com/lidar-slam-with-ros2](https://learnopencv.com/lidar-slam-with-ros2/)

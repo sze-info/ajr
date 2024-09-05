@@ -39,6 +39,7 @@ nav:
     - 6. Észlelés: 
       - eszleles/README.md
       - eszleles/practice.md
+      - eszleles/practice_cluster.md
       - eszleles/ground_filter.md
       - eszleles/road_filter.md
       - eszleles/slam.md

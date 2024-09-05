@@ -32,7 +32,7 @@ rsync -avzh --progress /mnt/kozos/measurement_files/lexus01foxglove.json   /mnt/
 ```
 
 !!! tip
-    A [https://jkk-research.github.io/#dataset](https://jkk-research.github.io/#dataset) oldalról további példa adatokat lehet letölteni.
+    A [https://jkk-research.github.io/dataset](https://jkk-research.github.io/dataset) oldalról további példa adatokat lehet letölteni.
 
 ## A Foxglove bemutatása
 
