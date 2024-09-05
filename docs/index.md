@@ -10,7 +10,7 @@ hide:
 - Tantárgy neve angolul: **Autonomous robots and vehicles software engineering**
 - Neptun tárgykód: `GKNB_AUTM078`
 
-A tantárgy több mérnöki szakon indul és meglévő minimális programozási tudásra épít.  **Járműmérnöki** (BSc) szakon `GKNB_INTM023` Programozás alapjai, **Programtervező informatikus** (BSc) `GKNB_MSTM032` Python programozás, **Mérnökinformatikus** (BSc) szakon `GKNB_INTM114` Progrmozás, **Mechatronikai mérnök** (BSc) szakon `GKNB_MSTM032` Python programozás, **Villamosmérnök** (BSc) szakon `GKNB_INTM023` Progrmozás alapjai előkövetleményekkel indul.
+A tantárgy több mérnöki szakon indul és meglévő minimális programozási tudásra épít.  **Járműmérnöki** (BSc) szakon `GKNB_INTM023` Programozás alapjai, **Programtervező informatikus** (BSc) `GKNB_MSTM032` Python programozás, **Mérnökinformatikus** (BSc) szakon `GKNB_INTM114` Programozás, **Mechatronikai mérnök** (BSc) szakon `GKNB_MSTM032` Python programozás, **Villamosmérnök** (BSc) szakon `GKNB_INTM023` Programozás alapjai előkövetleményekkel indul.
 
 
 !!! abstract "A tantárgy célja"
