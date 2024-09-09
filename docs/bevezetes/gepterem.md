@@ -56,6 +56,8 @@ A következő ábra egy **célszerű** (nem kötelező) géptermi elrendezést m
 
 ![win layout](gepterem02.png)
 
+![](windows_terminal02.png)
+
 ![](https://raw.githubusercontent.com/sze-info/arj/main/docs/telepites/wsl_overview01.svg)
 
 ## Foxglove

@@ -217,8 +217,10 @@ cd ~/ros2_ws/src/example_launch
 ``` bash
 code .
 ```
-
-<img src="/ros2halado/vscode06.png" width="60%" />
+<figure markdown="span">
+  ![Image title](vscode06.png){ width="80%" }
+  <figcaption>Lexus</figcaption>
+</figure>
 
 
 A package.xml-hez a `<test_depend>` elé szúrjuk be következő sort:

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Linux, git
+title: Linux és git
 parent: Bevezetés
 # icon: material/plus-outline
 icon: material/code-block-tags # kiegészítő tananyag
@@ -11,7 +11,7 @@ icon: material/code-block-tags # kiegészítő tananyag
 
 
 
-# Linux
+# Linux, git
 
 A leírásban alapvető Linux ismeretek találhatók. 
 
@@ -144,7 +144,7 @@ A megszokott `ctrl`+`v`, `ctrl`+`c` helyett itt a `ctrl`+`shift`+`v`, `ctrl`+`sh
 - `git merge <branch_name>`: a jelenlegi branch-be mergeli a branch-t
 
 !!! tip
-    A legtöbb művelet VS code-dal elvégezhető terminál nélkül is. [Erről bővebben itt lehet olvasni](https://sze-info.github.io/ajr/bevezetes/vscode).
+    A legtöbb művelet VS code-dal elvégezhető terminál nélkül is. [Erről bővebben itt lehet olvasni](https://sze-info.github.io/ajr/bevezetes/vscodegit).
 
 
 <center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/gitworkflow01.gif" width="100%" /></center>

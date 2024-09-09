@@ -14,12 +14,12 @@ nav:
       - bevezetes/README.md
       - bevezetes/practice.md
       - bevezetes/gepterem.md
-      - GitHub Copilot: bevezetes/copilot.md
-      - Linux, git: bevezetes/linux.md
+      - bevezetes/copilot.md
+      - bevezetes/linux.md
     - 2. ROS 2 koncepciók, telepítés: 
       - bevezetes/ros2.md
       - bevezetes/ros2gyak.md
-      - VS code, git: bevezetes/vscode.md
+      - bevezetes/vscodegit.md
       - telepites/ubuntu.md
       - telepites/win10.md
       - telepites/ros_humble.md
@@ -30,8 +30,6 @@ nav:
       - feleves_beadando/README.md
       - feleves_beadando/kisbeadando.md
       - feleves_beadando/nagyfeleves.md
-      - bevezetes/copilot.md
-      - bevezetes/linux.md  
       - ros2halado/ros2launch.md    
     - 5. Transzformációk: 
       - transzformaciok/README.md

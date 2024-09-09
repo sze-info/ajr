@@ -12,7 +12,7 @@ icon: material/code-block-tags # kiegészítő tananyag
 
 
 
-# VS code
+# VS code és Git
 
 A `VS code` Linux, Windows és Mac rendszerekre készült egyszerű kód és szövegszerkezstő, amely különböző kiegészítésekkel egy teljes értékű IDE (integrált fejlesztőkörnyezet) lehet. Neve a Visual Studio Code rövidítése, ingyenes, nyílt forráskódú, a Microsoft fejleszti.
 Népszerű fejlesztőkörnyezet (pl. 2021-ben a Stack Overflow Developer Survey alapján 82000 válaszadóból 70% használta, így az egyik legnépszerűbb IDE).
@@ -24,6 +24,20 @@ A következőkben a fontosabb feleületeket mutatjuk be.
 ![vs code alapok](vscodebasics01.png)
 
 Talán az egyik legfontosabb billentyűkombináció a `Ctrl-Shift-P`, mellyel a Command Palette jön elő, ahol beállítások, fájlok, parancsok között böngészhetünk.
+
+## Source control (forráskezelés) áttetintése
+
+
+A forráskezelő szoftvereket, mint például a Git, a következő okok miatt használjuk a modern szoftverfejlesztésben:
+
+- Változáskövetés: Lehetővé teszik a forráskód minden módosításának nyomon követését, így könnyen vissza lehet térni korábbi verziókhoz, ha hibát fedeznek fel, vagy ha egy új funkció nem működik megfelelően.
+- Együttműködés: Több fejlesztő egyidejűleg dolgozhat ugyanazon a projekten. A forráskezelő szoftverek segítenek kezelni a különböző változtatásokat és megoldani az esetleges ütközéseket.
+- Biztonsági mentés: A projekt minden verzióját tárolja, így ha valami elromlik vagy elveszik, könnyen vissza lehet állítani az előző állapotot.
+- "Kísérletezés": Lehetővé teszi a fejlesztők számára, hogy különböző verziókat vagy ágakat (branch) hozzanak létre, és új funkciókat vagy javításokat próbáljanak ki anélkül, hogy befolyásolnák a fő projektkódot.
+- Dokumentálás: A forráskezelő rendszerekben lehetőség van a módosításokhoz kapcsolódó üzenetek (commit message) rögzítésére, ami segíti a változtatások okainak és céljainak dokumentálását.
+- Integráció és folyamatos fejlesztés: Segítik az automatikus tesztelést és a folyamatos integrációs folyamatokat (CI/CD), mivel biztosítják, hogy minden változtatás könnyen kezelhető és nyomon követhető legyen.
+
+<center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/gitworkflow01.gif" width="100%" /></center>
 
 ## Git source control (forráskezelés) használata a VS Code-ban
 
@@ -43,9 +57,11 @@ Az egyes elemekre kattintva részletesen megtekintheti **az egyes fájlokon bel�
 
 A **repo státuszára** vonatkozó indikátorokat is megtalálhatók a VS Code bal alsó sarkában: az **aktuális branch (current branch)**, **dirty indicators**, valamint a **bejövő és kimenő commitok száma.** az aktuális ágból. A tárhely bármely ágát **checkout-olhatja**, ha rákattint az állapotjelzőre, és kiválasztja a Git hivatkozást a listából.
 
-> **Tipp:** A VS Code-ot megnyithatja egy Git-repo alkönyvtárában. A VS Code Git szolgáltatásai továbbra is a szokásos módon működnek, és minden változást megjelenítenek a tárolón belül, de a hatókörű könyvtáron kívüli fájlmódosítások egy eszköztippel vannak árnyékolva, jelezve, hogy az aktuális munkaterületen kívül helyezkednek el.
+!!! tip
+    A VS Code-ot megnyithatjuk egy Git-repo könyvtárában. Ehhez a parancs a könytárban állva: `code .` illetve pl: `code ~/ros2_ws/src/arj_packages/`, ha a tantárgy `arj_packages` repoját szereténk megnyitni. A VS Code Git szolgáltatásai továbbra is a szokásos módon működnek, és minden változást megjelenítenek a tárolón belül, de a hatókörű könyvtáron kívüli fájlmódosítások egy eszköztippel vannak árnyékolva, jelezve, hogy az aktuális munkaterületen kívül helyezkednek el.
 
-### Commit
+
+## Commit
 
 Az **staging** (git add) és **unstaging** (git reset) végrehajtható a fájlok kontextus szerinti műveleteivel vagy húzással.
 
