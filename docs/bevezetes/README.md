@@ -128,14 +128,30 @@ További információ [itt](https://www.youtube.com/szenergyteam).
 A Szenergy csapata európa legnagyobb önvezető versenyén, a Shell Eco-marathon Autonomous Urban Concept (AUC) versenyen 2023-ban első, előtte pedig második helyezést ért el. A doboogós helyezések ezekben az évek ben így alakultak:
 
 
-| 🏆 | 2022 | 2023 |
-|:---:|---|---|
-| 1. | DTU Road Runners, Technical University of Denmark (`Denmark`)  | SZEnergy Team, Széchenyi István University (`Hungary`) |
-| 2. | SZEnergy Team, Széchenyi István University (`Hungary`)  | Team EVA,  Hogeschool Van Amsterdam University (`Netherlands`) |
-| 3. | DNV Fuel Fighter, Norwegian University of Science And Technology (`Norway`) | H2politO,Molecole Urbane Politecnico Di Torino University (`Italy`) |
+| 🏆 | 2022 | 2023 | 2024 |
+|:---:|---|---|---|
+| 1. | DTU Road Runners, Technical University of Denmark (`Denmark`)  | SZEnergy Team, Széchenyi István University (`Hungary`) | SZEnergy Team, Széchenyi István University (`Hungary`) |
+| 2. | SZEnergy Team, Széchenyi István University (`Hungary`)  | Team EVA,  Hogeschool Van Amsterdam University (`Netherlands`) | H2politO,Molecole Urbane Politecnico Di Torino University (`Italy`) |
+| 3. | DNV Fuel Fighter, Norwegian University of Science And Technology (`Norway`) | H2politO,Molecole Urbane Politecnico Di Torino University (`Italy`) | Team EVA,  Hogeschool Van Amsterdam University (`Netherlands`) |
 
-Forrás: [shellecomarathon.com](https://www.shellecomarathon.com/2023-programme-on-track/autonomous-urban-concept/_jcr_content/root/main/section/simple/link_list_copy/links/item0.stream/1686130984099/008b488668d9f7248319705f60e09fe861737ccd/sem-2023-eu-auc-final-results.pdf)
+Forrás: [shellecomarathon.com](https://www.shellecomarathon.com/about/previous-seasons.html)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8yfCvTJF5I0?si=HkQV_ftpOQNymNPG&amp;start=50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## F1/10 (Ackermann robot) / Roboworks Rosbot mini Ackermann
+
+Az F1/10 verseny egy autonóm járművekkel kapcsolatos verseny, ahol a résztvevők 1/10-es méretarányú Formula 1-es autómodelleket építenek és programoznak, hogy azok önállóan navigáljanak egy versenypályán. A cél az, hogy a járművek a lehető leggyorsabban és legbiztonságosabban teljesítsék a pályát, miközben elkerülik az akadályokat és a többi autót. A verseny során a résztvevők tesztelhetik robotikai, mesterséges intelligencia és gépi tanulási ismereteiket. A Roboworks robotja az F1/10 jármű méreéhez és szenzorozottságához nagyon hasonló. F1tenth jármű [leírás itt](https://f1tenth.org/build.html).
+
+<figure markdown="span">
+  ![Image title](https://raw.githubusercontent.com/robotverseny/robotverseny.github.io/main/img/f1tenth_wheeltec_roboworks03.png){ width="80%" }
+</figure>
+
+<figure markdown="span">
+  ![Image title](https://raw.githubusercontent.com/robotverseny/robotverseny.github.io/main/img/f1tenth_wheeltec_roboworks01.png){ width="80%" }
+</figure>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k1tdeXjaJpk?si=_N7tOW_OVQDV6fZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Segway Loomo (robot)
 Leírás [itt](https://github.com/jkk-research/loomo_base).
@@ -144,26 +160,6 @@ Leírás [itt](https://github.com/jkk-research/loomo_base).
   ![Image title](vehcile_segway01.png){ width="40%" }
   <!-- <figcaption></figcaption> -->
 </figure>
-
-## F1/10 (Ackermann robot)
-
-F1tenth jármű, [leírás itt](https://f1tenth.org/build.html).
-
-<figure markdown="span">
-  ![Image title](f1tenth01.png){ width="80%" }
-  <!-- <figcaption></figcaption> -->
-</figure>
-
-_Kép forrása_: Varundev Suresh Babu and Prof. Madhur Behl, Computer Science | Link Lab | University of Virginia
-
-## Roboworks Rosbot mini Ackermann (robot)
-Leírás [itt](https://robotverseny.github.io/megoldas_zala23/)
-
-<figure markdown="span">
-  ![Image title](vehcile_rosbot01.png){ width="60%" }
-  <!-- <figcaption></figcaption> -->
-</figure>
-
 
 
 ## Husarion ROSbot 2 Pro (robot)
