@@ -50,15 +50,15 @@ C++ és Python nyelven is létrehoztunk egy úgynevezett template repo-t, amely 
 
 !!! tip
 
-    Erről [leírás itt](https://sze-info.github.io/arj/onallo/ros2git.html) olvasható.
+    Erről [leírás itt](https://sze-info.github.io/ajr/onallo/ros2git/#a-template-hasznalata) olvasható.
 
 <img src="https://raw.githubusercontent.com/sze-info/ros2_cpp_template/main/img/use_this_template01.png" width="60%" />
 
 
 ## Repo neve
 - A repository neve a következő mintát kövesse: `VVV_NNN_opcionalis`, ahol
-  - a `VVV` a vezetéknév első 3 karaktere
-  - az `NNN` a neptunkód első 3 karaktere
-  - az `opcionalis` pedig opcionális kiegészítés
+  - a `VVV` a vezetéknév első 3 karaktere, kisbetűvel
+  - az `NNN` a neptunkód első 3 karaktere, kisbetűvel
+  - az `opcionalis` pedig opcionális kiegészítés, kisbetűvel
   - a fentieket alulvonás `_` karakter válassza el és kisbetű legyen mindenhol
 - Pl: Szabó István, F99AXW neptunkóddal egy véletlenszámmal foglakozó kis beadandójának url-je lehet pl: `github.com/szaboistvan/sza_f99_random`. 

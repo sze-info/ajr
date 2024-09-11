@@ -10,7 +10,11 @@ icon: material/code-block-tags # kiegészítő tananyag
 
 ## Közös meghajtó (`K:\`)
 
-A közös meghajtó a `K:\` meghajtóként található meg Winodws Fájlkezelőben (File Explorer). Ha esetleg nem látszana, akkor szintén a Fájlkezelőben elérhető: `\\fs-kab.eik.sze.hu\C100\kozos`.
+A közös meghajtó a `K:\` meghajtóként található meg Winodws Fájlkezelőben (File Explorer). Ha esetleg nem látszana, akkor szintén a Fájlkezelőben elérhető:
+
+```powershell
+\\fs-kab.eik.sze.hu\C100\kozos
+```
 
 ![gepterem01](gepterem01.png)
 
