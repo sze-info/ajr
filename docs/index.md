@@ -77,7 +77,7 @@ Oktatók | | | .
 7| okt. 25. | [Szimuláció bevezetés](https://sze-info.github.io/ajr/szimulacio/gazebo_fortress/): Gazebo Fortress és ROS 2, [szimuláció gyakorlat](https://sze-info.github.io/ajr/szimulacio/gyakorlat/): saját robotszimuláció létrehozása.
 8| nov. 8. | [Tervezés gyakorlat](https://sze-info.github.io/ajr/tervezes/practice/): Polinom alapú lokális tervező megvalósításás. [Nav2](https://navigation.ros.org/) használata szimulátorral.
 9| nov. 15. | [Szabályozás gyakorlat](https://sze-info.github.io/ajr/szabalyozas/ros2practice/): PID hangolás. Trajektóriakövetés Gazebo szimulátorral. Saját fejlesztésű szabályzó és jármű modell.
-10| nov. 22. | [Mesterséges intelligencia gyakorlat](https://sze-info.github.io/ajr/mesterseges_intelligencia/practice/): Neurális hálózatok gyakrolat.
+10| nov. 22. | [Mesterséges intelligencia gyakorlat](https://sze-info.github.io/ajr/mesterseges_intelligencia/practice/): Neurális hálózatok gyakorlat.
 
 
 

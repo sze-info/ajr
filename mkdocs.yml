@@ -62,6 +62,7 @@ nav:
   - Önálló:
     - ros2halado/py_cpp.md    
     - onallo/ros2git.md
+    - onallo/bashalias.md
     - onallo/linux.md
     - onallo/ros2launchmarker.md
     - onallo/mermaid.md

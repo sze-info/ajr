@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Gyakrolat - ROS 2 alapok
+title: Gyakorlat - ROS 2 alapok
 parent: Bevezetés
 icon: material/code-braces-box # gyakorlati tananyag
 ---

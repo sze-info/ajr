@@ -6,7 +6,7 @@ icon: material/code-braces-box # gyakorlati tananyag
 
 # Mesterséges intelligencia gyakorlat
 
-## Gyakrolati anyag letöltése
+## Gyakorlati anyag letöltése
 A gyakorlati anyag frissítéséhez adjuk ki a következő parancsokat:
 
 ```bash
