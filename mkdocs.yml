@@ -45,7 +45,7 @@ nav:
       - szimulacio/README.md
       - szimulacio/gazebo_fortress.md
       - szimulacio/gyakorlat.md
-      - workshops/f1tenth_sim_a.md
+      - szimulacio/f1tenth_sim_a.md
     - 8. Tervezés:
       - tervezes/README.md
       - tervezes/practice.md
@@ -161,7 +161,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg    
-  - md_in_html
   - markdown.extensions.admonition:
   - markdown.extensions.codehilite:
       guess_lang: false
@@ -174,10 +173,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
-# extra_javascript: 
-#   - javascripts/katex.js # KATEX
-#   - https://unpkg.com/katex@0/dist/katex.min.js # KATEX
-#   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js # KATEX
+
 
 
   #- pymdownx.arithmex:
@@ -212,13 +208,11 @@ extra_javascript:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - toc:
-      permalink: true
+
 
 plugins:
   - search
   - social:
-      cards_layout: default/only/image
       cards_layout_options:
         background_image: 'assets/images/social1.png'
         background_color: "#43AEC5"

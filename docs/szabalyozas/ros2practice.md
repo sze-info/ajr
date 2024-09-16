@@ -13,7 +13,7 @@ A gyakorlat második részében egy szimulált trajektóriakövető robot / jár
 [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
 
 - [`1. feladat`: Trajektóriakövetés szimulációval](#1-feladat-trajektoriakovetes-szimulacioval)
-- [`2. feladat`:  Saját fejlesztésű szabályzó és jármű modell](#2-feladat--saját-fejlesztésű-szabályzó-és-jármű-modell)
+- [`2. feladat`:  Saját fejlesztésű szabályzó és jármű modell](#2-feladat-sajat-fejlesztesu-szabalyzo-es-jarmu-modell)
 - [`3. feladat`: PID hangolás](#3-feladat-pid-hangolas)
 
 

@@ -151,7 +151,7 @@ git push
 
 
 <figure markdown="span">
-  ![Image title](/onallo/git_status03.png){ width="100%" }
+  ![Image title](git_status03.png){ width="100%" }
   <figcaption>Git status add után</figcaption>
 </figure>
 

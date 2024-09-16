@@ -11,6 +11,7 @@ Az észlelés (perception) az érzékelt nyers adatokból történő informáci�
 ![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview11.svg)
 
 Az észlelés célja lehet:
+
 - Objektumfelismerés (detekció), pl: 
     - Gyalogos, biciklis jármű felimerés 
     - Tábla felismerés, jelzőlámpa felismerés

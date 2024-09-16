@@ -15,7 +15,7 @@ Elvárt kvalitások:
 - Minimum 1 publisher vagy 1 subscriber (több lehet)
 - Rövid dokumentáció, ami a build menetét, a node-topic kapcsolatokat tartalmazza, a [példák](#peldak) szerinti részletességgel
 - Helyes [névadás](#repo-neve) 
-- Template [használata](#ajánlott-módszer-a-kis-beadandó-repo-létrhozására-template) vagy saját megoldás, de a [példák](#peldak) szerinti kidolgozottsági szint
+- Template [használata](https://sze-info.github.io/ajr/onallo/ros2git/#a-template-hasznalata) vagy saját megoldás, de a [példák](#peldak) szerinti kidolgozottsági szint
 - Lehetőleg hiba nélkül forduljon, de a `build warning` sok esetben megengedhető, a lényeg a tanulás
 - Minél több commit, hogy a munkafolyamatot is lássuk
 - Terjedelem rövid: 30-100 kódsor node-onként + CMakeLists.txt, package.xml, README.md, launch fájlok (nem baj, ha hosszabb, de nem elvárt)

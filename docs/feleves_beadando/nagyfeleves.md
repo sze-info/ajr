@@ -63,6 +63,7 @@ Az alábbi példák nem feltétlenül féléves munkának készültek, de annak 
 
 !!! tip
     Erősen ajánlott a [GitHub Student Developer Pack](https://education.github.com/pack) beszerzése, többek között [Copilot](https://github.com/features/copilot) is jár hozzá.
+    Erről itt lehet részletesen olvasni: [sze-info.github.io/ajr/bevezetes/copilot/#github-copilot-beszerzese-sze-hallgatoknak](https://sze-info.github.io/ajr/bevezetes/copilot/#github-copilot-beszerzese-sze-hallgatoknak)
 
 ![](https://github.blog/wp-content/uploads/2019/08/FBLinkedIn_ALL-PARTNERS.png)
 

@@ -37,6 +37,17 @@ wsl --import ajr1 .\ajr1\ .\ajr24a.tar
 
 ![wsl03](wsl03.png)
 
+!!! danger
+    A `wsl -l -v` parancs listázza a telepített WSL verziókat. A `VERSION` oszlopnak 2-nek kell lennie, különben a WSL elavult verzióját telepítettük. Példa helyes kimenetre:
+    ``` bash
+    NAME            STATE           VERSION
+    Ubuntu          Stopped         2
+    Ubuntu-22.04    Stopped         2
+    Ubuntu-24.04    Running         2
+    ajr1            Stopped         2
+    ```
+    Amennyiben a `VERSION` oszlopban `1`-es szerepel `wsl --update` paranccsal lehet a verziót frissíteni.
+
 ## WSL telepítése és ROS installálása Script segítségével
 
 A WSL telepítését bemutató Windows 11-es videó (Windows 10 verzió lejjebb, de nagyrészt megegyező tartalommal):
