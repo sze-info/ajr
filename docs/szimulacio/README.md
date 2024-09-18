@@ -33,7 +33,7 @@ Az ROS-által leginkább támogatott szimulátor a Gazebo, de érdemes megemlít
 # További szimulátorok
 
 - [OSRF Gazebo](http://gazebosim.org/) - ROS-által leginkább támogatott szimulátor, OGRE-alapú, ROS/ROS 2 kompatibilis.
-  - [GitHub repository](https://github.com/osrf/gazebo)
+  - [GitHub organization](https://github.com/gazebosim)
 - [CARLA](https://carla.org/) - Unreal Engine alapú automotive szimulátor. Autoware, Baidu Apollo, ROS/ROS 2 kompatibiltással
   - [GitHub repository ](https://github.com/carla-simulator/carla)
   - [YouTube channel](https://www.youtube.com/channel/UC1llP9ekCwt8nEJzMJBQekg)

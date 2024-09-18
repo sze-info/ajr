@@ -62,6 +62,7 @@ A Videóhoz tartozó [PDF fájl elérhető itt](https://www.researchgate.net/pro
 
 
 Ismertebb globális tervező algoritmusok: 
+
 - **RRT (Rapidly exploring random tree)**: Az RRT egy mintavételezés alapú módszer bejárandó globális tér felderítésére és útvonalak tervezésére. *Megjegyzés*: bizonyos esetekben lokális tervezőként is használják. Az algoritmus random (véletlenszerű) módon választ ki pontokat és növekvő irányban kiterjeszti a fát azáltal, hogy a legközelebbi már meglévő pontokhoz kapcsolja az új pontokat. További információ: [en.wikipedia.org/wiki/Rapidly_exploring_random_tree](https://en.wikipedia.org/wiki/Rapidly_exploring_random_tree).
 - **Informed-RRT**: Az Informed-RRT az alap RRT kiterjesztése, amely heurisztikát használ a cél felé történő hatékonyabb felderítésre. Az algoritmus úgy tervezi az útvonalakat, hogy először a közelebbi területeket fedezze fel, majd a későbbi fázisokban elmozduljon a távolabbi területek felé.
 - **A-star**: Az A* algoritmus (ejtsd "A csillag") gráfbejáró és útvonalkeresési algoritmus, amelyet teljessége,  hatékonysága miatt gyakran régen előszeretettel használtak. Az egyik fő gyakorlati hátránya az $$ O(b^{d}) $$ tárhelybonyolultsága, mivel az összes generált csomópontot eltárolja a memóriában. Így a gyakorlati útkereső rendszerekben általában jobban teljesítenek nála olyan algoritmusok, amelyek képesek a gráf előfeldolgozására a jobb teljesítmény érdekében. További információ: [hu.wikipedia.org/wiki/A*_algoritmus](https://hu.wikipedia.org/wiki/A%2A_algoritmus).
@@ -94,11 +95,13 @@ A Videóhoz tartozó [PDF fájl elérhető itt](https://www.researchgate.net/pro
 
 A lokális tervezés voltaképp a valós időben mért, dinamikusan változó körülményekre adott tervezési válasz. Mit értünk ez alatt? A legegyszerűbb példa, ha a globális tervezést gyakorlatilag egy útvonal megtervezéséhez (pl. hogyan jussak el A-ból B-be) hasonlítjuk, a lokális tervezést pedig az adott sávban, adott forgalmi helyzetben történő feladathoz hasonlítjuk. Azonban láthatjuk, hogy egy tervezési szint "lokális" és "globális" mivoltja nem mindig különül el 100%-ban egymástól. Pl. megtervezzük, hogy az M1-es autópályán szeretnénk haladni. Ezen belül több sáv is van, így melyiket válasszuk? Alapból a külső sávot választjuk, ezt tekinhetjük a globális trajektóriának. Ugyanakkor menetközben sávot kell váltanunk, és így a belső sávot követjük. Ezt egy út során többször megtesszük. A teljes útra vetítve így a követni kívánt sáv időnként a belső, időnként a külső sáv lesz. Ezt előre nem tudjuk megmondani, így a legelső globális trajektória definíciót nem elégítjük ki. Tekinthetjük lokális tervezési problémának, viszont az, hogy a belső vagy külső sávot követjük, nem függ külső tényezőktől, kizárólag a döntés maga függ attól (pl. sávot váltunk egy előttünk haladó autó miatt), viszont ha már sávot váltottunk, az új sáv által kijelölt útvonal megintcsak nem függ dinamikus tényezőktől.
 Ezeket az ellentmondásokat többféleképpen is feloldhatjuk:
+
 - egy előre eltervezett útvonalat tekintünk globálisnak (ez esetben ez a külső sáv), mind módosítás lokális, vagy
 - magát az autópályán haladást tekintjük globális útvonalnak, ami így nem függ a sávoktól, bevezetünk egy középső szintet, nevezzük globális trajektóriának, amely ez esetben két alternatív útvonalat jelent (külső vagy belső sáv), és egy lokális trajektóriát, ami ennek a módosítása valós idejű információk alapján, vagy
 - a globális trajektória sem fix, hanem időben változhat, de csak ritkán, ha erre külső trigger jelt ad (pl. sávváltás).
 
 Ebben a fejezetben a lokális trajektória megtervezéséhéz szükséges alapokat vesszük át, így a következőkben kizárólag erre a szintre koncentrálunk. A fenti példában szereplő lokális tervezési feladatról mind elmondható, hogy:
+
 - adott hozzá valamilyen globális útvonal (pl. sáv), amit alapul veszünk,
 - figyelembe kell venni a valósidejű változókat (pl. más járművek),
 - mindig a jármű által befutható útvonalat kell tervezni, azaz a lekövető szabályzás szempontjából stabil, az utasok számára pedig komfortos; ezt röviden mondhatjuk "kinetikailag jól kondicionált" útvonalnak is,
@@ -107,7 +110,7 @@ Ebben a fejezetben a lokális trajektória megtervezéséhéz szükséges alapok
 Ahhoz, hogy ezeket a célokat teljesíteni tudjuk, tudni kell, pontosan a globális útvonalat, mérni kell a dinamikus változókat, ismernünk kell a járművet illetve tudnunk kell, pontosan mit jelent az utasok számára a "komfort".
 Emellett fontos kiemelni, hogy a lokális útvonal a legtöbbször nem kizárólag pontok halmaza. A trajektória reprezentálására valamilyen modellt használunk, azaz geometriailag kompakt formában írjuk le. Ez a gyakorlatban jelenthet pl. polinomiális formát, Euler-görbét, Spline-t...stb. Ezek a görbe leírások mind véges számú paraméterrel írnak le egy görbét. Ahhoz, hogy a görbe egy pontját megkapjuk, a görbét leíró függvényt kiértékeljük egy adott X távolságon. Ez a megközelítés azért hasznos, mert így hosszú görbéket is kevés paraméter segítségével tudunk leírni, és így a megvalósítás során memóriát és futásidőt spórolunk. Továbbá az egyenlet deriváltjai további mennyiségeket (pl. orientáció, görbület) adnak meg, és így a szabályzás számára ezeket könnyen elő tudjuk állítani.
 
-## Lokális tervező algoritmusok 
+### Lokális tervező algoritmusok 
 
 A lokális megoldásokat, ahogy a bevezető videóban is láthattuk nehéz csoportosítani, rendszerezni, a megoldások gyakran nem tiszán egy módszertant használnak. Példa erre a State Lattice tervező, ami grid-szerű rács szerkezeten dolgozik, de gráf-szerű keresést használ. Ide többnyire olyan ismertebb lokális tervező algoritmusokat, algoritmuscsaládokat sorolunk fel, amiknek van nyílt forrás kódú implementációjuk:
 
@@ -143,13 +146,13 @@ Algroitmuscsaládok:
 
 
 
-## Tervezési példa
+### Tervezési példa
 
 Az ebben a fejezetben szereplő példát Werling és mtsai. munkájából vettük [1]. Ez a példa egy általános tervezési problémát mutat be, amely tartalmazza fenti szempontok legtöbbjét. Két fontos dologra hívjuk fel a figyelmet:
 - a kereszt- illetve hosszirányú tervezési problémát szétválasztjuk, illetve
 - a keresztirányú tervezés az ún. Frenét-rendszerben történik.
 
-### Keresztirányú tervezés
+#### Keresztirányú tervezés
 A keresztirányú tervezés az útvonal görbéjének megtervezését jelenti. Először a Frenét-rendszer fogalmát vezetjük be. Az illusztárciója az 1. ábrán látható. A Frenét-rendszer egy olyan koordinátarendszer, amely egy tetszőleges görbén (ez esetben pl. a sávközép, vagy a globális trajektória) fut végig az $$s(t)$$ paraméter függvényében.
 A tetszőleges görbét nevezzük referencia vonalnak. A Frenét-rendszerben a referencia görbe koordinátája csupa zérus (önmagához képest vett eltérése nulla). Egy tervezett trajektória pontjait ebben a koordinátarendszerben értelmezve könnyű kifejezni azt, ha a trajektóriát egyelővé szeretnénk tenni a referencia görbével. Pl. ha egy tervezett trajektóriát szeretnénk, ha a referencia útvonalban végződne, ebben az esetben a végpontja $$[0; 0]$$, a Frenét-rendszerben. A nem zérus távolság a referencia vonaltól vett távolságot adja meg. Pl. ha a sávközépet tekintjük referenciának, az ettől vett eltérés lett a Frenét-rendszerben vett távolság, amely egy jó intuitív megközelítés is, hiszen az ember maga is sokszor tekinti a sáv közepét referenciának, az attól való eltérést pedig mérvadó mennyiségnek.
 
@@ -200,7 +203,7 @@ Ahol $T = \dfrac{s_{1}}{v_{x}}$ a trajektória hossza időben kifejezve, $J_{t}$
 
 
 
-### Hosszirányú tervezés
+#### Hosszirányú tervezés
 
 A hosszirányú tervezés hasonlóan működhet, mint a keresztirányú. Ebben az esetben a globális trajektória felfogható úgy, mint célsebességek sorozata az útvonal mentén. Ezzel szemben a lokális trajektória a helyi viszonyoknak megfelelő tényleges sebesség megtervezése. Figyelembe vesszük másik objektumok mozgását, a cél járműkinetikát, a sebességhatárokat...stb. Ennek szemléltetése látható a 4. ábrán. Látható, hogy normál esetben a maximális sebességet tartjuk. Amikor pl. utolérünk egy másik járművet ami előttünk halad, fékezünk, és felvesszük ennek a járműnek a sebességét. A fékezés során olyan sebességprofilt tervezünk, hogy biztosan kellő távolságot tudjunk tartani a másik járműtől, ne fékezzünk hirtelen de ne is túl hamar. Majd a másik járművet úgy követjük, hogy ezt a távolságot (bizonyos határon belül) tartsuk. Amikor ennél is lassabb járművet látunk (pl. biciklis) tovább csökkentjük a sebességet, ha ez az akadály eltűnt előlünk, visszagyorsítunk a megengedett sebességre. Mindig figyelembe vesszük a saját gyorsítási és lassítási preferenciánkiat. 
 
@@ -235,7 +238,8 @@ Ahol $J_t$ a trajektória befutása során tapasztalt átlagos jerk (azaz ránt�
 A [Nav2](https://navigation.ros.org/) az ROS Navigation Stack támogatott szellemi utódja, amely ugyanazt a technológiát alkalmazza, amely például a mobil robotikára, autonóm járművekre alkalmazható, optimalizált és átdolgozott megoldások gyűjteménye. A Nav2 projekt arra törekszik, hogy megtalálja a biztonságos módot arra, hogy egy mobil robot bonyolult feladatokat hajtson végre sokféle környezeten és robotkinematikai osztályon keresztül. Nemcsak mozoghat A pontból B pontba, de lehetnek közbenső pózok (pozíció + orientáció) is, és más típusú feladatokat is képviselhet, például objektumkövetést, teljes lefedettség-navigációt stb. A Nav2 egy gyártási szintű és jó minőségű navigációs keretrendszer, amelyben világszerte több mint 50 vállalat bízik meg.
 
 A [Nav2](https://github.com/ros-planning/navigation2) architektúra áttekintése:
-![](https://navigation.ros.org/_images/nav2_architecture.png)
+
+![](https://docs.nav2.org/_images/nav2_architecture.png)
 
 ### Autoware tervező
 
