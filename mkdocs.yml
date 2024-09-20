@@ -66,6 +66,7 @@ nav:
     - onallo/linux.md
     - onallo/ros2launchmarker.md
     - onallo/mermaid.md
+    - onallo/joystick.md
     - ros2halado/rqt.md    
     - ros2halado/qos.md    
     - ros2halado/mcap.md    
