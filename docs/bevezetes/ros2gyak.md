@@ -419,6 +419,9 @@ code ~/ros2_ws/src/my_package
 
 ## `4.` feladat - C++ publisher / subscriber
 
+!!! warning "Házi feladat"
+    Otthon készítsük el a `cpp_pubsub` / `py_pubsub` package-t, ami egy egyszerű publish/subscribe példát valósít meg.
+
 A gyakorlat a hivatalos ROS 2 tutorialokon alapszik: [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html)
 
 - [C++ publisher](https://github.com/ros2/examples/blob/humble/rclcpp/topics/minimal_publisher/member_function.cpp)

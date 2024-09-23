@@ -256,7 +256,12 @@ Ez a parancs most már __bárhonnan__ kiadható:
 ros2 launch example_launch turtlesim_mimc_launch.py
 ```
 
-# Források
+## Házi feladat
+
+!!! warning "Házi feladat"
+    Otthon Copilot segítségével konvertáljuk a Python launch fájlt XML-be, és futtassuk le az XML fájlt.
+
+## Források
 - [foxglove.dev/blog/how-to-use-ros2-launch-files](https://foxglove.dev/blog/how-to-use-ros2-launch-files)
 - [youtube.com/watch?v=PqNGvmE2Pv4&t](https://www.youtube.com/watch?v=PqNGvmE2Pv4&t) 
 - [docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Creating-Launch-Files.html](https://docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Creating-Launch-Files.html)

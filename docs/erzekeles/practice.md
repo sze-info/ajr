@@ -18,8 +18,14 @@ sudo apt install ros-humble-rosbag2 ros-humble-rosbag2-storage-mcap
 Gépteremben is ellenőrizzük a `check_all.sh` segítségével:
 ``` r
 cd /mnt/kozos/script
-./bag_mcap.sh
+```
+
+``` r 
 ./check_all.sh
+```
+
+``` r 
+./bag_mcap.sh
 ```
 
 ## Előkészületek
@@ -41,66 +47,81 @@ ls /mnt/c/temp
 - Ha nem létezik (`No such file or directory`), akkor hozzuk létre: `mkdir /mnt/c/temp`
 - Ha létezik, akkor nincs teendőnk, lépjünk a következő lépésre, másoljuk át ide az `.mcap` fájlokat
 
+Listázzuk a mérésadatokat a `mnt/kozos/measurement_files` könyvtárban:
 
-Tanteremben a másolás a következő parancsok **egyike** legyen:
+``` r
+ls /mnt/kozos/measurement_files/ -lh
+```
+Az eredmény valami hasonló lesz:
+``` r
+-rwxrwxrwx 1 he he 4.9K Aug 23  2023 leaf01foxglove.json
+-rwxrwxrwx 1 he he 6.6K Sep  4  2023 lexus01foxglove.json
+-rwxrwxrwx 1 he he 2.7G Jun 10 09:17 lexus-2023-07-18-campus.mcap
+-rwxrwxrwx 1 he he 541M Apr 11 17:01 lexus3-2024-04-05-gyor.mcap
+```
+
+Tanteremben a másolás a következő parancs segítségével:
 
 ``` r 
-rsync -avzh --progress /mnt/kozos/measurement_files/lexus3sample01.mcap  /mnt/c/temp/
-rsync -avzh --progress /mnt/kozos/measurement_files/lexus3sample02.mcap  /mnt/c/temp/
-rsync -avzh --progress /mnt/kozos/measurement_files/lexus3sample03.mcap  /mnt/c/temp/
-rsync -avzh --progress /mnt/kozos/measurement_files/lexus3sample04.mcap  /mnt/c/temp/
-rsync -avzh --progress /mnt/kozos/measurement_files/lexus3sample05.mcap  /mnt/c/temp/
+rsync -avzh --progress /mnt/kozos/measurement_files/lexus3-2024-04-05-gyor.mcap  /mnt/c/temp/
 ```
+
+!!! warning "Figyelem"
+    A fájl mérete miatt a másolás néhány percig is eltarthat.
 
 Otthon a következő linkről (zöld gomb), vagy parancsként `wget`-el lehet letölteni:
 
 ```r 
-wget  -O lexus3sample02.mcap https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w?download=1
+wget  -O lexus3-2024-04-05-gyor.mcap https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1
 ```
 
 [MCAP letöltése :material-download: 553 MB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1){ .md-button }
 
-[MCAP sample letöltése :material-download: 300 MB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w?download=1){: .md-button } 
 
 Listázzuk a **megfelelő** átmásolt `.mcap` fájl alap információit, hasonlóan:  
 
 ``` r
-ros2 bag info /mnt/c/temp/lexus3sample06.mcap
-
-closing.
-
-Files:             /mnt/c/temp/lexus3sample06.mcap
-Bag size:          286.7 MiB
-Storage id:        mcap
-Duration:          3.367s
-Start:             Jul 18 2023 15:37:09.211 (1689687429.211)
-End:               Jul 18 2023 15:38:03.314 (1689687483.314)
-Messages:          29598
-Topic information: 
-  Topic: /lexus3/zed2i/zed_node/right_raw/image_raw_color/compressed | Type: sensor_msgs/msg/CompressedImage
-  Topic: /lexus3/os_left/points | Type: sensor_msgs/msg/PointCloud2
-  Topic: /lexus3/os_right/points | Type: sensor_msgs/msg/PointCloud2
-  Topic: /lexus3/os_center/imu | Type: sensor_msgs/msg/Imu
-  Topic: /tf_static | Type: tf2_msgs/msg/TFMessage
-  Topic: /lexus3/os_center/points | Type: sensor_msgs/msg/PointCloud2
-  Topic: /tf | Type: tf2_msgs/msg/TFMessage
-  Topic: /lexus3/gps/duro/mag | Type: sensor_msgs/msg/MagneticField
-  Topic: /lexus3/gps/duro/imu | Type: sensor_msgs/msg/Imu
-  Topic: /lexus3/gps/duro/status_string | Type: std_msgs/msg/String
-  Topic: /lexus3/gps/duro/current_pose | Type: geometry_msgs/msg/PoseStamped
+ ros2 bag info /mnt/c/temp/lexus3-2024-04-05-gyor.mcap
 ```
 
-# Játsszuk vissza az `.mcap` fájlt
+Az eredmény hasnló lesz:
+
+``` r
+Files:             /mnt/c/temp/lexus3-2024-04-05-gyor.mcap
+Bag size:          540.7 MiB
+Storage id:        mcap
+Duration:          12.519s
+Start:             Apr  5 2024 14:51:02.480 (1712321462.480)
+End:               Apr  5 2024 14:51:14.999 (1712321474.999)
+Messages:          5930
+Topic information: 
+  Topic: /lexus3/gps/duro/status_string | Type: std_msgs/msg/String | Count: 124
+  Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 24
+  Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 2597
+  Topic: /lexus3/os_right/points | Type: sensor_msgs/msg/PointCloud2 | Count: 247
+  Topic: /lexus3/os_left/points | Type: sensor_msgs/msg/PointCloud2 | Count: 249
+  Topic: /lexus3/gps/duro/time_ref | Type: sensor_msgs/msg/TimeReference | Count: 124
+  Topic: /lexus3/gps/duro/status_flag | Type: std_msgs/msg/UInt8 | Count: 124
+  Topic: /lexus3/gps/duro/mag | Type: sensor_msgs/msg/MagneticField | Count: 315
+  Topic: /lexus3/gps/duro/time_diff | Type: std_msgs/msg/Float64 | Count: 124
+  Topic: /lexus3/os_center/points | Type: sensor_msgs/msg/PointCloud2 | Count: 246
+  Topic: /lexus3/gps/duro/navsatfix | Type: sensor_msgs/msg/NavSatFix | Count: 124
+  Topic: /lexus3/gps/duro/imu | Type: sensor_msgs/msg/Imu | Count: 1259
+  Topic: /lexus3/gps/duro/current_pose | Type: geometry_msgs/msg/PoseStamped | Count: 124
+  Topic: /lexus3/zed2i/zed_node/left/image_rect_color/compressed | Type: sensor_msgs/msg/CompressedImage | Count: 249
+```
+
+## Játsszuk vissza az `.mcap` fájlt
 
 A következőken a mérésadatfájlt visszajátsszuk és ellenőrizzük, hogy milyen adatok jelennek meg, milyen típusban és sebességgel. A `--loop` kapcsoló a végtelen ismétlést, a `--clock` kapcsoló pedig egy `/clock` topic hirdetéséért felel, ehhez igazítja a lejátszást.
 
 ``` r
-ros2 bag play /mnt/c/temp/lexus3sample06.mcap --clock --loop
+ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap --clock --loop
 ```
 Ugyanez, csak lassabban visszajátszva pl.:
 
 ``` r
-ros2 bag play /mnt/c/temp/lexus3sample06.mcap --clock --loop --rate 0.2
+ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap --clock --loop --rate 0.2
 ```
 
 
@@ -109,33 +130,43 @@ A következő topic-ok jelennek meg:
 
 ``` r
 ros2 topic list
+```
 
+Eredménye valami hasonló lesz:  
+
+``` r
 /clock
 /events/read_split
 /lexus3/gps/duro/current_pose
 /lexus3/gps/duro/imu
 /lexus3/gps/duro/mag
+/lexus3/gps/duro/navsatfix
+/lexus3/gps/duro/status_flag
 /lexus3/gps/duro/status_string
-/lexus3/os_center/imu
+/lexus3/gps/duro/time_diff
+/lexus3/gps/duro/time_ref
 /lexus3/os_center/points
 /lexus3/os_left/points
 /lexus3/os_right/points
-/lexus3/zed2i/zed_node/right_raw/image_raw_color
+/lexus3/zed2i/zed_node/left/image_rect_color/compressed
 /parameter_events
 /rosout
 /tf
 /tf_static
 ```
 
-A `ros2 topic hz` az adott topic frekvenciáját mutatja. A pozíció ebben az esetben ~20Hz.
+A `ros2 topic hz` az adott topic frekvenciáját mutatja. A pozíció ebben az esetben ~10Hz.
 
 ``` r
 ros2 topic hz /lexus3/gps/duro/current_pose
-average rate: 20.133
-        min: 0.002s max: 0.101s std dev: 0.03451s window: 22
+```
+Az eredmény valami hasonló lesz:
+``` r
+average rate: 9.994
+        min: 0.003s max: 1.005s std dev: 0.09166s window: 107
 ```
 
-# `ROS 2` időkezelés
+## `ROS 2` időkezelés
 
 Az `ROS` idő kezelésre a Unix-időt, vagy a POSIX-időt használja. Ez a UTC (greenwichi idő) szerinti 1970. január 1. 00:00:00 óta eltelt másodpercek és nanoszekundumok számát jelenti (`int32 sec`, `int32 nsec`). Ez egyrészt relatív kis helyet foglal a memóriában, másrészt könnyen számolható két időpont között eltelt idő, mégpedig egy egyszerű kivonással. 
 
@@ -168,6 +199,11 @@ clock:
 
 ``` r
 ros2 topic echo --once /lexus3/gps/duro/current_pose
+
+```
+Az eredmény valami hasonló lesz:
+
+```yaml
 
 header:
   stamp:
@@ -203,7 +239,7 @@ ISO format:	2023-09-13T08:52:42.945887
 
 **Emlékeztető**: a nanoszekundum a másodperc egy milliárdodrésze (10^-9 s).
 
-# Global Navigation Satellite System (GNSS) / Global Positioning System (GPS)
+## Global Navigation Satellite System (GNSS) / Global Positioning System (GPS)
 
 A köveztkezőkben átnézünk pár jellemző szenzort (GPS, kamera, LIDAR) és azok topic-jait, node-jait (driver package-ekbe szervezve). Vessünk egy pillantást a saját fejlesztésű Duro GPS (GNSS) driverre: [github.com/szenergy/duro_gps_driver](https://github.com/szenergy/duro_gps_driver/tree/ros2-humble). A GPS-t etherneten a számítógéphez csatlakoztatva, az ROS drivert indítva a következő topicokat fogja hirdetni:
 
@@ -221,7 +257,7 @@ A köveztkezőkben átnézünk pár jellemző szenzort (GPS, kamera, LIDAR) és 
 `/gps/duro/time_ref` |[`[sensor_msgs/TimeReference]`](http://docs.ros.org/en/api/sensor_msgs/html/msg/TimeReference.html)
 
 
-# Inertial Measurement Unit (IMU)
+## Inertial Measurement Unit (IMU)
 
 *Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/Imu`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Imu.msg), [`sensor_msgs/msg/MagneticField`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/MagneticField.msg)
 
@@ -229,7 +265,10 @@ A köveztkezőkben átnézünk pár jellemző szenzort (GPS, kamera, LIDAR) és 
 
 ``` r
 ros2 topic echo --once /lexus3/gps/duro/imu
+```
+Az eredmény valami hasonló lesz:
 
+```yaml
 header:
   stamp:
     sec: 1695039048
@@ -256,14 +295,17 @@ linear_acceleration_covariance:
   - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 ```
 
-# Kamera
+## Kamera
 
 
 *Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/Image`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Image.msg), [`sensor_msgs/msg/CameraInfo`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/CameraInfo.msg)
 
 ``` r
 ros2 topic echo --once /lexus3/zed2i/zed_node/right_raw/image_raw_color
+```
+Az eredmény valami hasonló lesz:
 
+```yaml
 header:
   stamp:
     sec: 1695039047
@@ -278,7 +320,7 @@ data: 21,66,93,255,21,66,94,255,25,69,94,255,14,63,90,255,31,55,80,255,19,49,75,
 ```
 
 
-# LIDAR
+## LIDAR
 
 
 *Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/PointCloud2`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/PointCloud2.msg), [`sensor_msgs/msg/LaserScan`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/LaserScan.msg)
@@ -286,7 +328,10 @@ data: 21,66,93,255,21,66,94,255,25,69,94,255,14,63,90,255,31,55,80,255,19,49,75,
 
 ``` r
 ros2 topic echo --once /lexus3/os_center/points
+```
+Az eredmény valami hasonló lesz:
 
+```yaml
 header:
   stamp:
     sec: 1695039048
@@ -300,9 +345,9 @@ data: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,63,0,0,16,65,96,211,241,2,0,0,0,0,12,3,0,0
 ```
 
 
-# Vizualizáció
+## Vizualizáció
 
-## RVIZ2
+### RVIZ2
 
 ``` r
 ros2 run rviz2 rviz2
@@ -312,7 +357,7 @@ Alakítsunk ki hasonló elrendezést:
 
 ![](rviz01.png)
 
-## Foxglove studio
+### Foxglove studio
 
 ``` r
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765
@@ -327,7 +372,7 @@ Alakítsunk ki hasonló elrendezést:
 
 Forrás: [foxglove.dev/blog/introducing-foxglove-studios-new-navigation](https://foxglove.dev/blog/introducing-foxglove-studios-new-navigation)
 
-# Hozzuk létre a `simple_sub_cpp` package-t
+## Hozzuk létre a `simple_sub_cpp` package-t
 
 A következőkben egy egyszerű subscriber node fog feliratkozni `geometry_msgs/PoseStamped` üzenetekre, majd kiírni az X és az Y koordinátákat. A gyakorlat a [hivatalos ROS 2 tutorialokon alapszik](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html) felépítését tekintve.
 
@@ -346,7 +391,7 @@ A terminál egy üzenetet küld vissza, amely megerősíti a `simple_sub_cpp` cs
 
 
 
-## Írjuk meg a subscriber node-ot (`print_pose.cpp` >> `simple_sub_node`)
+### Írjuk meg a subscriber node-ot (`print_pose.cpp` >> `simple_sub_node`)
 
 Lépjünk a ``ros2_ws/src/simple_sub_cpp/src`` mappába.
 
@@ -416,7 +461,7 @@ int main(int argc, char *argv[])
     A [C++ kód](https://github.com/sze-info/arj_packages/blob/main/etc/print_pose.cpp) python verziója szintén elérhető a [github.com/sze-info/arj_packages](https://github.com/sze-info/arj_packages/blob/main/etc/print_pose.py) címen. Érdemes összehasonlítani a C++ és a python kódokat.
 
 
-## Függőségek hozzáadása
+### Függőségek hozzáadása
 
 Mindig érdemes kitölteni a ``<description>``, ``<maintainer>`` és ``<license>`` tag-eket:
 
@@ -436,7 +481,7 @@ Adjunk hozzá egy új sort az ``ament_cmake`` buildtool függősége után, és 
 Ez deklarálja, hogy a pacakge-nek szükséges az ``rclcpp`` és a ``geometry_msgs`` fordításkor és futtatáskor.
 
 
-## CMakeLists.txt
+### CMakeLists.txt
 
 Most nyissuk meg a ``CMakeLists.txt`` fájlt.
 A meglévő ``find_package(ament_cmake REQUIRED)`` függőség alá adjuk hozzá a következő sorokat:
@@ -497,13 +542,16 @@ ament_package()
 
 ![](cmakelists01.png)
 
-## Build és futtatás
+### Build és futtatás
 
 !!! success 
     Már buildelhető a package:
 
 ``` r 
 cd ~/ros2_ws/
+```
+  
+``` r
 colcon build --packages-select simple_sub_cpp
 ```
 
@@ -511,6 +559,9 @@ Futtassuk a szokásos módon:
 
 ``` r
 source ~/ros2_ws/install/setup.bash
+```
+  
+``` r
 ros2 run simple_sub_cpp simple_sub_node
 ```
 
@@ -523,9 +574,12 @@ Kimenet:
 [simple_pose_sub]: x: 697201.886, y: 5285678.949
 ```
 
+## Házi feladat
 
+!!! warning "Házi feladat"
+    Otthon készítsük el a `simple_sub_py` package-t, ami a `simple_sub_cpp` python megfelelője. 
 
-# Források
+## Források
 - [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html)
 - [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html)
 - [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)

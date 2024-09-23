@@ -82,3 +82,12 @@ Ahogy látszik, a típusok különböző kategóriákba esnek, úgy mint: `std_m
 /ctrl_cmd | `autoware_msgs/ControlCommandStamped` | 20 | Referencia sebesség és kormyánszög
 /current_pose | `geometry_msgs/PoseStamped` | 20 | Aktuális GPS
 /tf | `tf2_msgs/TFMessage` | 500+ | Transform
+
+## Házi feladat
+
+!!! warning "Házi feladat"
+    Otthon reprodukáljuk a gyakorlatot, és vizsgáljuk meg a letöltött adatokat a Foxglove Studio segítségével. A vizsgálat során a következő kérdésekre keressük a választ:
+    
+    - Méterben kifejezve milyen távolságokra találhatóak az objektumok a járműtől?
+    - Milyen sebességgel halad a jármű?
+    - Milyen irányban halad a jármű?

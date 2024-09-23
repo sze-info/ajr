@@ -31,6 +31,10 @@ A kamera az érzékelőjére (pl CCD CMOS szenzor) érkező fényt elektronikus 
 
 ![cam](camera01.png)
 
+Mélységesztimáció:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NZZIPcBBAc8?si=prA7yVUnzcK2szQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## LIDAR
 
 A LIDAR (Light Detection and Ranging) szenzor egy olyan eszköz, amely lézerpulzusokkal és azok visszaverődési idejéből távolságokat képes megállapítani. Az elve hasnoló a lézeres távolságmérőhöz, ám a mérés gyakorisága és frekvenciája is sokkal naygobb annál. Példaképp vegyünk egy forgó 64 csatornás LIDAR-t. Ez jellemzően `10` vagy `20` Hz-en mér, tehát másodpercenként `10` vagy `20` teljes `360°`-os körbefordulást tesz meg. A `64` csatorna azt jelenti, hogy minden pillanatban `64` egymás alatti érzékelő érzékel. Egy körbefordulást jellemzően `512` / `1024` / `2048` mérést jelent csatornánként. Innen ki is számolható a másodpercenkénti mérésadat: pl `20*64*1024 = 1 310 720`. Tehát jellemzően másodpercenként, több mint egymillió 3D pontot mér az eszköz, amihez intenzitás, ambient, reflektív tulajdonságok is társulnak.
@@ -45,13 +49,14 @@ LIDAR gyártókat, dataseteket, algoritmusokat tartlamazó gyűjtemény: [github
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1IWXO0vvmO8?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+![](lidar_camera01.svg)
+
 ## Radar
 - *Jellemző gyártók:* Aptiv, Bosch, Continental,  Denso
 - *Jellemző interfész:* CAN bus
 - *Jellemző `ROS 2` topic típusok:* [`radar_msgs/msg/RadarTrack`](https://github.com/ros-perception/radar_msgs/blob/ros2/msg/RadarTrack.msg)
 
 
-![](lidar_camera01.svg)
 
 A LIDAR és a kamera jellemzőinek összehasonlítása
 
