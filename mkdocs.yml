@@ -27,10 +27,11 @@ nav:
       - erzekeles/README.md
       - erzekeles/practice.md
     - 4. Féléves, ROS 2 további koncepiók: 
+      - ros2halado/README.md
+      - ros2halado/ros2launch.md    
       - feleves_beadando/README.md
       - feleves_beadando/kisbeadando.md
       - feleves_beadando/nagyfeleves.md
-      - ros2halado/ros2launch.md    
     - 5. Transzformációk: 
       - transzformaciok/README.md
       - transzformaciok/practice.md

@@ -1,6 +1,5 @@
 ---
 title: Elmélet - Tervezés
-permalink: /tervezes/
 icon: material/math-integral-box # elméleti tananyag
 ---
 

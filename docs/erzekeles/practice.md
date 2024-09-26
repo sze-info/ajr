@@ -81,7 +81,7 @@ wget  -O lexus3-2024-04-05-gyor.mcap https://laesze-my.sharepoint.com/:u:/g/pers
 Listázzuk a **megfelelő** átmásolt `.mcap` fájl alap információit, hasonlóan:  
 
 ``` r
- ros2 bag info /mnt/c/temp/lexus3-2024-04-05-gyor.mcap
+ros2 bag info /mnt/c/temp/lexus3-2024-04-05-gyor.mcap
 ```
 
 Az eredmény hasnló lesz:
@@ -298,11 +298,18 @@ linear_acceleration_covariance:
 ## Kamera
 
 
-*Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/Image`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Image.msg), [`sensor_msgs/msg/CameraInfo`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/CameraInfo.msg)
+*Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/Image`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Image.msg), [`sensor_msgs/msg/CameraInfo`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/CameraInfo.msg), [`sensor_msgs/msg/CompressedImage`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/CompressedImage.msg)
+
+Attzól függően, hogy a kamera képe tömörített vagy sem, a `sensor_msgs/msg/Image` vagy a `sensor_msgs/msg/CompressedImage` típusú üzeneteket fogunk látni. Használjuk a **megfelelő** topic-ot.
 
 ``` r
 ros2 topic echo --once /lexus3/zed2i/zed_node/right_raw/image_raw_color
 ```
+
+``` r
+ros2 topic echo --once /lexus3/zed2i/zed_node/left/image_rect_color/compressed
+```
+
 Az eredmény valami hasonló lesz:
 
 ```yaml
@@ -313,7 +320,7 @@ header:
   frame_id: zed2i_right_camera_optical_frame
 height: 720
 width: 1280
-encoding: bgra8
+encoding: bgra8 # vagy format: bgra8; jpeg compressed bgr8
 is_bigendian: 0
 step: 5120
 data: 21,66,93,255,21,66,94,255,25,69,94,255,14,63,90,255,31,55,80,255,19,49,75,255,26,55,76,255,24,57,80,255,35,51,72,255,30,52,74,255,57,73,88,255,55,74,90,255,64,74,93,255,52,66,86,255,56,61,76,255,25,34,48,255,25,31,52,255,16,24,43,255,14,22,41,255,19,27,46,255,13,20,38,255,23,28,45,255,31,41,65,255,36,37,59,255,23,59,82,255,45,71,91,255,51,84,116,255,70,94,122,255,57,105,141,255,42,84,117,255,42,90,126,255,36,81,116,255,..
