@@ -3,7 +3,7 @@ title: Gyakorlat - Transzformációk
 icon: material/code-braces-box # gyakorlati tananyag
 ---
 
-# Gyakorlat
+## Gyakorlat
 
 A következő gyakorlat a transzformációk ROS2-ben történő kezelését szemlélteti, C++-ban.
 
@@ -241,7 +241,7 @@ További színekre példa lejjebb, színekről pedig bővebben: [github.com/jkk-
 
 
 
-# Önálló feladat
+## Önálló feladat
 
 Önálló feladatként készítsünk egy `my_launch_pkg` nevű package-t, amiben egy `run_transforms_and_markers.launch.py` elindítja a:
 
@@ -258,9 +258,9 @@ Tehát indítható legyen az önálló feladat végén a következő paranccsal:
 ros2 launch my_launch_pkg run_transforms_and_markers.launch.py
 ```
 
-Megoldás: [elérhető az önálló feladatok között](https://sze-info.github.io/arj/onallo/ros2launchmarker.html)
+Megoldás: [elérhető az önálló feladatok között](https://sze-info.github.io/ajr/onallo/ros2launchmarker/)
 
-## Segítség az önálló feladathoz
+### Segítség az önálló feladathoz
 
 A `ros2 run tf2_ros static_transform_publisher --x 1.0 --y 0.2 --z 1.4 --qx 0.0 --qy 0.0 --qz 0.0 --qw 1.0 --frame-id orbit2 --child-frame-id orbit3` az előző órák alapján könnyen összeállítható:
 
@@ -322,9 +322,12 @@ def generate_launch_description():
 ```
 
 
+## Házi feladat
 
+!!! warning "Házi feladat"
+    Készítsünk ROS 2 package-t (mindegy, hogy python vagy C++), ami a `map` frame-re hirdet egy `CUBE` típusú markert. A marker színe legyen a `md_blue_500` (0.13 0.59 0.95) és a mérete 1.0. A marker pozíciója legyen a `map` frame-ben (`r1`, `r2`, 0.0). AZ `r1`, `r2` két véletlenszám 0 és 2 közötti intervallumon. Hirdesse a topicot 5 Hz-en. A marker id-ja legyen 1. A marker üzenetet a `/marker_topic` topic-ra hirdessük. A package neve legyen `my_cool_marker_pkg`.
 
-# További 
+## További 
 
 [Python notebook transform](https://nbviewer.org/github/horverno/sze-academic-python/blob/master/eload/ealeshtranszformaciok.ipynb){: .md-button .md-button-blue .mr-4 }
 
@@ -342,5 +345,5 @@ def generate_launch_description():
 
 
 
-# Olvasnivaló
+## Olvasnivaló
 - [articulatedrobotics.xyz/ready-for-ros-6-tf](https://articulatedrobotics.xyz/ready-for-ros-6-tf/)

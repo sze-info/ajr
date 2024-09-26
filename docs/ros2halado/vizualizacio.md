@@ -34,6 +34,11 @@ source ~/ros2_ws/install/setup.bash
 
 ![](https://raw.githubusercontent.com/wiki/szenergy/szenergy-public-resources/img/rviz02.gif)
 
+
+A mesheket Foxglove Studio-ban is megjeleníthetjük, csak állítsuk a package path-t a megfelelő helyre, pl:
+
+![alt text](foxglove05.png)
+
 ## Színek
 
 A Google Material Design színrendszer egy átfogó tervezési rendszer, amely pl. ROS-ban és Rviz-ben is használható. A kényelem kedvéért a következőkben felsoroljuk a hexadecimális értékeket (pl. `#F44336`) és az rgb-vé alakított értékeket (pl. `0,96 0,26 0,21`), ami a ROS 2-ben általánosan elfogadott.

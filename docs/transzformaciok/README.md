@@ -4,12 +4,19 @@ permalink: /transzformaciok/
 icon: material/math-integral-box # elméleti tananyag
 ---
 
+## Ellenőrző kérdések
+
+- Mik a launch fájlok és mire használjuk őket?
+- Milyen nyelven írjuk a launch fájlokat?
+- Mit jelenít meg az `rqt_tf_tree`, az `rviz` és az `rqt_graph`?
+- Mit értünk pose (vagy póz) alatt?
+
 
 # Bevezetés
 
 ROS-ben (és álatalában robotikában) a transformok határozzák meg a hogy, mi merre található az adott vonatkozatási ponttól (frame). Több transzform leírhatja például egy robotkar mozgását vagy épp egy jármű és szenzorai helyzetét a térben.
 
-# Merev test mozgása
+## Merev test mozgása
 
 Merevnek tekinthető az a test, mely pontjainak távolsága mozgás során nem változik, vagyis bármely két pontjának távolsága időben állandó.
 
@@ -31,7 +38,7 @@ Az alábbiakban egy rövid (~9 perc), de hasznos videó látható a témáról:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NGPn9nvLPmg?si=nd182aJPvKvUjxhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Transzformációk
+## Transzformációk
 
 A pose (póz) a pozíció (elhelyezkedés) és orientáció (irány) összessége. Amennyiben egy térbeli pose-t transzformálunk (mozgatunk és forgatunk) egy másik pose keletkezik. Ez a két pose egymáshoz képest két transzformációs frame. Ilyen transzformációs frame-k írják le a teljes robotikai rendszert.
 
@@ -242,7 +249,7 @@ Itt az utolsó argumentum `ROS 1`-nél 50 ms, tehát 20 Hz-en hirdette a ugyanaz
 Példa a statikus transzform launch fájlra: [tf_static.launch](https://github.com/jkk-research/lexus_bringup/blob/main/launch/tf_static.launch.py)
 
 
-# Mátrix szorzás
+## Mátrix szorzás
 
 A 3D  transzformáció (de természetesen a 2D is) egy mátrix segítségével, egész pontosan mátrisx szorzással írható le. Például, ha egy objektumot elmozdítunk egy adott távolságra, akkor azt egy forgatómátrix segítségével írhatjuk le. A forgatómátrix 3 dimenzióban egy 3x3-as mátrix, amely a forgatás irányát és mértékét határozza meg. 
 
@@ -258,11 +265,11 @@ Forrás: [Robotic Systems, University of Illinois](http://motion.cs.illinois.edu
 !!! danger
     A python notebook-ot és a mátrixszozás vizualizációt oktatási céllal linkeltük. ROS 2-ben rengeteg funkciót ad a `tf2` és kapcsolódó megoldásai, így nem kell "kézzel" transzlációt és rotációt írni. Transzformációkat például le lehet kérdezni 2 frame között anélkül is, hogy tudnánk pontosan hány frame-n kereszül kapcsolódnak. Az ROS 2 ezt kényelmesen biztosítja. [Erről bővebben itt lehet olvasni](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Tf2-Main.html)
 
-# Homogén koordináták
+## Homogén koordináták
 
 A homogén koordináták kényelmes reprezentációt nyújtanak a merevtest transzformációkhoz, mint a lineáris transzformációk egy kibővítéseként a térben. Ráadásul kompaktan reprezentálják a helyzetfüggő és irányfüggő mennyiségek közötti különbséget. Az ötlet az, hogy minden pontot kiegészítünk egy további homogén koordinátával, amely 1, ha helyzetfüggő, és 0, ha irányfüggő. Ezt az műveletet a "hat" (kalap) operátorral (`^`) jelöljük.
 
-# Quaternion (kvaterniók)
+## Quaternion (kvaterniók)
 A roll pitch yaw (Euler szögek) alternatívája, a komplex számokhoz hasonló kiterjesztéssel. 
 
 Demonstáció: [www.quaternions.online](https://quaternions.online/)
@@ -291,12 +298,12 @@ tf2_quat.setRPY(roll, pitch, yaw);
 További információ erről  [itt olvasható](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Quaternion-Fundamentals.html).
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zjMuIxRvygQ?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-# Konvenciók
+## Konvenciók
 
 ![rh](right_hand_rule01.svg)
 ![va](vehicle_axes01.svg)
 
-# Koordinátarendszerek (GPS/GNSS)
+## Koordinátarendszerek (GPS/GNSS)
 
 A `WGS84` vagy World Geodetic System 1984 egy globális referencia rendszer a térképészetben, geolokációban, navigációban és a GPS (Global Positioning System) rendszerben történő használatra. Ez egy szabványos koordináta rendszer, amelyet a földrajzi szélesség, hosszúság és tengerszint feletti magasság megadására használnak. A földrajzi szélességi (latitude) körök vízszintesen futnak, és fokokban adják meg egy pont helyét a Föld felszínén az egyenlítőtől (0 fok szélesség) északra vagy délre. A hosszúsági körök (longitude) függőlegesen futnak, és fokokban adják meg egy pont helyét a Föld felszínén a keleti vagy nyugati nullameridiántól (0 fok hosszúság). A nullameridián a 0 fok hosszúságánál található, és Londonon Greenwich városrészén keresztül halad. A hosszúsági értékek -180 foktól +180 fokig terjednek, az 180 foknál pedig az Északi és Dél-Keleti hosszúságok összekapcsolódnak. A mérésadat fájl navsatfix topicja (sensor_msgs/msg/NavSatFix) ebben a formátumban került mentésre.
 Ennek alternatívája az `UTM` vetületi rendszer, amely nem fokokban, hanem méterekben számol. Az `UTM`, vagyis az Egyesített Térképi Projekció (Universal Transverse Mercator), egy térképi projekciós rendszer, amelyet a térképek készítésére és a navigációhoz használnak. A világ különböző zónáit egy sor speciális hengertérképen ábrázolják, ahol a hosszúsági és szélességi vonalak egyenesek. Ahogy lejjebb látható, Magyarország 4 `UTM` zónába esik: `33U`, `34U`, `33T` és `34T`. Az UTM zónák 6 fokos szélességi sávokra oszlanak szét, ahol minden sávban az ábrázolás egy transzverzális Merkátor-projekción alapuló hengertérképen történik. Az UTM rendszer előnye, hogy egyszerű koordináta-rendszert biztosít, ami kis torzulással rendelkezik a zónákon belül. Ezért sokszor használják katonai térképek, topográfiai térképek, navigációs rendszerek és más térképkészítési alkalmazásoknál. Például a mérésadatoknál a jellemzően current_pose végződésű topicja (`geometry_msgs/msg/PoseStamped`) ebben a formátumban érkező adat.

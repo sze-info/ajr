@@ -12,6 +12,8 @@ icon: material/math-integral-box # elméleti tananyag
 - Mi a topic?
 - Milyen típusú adatokat küldhetünk a topicokon keresztül? (példák)
 
+## ROS 2 launch fájlok
+
 ### `ROS 2` launch szemléltetés
 
 
@@ -57,7 +59,7 @@ Ahelyett, hogy minden egyes node-ot külön terminálablakban futtatnánk minden
 
 ### Hogyan tehetjük ezt meg?
 
-Két lehetőségünk van launch fájlt írni, pythonban vagy xml-ben. Az xml fájlok egyszerűbbek, de a python fájlok sokkal rugalmasabbak és könnyebben kezelhetőek.
+Három lehetőségünk van launch fájlt írni, pythonban, yaml-ben vagy xml-ben. Ebből kettőt bemutatunk: az xml fájlok egyszerűbbek, de a python fájlok sokkal rugalmasabbak és könnyebben kezelhetőek.
 
 === "Python"
 
@@ -163,7 +165,7 @@ flowchart TD
 *Megjegyzés:* A balról jobbra elrendezés helyett a helykihasználás miatt most a fentről lefelé elrendezést használtunk.
 
 
-## Más package-ből származó node-ok, paraméterek
+### Más package-ből származó node-ok, paraméterek
 
 ```py
 robot_node = Node(
@@ -213,7 +215,7 @@ flowchart TD
     classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
 ```
 
-## További példa
+### További példa
 
 - `robot_a` namespace:
     - `sensor_node_a`: Érzékelő adatokat publikál a `/robot_a/sensor_data` topicra.
@@ -269,9 +271,97 @@ flowchart TB
 ```
 
 
-## Videó
+### Videó
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PqNGvmE2Pv4?si=-pLNSZsHNDE5br5I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Vizualizáció és debug
+
+### Foxglove Studio / Lichtblick Suite
+
+A Foxglove Studio egy nyílt forráskódú, robotikai adatokat vizualizáló és hibakereső eszköz. Létezik `Windows`, `Linux` és `MacOS` rendszerekre. A `v1.87.0`-ig bezárólag nyílt forráskódu volt, a `v2.0.0`-tól pedig ingyenesen használható, de zárt forráskódú. Az open source fejlesztést több fork, például a **Lichtblick Suite** vette át. Elérhető számos módon:
+
+- önálló asztali alkalmazásként futtatható
+- böngészőben hozzáférhető
+- saját domainen, önállóan hostolható
+
+A natív robotikai eszközök (mint például az ROS ökoszisztéma részei) általában csak Linux rendszeren támogatottak, de a Studio asztali alkalmazás Linuxon, Windows-on és macOS-en is működik. Akár az ROS stack más operációs rendszeren fut, a Studio képes kommunikálni a robottal zökkenőmentesen.
+
+![foxglove_a](../bevezetes/foxglove04.png#only-light)
+![foxglove_a](../bevezetes/foxglove03.png#only-dark)
+
+A Studio gazdag vizuális elemeket és hibakereső panelokat kínál - interaktív diagramoktól, 3D vizuális elemekig, kameraképektől, és diagnosztikai adatfolyamokig. Legyen szó valós idejű robotkövetésről, vagy `.bag` / `.mcap` fájlban történő hibakeresésről, ezek a panelok segítenek a különböző, általános robotikai feladatok megoldásában.
+
+Ezek a panelok ezután egyedi elrendezésekben konfigurálhatók és összeállíthatók a projekt egyedi igényeinek és munkafolyamatainak megfelelően.
+
+
+- [Foxglove Studio letöltés](https://foxglove.dev/download)
+- [Lichtblick Suite letöltés](https://github.com/Lichtblick-Suite/lichtblick/releases)
+
+<video width="100%" loop="" autoplay="" muted="" playsinline="" poster="https://cdn.prod.website-files.com/66a36245725199d12625c1d5/66dc638d81bf97e670aaf5fc_website-product-hero.webp">
+  <source src="https://storage.googleapis.com/assets.foxglove.dev/website/website-product-hero.webm" type="video/mp4">
+</video>
+
+### Rviz
+
+Az `Rviz2` a `ROS 2` natív, nyílt forráskódú, robotikai adatokat vizualizáló és hibakereső eszköze. Ennek értelmében leginkább Linux rendszeren használható, de a Windows és macOS támogatás is folyamatosan fejlődik.
+
+
+```bash
+ros2 run rviz2 rviz2
+```
+
+![rviz](../erzekeles/rviz01.png)
+
+```bash
+ros2 run rviz2 rviz2 --help
+```
+Parancs segítségével megtudhatjuk, hogy pl. `-d` kapcsolóval betölthetünk egy `.rviz` konfigurációs fájlt, vagy `-f` fix frame-et adhatunk meg.
+
+
+Bővebben: [docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html](https://docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html)
+
+### rqt_graph
+
+Az `rqt_graph` a node-ok és topic-ok vizualizációjára használható.
+
+```bash
+ros2 run rqt_graph rqt_graph
+```
+
+![rqt_reconfigure](../eszleles/rqt_graph02.svg)
+
+### rqt_console
+
+Az `rqt_console` log (info, debug, warn, error, fatal) üzenetek megjelenítésre, szűrésére és elemzésére használható.
+
+```bash
+ros2 run rqt_console rqt_console
+```
+
+![](https://docs.ros.org/en/humble/_images/warn.png)
+
+
+### rqt_tf_tree
+
+Az `rqt_tf_tree` a transzformációk vizualizációjára használható.
+
+```bash
+ros2 run rqt_tf_tree rqt_tf_tree
+```
+
+![rqt_](../transzformaciok/tf_examples03.svg)
+
+### rqt_reconfigure
+
+Az `rqt_reconfigure` a node-ok paramétereinek módosítására használható.
+
+```bash
+ros2 run rqt_reconfigure rqt_reconfigure
+```
+
+![rqt_reconfigure](../transzformaciok/rqt_reconf01.png)
+
 
 ## Források
 - [foxglove.dev/blog/how-to-use-ros2-launch-files](https://foxglove.dev/blog/how-to-use-ros2-launch-files)
@@ -280,3 +370,4 @@ flowchart TB
 - [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html)
 - [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html)
 - [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
+- [docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html](https://docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html)
