@@ -73,7 +73,7 @@ cd launch
 ```
 
 ``` bash
-code turtlesim_mimc_launch.py
+code turtlesim_mimic_launch.py
 ```
 
 Állítsunk össze egy launch fájlt a ```turtlesim``` csomag elemeivel, Python nyelv alkalmazásával.
@@ -114,13 +114,13 @@ code turtlesim_mimc_launch.py
     <launch>
         <node
             pkg="turtlesim"
-            ns="turtle1"
+            ns="turtlesim1"
             exec="turtlesim_node"
             name="turtle1"/>
         
         <node
             pkg="turtlesim"
-            ns="turtle2"
+            ns="turtlesim2"
             exec="turtlesim_node"
             name="turtle2_green">
             <param name="background_b" value="160"/>
@@ -200,7 +200,7 @@ A létrehozott launch fájl elindítása az alábbi módon történik:
 cd ~/ros2_ws/src/example_launch_cpp/launch # belépünk a launch fájlt tartalmazó mappába
 ```
 ``` bash
-ros2 launch turtlesim_mimc_launch.py
+ros2 launch turtlesim_mimic_launch.py
 ```
 
 Két turtlesim ablak fog megnyílni, és a következő ```[INFO]``` kimenet lesz látható, felsorolva az indított node-okat:
@@ -300,7 +300,10 @@ cd ~/ros2_ws
 ```
 
 ``` bash
-colcon build --packages-select example_launch_cpp
+colcon build --packages-select example_launch_cpp --symlink-install
+```
+
+``` bash
 ```
 
 ``` bash
@@ -310,13 +313,13 @@ source ~/ros2_ws/install/setup.bash
 Ez a parancs most már __bárhonnan__ kiadható:
 
 ``` bash
-ros2 launch example_launch_cpp turtlesim_mimc_launch.py
+ros2 launch example_launch_cpp turtlesim_mimic_launch.py
 ```
 
 ## Házi feladat
 
 !!! warning "Házi feladat"
-    Készíts egy launch fájlt, amely a `turtlesim` csomagból elindít egy turtlesim ablakot, és egy `teleop_turtle` csomagból egy `teleop_turtle_keyboard` node-ot. A `teleop_turtle_keyboard` node segítségével a turtlesim ablakban mozgatható a teknős a billentyűzetről. A turtlesim háttere legyen piros. Készítsünk hozzá egy `example_launch_cpp` csomagot, és indítsuk el a launch fájlt a csomagból.
+    Készíts egy launch fájlt, amely a `turtlesim` csomagból elindít egy turtlesim ablakot, és egy `teleop_turtle` csomagból egy `teleop_turtle_keyboard` node-ot. A `teleop_turtle_keyboard` node segítségével a turtlesim ablakban mozgatható a teknős a billentyűzetről. A turtlesim háttere legyen piros. Készítsünk hozzá egy `example_launch_py` python csomagot, és indítsuk el a launch fájlt a csomagból.
 
 ## Megjegyzés python csomagok esetén
 

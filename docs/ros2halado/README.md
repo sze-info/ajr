@@ -363,6 +363,94 @@ ros2 run rqt_reconfigure rqt_reconfigure
 ![rqt_reconfigure](../transzformaciok/rqt_reconf01.png)
 
 
+## Publish, Subscribe, Timer
+
+Három alapvető műveletet célszerű ismerni, amelyeket a ROS 2-ben a node-ok használnak a kommunikációhoz:
+
+- **Timer**: Időzített eseményeket hoz létre a következő példánál ez a `timer_callback()` függvény. Ezen a függvényen belül például publikálhatunk egy üzenetet vagy elvégezhetünk egy számítást.
+- **Subscribe**: Feliratkozik egy topic-ra, és fogadja az adatokat. Ezt úgy éri el, hogy a példánál maradva a `callback1()` függvény minden új üzenet érkezéskor meghívódik.
+- **Publish**: Adatokat küld a topic-on keresztül. Ezt általában ismétlődően tessszük, jó lehet erre a  subscriber callback függvénye, vagy a timer callback függvénye.
+
+### Példa C++
+
+```cpp linenums="1" hl_lines="14-16 21 26 30-32"
+#include <chrono>
+#include <functional>
+#include <memory>
+#include <string>
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/float32.hpp"
+using namespace std::chrono_literals;
+
+class CoolNode : public rclcpp::Node
+{
+public:
+  CoolNode() : Node("my_cool_node")
+  {
+    pub1_ = this->create_publisher<std_msgs::msg::Float32>("topic1", 10);
+    sub1_ = this->create_subscription<std_msgs::msg::Float32>("topic2", 10, std::bind(&CoolNode::callback1, this, std::placeholders::_1));
+    timer_ = this->create_wall_timer(50ms, std::bind(&CoolNode::timer_callback, this)); // 20 hz = 50 ms
+    RCLCPP_INFO_STREAM(get_logger(), this->get_name() << " has been started.");
+  }
+
+private:
+  void timer_callback()
+  {
+    // create message and publish e.g. pub1_->publish(my_msg);
+  }
+
+  void callback1(const std_msgs::msg::Float32::SharedPtr msg)
+  {
+    // do something with the message
+  }
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub1_;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub1_;
+  rclcpp::TimerBase::SharedPtr timer_;
+};
+
+int main(int argc, char *argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<CoolNode>());
+  rclcpp::shutdown();
+  return 0;
+}
+```
+
+### Példa python
+
+```python linenums="1" hl_lines="8-10 13 17"
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float32
+
+class CoolNode(Node):
+    def __init__(self):
+        super().__init__('my_cool_node')
+        self.pub1_ = self.create_publisher(Float32, 'topic1', 10)
+        self.sub1_ = self.create_subscription(Float32, 'topic2', 10, self.callback1)
+        self.timer_ = self.create_timer(0.05, self.timer_callback)  # 20 Hz = 50 ms
+        self.get_logger().info(f'{self.get_name()} has been started.')
+
+    def timer_callback(self):
+        # create message and publish e.g. self.pub1_.publish(my_msg)
+        pass
+
+    def callback1(self, msg):
+        # do something with the message
+        pass
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = CoolNode()
+    rclpy.spin(node)
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+
+
 ## Források
 - [foxglove.dev/blog/how-to-use-ros2-launch-files](https://foxglove.dev/blog/how-to-use-ros2-launch-files)
 - [youtube.com/watch?v=PqNGvmE2Pv4&t](https://www.youtube.com/watch?v=PqNGvmE2Pv4&t) 
