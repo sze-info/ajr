@@ -9,7 +9,7 @@ icon: material/math-integral-box # elméleti tananyag
 - Mik a launch fájlok és mire használjuk őket?
 - Milyen nyelven írjuk a launch fájlokat?
 - Mit jelenít meg az `rqt_tf_tree`, az `rviz` és az `rqt_graph`?
-- Mit értünk pose (vagy póz) alatt?
+- Mit értünk pose (vagy póz / helyzet) alatt? (robotikában)
 
 
 # Bevezetés
@@ -44,9 +44,9 @@ A pose (póz) a pozíció (elhelyezkedés) és orientáció (irány) összesség
 
 - **Pozíció:** 3 elemű offszet vektor (`x`, `y` és `z` 3D-ben).
 - **Orientáció:** több reprezentációt használhatunk:
-  - 4 elemű quaternion _(erről később)_
-  - 3 elemű Euler-szögek: roll (dőlés, gurulás, ψ): pitch (bólintás, θ), yaw (legyezőmozgás, φ) [wolfram alpha](https://mathworld.wolfram.com/EulerAngles.html)
-  - 3 x 3 elemű rotációs matrix
+    - 4 elemű quaternion _(erről később)_
+    - 3 elemű Euler-szögek: roll (dőlés, gurulás, ψ): pitch (bólintás, θ), yaw (legyezőmozgás, φ) [wolfram alpha](https://mathworld.wolfram.com/EulerAngles.html)
+    - 3 x 3 elemű rotációs matrix
 
 Például a Nissan Leaf `base_link` framejéhez képest a következő fontosabb framek találhatóak meg:
 
@@ -258,7 +258,7 @@ Forrás: [Robotic Systems, University of Illinois](http://motion.cs.illinois.edu
 
 [matrixmultiplication.xyz](http://matrixmultiplication.xyz/){: .md-button .md-button-blue .mr-4 }
 
-[Python notebook](https://nbviewer.org/github/horverno/sze-academic-python/blob/master/eload/ealeshtranszformaciok.ipynb){: .md-button .md-button-blue .mr-4 }
+[Python notebook](https://github.com/horverno/sze-academic-python/blob/master/eload/ealeshtranszfromaciok.ipynb){: .md-button .md-button-blue .mr-4 }
 
 
 
@@ -275,14 +275,17 @@ A roll pitch yaw (Euler szögek) alternatívája, a komplex számokhoz hasonló 
 Demonstáció: [www.quaternions.online](https://quaternions.online/)
 
 Előnyei:
+
 - __Numerikus stabilitás__:  A lebegőpontos reprezentációból adódó kis numerikus hibák sokszor ismétlődve egyre nagyobb hibákhoz vezethetnek Euler szögek esetén. Például egy forgatás pár század fokos pontatlansága ezrez vagy tízezres ismétléssel komoly hibává adódhat össze. Quaternion-oknál ez a komlex reprezentáció és a normált alak miatt sokkal kisebb.
 - __Gyors számítás__: A kvaterniók hatékonyan reprezentálják a 3D térbeli forgatásokat, és sokszor gyorsabbak és stabilabbak lehetnek, mint más reprezentációs módszerek, például Euler-szögek.
 - __Pontosság__:
-- __Nem érzékeny a "Gimbal lock" prblémára__: Az Euler-szögek esetében előfordulhat egy olyan helyzet, amikor a rotációk szenzitívekké válnak bizonyos irányokban, ami korlátozhatja a számítások pontosságát. A kvaterniók ezt a problémát elkerülik.
+
+    - __Nem érzékeny a "Gimbal lock" problémára__: Az Euler-szögek esetében előfordulhat egy olyan helyzet, amikor a rotációk szenzitívekké válnak bizonyos irányokban, ami korlátozhatja a számítások pontosságát. A kvaterniók ezt a problémát elkerülik.
 - __Könnyen interpolálhatók__: A kvaterniók segítségével könnyen lehet interpolálni a két rotációt közöttük, ami fontos az animációk simaságának megőrzése szempontjából. Sőt nem lineáris interpolációkhoz is használhatók. A kvaterniók lehetővé teszik a nem lineáris interpolációkat is, ami olyan animációk létrehozásához hasznos, ahol a rotáció nem lineárisan változik az időben.
 
 
 Hátrány:
+
 - __Nem intuitív az ember számára__: Nehezebben érthetők, mint például az Euler-szögek, amiket megszoktunk a 3 tengely körüli forgatásra.
 
 $$tan(\frac{\pi}{2}) = \infty $$

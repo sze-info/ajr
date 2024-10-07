@@ -329,7 +329,7 @@ def generate_launch_description():
 
 ## További 
 
-[Python notebook transform](https://nbviewer.org/github/horverno/sze-academic-python/blob/master/eload/ealeshtranszformaciok.ipynb){: .md-button .md-button-blue .mr-4 }
+[Python notebook transform](https://github.com/horverno/sze-academic-python/blob/master/eload/ealeshtranszfromaciok.ipynb){: .md-button .md-button-blue .mr-4 }
 
 
 [Python notebook quaternion](https://github.com/sze-info/arj/blob/main/docs/transzformaciok/gps_utm.ipynb){: .md-button .md-button-purple .mr-4 }
