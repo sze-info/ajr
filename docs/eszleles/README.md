@@ -87,6 +87,7 @@ Ez a tananyagrész a TU München Autonomous Driving Software Engineering tantár
 ## Kihívások, nehézségek
 
 Számos kihívás nehezítheti a felismerést illetve annak pontosságát:
+
 - Időjárás (eső, hó, köd, ...)
 - Napszak (éjszaka, naplemente, napfelkelte ...)
 - Takarás (objektumok csak részlegesen látszanak)
@@ -116,6 +117,10 @@ Miután az út szintjét kiszűrtük a LIDAR adatból (ground-segmentation), út
 ![](https://codeahoy.com/img/kmeans/kmeans-animated.gif)
 
 Forrás: [codeahoy.com](https://codeahoy.com/img/kmeans/kmeans-animated.gif)
+
+![](https://raw.githubusercontent.com/jkk-research/lidar_cluster_ros2/refs/heads/ros2/img/lidar_cluster01.png)
+
+Forrás: saját
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y0bmX5s6ojk?si=waCecpMidjLI19_N?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

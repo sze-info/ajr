@@ -27,9 +27,9 @@ A következő képernyőfelvétel bemutatja a szükséges lépéseket:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YJyczb53vrg?si=rqnKHgE7y70-5B3a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-## `1. lépés.` - Töltsük le a nyers adatokat
+## `1. lépés.` - Ha még nincs meg korábbról, töltsük le a nyers adatokat
 
-A LIDAR adatok klaszterezéséhez először – nem meglepő módon – LIDAR adatokra van szükség. Használja a következő 3 lehetőség valamelyikét.
+A LIDAR adatok klaszterezéséhez először – nem meglepő módon – LIDAR adatokra van szükség. Használja a következő 3 lehetőség valamelyikét, amennyiben még nincs meg az elsőző gyakorlatokból.
 
 ### `A lehetőség`: MCAP letöltése az alábbi linkről
 
@@ -52,6 +52,11 @@ cd /mnt/c/bag/
 ```
 wget https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1  -O lexus3-2024-04-05-gyor.mcap
 ```
+Tanteremben ez így néz ki:
+``` bash
+rsync -avzh --progress /mnt/kozos/measurement_files/lexus3-2024-04-05-gyor.mcap /mnt/c/temp/
+```
+Windows böngészőből is meg lehet tenni, de a terminálból csak egy parancs. 
 
 
 ### `C lehetőség`: Saját MCAP használata
@@ -68,7 +73,7 @@ Később se felejtsük el frissíteni ezeket a további lépésekben.
 
 Játsszuk le a bag-et következőhöz hasonló paranccsal:
 ``` bash
-ros2 bag play /mnt/c/bag/lexus3-2024-04-05-gyor.mcap -l
+ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap -l
 ```
 
 !!! info 
@@ -151,7 +156,7 @@ git clone https://github.com/jkk-research/lidar_cluster_ros2
 ```
 
 
-### Build the packages
+### Build
 
 ```bash
 cd ~/ros2_ws
@@ -191,7 +196,7 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 ```bash
-ros2 bag play /mnt/c/bag/lexus3-2024-04-05-gyor.mcap -l
+ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap -l
 ```
 
 ```bash

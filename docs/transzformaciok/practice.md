@@ -56,7 +56,7 @@ Ezután már buildelhetünk is:
 cd ~/ros2_ws
 ```
 ``` bash
-colcon build --packages-select arj_transforms_cpp
+colcon build --packages-select arj_transforms_cpp --symlink-install
 ```
 
 Célszerű új terminalban source-olni, majd futtatni:

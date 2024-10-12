@@ -46,38 +46,53 @@ Oktatók | | | .
 
 </center>
 
-2023/24 őszi félévében az `A2`-es teremben, illetve a `C100`-as gépteremben tartunk órákat.
+2024/25 őszi félévében az `A2`-es teremben (hétfő), illetve a `B6`-as gépteremben (kedd 8:30) tartunk órákat.
+
+Óra | Dátum | Tananyag | Megj.
+-----:|---:|:-----|:-----:
+1 | szept. 9-10. | Bevezetés | 
+2 | szept. 16-17. | ROS 2 alap, telepítés | 
+3 | szept. 23-24. | Érzékelés | 
+4 | szept. 30-okt. 1. | ROS 2 haladó | 
+5 | okt. 7-8. | Transzformációk | okt. 13-ig kis beadandó
+6 | okt. 14-15. | Észlelés | 
+7 | okt. 21. | Szimuláció | 22-én B6 terem felújítás
+8 | okt. 28-29. | Tervezés | ZH 1 
+9 | nov. 4-5. | Szabályozás | 
+10 | nov. 11-12. | AI | 
++1 | nov. 19.? | | ZH 2?
++2 | - | | Pót ZH?
 
 ## Elmélet
 
-Óra | Dátum | Tananyag
------|-----|-----
-1 | szept. 6. | [Bevezetés](https://sze-info.github.io/ajr/bevezetes/): A tantárgy felépítése. Robotikai és önvezető járműves ismeretek. Érzékelés, észlelés, tervezés, szabályozás, aktuálás.
-2 | szept. 13. | [ROS2 koncepciók](https://sze-info.github.io/ajr/bevezetes/ros2/): Egyetemi robotok és járművek ismertetése. `ROS 2` alapismeretek.
-3 | szept. 20. | [Érzékelés](https://sze-info.github.io/ajr/erzekeles/): Kamera, LIDAR, GNSS (GPS), IMU, CAN szenzorok működése, jelfeldolgozása, főbb `ROS 2` topicok, `ROS 2` időkezelés.
-4 | szept. 27. | [Féléves beadandó](https://sze-info.github.io/ajr/feleves_beadando/): féléves beadandó ismertetése, osztályzási szempontok, ötletek, kérdések-válaszok
-5 | okt. 4. | [Transzformációk](https://sze-info.github.io/ajr/transzformaciok/): Merev test mozgása, mátrix szorzás ismétlése, homogén koordináták szemléltetése rövid progamkódokkal, quaternion (kvaterniók) fogalma.
-6 | okt. 11. | [Észlelés](https://sze-info.github.io/ajr/eszleles/): objektumfelismerés, objektumklasszifikáció, objektum követés és predikció, SLAM és LOAM.
-7 | okt. 25. | [Szimuláció](https://sze-info.github.io/ajr/szimulacio/): ROS 2 kompatibilis szimulátorok áttekintése (pl [Gazebo](http://gazebosim.org/), [Carla](https://carla.org/), [SVL](https://www.lgsvlsimulator.com/), [OSSDC SIM](https://github.com/OSSDC/OSSDC-SIM), [AirSim](https://microsoft.github.io/AirSim), [AWSIM](https://tier4.github.io/AWSIM), [CoppeliaSim](https://www.coppeliarobotics.com/coppeliaSim), [MVSim](https://mvsimulator.readthedocs.io/))
-8 | nov. 8. | [Tervezés](https://sze-info.github.io/ajr/tervezes/): Globális tervezés, lokális tervezés. Lokális tervezés: keresztirányú és hosszirányú tervezés.
-9 | nov. 15. | [Szabályozás](https://sze-info.github.io/ajr/szabalyozas/): Járműirányítási megoldások (inverz-modellek, prediktív modellek, zárhurkú modellek).
-10 | nov. 22. | [Mesterséges intelligencia](https://sze-info.github.io/ajr/mesterseges_intelligencia/): Neurális hálózatok járműves és robotikai fókusszal.
+Óra | Tananyag
+-----|-----
+1 | [Bevezetés](https://sze-info.github.io/ajr/bevezetes/): A tantárgy felépítése. Robotikai és önvezető járműves ismeretek. Érzékelés, észlelés, tervezés, szabályozás, aktuálás.
+2 | [ROS2 koncepciók](https://sze-info.github.io/ajr/bevezetes/ros2/): Egyetemi robotok és járművek ismertetése. `ROS 2` alapismeretek.
+3 | [Érzékelés](https://sze-info.github.io/ajr/erzekeles/): Kamera, LIDAR, GNSS (GPS), IMU, CAN szenzorok működése, jelfeldolgozása, főbb `ROS 2` topicok, `ROS 2` időkezelés.
+4 | [Féléves beadandó](https://sze-info.github.io/ajr/feleves_beadando/): féléves beadandó ismertetése, osztályzási szempontok, ötletek, kérdések-válaszok
+5 | [Transzformációk](https://sze-info.github.io/ajr/transzformaciok/): Merev test mozgása, mátrix szorzás ismétlése, homogén koordináták szemléltetése rövid progamkódokkal, quaternion (kvaterniók) fogalma.
+6 | [Észlelés](https://sze-info.github.io/ajr/eszleles/): objektumfelismerés, objektumklasszifikáció, objektum követés és predikció, SLAM és LOAM.
+7 | [Szimuláció](https://sze-info.github.io/ajr/szimulacio/): ROS 2 kompatibilis szimulátorok áttekintése (pl [Gazebo](http://gazebosim.org/), [Carla](https://carla.org/), [SVL](https://www.lgsvlsimulator.com/), [OSSDC SIM](https://github.com/OSSDC/OSSDC-SIM), [AirSim](https://microsoft.github.io/AirSim), [AWSIM](https://tier4.github.io/AWSIM), [CoppeliaSim](https://www.coppeliarobotics.com/coppeliaSim), [MVSim](https://mvsimulator.readthedocs.io/))
+8 | [Tervezés](https://sze-info.github.io/ajr/tervezes/): Globális tervezés, lokális tervezés. Lokális tervezés: keresztirányú és hosszirányú tervezés.
+9 | [Szabályozás](https://sze-info.github.io/ajr/szabalyozas/): Járműirányítási megoldások (inverz-modellek, prediktív modellek, zárhurkú modellek).
+10 | [Mesterséges intelligencia](https://sze-info.github.io/ajr/mesterseges_intelligencia/): Neurális hálózatok járműves és robotikai fókusszal.
 
 
 ## Gyakorlat
 
-Óra | Dátum | Tananyag
------|-----|-----
-1| szept. 6. | [Bevezetés](https://sze-info.github.io/ajr/bevezetes/practice/) + [Linux](https://sze-info.github.io/ajr/bevezetes/linux/) + [Géptermi ismeretek](https://sze-info.github.io/ajr/bevezetes/gepterem/): WSL2 használata Windows operációs rendszeren. Géptermi alapismeretek. Linux parancsok, amelyek szükségesek lehetnek a későbbiekben.
-2| szept. 13. | [Telepítés](https://sze-info.github.io/ajr/telepites/ros_humble/)+ [Fejlesztőkörnyezet beállítása](https://sze-info.github.io/ajr/bevezetes/vscodegit/) + [ROS2 kommunikáció](https://sze-info.github.io/ajr/bevezetes/ros2gyak/): Első `ROS 2` node-ok, ROS parancsok használata, build és source.
-3| szept. 20. | [Érzékelés gyakorlat](https://sze-info.github.io/ajr/erzekeles/practice/): Szenzor adatok jellemzőbb formátumai: `sensor_msgs/PointCloud2`, `sensor_msgs/Image`, `geometry_msgs/Pose`, stb. Bag `.mcap` fájlok kezelése, lejátszása. Egyszerű pacakge készítése, amely pozíció adatokra iratkozik fel. 
-4| szept. 27. | [Verziókezelés, Git](https://sze-info.github.io/ajr/onallo/ros2git/), [Copilot](https://sze-info.github.io/ajr/bevezetes/copilot/), [vs code](https://sze-info.github.io/ajr/bevezetes/vscodegit/), [ROS 2 launch](https://sze-info.github.io/ajr/ros2halado/ros2launch/): Copilot használata ROS 2 fejlesztéshez, Template repo ismertetése, használata, launch fájlok írása python nyelven
-5| okt. 4. | [Transzformációk gyakorlat](https://sze-info.github.io/ajr/transzformaciok/practice/): Node létrehozása, amely transzformációkat hirdet. Markerek megjelenítése, launch önálló feladat.
-6| okt. 11. | [Észlelés gyakorlat](https://sze-info.github.io/ajr/eszleles/practice/): egyszerű LIDAR szűrés, X, Y és Z koordináták szerint.
-7| okt. 25. | [Szimuláció bevezetés](https://sze-info.github.io/ajr/szimulacio/gazebo_fortress/): Gazebo Fortress és ROS 2, [szimuláció gyakorlat](https://sze-info.github.io/ajr/szimulacio/gyakorlat/): saját robotszimuláció létrehozása.
-8| nov. 8. | [Tervezés gyakorlat](https://sze-info.github.io/ajr/tervezes/practice/): Polinom alapú lokális tervező megvalósításás. [Nav2](https://navigation.ros.org/) használata szimulátorral.
-9| nov. 15. | [Szabályozás gyakorlat](https://sze-info.github.io/ajr/szabalyozas/ros2practice/): PID hangolás. Trajektóriakövetés Gazebo szimulátorral. Saját fejlesztésű szabályzó és jármű modell.
-10| nov. 22. | [Mesterséges intelligencia gyakorlat](https://sze-info.github.io/ajr/mesterseges_intelligencia/practice/): Neurális hálózatok gyakorlat.
+Óra | Tananyag
+-----|-----
+1| [Bevezetés](https://sze-info.github.io/ajr/bevezetes/practice/) + [Linux](https://sze-info.github.io/ajr/bevezetes/linux/) + [Géptermi ismeretek](https://sze-info.github.io/ajr/bevezetes/gepterem/): WSL2 használata Windows operációs rendszeren. Géptermi alapismeretek. Linux parancsok, amelyek szükségesek lehetnek a későbbiekben.
+2| [Telepítés](https://sze-info.github.io/ajr/telepites/ros_humble/)+ [Fejlesztőkörnyezet beállítása](https://sze-info.github.io/ajr/bevezetes/vscodegit/) + [ROS2 kommunikáció](https://sze-info.github.io/ajr/bevezetes/ros2gyak/): Első `ROS 2` node-ok, ROS parancsok használata, build és source.
+3| [Érzékelés gyakorlat](https://sze-info.github.io/ajr/erzekeles/practice/): Szenzor adatok jellemzőbb formátumai: `sensor_msgs/PointCloud2`, `sensor_msgs/Image`, `geometry_msgs/Pose`, stb. Bag `.mcap` fájlok kezelése, lejátszása. Egyszerű pacakge készítése, amely pozíció adatokra iratkozik fel. 
+4| [Verziókezelés, Git](https://sze-info.github.io/ajr/onallo/ros2git/), [Copilot](https://sze-info.github.io/ajr/bevezetes/copilot/), [vs code](https://sze-info.github.io/ajr/bevezetes/vscodegit/), [ROS 2 launch](https://sze-info.github.io/ajr/ros2halado/ros2launch/): Copilot használata ROS 2 fejlesztéshez, Template repo ismertetése, használata, launch fájlok írása python nyelven
+5| [Transzformációk gyakorlat](https://sze-info.github.io/ajr/transzformaciok/practice/): Node létrehozása, amely transzformációkat hirdet. Markerek megjelenítése, launch önálló feladat.
+6| [Észlelés gyakorlat](https://sze-info.github.io/ajr/eszleles/practice/): egyszerű LIDAR szűrés, X, Y és Z koordináták szerint.
+7| [Szimuláció bevezetés](https://sze-info.github.io/ajr/szimulacio/gazebo_fortress/): Gazebo Fortress és ROS 2, [szimuláció gyakorlat](https://sze-info.github.io/ajr/szimulacio/gyakorlat/): saját robotszimuláció létrehozása.
+8| [Tervezés gyakorlat](https://sze-info.github.io/ajr/tervezes/practice/): Polinom alapú lokális tervező megvalósításás. [Nav2](https://navigation.ros.org/) használata szimulátorral.
+9| [Szabályozás gyakorlat](https://sze-info.github.io/ajr/szabalyozas/ros2practice/): PID hangolás. Trajektóriakövetés Gazebo szimulátorral. Saját fejlesztésű szabályzó és jármű modell.
+10| [Mesterséges intelligencia gyakorlat](https://sze-info.github.io/ajr/mesterseges_intelligencia/practice/): Neurális hálózatok gyakorlat.
 
 
 
