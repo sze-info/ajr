@@ -33,7 +33,7 @@ Nyissuk meg a létrehozott fájlt Visual Studio Code segítségével, majd máso
 
 ``` xml
 <?xml version="1.0" ?>
-<sdf version="1.10">
+<sdf version="1.9">
     <world name="car_world">
         <physics name="1ms" type="ignored">
             <max_step_size>0.001</max_step_size>
@@ -109,7 +109,7 @@ Indítást követően a leírtaknak megfelelő üres környezetet kell látnunk:
 
 ## Robot modell létrehozása
 
-Folytassuk a `building_robot.sdf` szerkesztését, a `</model>` címkét követően: 
+Folytassuk a `building_robot.sdf` szerkesztését, a `</model>` címkét követően. Észrevehető, hogy a talajt, vagyis a `ground_plane` elemet is modellként adtuk meg, hasonló módon adjuk hozzá a járművet is.
 
 ``` xml
 <model name='vehicle_blue' canonical_link='chassis'>
@@ -128,6 +128,8 @@ Minden modell (robot) `jointok` (csuklók / ízületek) által összekapcsolt `l
 
 ## A robotot alkotó linkek definiálása
 
+A következőkben az érthetőség kedvéért az SDF fájl magyarázata elemenként történik. Nehéz lehet követni az egyes részletek teljes kódon belüli helyét, ehhez a magyarázat végén található teljes SDF ad segítséget.
+
 Minden link létrehozása során meg kell adnunk a következőket:
 1. link neve, pozíciója
 2. link inerciális tulajdonságai (tömeg és inerciamátrix)
@@ -138,9 +140,12 @@ Minden link létrehozása során meg kell adnunk a következőket:
 Link létrehozása:
 
 ``` xml
-<link name='chassis'>
+<model name='vehicle_blue' canonical_link='chassis'>
+    <pose relative_to='world'>0 0 0 0 0 0</pose>
+    <link name='chassis'>
         <pose relative_to='__model__'>0.5 0 0.4 0 0 0</pose>
-</link>
+    </link>
+</model>
 ```
 
 Inerciális tulajdonságok (a mértékegységek ebben az esetben is SI-ben értendőek):
@@ -176,7 +181,7 @@ Vizuális és egyszerűsített (ütközési/collision) geometria megadása:
 </visual>
 ```
 
-```
+```xml
 <collision name='collision'>
     <geometry>
         <box>
@@ -189,10 +194,10 @@ Vizuális és egyszerűsített (ütközési/collision) geometria megadása:
 Indítsuk el a szimulációt ismét:
 
 
-```
+```bash
 cd ~/simulation
 ```
-```
+```bash
 ign gazebo building_robot.sdf
 ```
 
@@ -293,7 +298,7 @@ A bal kerék megadása analóg módon történik, csak a pozíció tekintetében
 
 Van lehetőség enyéni frame-ek létrehozására is, a támasztógörgő felépítése során ezt fogjuk tenni:
 
-```
+```xml
 <frame name="caster_frame" attached_to='chassis'>
     <pose>0.8 0 -0.2 0 0 0</pose>
 </frame>
@@ -351,7 +356,7 @@ Megadjuk a joint nevét és típusát. A keréknek el kell fordulnia, ezért a `
     <pose relative_to='left_wheel'/>
 ```
 Ezt követően megadjuk az alá-fölé rendelő viszonyt:
-```
+```xml
     <parent>chassis</parent>
     <child>left_wheel</child>
 ```

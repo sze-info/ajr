@@ -65,14 +65,14 @@ ign gazebo
 ![gazebo](ign_gazebo_02.png)
 
 
-Nyissuk meg a `shapes.sdf` világot. Az SDF (Simulation Description Format), egy beépített  XML leírás. AKár egy parancsként is indítható: `ign gazebo shapes.sdf`.
+Nyissuk meg a `shapes.sdf` világot. Az SDF (Simulation Description Format) egy beépített  XML leírás. Akár egy parancsként is indítható: `ign gazebo shapes.sdf`.
 
 ![](https://api.gazebosim.org/1.0/images/fortress/img/snap.gif)
 
 
 # Példa: Ackermann robot
 
-Ackermann robotnak a "személyautó-szerű" elől két kormányzott, hátul pedig két nem kormányzott kerékkel rendelkező járművet / robotot. Ebben a példában egy ilyen robotot szeretnénk mozgatni ROS 2-ből. Az `ign gazebo` parancsra a szimuláció-választó felület indul. Egy paranccsal indítható az Ackermann robot szimuláció:
+Ackermann robotnak a „személyautó-szerű”, hagyományos, elől két kormányzott, hátul pedig két nem kormányzott kerékkel rendelkező járművet / robotot nevezzük. Ebben a példában egy ilyen robotot szeretnénk mozgatni ROS 2-ből. Az `ign gazebo` parancsra a szimuláció-választó felület indul. Egy paranccsal indítható az Ackermann robotot tartalmazó szimuláció:
 
 ```
 ign gazebo -v 4 -r ackermann_steering.sdf
@@ -80,7 +80,7 @@ ign gazebo -v 4 -r ackermann_steering.sdf
 
 ![Alt text](ign_gazebo_01.png)
 
-Az Ignition Gazebo ROS 2-től független, de jól támogatott, így `ros_gz_bridge` package segítségével indítható az a bridge, amin a szimmulációs topicok ROS 2 topicként látszanak, pl:
+Az Ignition Gazebo ROS 2-től független, de jól támogatott, így `ros_gz_bridge` package segítségével indítható az a bridge, amin a szimmulációs topic-ok ROS 2 topic-ként látszanak, pl:
 
 ``` bash
 sudo apt update
@@ -118,7 +118,7 @@ Ez a 3 parancs egy hosszú parancsként is kiadható:
 ros2 run ros_gz_bridge parameter_bridge /model/vehicle_blue/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist /model/vehicle_blue/odometry@nav_msgs/msg/Odometry[ignition.msgs.Odometry   /world/ackermann_steering/pose/info@tf2_msgs/msg/TFMessage[ignition.msgs.Pose_V  --ros-args -r /world/ackermann_steering/pose/info:=/tf -r /model/vehicle_blue/odometry:=/odom
 ```
 
-Hogy pontosan milyen szimulációs topicok vannak, az ezekkel a parancsokkal ellenőrizhatő:
+Hogy pontosan milyen szimulációs topicok vannak, az ezekkel a parancsokkal ellenőrizhető:
 
 ``` bash
 ign topic -l
