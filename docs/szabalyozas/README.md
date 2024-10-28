@@ -16,11 +16,19 @@ A szabályozás célja a megtervezett trajektória kivitelezése.
 
 ![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview14.svg)
 
+## Ellenőrző kérdések
+
+- Mi a különbség az objektum detekció és a klasszifikáció között?
+- Mi a különbség az objektum detekció és a predikció között?
+- Mit értünk pose (vagy póz / helyzet) alatt? (robotikában)
+- Milyen mennyiségeket szokás mérni / szabályozni egy járműirányítási rendszerben? Ugyanez a kérdés robotikai rendszerek esetén.
+
 ## 1. Motiváció a zárthurkú szabályozás mögött - bevezetés
 
 Egy rendszer tervezett célállapotát úgy érhetjük el, ha célérték figyelembevételével a rendszerbe beavatkozunk. Például egy jármű esetén a célsebességet a gáz és fékpedál mozgatásával, közvetetten a motor nyomatékának és a fékerőnek a változtatásával érhetjük el. Kezdeti példának tekintsünk egy járművezetőt: a vezető általában tisztában van a megengedett legnagyobb sebességgel, ekörül alkalmaz egy számára megfelelő tűrési sávot. Ezen belül meghatároz egy számára biztonságos és kényelmes sebességet, amit tartani szeretne. A vezető addig gyorsít, amíg el nem éri a kívánt sebességet, majd a gázpedált kicsit visszábbengedve tartja a sebességet.
 Helyes az az állítás, hogy amennyiben elértük a kívánt sebességet, a pedált elengedhetjük, nincs több dolgunk? Természetesen nem. Miért nem? Hisz a jármű a veszteségekből adódóan lassulni fog, lejtő esetén akár gyorsulhat is. Ahhoz, hogy tartani tudjuk a sebességet a vezetőnek folyamatosan figyelnie kell a jármű mozgását illetve a környezetet, és ez alapján beavatkoznia a pedálokon keresztül.
 Ez az egyszerű példa legtöbb részét a tervezési és szabályzási komponenseknek lefedi. A szabályzás téren a következő megfigyeléseket tehetjük meg:
+
 - a vezető érzékeli a jármű akutális állapotát (valamilyen pontossággal)
 - a vezető tudja, hogyha beavatkozik a gáz- vagy fékpedállal, milyen hatást fog elérni, azaz mennyire lassul vagy gyorsul az autó (valamilyen pontossággal)
 - a vezető különösebb érzékeléstől függetlenül (tehát anélkül, hogy tudná, pl. milyen erő hat az autóra) nagyjából (!) meg tudja határozni a kívánt gázpedál állást (nagy hibával)
@@ -38,6 +46,7 @@ Egy nagyon durva összehasonlítást tartalmaz az 1. Ábra. Képzeljünk el egy 
 ## 2. Architekturális áttekintés, visszatekintés
 
 Ahogyan azt a korábbi fejezetekben is láttuk, a teljes járműirányítási lánc moduláris. A legfőbb feladatok:
+
 - érzékelés
 - észlelés
 - tervezés
@@ -50,16 +59,16 @@ Ez a fejezet a szabályzásról szól. A szabályzások alapjairól a 3. alfejez
 flowchart LR
 
 GP1[Globális tervezés
-   Bemenetek:
-   - Sofőrprofil
-   - Térkép
-   Kimenet:
-   - Útvonalterv
-   Cél: globális terv megtervezése
-   útvonalon, amely A-ból vezet
-   B-be, figyelembe véve pl.
-   forgalmi adatok, üzemanyag
-   fogyasztás… stb.]:::light
+     Bemenetek:
+     - Sofőrprofil
+     - Térkép
+     Kimenet:
+     - Útvonalterv
+     Cél: globális terv megtervezése
+     útvonalon, amely A-ból vezet
+     B-be, figyelembe véve pl.
+     forgalmi adatok, üzemanyag
+     fogyasztás… stb.]:::light
 
 GP2[Szeretnék eljutni
    A-ból B-be
@@ -121,19 +130,19 @@ VC2[A járművet a
 
 
 AC1[Aktuátor szabályozás
-  Alacsony szintű szabályozás
-  Bemenetek:
-  - Járműszintű cél
-  mennyiségek
-  - Ellenőrzési korlátok
-  - Aktuátor
-  állapotváltozói
-  Kimenet:
-  - Aktuátor célállapotai
-  Cél: A járműszintű 
-  mennyiségeket lebontsa
-  és megvalósítsa 
-  az aktuátorokon keresztül]:::light
+     Alacsony szintű szabályozás
+     Bemenetek:
+     - Járműszintű cél
+     mennyiségek
+     - Ellenőrzési korlátok
+     - Aktuátor
+     állapotváltozói
+     Kimenet:
+     - Aktuátor célállapotai
+     Cél: A járműszintű 
+     mennyiségeket lebontsa
+     és megvalósítsa 
+     az aktuátorokon keresztül]:::light
   AC2[Kiszámolni a
 szükséges motor
 nyomaték és kormányzási
@@ -165,6 +174,7 @@ classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
 *2. Ábra: a legfőbb tervezési és szabályzási rétegek az architektúrában.*
 
 A szabályzó réteg általában több szinre bomlik. Minimum két ilyen szintet megkülönböztetünk:
+
 - járműszintű szabályzás
 - aktuátor szabályzás
 
@@ -174,6 +184,7 @@ Belülről kifelé érdemes a problémát megközelíteni, ahogy a legbelső sza
 Fontos, hogy automatizált vezetési rendszerek mozgásszabályzása esetén az aktuátor szabályzó rétegeket sokszor nem vesszük figyelembe, hanem feltételezzük, hogy azok teljesítménye, pontossága, sebessége megfelelő, "közel ideális". Persze a gyakorlatban ezt sokszor nehéz elválasztani, de arra törekszünk, hogy csak a járműszintű szabályzást kelljen megtervezni.
 
 A legfelső szintű szabályzás feladata tehát az, hogy a jármű a trajektóriát lekövesse. Általában két dimenziót különböztetünk meg:
+
 - hosszirányú mozgás: a jármű hosszirányú gyorsulásának, és végül a fék és motorerők meghatározása.
 - keresztirányú mozgás: a jármű célszögesebességének, és végül a kormányszögnek a meghatározása.
 
@@ -203,6 +214,7 @@ Ebben a fejezetben ismertetjük a szabályzástechnikához kapcsolódó alapfoga
 *Példa: a jármű dinamikai bicikli modelljének egy paramétere a jármű tömege. Ez változhat "menet közben is", hiszen pl. többen ülnek az autóban, csomagokat pakolnak bele, az üzemanyag szintje változik, azaz ez a paraméter nem időinvariáns, tehát a fizikai rendszer sem időinvariáns. Ugyanakkor tekinthetjük **bizonyos feltételek mellett** időinvariánsnak, ekkor a modell pontatlansága nő.*
 
 **Állapot**: Az állapot a memória jelleggel rendelkező dinamikai rendszerekben a múlt összesített hatása. A rendszer állapotának a következő két tulajdonsággal kell rendelkeznie
+
 - Bármely T időpillanatban a kimenőjel az adott pillanatbeli állapot és bemenőjel együttes ismeretében egyértelműen meghatározható legyen. Kimeneti egyenletnek nevezzük azt az összefüggést, amely az állapotból és a bemenőjelből meghatározza a kimenőjeleket.
 - Az állapot egy adott T időpillanatban egyértelműen meghatározható legyen a bemenőjel a t≤T időtartománybeli értékének ismeretében. Az állapot változását leíró egyenletet állapotegyenletnek nevezzük.
 
@@ -225,6 +237,7 @@ Ezen fogalmak összessége elegendő a járműirányítási alapok megértéséh
 ### 3.2. A szabályzási feladat megfogalmazása
 
 **A cél mindig a valós fizikai rendszer irányítása úgy, hogy az az előírt célértéknek megfelelően viselkedjen.** Fontos, hogy minden célhoz meghatározzunk olyan **mérhető** mennyiségeket, amelyek alapján a szabályzás *jóságát* meg tudjuk határozni. A legtöbbször (de nem kizárólagosan) használt ilyen mennyiségek:
+
 - beállási idő (gyorsaság)
 - túllendülés mértéke
 - állandósult állapotbeli hiba
@@ -257,12 +270,14 @@ A rendszerre a járműre ható gyorsító erővel szeretnénk hatni, ezért ez a
 
 2. Feladat: készítsük el a jármű matematikai modelljét / absztrakt modelljét!
 Olyan egyenletrendszert keresünk, amely összeköti a be- és kimenetet. Itt meg kell határoznunk, mennyire törekszünk pontos modellre. Az egyszerűség kedvéért éljünk a következő megkötésekkel:
+
 - eltekintünk a hosszirányban fellépő kerékszliptől
 - eltekintünk az aktuátorok dinamikai viselkedésétől, azaz a kért gyorsulás egyből megvalósul
 - eltekintünk a mért mennyiségeket terhelő hibáktól, azaz a szenzorok pontatlanságától.
 - eltekintünk a futómű és a felfüggesztés dinamikai tulajdonságaitól.
 
 Az egyenletünk így egy koncentrált tömegpont lineáris mozgásává egyszerűsödik. A modellbe foglaljuk be a következő mennyiségeket:
+
 - a jármű tömege
 - a jármű légellenállása
 - a jármű sebességarányos súrlódása.
@@ -384,6 +399,7 @@ Hasonló interaktív vizualizáció érhető el a Viktor.ai oldalon, de itt még
 
 Ebben a fejezetben áttekintettük a szabályzástechnikai alapfogalmakat, példákat hoztunk a járműirányítás területéről. Ezen kívül a gyakorlatban megalkottunk egy egyszerű matematikai modellt, amely leírja egy jármű, mint tömegpont hosszirányú mozgását. Ezen keresztül MATLAB/Simulink segítségével sebességszabályzással kapcsolatos szimulációt végeztünk. Az egyik legelterjedtebb szabályzót, a PID szabályzót mutattuk be.
 A következő pontokat érdemes megjegyezni:
+
 - egy zárthurkú szabályzás általában áll a szabályzott szakaszból (mely a valós fizikai rendszer absztrakt matematikai modellje) és a szabályzóból.
 - a valós fizikai rendszert matematikai modellel írjuk le, amely alapján tervezhető a szabályzó is. A modell pontossága befolyásolja a megtervezett szabályzó minőségét is.
 - a matematikai modell általában differenciálegyenletek formájában áll elő.
@@ -393,6 +409,7 @@ A következő pontokat érdemes megjegyezni:
 ## 4. Járműirányítási megoldások
 
 A járműszabályzás területén - ahogy azt a 2. alfejezetben láttuk - több, egymásba ágyazott szabályzó kört használunk. Mindegyik jellemzően tartalmaz egy előre csatolt és egy visszcsatolt ágat. Automatizált vezetési rendszerek esetén általában a legfelső, ún. járműszintű irányítást szoktuk legelőre venni. Az alacsonyabb szintű szabályzókra most nem térünk ki, csupán egy lista erejéig összegezzük őket. Meg kell jegyezni, hogy ezek az alacsonyszintű szabályzók nagyban függnek a járműben elérhető aktuátoroktól, hiszen többféle fékrendszer, hajtás és kormányrendszer is elérhető lehet. Ez a felosztás nagyban támogatja moduláris tervezést, azaz a járműszintű szabályzást függetlenül tudjuk fejleszteni az alacsony szintű szabályzásoktól. Ez pl. sorozatgyártott szoftverek esetén nagyban megkönnyíti az újrahasznosíthatóságot. Az alacsony szintű, aktuátor szabályzó hurkok a következők lehetnek (a teljesség igénye nélkül):
+
 - kormány szervó motor szögszabályzás
 - kormány szervó motor nyomatékszabályzás
 - motor nyomaték szabályzás
@@ -400,6 +417,7 @@ A járműszabályzás területén - ahogy azt a 2. alfejezetben láttuk - több,
 
 Innentől minden megállapítás a jármű szintjére vonatkozik. Fontos megjegyezni, hogy mindig két dimenzióban gondolkodunk: hosszirányú és keresztirányú szabályzásban. A hosszirányú szabályzásra láttunk példát a 3. alfejezetben. Ez általában a sebesség szabályzását, esetleg a gyorsulás szabályzását jelenti. Habár a hosszirányú szabályzás is rejt nem levés kihívást (a motor tehetetlensége, a fék- és hajtóerők szétválasztása...stb.), a legtöbb járműirányítási megoldás elsősorban a keresztirányú szabályzásra összpontosít. 
 Mivel a jármű automatikus irányítási feladata nagyban hasonlít az emberek vezetési feladatához (tehát a kormány és a pedálok segítségével a jármű mozgásának befolyásolása), ezért szokás ezeket az irányítási megoldásokat vezetői modelleknek (angolul driver models) is hívni. Az egyes modellekről rövid összefoglalókat találunk az ajánlott irodalom alatt. Ezek közül [1] szerint 3 csoportra oszthatjuk a vezetői modelleket:
+
 -	Inverz-modellek (inverse models)
 -	Prediktív modellek (predictive/forward models)
 -	Zárhurkú modellek (closed loop models).
@@ -407,7 +425,7 @@ Mivel a jármű automatikus irányítási feladata nagyban hasonlít az emberek 
 ![](https://raw.githubusercontent.com/jkk-research/wayp_plan_tools/main/csv/control_overview01.svg)
 *18. Ábra: járműirányítási megoldások szemléltetése.*
 
-### Inverz modellek
+### Inverz modellek (*pursuit*)
 Az inverz modelleket angol terminológiában *pursuit* modelleknek is szokás hívni, amely a legjobban talán *előre tekintő*, *előre toló*nak lehet fordítani. A lényege, hogy a kormányzáshoz szükséges célértéket az két információ alapján határozza meg:
 - egy előretekintési pontban mi a jármű célállapota?
 - a járműről előzetesen felállított modell.
@@ -449,8 +467,9 @@ Szokás az előretekintési távot adaptívan, pl. a sebesség függvényében m
 
 A pure-pursuit modellek továbbfejlesztett változatairól pl. a [2] és [3] cikkben olvashatunk.
 
-### Prediktív modellek
+### Prediktív modellek (*MPC*)
 A prediktív modellek, hasonlóan a az inverz modellekhez a jármű modelljén alapszanak. Azonban egyúttal előre is tekintenek egy meghatározott horizonton: a modell segítségével becsüljük a jármű viselkedését előre, majd ennek függvényében a lehető legjobb megoldást választjuk a jelenben. Tehát ez esetben a jövő valamilyen pontosságú információit felhasználva hozunk döntést. Itt két esetet különböztetünk meg:
+
 - receding horizon: azaz a jövőbeli horizont folyamatosan tolódik előttünk, mivel a megtervezett jövőbeli viselkedésnek mindig az első elemét hajtjuk csak végre, ezek után újratervezünk
 - proceeding horizon: a horizont közeledik felénk, azaz a jövőbeli megtervezett viselkedést teljes egészében végrehajtjuk, és csak ez után tervezünk újra.
 
@@ -493,7 +512,7 @@ A 22. Ábrán azt látjuk, hogy 10 m/s-ig az MPC és a PID is jól teljesít, az
 <img src="arj_control_22.png" width="500" height="350" /> <br>
 *23. Ábra: MPC és PID szabályzó összevetése, kinematikai modell esetén, körpálya, alacsony sebességeken*
 
-### Zárthurkú modellek
+### Zárthurkú modellek (*PID*)
 
 Az ilyen típusú modellek, ahogy a neve is sugallja, a PID szabályzók logikáján alapszanak. Jellemzően egy vagy több visszacsatolt mennyiség hibáját minimalizálják. Ilyen modellekre találunk példát a [3] és [8] irodalomban. 
 A 24. Ábrán a [3]-ban bemutatott példa illusztrációját látjuk. Eszerint kijelölünk kettő előretekintési pontot: egy közelit (a jármű előtt) és egy távolit (a horizonton). Hasonlóan a pure-pursuit megoldásokhoz, itt is azt vizsgáljuk, hogyan juthatunk el a jelenlegi pozícióból a távoliba. Azonban nem egy egyszerű görbületszámolással, hanem a hiba minimalizálásával érjük ezt el, a következő egyenlet szerint:
@@ -542,7 +561,7 @@ A legrégebbi inverz-modellek a legegyszerűbbek és robosztusabbak, azonban a t
 2. [Interactive Live Script Control Tutorials for MATLAB and Simulink](https://www.mathworks.com/campaigns/products/control-tutorials.html)
 3. [Mario Theers - PID](https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Control/PID.html) - [CC BY 4.0 License](https://github.com/thomasfermi/Algorithms-for-Automated-Driving/blob/master/LICENSE)
 4. [Mario Theers - Pure pursuit](https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Control/PurePursuit.html) - [CC BY 4.0 License](https://github.com/thomasfermi/Algorithms-for-Automated-Driving/blob/master/LICENSE)
-5. [Youtube ControlLectures](https://www.youtube.com/@ControlLectures/videos)
+5. [Youtube ControlLectures Brian B. Douglas](https://www.youtube.com/@BrianBDouglas/videos)
 6. [Bokor József & Gáspár Péter. Irányítástechnika](https://dtk.tankonyvtar.hu/bitstream/handle/123456789/3269/Bokor_Gaspar_Soumelidis_Iranyitastechnika_II.pdf)
 
 ## Vezetői modellek

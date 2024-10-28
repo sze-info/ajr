@@ -8,7 +8,7 @@ icon: material/school
 
 # Nagy féléves
 
-A nagy féléves projekt elkészítése több időt igényel, azonban lehetőség van sokkal érdekesebb feladatokat kidolgozni, ráadásul jóval több hét alatt. A félévesre alapozva, a tárgy *teljesítése után* akár diplomamunka, szakdolgozat, projektmunka, TDK dolgozat is készíthető, illetve van lehetőség a kötelező szakmai gyakorlat teljesítésére is.
+A nagy féléves projekt elkészítése több időt igényel, azonban lehetőség van sokkal érdekesebb feladatokat kidolgozni, ráadásul jóval több hét alatt. A félévesre alapozva, a tárgy *teljesítése után* akár diplomamunka, szakdolgozat, projektmunka, TDK dolgozat is készíthető, illetve van lehetőség a kötelező szakmai gyakorlat teljesítésére is. Féléves választása esetén **nem kötelező** a ZH, de ha valaki úgy dönt, hogy ír, akkor a jobb eredmény számít.
 
 
 ## Példák
@@ -70,6 +70,7 @@ Az alábbi példák nem feltétlenül féléves munkának készültek, de annak 
 ## Értékelési szempontok
 
 A szempontok kialakításánaál az [Óbudai Egyetem](https://abc-irobotics.github.io/ros_course_materials_hu/#evkozi-jegy_1) hasonló kurzusának értékelési szempontjait vettük alapul.
+
 - Saját munka és fehasznált kódbázis aránya (megfelelő hivatkozások megléte)
 - Értékelhető eredményeket produkáló munka
 - A bemutató minősége (ppt, videók, élő demo, bármilyen plusz felhasznált eszköz)

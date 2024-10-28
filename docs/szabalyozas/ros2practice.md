@@ -26,11 +26,13 @@ A gyakorlat második részében egy szimulált trajektóriakövető robot / jár
 [github.com/jkk-research/sim_wayp_plan_tools](https://github.com/jkk-research/sim_wayp_plan_tools)
 
 ### Követelmények
-A gyakorlat hibamentes lefutásához a következő programok telepítése szükséges: 
+A gyakorlat hibamentes lefutásához a következők szükséges:
+
+**Megjegyzés**: A gyakorlati gépek, otthonra kiadott WSL snapshot ezeket már tartalmazza is: 
+
 - ROS 2 Humble: [docs.ros.org/en/humble/Installation.html](https://docs.ros.org/en/humble/Installation.html)
 - Gazebo Fortress: [gazebosim.org/docs/fortress/install_ubuntu](https://gazebosim.org/docs/fortress/install_ubuntu), Több információ az integrálásról: [gazebosim.org/docs/fortress/ros2_integration](https://gazebosim.org/docs/fortress/ros2_integration)
 - `ros-gz-bridge` Egy parancsal installálható: `sudo apt install ros-humble-ros-gz-bridge`
-- Ellenőrizük, hogy a [`colcon_cd`](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html#setup-colcon-cd) megfelelően van telepítve. A csv fájlok a `colcon_cd`-vel töltődnek be.
 
 ### Package-ek és build
 
@@ -169,6 +171,10 @@ After `ign gazebo -v 4 -r ackermann_steering.sdf` (terminal 1) and `source ~/ros
 ``` r
 ros2 launch sim_wayp_plan_tools all_in_once.launch.py
 ```
+
+Különböző trajektóriák vizualizálása:
+
+![](https://raw.githubusercontent.com/jkk-research/sim_wayp_plan_tools/refs/heads/ros2/img/csv_eval01.svg)
 
 ### Hibaelhárítás
 
