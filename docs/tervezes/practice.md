@@ -193,6 +193,83 @@ ros2 run sam_bot_nav2_gz reach_goal.py
    
 ![](https://raw.githubusercontent.com/ros-planning/navigation.ros.org/master/images/navigation_with_recovery_behaviours.gif)
 
+# `4.` feladat
+
+Az akadály elkerülési algoritmus bemutatása szimuláció segítségével
+
+Ellenőrizük, hogy megvannak-e a következő packagek, ha nincsenek klónozuk le őket:
+ - lexus_bringup : 
+``` r
+git clone https://github.com/jkk-research/lexus_bringup.git
+``` 
+- patchworkpp
+``` r
+git clone https://github.com/url-kaist/patchwork-plusplus-ros.git -b ROS2
+``` 
+
+
+## waypointok betöltése
+
+```r
+ros2 run wayp_plan_tools waypoint_loader --ros-args -p file_name:=sim_waypoints3.csv -p file_dir:=$HOME/ros2_ws/src/sim_wayp_plan_tools/csv -r __ns:=/sim1
+```
+
+##  build
+
+``` r
+cd ~/ros2_ws/src
+``` 
+``` r
+cd sim_wayp_plan_tools
+``` 
+``` r
+git checkout gamma
+``` 
+``` r
+cd ~/ros2_ws/
+``` 
+``` r
+pip install setuptools==59.6.0
+``` 
+
+``` r
+colcon build --symlink-install --packages-select gammasim_application gammasim_bringup gammasim_description gammasim_gazebo joint_attribute_publisher
+``` 
+
+## Szimuláció indiítása
+``` r
+source ~/ros2_ws/install/setup.bash
+``` 
+``` r
+ros2 launch gammasim_bringup gamma.launch.py
+``` 
+
+A gazebo szimulátor bal alsó sarkában nyojunk rá a play gombra
+
+
+## Filterek indítása
+```r
+ros2 run wayp_plan_tools x_filter
+```
+```r
+ros2  launch patchworkpp demo.launch.py
+```
+## tf illetve lokalizáció indítása
+```r
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 /map /map_gamma
+```
+
+```r
+ros2 run lexus_bringup current_pose_from_tf
+```
+## Az akadálykerülő algoritmus indítása
+```r
+ros2 launch wayp_plan_tools obstacle_avoidance_trapezoid.launch.py
+```
+
+```r
+ros2 run rqt_reconfigure 
+```
 
 
 # Sources
