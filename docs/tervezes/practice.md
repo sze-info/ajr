@@ -59,141 +59,9 @@ Válasszuk ki a map frame-t, illetve adjuk hozzá a /planner/trajectory topicot.
 
 Ezt az egyszerű tervezőt használhatjuk pl. mozgó célpontra (másik jármű, sáv közepe, globális trajektória egy pontja...stb) illetve statikus célpontra (pl. parkolóhely).
 
+
+
 # `2.` feladat
-
-
-A második feladat a ROS 2 Navigation stack-jének beüzemelése szimulátorban, üres pályán. Részletes dokumentáció a [navigation.ros.org](https://navigation.ros.org/) oldalon.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gjaXRG1d2Fw?si=Xf2iOuBe8ihZnKuV?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-## Clone és build
-
-``` r
-cd ~/ros2_ws/src
-``` 
-``` r
-git clone https://github.com/rosblox/nav2_outdoor_example
-```
-
-``` r
-cd ~/ros2_ws
-``` 
-``` r
-rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
-```
-
-``` r
-cd ~/ros2_ws
-``` 
-``` r
-colcon build --packages-select nav2_outdoor_example
-```
-
-## Futtatás
-
-``` r
-source ~/ros2_ws/install/setup.bash
-``` 
-``` r
-ros2 launch nav2_outdoor_example bringup.launch.py
-```
-
-# `3.` feladat
-
-
-A harmadik feladat a ROS 2 Navigation stack-jének beüzemelése szimulátorban, a turlebot egyik pályáján. Részletes dokumentáció a [navigation.ros.org](https://navigation.ros.org/) oldalon.
-
-<video src="https://user-images.githubusercontent.com/2298371/226628768-818a7c3f-e5e1-49c6-b819-112c2cfa668b.webm" type="video/webm" width="560" controls>
-</video>
-
-[Videó direkt link](https://user-images.githubusercontent.com/2298371/226628768-818a7c3f-e5e1-49c6-b819-112c2cfa668b.webm)
-
-Megjegyzés: előfordulhat, hogy az `ign_ros_control` package másik feladatban is buildelt package, ha ez már létezik, akkor a build / apt install kihagyható. A helyek, ahol ez lehetséges, hogy megtalálható:
-``` r
-ros2_ws/src/gz_ros2_control/ign_ros2_control
-ros2_ws/src/navigation2_ignition_gazebo_example/src/gz_ros2_control/ign_ros2_control
-/opt/ros/humble/share/ign_ros2_control
-```
-
-
-## Clone és build
-
-```r
-sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-turtlebot3-gazebo
-```
-
-
-``` r
-cd ~/ros2_ws/src
-``` 
-``` r
-git clone https://github.com/ros-controls/gz_ros2_control
-``` 
-``` r
-git clone https://github.com/art-e-fact/navigation2_ignition_gazebo_example
-``` 
-``` r
-cd ~/ros2_ws/src/gz_ros2_control
-``` 
-``` r
-git checkout humble
-``` 
-``` r
-cd ~/ros2_ws
-``` 
-``` r
-rosdep install -y --from-paths src --ignore-src --rosdistro humble
-```
-
-``` r
-cd ~/ros2_ws
-``` 
-``` r
-colcon build --packages-select sam_bot_nav2_gz
-```
-## Futtatás
-
-Gazebo, RViz2 és Navigation2
-``` r
-source ~/ros2_ws/install/setup.bash
-``` 
-``` r
-ros2 launch sam_bot_nav2_gz complete_navigation.launch.py
-```
-
-Célpont kijelölése RViz2-ben:
-``` r
-source ~/ros2_ws/install/setup.bash
-``` 
-``` r
-ros2 run sam_bot_nav2_gz follow_waypoints.py
-``` 
-``` r
-source ~/ros2_ws/install/setup.bash
-``` 
-``` r
-ros2 run sam_bot_nav2_gz reach_goal.py
-``` 
-
-![](https://raw.githubusercontent.com/ros-planning/navigation.ros.org/master/images/rviz/rviz-not-started.png)
-
-![](gazebo_turtlebot01.png)
-
-
-
-![](https://raw.githubusercontent.com/ros-planning/navigation.ros.org/master/images/rviz/rviz_initial.png)
-
-## Navigáció
-
-![](https://raw.githubusercontent.com/ros-planning/navigation.ros.org/master/images/rviz/rviz-set-initial-pose.png)
-
-![](https://raw.githubusercontent.com/ros-planning/navigation.ros.org/master/images/rviz/navstack-ready.png)
-
-![](https://raw.githubusercontent.com/ros-planning/navigation.ros.org/master/images/rviz/navigate-to-pose.png)
-   
-![](https://raw.githubusercontent.com/ros-planning/navigation.ros.org/master/images/navigation_with_recovery_behaviours.gif)
-
-# `4.` feladat
 
 Az akadály elkerülési algoritmus bemutatása szimuláció segítségével
 
@@ -249,10 +117,11 @@ A gazebo szimulátor bal alsó sarkában nyojunk rá a play gombra
 
 ## Filterek indítása
 ```r
-ros2 run wayp_plan_tools x_filter
-```
-```r
-ros2  launch patchworkpp demo.launch.py
+ros2 launch arj_simple_perception filter_a.launch.py \
+    cloud_topic:=/gamma/points  \
+    cloud_frame:=gamma/ouster_link/ouster   \
+    minZ:=-1.5 \
+    minX:=0.5
 ```
 ## tf illetve lokalizáció indítása
 ```r
@@ -260,7 +129,13 @@ ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 /map /map_gamma
 ```
 
 ```r
-ros2 run lexus_bringup current_pose_from_tf
+ ros2 run lexus_bringup current_pose_from_tf --ros-args -p output_topic:=/gamma/current_pose -p frame_id:=map -p child_frame_id:=base_link
+```
+
+## A klaszterező indítása
+
+```r
+ros2 launch lidar_cluster euclidean_grid.launch.py topic:=lidar_filter_output
 ```
 ## Az akadálykerülő algoritmus indítása
 ```r
