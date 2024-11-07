@@ -11,6 +11,8 @@ icon: material/math-integral-box # elméleti tananyag
 
 # Mesterséges intelligencia
 
+[NN Introduction](nn_intro_slides.md)
+
 Az AI az észlelés mellett akár a tervezésnél vagy a szabályozásnál is megjelenhet.
 
 ![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview15.svg)
@@ -18,7 +20,8 @@ Az AI az észlelés mellett akár a tervezésnél vagy a szabályozásnál is me
 
 Bár legfontosabb autonóm alkamazási köre az észlelés, ahogy a fenti ábrán is látszik: tervezési illetve szabályozási felhasználása is van.
 
-A mesterséges intelligencia (AI) órai prezentáció itt található meg: [Link](assets/arj-ai.pptx)
+
+
 
 
 Példa videók:
