@@ -46,22 +46,28 @@ Oktatók | | | .
 
 </center>
 
-2024/25 őszi félévében az `A2`-es teremben (hétfő), illetve a `B6`-as gépteremben (kedd 8:30) tartunk órákat.
+2024/25 tavaszi félévében az `B2`-es teremben, illetve a `C100`-as gépteremben tartunk órákat.
 
-Óra | Dátum | Tananyag | Megj.
------:|---:|:-----|:-----:
-1 | szept. 9-10. | Bevezetés | 
-2 | szept. 16-17. | ROS 2 alap, telepítés | 
-3 | szept. 23-24. | Érzékelés | 
-4 | szept. 30-okt. 1. | ROS 2 haladó | 
-5 | okt. 7-8. | Transzformációk | okt. 13-ig kis beadandó
-6 | okt. 14-15. | Észlelés | 
-7 | okt. 21. | Szimuláció | 22-én B6 terem felújítás
-8 | okt. 28-29. | Tervezés | ZH 1 
-9 | nov. 4-5. | Szabályozás | 
-10 | nov. 11-12. | AI | 
-+1 | nov. 19.? | | ZH 2?
-+2 | - | | Pót ZH?
+Előzetesen a következő időtervet követjük, de a pontos dátumokat mindig előre, neptun üzenetben közöljük.
+
+<center> 
+
+Óra | Dátum Ő | Dátum T | Tananyag | Megj.
+-----:|---:|---:|:-----|:-----
+1 | szept. 9-10. | feb. 6. | Bevezetés | 
+2 | szept. 16-17. | feb. 13. | ROS 2 alap, telepítés | 
+3 | szept. 23-24. | feb. 20. | Érzékelés |  Beadandó 🔴 Aláírás megtagadás mulasztás esetén!
+4 | szept. 30-okt. 1. | feb. 27. | ROS 2 haladó | 
+5 | okt. 7-8. | márc. 6. | Transzformációk | Beadandó 🔴 Kis beadandó véglegestése
+6 | okt. 14-15. | márc. 13. | Észlelés | Féléves feladat választás
+7 | okt. 21. | márc. 20. | Szimuláció | 
+8 | okt. 28-29. | márc. 27. | Tervezés | ZH 1?
+9 | nov. 4-5. | ápr. 3. | Szabályozás | 
+10 | nov. 11-12. | ápr. 10. | AI | 
++1 | nov. 19.? | ápr. 17. | | ZH 2?
++2 | - | - | | Pót ZH?
+
+</center>
 
 ## Elmélet
 
@@ -100,8 +106,8 @@ Oktatók | | | .
 
 - **Aláírás**: Kis beadandó teljesítése (egyszerű otthoni programozási feladat)
 - **1 (elégtelen)**: $0\% \leq ZH_{átlag} < 60\%$
-- **2 (elégséges)**: $60\% \leq ZH_{átlag} < 85\%$
-- **3 (közepes)**: $85\% \leq  ZH_{átlag} \leq 100\%$  
+- **2 (elégséges)**: $60\% \leq ZH_{átlag} < 90\%$
+- **3 (közepes)**: $90\% \leq  ZH_{átlag} \leq 100\%$  
 - **4 (jó)**: Nagy féléves beadandó a [megadott irányelvek](https://sze-info.github.io/ajr/feleves_beadando/) mentén, nagyobb hibákkal teljesítve
 - **5 (jeles)**: Nagy féléves beadandó a [megadott irányelvek](https://sze-info.github.io/ajr/feleves_beadando/) mentén, csak néhány kisebb hibával teljesítve
 
