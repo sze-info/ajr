@@ -64,11 +64,15 @@ A következő ábra egy **célszerű** (nem kötelező) géptermi elrendezést m
 
 ![](https://raw.githubusercontent.com/sze-info/arj/main/docs/telepites/wsl_overview01.svg)
 
-## Foxglove
+## Foxglove / Lichtblick
 
 Telepítve van, az asztalon található ikonnal indítható. Ha mégse lenne telepítve, a közös meghajtón lévő portable verziót kell a `C:\temp`-be másolni. 
 
+![foxglove_lichtblick_logo](foxglove_lichtblick01.png)
+
 ![foxglove](foxglove01.png)
+
+
 
 ## Géptermi beállítások gyors ellenőrzése
 

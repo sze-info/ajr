@@ -35,7 +35,7 @@ source ~/ros2_ws/install/setup.bash
 ![](https://raw.githubusercontent.com/wiki/szenergy/szenergy-public-resources/img/rviz02.gif)
 
 
-A mesheket Foxglove Studio-ban is megjeleníthetjük, csak állítsuk a package path-t a megfelelő helyre, pl:
+A mesheket Foxglove Studio-ban (vagy Lichtblick Suite) is megjeleníthetjük, csak állítsuk a package path-t a megfelelő helyre, pl:
 
 ![alt text](foxglove05.png)
 

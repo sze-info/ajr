@@ -12,8 +12,8 @@ permalink: /telepites/
 
 `ROS 1` alapvetően Linux rendszereken támogatott, bár voltak próbálkozások más operációs rendszerekre is. Ezzel szemben az `ROS 2` már támogatja a natív Windows, Mac OS vagy egyéb Real-Time operációs rendszen történő futtatást. Tehát alapvetően négy lehetőség adott:
 
-1. Dual boot, Windows mellé telepített natív Linux (leginkább Ubuntu) ✅ [leírás](https://sze-info.github.io/arj/telepites/ubuntu.html)
-2. Windows WSL2, könnyűsúlyú Linux virtuális gép ✅ [leírás](https://sze-info.github.io/arj/telepites/win10.html)
+1. Dual boot, Windows mellé telepített natív Linux (leginkább Ubuntu) ✅ [leírás](https://sze-info.github.io/ajr/telepites/ubuntu)
+2. Windows WSL2, könnyűsúlyú Linux virtuális gép ✅ [leírás](https://sze-info.github.io/ajr/telepites/win10)
 3. Virtuális gép Windowsra 🟠
 4. Windows build 🟠
 

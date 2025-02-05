@@ -14,8 +14,8 @@ icon: material/code-block-tags # kiegészítő tananyag
 
 Ahogy abevezetőben írtuk, alapvetően négy lehetőség adott `ROS 2 Humble` telepítésére:
 
-1. Dual boot, Windows mellé telepített natív Linux (leginkább Ubuntu) ✅ [leírás](https://sze-info.github.io/arj/telepites/ubuntu.html)
-2. Windows WSL2, könnyűsúlyú Linux virtuális gép ✅ [leírás](https://sze-info.github.io/arj/telepites/win10.html)
+1. Dual boot, Windows mellé telepített natív Linux (leginkább Ubuntu) ✅ [leírás](https://sze-info.github.io/ajr/telepites/ubuntu)
+2. Windows WSL2, könnyűsúlyú Linux virtuális gép ✅ [leírás](https://sze-info.github.io/ajr/telepites/win10)
 3. Virtuális gép Windowsra 🟠
 4. Windows build 🟠
 

@@ -12,8 +12,8 @@ icon: material/math-integral-box # elméleti tananyag
 
 # `ROS 2` alapfoglamak
 
-[ROS verziók és telepítés](https://sze-info.github.io/ajr/telepites/)
-
+- [Ajánlott ROS 2 telepítés](https://sze-info.github.io/ajr/telepites/win10)
+- [Alternatív ROS 2 verziók és telepítés](https://sze-info.github.io/ajr/telepites/)
 
 
 Az `ROS 2`, a `ROS` legújabb kiadása, olyan szoftverkönyvtárak és eszközök készlete (middleware), amelyek segítenek robotalkalmazások fejlesztésében. Definíció szerint a middleware egy szoftver komponenseket összekötő szoftver. Ez egy olyan réteg, amely az operációs rendszer és az alkalmazások között helyezkedik el az elosztott számítógépes hálózat mindkét oldalán. Az `ROS 2` megengedő, nyílt forráskódú, [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/) licenszelést használ. 
@@ -43,7 +43,7 @@ Első robotikai projektünknél választhatjuk azt az utat, hogy framework nélk
 Kép forrása: [ros.org/blog/ecosystem](https://www.ros.org/blog/ecosystem/)
 
 - Plumbing: A ROS alapvetően egy üzenetküldő rendszert biztosít, amelyet gyakran "middleware"-nek vagy "plumbing"-nek neveznek. A kommunikáció az egyik első igény, amely felmerül egy új robotikai alkalmazás vagy bármilyen olyan szoftverrendszer implementálásakor, amelyhez hardverrel is csatlakozik. A ROS beépített és jól tesztelt üzenetküldő rendszere időt takaríthat meg, hiszen kezeli a kommunikáció részleteit a decentralizált csomópontok között, ezt nem kell külön implementálni. Sőt lehetőség van egy gépen Intra-process kommunikáció segítségével direkt memória elérésre is.
-- Eszközök: A hatékony alkalmazások fejlesztéséhez jó fejlesztői eszközökre van szükség. A ROS rendelkezik ilyen az eszközökkel, beleértve: a hibakeresést (`rqt_console`), a vizualizációt (`Rviz2`, `Foxglove Studio`), a diagramokat (`rqt_plot`, `Foxglove Studio`), a logolást (`mcap`) és a visszajátszást. 
+- Eszközök: A hatékony alkalmazások fejlesztéséhez jó fejlesztői eszközökre van szükség. A ROS rendelkezik ilyen az eszközökkel, beleértve: a hibakeresést (`rqt_console`), a vizualizációt (`Rviz2`, `Foxglove Studio`, `Lichtblick Suite`), a diagramokat (`rqt_plot`, `Foxglove Studio`), a logolást (`mcap`) és a visszajátszást. 
 - Képességek: Legyen szó GPS-eszköz-illesztőprogramról, négylábú robothoz való járás- és egyensúlyszabályozóról, vagy mobil robothoz való térképezőrendszerről, a ROS-nak vannak megoldásai a problémára. A driverektől az algoritmusokig, a felhasználói felületekig a ROS biztosítja azokat az építőelemeket, amelyek lehetővé teszik, hogy a saját alkalmazására koncentráljon.
 - Közösség: A ROS mögött egy nagy, globális és változatos közösség áll. Diákoktól és hobbiból űzőktől kezdve multinacionális vállalatokig és kormányzati ügynökségekig, az emberek és szervezetek minden szegmense működteti az `ROS 2` projektet. Ez azért is fontos, mert a fejlesztés során rengeteg kérdés fog felmerülni. Ezek nagy részét már meg is válaszolta aközösség, az új kérdésekre pedig szívesen válaszolnak. 
 

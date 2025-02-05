@@ -10,9 +10,9 @@ icon: material/code-braces-box # gyakorlati tananyag
 
 A gyakorlat során meg fogunk ismerkedni az önvezető járművek jellemző tulajdonságaival és a rögzített adatok jellegzetességeivel.
 
-## Foxglove Studio
+## Foxglove Studio / Lichtblick Suite
 
-Bevezetésképpen nézzük egy önvezető jármű jellemző adatait. Példaképp célszerű az **egyetemünk** egyik ilyen járművével készült adatokat vizsgálni. [Foxglove Studio](https://foxglove.dev/download)-t fogunk használni, hiszen telepítés nélkül, vagy ~150MB méretű telepíthető állományként is hozzáférhető, valamint képes vizualizálni a számunkra fontos adatokat. A vizsgált adatok hasonló képet fognak mutatni:
+Bevezetésképpen nézzük egy önvezető jármű jellemző adatait. Példaképp célszerű az **egyetemünk** egyik ilyen járművével készült adatokat vizsgálni. [Foxglove Studio](https://foxglove.dev/download)-t vagy [Lichtblick Suite](https://github.com/Lichtblick-Suite/lichtblick/releases)-t fogunk használni, hiszen telepítés nélkül, vagy ~150MB méretű telepíthető állományként is hozzáférhető, valamint képes vizualizálni a számunkra fontos adatokat. A vizsgált adatok hasonló képet fognak mutatni:
 
 ![foxglove_a](foxglove04.png#only-light)
 ![foxglove_a](foxglove03.png#only-dark)
@@ -34,7 +34,7 @@ rsync -avzh --progress /mnt/kozos/measurement_files/lexus01foxglove.json   /mnt/
 !!! tip
     A [https://jkk-research.github.io/dataset](https://jkk-research.github.io/dataset) oldalról további példa adatokat lehet letölteni.
 
-## A Foxglove bemutatása
+## A Foxglove Studio / Lichtblick Suite bemutatása
 
 Amíg az `.mcap` töltődik, röviden bemutatjuk a Foxglove Studio programot. A Foxglove Studio egy nyílt forráskódú, robotikai adatokat vizualizáló és hibakereső eszköz. Egész pontosan a `v1.87.0`-ig bezárólag nyílt forráskódu volt, a `v2.0.0`-tól pedig ingyenesen használható, de zárt forráskódú. Elérhető számos módon:
 
@@ -44,9 +44,25 @@ Amíg az `.mcap` töltődik, röviden bemutatjuk a Foxglove Studio programot. A 
 
 A natív robotikai eszközök (mint például az ROS ökoszisztéma részei) általában csak Linux rendszeren támogatottak, de a Studio asztali alkalmazás Linuxon, Windows-on és macOS-en is működik. Akár az ROS stack más operációs rendszeren fut, a Studio képes kommunikálni a robottal zökkenőmentesen.
 
+![foxglove_lichtblick_logo](foxglove_lichtblick01.png)
+
 A Studio gazdag vizuális elemeket és hibakereső panelokat kínál - interaktív diagramoktól, 3D vizuális elemekig, kameraképektől, és diagnosztikai adatfolyamokig. Legyen szó valós idejű robotkövetésről, vagy `.bag` / `.mcap` fájlban történő hibakeresésről, ezek a panelok segítenek a különböző, általános robotikai feladatok megoldásában.
 
+A Lichtblick Suite egy hasonló, a Foxglove a `v1.87.0` verziójának nyílt forráskódú változata. A Lichtblick a Foxglove-hoz hasonlóan asztali alkalmazásként futtatható, és a Studio-hoz hasonlóan támogatja a `.bag` / `.mcap` fájlokat, valamint a valós idejű adatvizualizációt.
+
 Ezek a panelok ezután egyedi elrendezésekben konfigurálhatók és összeállíthatók a projekt egyedi igényeinek és munkafolyamatainak megfelelően.
+
+### Foxglove Studio / Lichtblick Suite telepítése
+
+[Foxglove 1.66.0 Win :material-download: 154 MB](https://drive.google.com/drive/folders/1TWLy6ZZb5ue9PcDmvdf5dDgKJOQUBzms?usp=drive_link){ .md-button .md-button}
+
+[Foxglove 1.74.2 Linux :material-download: 71 MB](https://drive.google.com/drive/folders/1TWLy6ZZb5ue9PcDmvdf5dDgKJOQUBzms?usp=drive_link){ .md-button .md-button}
+
+[Foxglove Latest All platform:material-download:](https://foxglove.dev/download){ .md-button .md-button}
+
+[Lichtblick Latest All platform:material-download:](https://github.com/Lichtblick-Suite/lichtblick/releases){ .md-button .md-button}
+
+
 
 ## Az egytemi Nissan mérésadatainak leírása
 
