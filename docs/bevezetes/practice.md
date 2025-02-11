@@ -48,7 +48,7 @@ A natív robotikai eszközök (mint például az ROS ökoszisztéma részei) ál
 
 A Studio gazdag vizuális elemeket és hibakereső panelokat kínál - interaktív diagramoktól, 3D vizuális elemekig, kameraképektől, és diagnosztikai adatfolyamokig. Legyen szó valós idejű robotkövetésről, vagy `.bag` / `.mcap` fájlban történő hibakeresésről, ezek a panelok segítenek a különböző, általános robotikai feladatok megoldásában.
 
-A Lichtblick Suite egy hasonló, a Foxglove a `v1.87.0` verziójának nyílt forráskódú változata. A Lichtblick a Foxglove-hoz hasonlóan asztali alkalmazásként futtatható, és a Studio-hoz hasonlóan támogatja a `.bag` / `.mcap` fájlokat, valamint a valós idejű adatvizualizációt.
+A Lichtblick Suite a Foxglove-hoz hasonló, egész pontosan a Foxglove `v1.87.0` verziójának folytatása, továbbra is nyílt forráskóddal. A Lichtblick a Foxglove-hoz hasonlóan asztali alkalmazásként futtatható, és a Studio-hoz hasonlóan támogatja a `.bag` / `.mcap` fájlokat, valamint a valós idejű adatvizualizációt.
 
 Ezek a panelok ezután egyedi elrendezésekben konfigurálhatók és összeállíthatók a projekt egyedi igényeinek és munkafolyamatainak megfelelően.
 

@@ -179,7 +179,7 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch robotverseny_bringup roboworks.launch.py
 ```
 
-![](https://raw.githubusercontent.com/rudolfkrecht/robotverseny/main/img/gazebo_and_rviz01.png)
+![](https://raw.githubusercontent.com/robotverseny/megoldas_sim24/refs/heads/main/img/sim01.png)
 
 ## Useful commands
 

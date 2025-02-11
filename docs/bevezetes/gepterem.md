@@ -82,3 +82,21 @@ Telepítve van, az asztalon található ikonnal indítható. Ha mégse lenne tel
     cd /mnt/kozos/script/
     ./check_all.sh
     ```
+
+## Géptermi hasznos parancsok
+
+
+=== "Linux"
+
+    ``` bash
+    cd /mnt/c & mkdir temp & cd temp
+    rsync -avzh --progress /mnt/kozos/wsl_backup/sze24a.tar
+    ```
+
+=== "PowerShell"
+
+    ``` powershell
+    cd C:\ & mkdir temp & cd temp
+    Copy-Item "\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása\wsl_backup\sze24a.tar" -Destination "C:\temp\" -Recurse -Force
+    ```
+

@@ -19,7 +19,94 @@ Pár alapfogalom az [előző](https://sze-info.github.io/ajr/bevezetes/ros2/) al
 - **Publish / subscribe**: Üzenetekre történő publikálás és feliratkozás. 
 - **Build**: A package forráskódjából futtatható állományok készítésének folyamata. ROS2-ben a `colcon` az alapértelmezett build eszköz. 
 
-## `1.` feladat - Node és publish
+## `0.` feladat - Gazebo 3D szimuláció
+
+Próbáljuk, ki, hogy a parancsok működnek-e. (*Később részletes telepítést is bemutatunk, egyelőre ez szemléltetés.*)
+
+```bash
+ign gazebo
+```
+
+```bash
+ign gazebo -v 4 -r ackermann_steering.sdf
+```
+
+```bash
+ign gazebo shapes.sdf
+```
+
+```bash
+ign param --versions
+```
+
+
+
+### Szimuláció clone és build
+
+Lépjünk a `~/ros2_ws/` mappába.
+
+
+``` bash
+cd ~/ros2_ws/src
+```
+
+Klónozzuk a szükséges package-t.
+
+``` bash
+git clone https://github.com/robotverseny/robotverseny_gazebo24
+```
+
+``` bash
+git clone https://github.com/robotverseny/megoldas_sim24
+```
+
+
+#### Build
+
+``` bash
+cd ~/ros2_ws
+```
+
+``` bash
+colcon build --symlink-install --packages-select robotverseny_application robotverseny_description robotverseny_bringup robotverseny_gazebo megoldas_sim24 
+```
+
+
+#### Futtatás
+
+<details>
+<summary> Don't forget to source before ROS commands.</summary>
+
+``` bash
+source ~/ros2_ws/install/setup.bash
+```
+</details>
+
+``` bash
+ros2 launch robotverseny_bringup roboworks.launch.py
+```
+
+``` bash
+ros2 launch megoldas_sim24 megoldas1.launch.py
+```
+
+![](https://raw.githubusercontent.com/robotverseny/megoldas_sim24/refs/heads/main/img/sim01.png)
+
+#### Hasznos parancsok
+
+Publikálhatjuk a `/roboworks/cmd_vel` topicra a következő üzenetet:
+
+``` bash
+ros2 topic pub --once /roboworks/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.01}}"
+```
+
+Teleop twist keyboard:
+``` bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/roboworks/cmd_vel
+```
+
+
+## `1.` feladat - Node és publish - Turtlesim 2D szimuláció
 
 Nyissunk két terminált. Az első terminálból indítsuk a beépített `turtlesim_node` szimulátort, ami a `turtlesim` package-ben található.
 
