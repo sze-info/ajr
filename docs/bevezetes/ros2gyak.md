@@ -75,7 +75,7 @@ colcon build --symlink-install --packages-select robotverseny_application robotv
 #### Futtatás
 
 <details>
-<summary> Don't forget to source before ROS commands.</summary>
+<summary> Ne felejsünk source-olni ROS parancsok előtt.</summary>
 
 ``` bash
 source ~/ros2_ws/install/setup.bash
@@ -85,9 +85,16 @@ source ~/ros2_ws/install/setup.bash
 ``` bash
 ros2 launch robotverseny_bringup roboworks.launch.py
 ```
+és egy másik terminálban:
 
 ``` bash
 ros2 launch megoldas_sim24 megoldas1.launch.py
+```
+
+vagy:
+
+``` bash
+ros2 launch megoldas_sim24 megoldas2.launch.py
 ```
 
 ![](https://raw.githubusercontent.com/robotverseny/megoldas_sim24/refs/heads/main/img/sim01.png)
