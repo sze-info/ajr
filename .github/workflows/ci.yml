@@ -1,4 +1,4 @@
-name: ci 
+name: ci
 on:
   push:
     branches:
@@ -18,6 +18,11 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
+      - run: pip install --upgrade pip
+      - run: pip install -r requirements.txt  # Ensure all dependencies are installed
+      # - run: pip install mkdocs # Ensure mkdocs is installed
+      # - run: pip install mkdocs-slides  # Explicitly install the slides plugin
+      # - run: pip install mkdocs-material pillow cairosvg  # Ensure other dependencies are installed
+      # Debugging step: Check installed packages
+      - run: pip list
       - run: mkdocs gh-deploy --force
