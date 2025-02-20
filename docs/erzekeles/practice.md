@@ -356,6 +356,14 @@ data: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,63,0,0,16,65,96,211,241,2,0,0,0,0,12,3,0,0
 
 ### RVIZ2
 
+Az ROS 2 alapértelmezett vizualizációs eszköze az RVIZ2. A következő paranccsal indíthatsuk el. Az RVIZ2-ben a `Fixed Frame`-et állítsuk be a `lexus3/os_center_a_laser_data_frame`-re. 
+
+``` r
+ros2 run rviz2 rviz2 --fixed-frame lexus3/os_center_a_laser_data_frame
+```
+
+*Megjegyzés*, hogy állatalában nem szükséges a `--fixed-frame` kapcsoló, mert az RVIZ2-ben is beállítható. Enélkül az alapértelmezett `map`-ra állítódik:
+
 ``` r
 ros2 run rviz2 rviz2
 ```

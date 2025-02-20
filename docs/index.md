@@ -117,6 +117,7 @@ Előzetesen a következő időtervet követjük, de a pontos dátumokat mindig e
 - :material-code-braces-box:  gyakorlati tananyag
 - :material-math-integral-box:  elméleti tananyag
 - :material-code-block-tags:  kiegészítő tananyag, a teljes kép megértéséhez szükséges lehet
+- :material-presentation:  prezentációs tananyag
 
 ## Érintett témakörök (nem a feldolgozás szerinti sorrendben)
 

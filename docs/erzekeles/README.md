@@ -21,6 +21,12 @@ Az érzékelés nyers adatok beolvasását jelenti.
     Magyar nyelven könnyű összekeverni az érzékelés (sensing) és az észlelés (perception) foglamakat. Az érzékelés egyszerű driver szintű nyers adatok előállításával foglakozik.
 
 
+## Ellenőrző kérdések
+
+- Melyik ROS verziót használjuk a félévben? 
+- Mi a topic? Milyen típusú üzenetekről volt szó?
+- Mi a node?
+
 ## Kamera
 
 A kamera az érzékelőjére (pl CCD CMOS szenzor) érkező fényt elektronikus jellé alakítja, diitálisan. Megkülönböztethetünk mono, sztereo vagy mélységérzékelésre képes kamerákat is.
@@ -34,6 +40,10 @@ A kamera az érzékelőjére (pl CCD CMOS szenzor) érkező fényt elektronikus 
 Mélységesztimáció:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NZZIPcBBAc8?si=prA7yVUnzcK2szQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Lokalizáció kamerával:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Eaf6r_BNFfk?si=KxoCWP2M8S6BBOui" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## LIDAR
 
@@ -71,6 +81,9 @@ Az IMU kis méretű elektromechanikus giroszkópokat és gyorsulásmérőket, va
 
 
 ![imu](imu01.png)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6HxuGmd24u4?si=8QImJAkkbuxq7rNu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## GNSS (GPS)
 
 A [GNSS](https://en.wikipedia.org/wiki/Satellite_navigation) (global navigation satellite system) globális szatelit-alapú navigációs rendszert jelent, köznapi szóhasználatban ezt szokás GPS-nek nevezni. Ha pontosak szeretnénk lenni, akkor a GPS csupán az első ilyen technológia ezen kívül létezik még GLONASS, BeiDou, Galileo és QZSS rendszer is, ezek üzemeltetése különböző államokhoz / szövetségekhez kötődik.
@@ -82,6 +95,8 @@ A [GNSS](https://en.wikipedia.org/wiki/Satellite_navigation) (global navigation 
 ![gnss](gps01.png)
 
 Rövid, de jó leírás a GNSS pontosságról: [www.sbg-systems.com/news/mastering-accurac-gnss-and-its-errors-sources/](https://www.sbg-systems.com/news/mastering-accurac-gnss-and-its-errors-sources/)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gm-oEbn5nQo?si=fKLiyV6wvU67loeP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## CAN bus
 

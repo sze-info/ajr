@@ -51,7 +51,7 @@ classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
 
 ## Globális tervezés
 
-### Bevezetés
+### Bevezetés (Globális tervezés)
 
 Az alábbi német nyelvű, de angol PPT-t és feliratot tartalmazó videó a [TU München](https://github.com/TUMFTM/Lecture_ADSE) tananyagának része, a témában jó összefoglaló:
 
@@ -71,6 +71,18 @@ Ismertebb globális tervező algoritmusok:
 Jó tudni, hogy a fenti algoritmusokanak számos változata, továbbfejlesztése ismert.
 
 
+### Globális tervezés HD térképeken
+
+Ismertebb HD téképek és térképformátumok:
+
+- OpenDRIVE 
+- Lanelet2
+
+További információk:
+- [fzi-forschungszentrum-informatik.github.io/Lanelet2/lanelet2_routing](https://fzi-forschungszentrum-informatik.github.io/Lanelet2/lanelet2_routing/)
+- [autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/planning/#detailed-design](https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/planning/#detailed-design)
+- [asam.net/standards/detail/opendrive](https://www.asam.net/standards/detail/opendrive/)
+
 ### Utazó ügynök probléma
 
 Az utazó ügynök probléma (TSP traveling salesman problem) egy jól ismert kombinatorikus optimalizációs probléma, amely a számítástudomány és a matematika területén jelent meg. A probléma lényege az, hogy az utazó ügynöknek egy adott városokból álló halmazt kell meglátogatnia, és vissza kell térnie a kiindulási városba a lehető legrövidebb úton úgy, hogy minden várost pontosan egyszer látogat meg. Tobábbi információ: [hu.wikipedia.org/wiki/Az_utazó_ügynök_problémája](https://hu.wikipedia.org/wiki/Az_utaz%C3%B3_%C3%BCgyn%C3%B6k_probl%C3%A9m%C3%A1ja).
@@ -82,7 +94,7 @@ Autonóm járművek és robotika vonatkozásában legtöbbször **nem a klasszik
 
 ## Lokális tervezés
 
-### Bevezetés
+### Bevezetés (lokális tervezés)
 
 Az alábbi német nyelvű, de angol PPT-t és feliratot tartalmazó videó a [TU München](https://github.com/TUMFTM/Lecture_ADSE) tananyagának része, a témában jó összefoglaló:
 
