@@ -78,10 +78,25 @@ Ismertebb HD téképek és térképformátumok:
 - OpenDRIVE 
 - Lanelet2
 
-További információk:
+
+```slides
+title: HD map Presentation
+url_stub: hd1
+nav:
+  - slides/hd/lanelet.md
+  - slides/hd/pointcloud.md
+  - slides/hd/mesh.md
+  - slides/hd/map.md
+```
+
+További információ:
+
 - [fzi-forschungszentrum-informatik.github.io/Lanelet2/lanelet2_routing](https://fzi-forschungszentrum-informatik.github.io/Lanelet2/lanelet2_routing/)
 - [autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/planning/#detailed-design](https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/planning/#detailed-design)
 - [asam.net/standards/detail/opendrive](https://www.asam.net/standards/detail/opendrive/)
+- [github.com/jkk-research/lanelet2_rviz2](https://github.com/jkk-research/lanelet2_rviz2)
+- [github.com/jkk-research/lanelet2_maps](https://github.com/jkk-research/lanelet2_maps)
+- [github.com/jkk-research/pcd_publisher](https://github.com/jkk-research/pcd_publisher)
 
 ### Utazó ügynök probléma
 
