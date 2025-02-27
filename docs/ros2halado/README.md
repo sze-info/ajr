@@ -294,13 +294,26 @@ A Studio gazdag vizuális elemeket és hibakereső panelokat kínál - interakt�
 
 Ezek a panelok ezután egyedi elrendezésekben konfigurálhatók és összeállíthatók a projekt egyedi igényeinek és munkafolyamatainak megfelelően.
 
-
-- [Foxglove Studio letöltés](https://foxglove.dev/download)
-- [Lichtblick Suite letöltés](https://github.com/Lichtblick-Suite/lichtblick/releases)
+![foxglove_lichtblick_logo](../bevezetes/foxglove_lichtblick01.png)
 
 <video width="100%" loop="" autoplay="" muted="" playsinline="" poster="https://cdn.prod.website-files.com/66a36245725199d12625c1d5/66dc638d81bf97e670aaf5fc_website-product-hero.webp">
   <source src="https://storage.googleapis.com/assets.foxglove.dev/website/website-product-hero.webm" type="video/mp4">
 </video>
+
+
+A Lichtblick Suite a Foxglove-hoz hasonló, egész pontosan a Foxglove `v1.87.0` verziójának folytatása, továbbra is nyílt forráskóddal. A Lichtblick a Foxglove-hoz hasonlóan asztali alkalmazásként futtatható, és a Studio-hoz hasonlóan támogatja a `.bag` / `.mcap` fájlokat, valamint a valós idejű adatvizualizációt.
+
+### Foxglove Studio / Lichtblick Suite telepítése
+
+[Foxglove 1.66.0 Win :material-download: 154 MB](https://drive.google.com/drive/folders/1TWLy6ZZb5ue9PcDmvdf5dDgKJOQUBzms?usp=drive_link){ .md-button .md-button}
+
+[Foxglove 1.74.2 Linux :material-download: 71 MB](https://drive.google.com/drive/folders/1TWLy6ZZb5ue9PcDmvdf5dDgKJOQUBzms?usp=drive_link){ .md-button .md-button}
+
+[Foxglove Latest All platform:material-download:](https://foxglove.dev/download){ .md-button .md-button}
+
+[Lichtblick Latest All platform:material-download:](https://github.com/Lichtblick-Suite/lichtblick/releases){ .md-button .md-button}
+
+
 
 ### Rviz
 
