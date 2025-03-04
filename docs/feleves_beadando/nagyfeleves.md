@@ -71,16 +71,21 @@ Az alábbi példák nem feltétlenül féléves munkának készültek, de annak 
 
 A szempontok kialakításánaál az [Óbudai Egyetem](https://abc-irobotics.github.io/ros_course_materials_hu/#evkozi-jegy_1) hasonló kurzusának értékelési szempontjait vettük alapul.
 
-- Saját munka és fehasznált kódbázis aránya (megfelelő hivatkozások megléte)
-- Értékelhető eredményeket produkáló munka
-- A bemutató minősége (ppt, videók, élő demo, bármilyen plusz felhasznált eszköz)
-- A megoldás teljessége
-- Megfelelő `ROS 2` kommunikáció / best practice alkalmazása
-- A program szerkezete
-- Az implementáció minősége
-- A kód dokumentálása
-- Konzultáció
-- A választott feladat nehézsége
+Miután a minimális elvárásoknak megfelel a munka, a következő szempontok alapján értékelünk:
+
+Értékelési szempont | Pont
+-----|-----
+Követhető és megfelelő mennységű commit | 3
+Saját munka és fehasznált kódbázis aránya (megfelelő hivatkozások megléte) | 3
+Értékelhető eredményeket produkáló munka | 5
+A bemutató minősége (ppt, videók, élő demo, bármilyen plusz felhasznált eszköz) | 2
+A megoldás teljessége | 2
+Megfelelő `ROS 2` kommunikáció / best practice alkalmazása | 4
+A program szerkezete | 2
+Az implementáció minősége | 2
+A kód dokumentálása | 4
+Konzultáció | 2
+A választott feladat nehézsége | 5
 
 ## Ajánlott módszer a féléves repo létrhozására: `template`
 

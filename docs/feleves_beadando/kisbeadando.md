@@ -9,7 +9,7 @@ icon: material/math-compass
 
 A kis beadandó célja, hogy a hallgatók az órán megszerzett kezdő szintű elméleti tudás mellé **gyakorlati** tapasztalatot szerezzenek ROS 2-ről és GitHub-ról. A kis beadandó viszonylag **kevés idő** alatt elvégezhető: egy oktató pár óra alatt, egy átlag hallgató pár délután alatt elkészülhet vele. Fontos, hogy a beadandó **aláírás feltétel**.
 
-Elvárt kvalitások:
+## Elvárt kvalitások
 
 - Egy package, 1 vagy 2 node
 - Minimum 1 publisher vagy 1 subscriber (több lehet)
@@ -17,13 +17,20 @@ Elvárt kvalitások:
 - Helyes [névadás](#repo-neve) 
 - Template [használata](https://sze-info.github.io/ajr/onallo/ros2git/#a-template-hasznalata) vagy saját megoldás, de a [példák](#peldak) szerinti kidolgozottsági szint
 - Lehetőleg hiba nélkül forduljon, de a `build warning` sok esetben megengedhető, a lényeg a tanulás
-- Minél több commit, hogy a munkafolyamatot is lássuk
 - Terjedelem rövid: 30-100 kódsor node-onként + CMakeLists.txt, package.xml, README.md, launch fájlok (nem baj, ha hosszabb, de nem elvárt)
+
+## Pozitívumok
+
+- Minél több commit, hogy a munkafolyamatot is lássuk
 - Lehetőleg képpel illusztrálva (lásd [példák](#peldak))
 - Lehetőleg [mermaid](https://mermaid.js.org/intro/) diagram a node-ok, topic-ok viszonyáról (lásd [példák](#peldak), [leírás](https://sze-info.github.io/arj/onallo/mermaid.html))
 
+## Hibajavítás
+
+Hiba esetén javítási lehetőség természetesen lesz, de csak egyetlen alkalom. Ekkor GitHub [issue](https://docs.github.com/en/issues)-t nyitunk és ettől kezdve egy hét áll rendelkezésre a javításra.
+
 !!! danger
-    A kis beadandó akkor lesz elfogadható, ha a node buildelhető és a feladatkiírásnak megfelelő kimenetet adja! Amennyiben ez nem teljesül a hallgatónak egy hete lesz a javításra az [issue](https://docs.github.com/en/issues) kiírásától számítva!
+    A kis beadandó akkor lesz elfogadható, ha a node buildelhető és a feladatkiírásnak megfelelő kimenetet adja! Amennyiben ez nem teljesül a hallgatónak **egy hét** áll rendelkezésre a javításra az [issue](https://docs.github.com/en/issues) kiírásától számítva!
 
 ## Példák
 
