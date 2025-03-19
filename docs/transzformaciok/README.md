@@ -313,6 +313,38 @@ Ennek alternatívája az `UTM` vetületi rendszer, amely nem fokokban, hanem mé
 
 ![utm](utm01.svg)
 
+Például a következő online eszközzel konvertálhatók a koordináták:
+
+[coordinates-converter.com](https://coordinates-converter.com/en/decimal/47.694064,17.628915?karte=OpenStreetMap&zoom=17)
+
+
+### Python UTM konvertálás
+
+```
+pip install utm
+```
+
+UTM-WGS84 conversion
+``` python
+import utm
+utm.to_latlon(639770.000, 5195040.000, 33, 'T')
+```
+Result
+``` cs
+(46.894188434576925, 16.834861347101725)
+```
+
+WGS84-UTM conversion
+``` python
+import utm
+utm.from_latlon(47.69405596312653, 17.62866888484998)
+```
+
+Eredmény:
+
+```cs
+(697237.0000192814, 5285644.004006204, 33, 'T')
+```
 
 # Források
 - [articulatedrobotics.xyz/ready-for-ros-6-tf](https://articulatedrobotics.xyz/ready-for-ros-6-tf/)

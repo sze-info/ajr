@@ -10,6 +10,18 @@ Az észlelés (perception) az érzékelt nyers adatokból történő informáci�
 
 ![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview11.svg)
 
+
+## Ellenőrző kérdések
+
+- Egy frame-nek hány szülője lehet? *(transzformációk témakör)* 
+- Mit értünk pose (vagy póz / helyzet) alatt (robotikában)? ROS-ben hogyan adhatjuk meg? *(transzformációk témakör)*
+- Mit jelenít meg az `rqt_tf_tree`, az `rviz` és az `rqt_graph`? *(ROS 2 alapfogalmak témakör)*
+- Mik a launch fájlok és mire használjuk őket? *(ROS 2 haladó témakör)*
+- Mit jelent az érzékelés (sensing)? *(érzékelés témakör)*
+
+
+## Az észlelés célja
+
 Az észlelés célja lehet:
 
 - Objektumfelismerés (detekció), pl: 
@@ -94,23 +106,23 @@ Számos kihívás nehezítheti a felismerést illetve annak pontosságát:
 - Számítási idő (nagyobb sebességeknél hatványozottan)
 - Különböző könyezetek (városi, autópálya, erdős szakasz ...)
 
-# Use case (esettanulmányok)
+## Use case (esettanulmányok)
 
 Mivel az észlelés minden egyes aspektusát nehéz lenne bemutani, inkább pár use-case segítségével mutatnánk be.
 
-## Kamera-alapú jelzőlámpa klasszifikáció
+### Kamera-alapú jelzőlámpa klasszifikáció
 
 Mesterséges intelligencia (neurális háló: YOLOv7) segítségével kamerakép feldolgozás. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2AQy0-QckMk?si=FHxRsQ5S4m-T5rK-?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## LIDAR-alapú egyszerű magasság szűrés
+### LIDAR-alapú egyszerű magasság szűrés
 
 A gyakorlaton is előkerülő feladat egyszerű LIDAR szűrés, X, Y és Z koordináták szerint. Mivel a LIDAR a 3D környezet egyszerű reprezentációját adja bizonyos szempontból könnyebb dolgunk van vele, mint a kamerával. Gyakori technológia, hogy az út szintjét szűrik ki a LIDAR adatból(ground-segmentation), majd a maradék pontok (non-ground) jelentik az összes objektumot. Itt egy sokkal egyszerűbb technológiát demonstrálunk:
 
 ![](https://raw.githubusercontent.com/sze-info/arj_packages/main/arj_simple_perception/img/simple_filter01.gif)
 
-## Klaszterezés 
+### Klaszterezés 
 
 Miután az út szintjét kiszűrtük a LIDAR adatból (ground-segmentation), út pontok (ground) és maradék pontok (non-ground) keletkeztek. A non-ground pontokat természetesen klaszterezni (cluster) kell, hogy kialakuljanak az objektumokat leíró pontok. A klaszterezés lényege, hogy egy adott objektum (pl egy autó) pontjai egymáshoz közel állnak.
 
@@ -124,39 +136,41 @@ Forrás: saját
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y0bmX5s6ojk?si=waCecpMidjLI19_N?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Szenzorfúzió
+### Szenzorfúzió
 
 A következő videó egy való életből vett példán keresztül mutatja be az észlelést.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5E2NYmgvo3E?si=n7lpvnjh2LGBzEC_?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## LIDAR-alapú útfelület / padka detekció
+### LIDAR-alapú útfelület / padka detekció
 
 Egyetemünk egyik saját fejlesztésű algoritmusa.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T2qi4pldR-E?si=9p4mxITiHcwxk4HL?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## LIDAR-alapú objektum követés és predikció
+### LIDAR-alapú objektum követés és predikció
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/si9gamz07LA?si=uG4gJHcaTnfOMpfv?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## LIDAR alapú lokálizáció
+### LIDAR alapú lokálizáció
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A0H8CoORZJU?si=2ypMlkuFM1XDKPFT&amp;start=131" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## SLAM LIDAR és kamera fúzió
+### SLAM LIDAR és kamera fúzió
 
 A Simultaneous Localization and Mapping (SLAM) lényege, hogy egy mozgó rendszer (robot vagy jármű) pozícióját és a környezetét térképezze egyszerre, miközben navigál.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oRzH-grBsKY?si=UPFX2vd85StR6MLY?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Kamera alapú lokalizáció
+### Kamera alapú lokalizáció
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Eaf6r_BNFfk?si=KxoCWP2M8S6BBOui" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Szenzorfúzió alapú lokalizáció - kamera, GPS, IMU 
+### Szenzorfúzió alapú lokalizáció - kamera, GPS, IMU 
 
-# Források
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NIZQLEdYi8I?si=7i_vHlivMmMja3YS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Források
 - [github.com/TUMFTM/Lecture_ADSE](https://github.com/TUMFTM/Lecture_ADSE)
 - [Kim and Kum (2019) – Deep Learning based Vehicle Position and Orientation Estimation via Inverse Perspective Mapping Image](https://ieeexplore.ieee.org/document/8814050)
 - [Object Perception: LIDAR youtube APEX AI](https://www.youtube.com/watch?v=xSGCpb24dhI&amp;list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&amp;index=7&amp;ab_channel=ApexAI)
