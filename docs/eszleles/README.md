@@ -20,9 +20,9 @@ Az észlelés (perception) az érzékelt nyers adatokból történő informáci�
 - Mit jelent az érzékelés (sensing)? *(érzékelés témakör)*
 
 
-## Az észlelés célja
+## Az észlelési feladatok csoportosítása
 
-Az észlelés célja lehet:
+### Célok szerint
 
 - Objektumfelismerés (detekció), pl: 
     - Gyalogos, biciklis jármű felimerés 
@@ -35,7 +35,10 @@ Az észlelés célja lehet:
 - Lokalizáció és térképépítés
     - [SLAM](https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping): nem illetve nem csak GNSS alapú helymeghatározás kiegészítése lokális térképp készítéssel. LOAM: LIDAR alapú odometria.
 
+### Szenzorok szerint
+
 A felhasznált szenzorok alapján lehet:
+
 - LIDAR
 - Kamera
 - Radar
@@ -47,6 +50,8 @@ A felhasznált szenzorok alapján lehet:
 !!! danger
 
     Magyar nyelven könnyű összekeverni az érzékelés (sensing) és az észlelés (perception) foglamakat. Az észlelés összetett funkció a nyers adatokból feldolgozott, értelmezett kimenet előállításával foglakozik.
+
+## Összefoglaló ábra
 
 ```mermaid
 flowchart LR
