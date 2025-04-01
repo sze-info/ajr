@@ -65,44 +65,71 @@ Ezt az egyszerű tervezőt használhatjuk pl. mozgó célpontra (másik jármű,
 
 Az akadály elkerülési algoritmus bemutatása szimuláció segítségével
 
-Ellenőrizük, hogy megvannak-e a következő packagek, ha nincsenek klónozuk le őket:
- - lexus_bringup : 
-``` r
-git clone https://github.com/jkk-research/lexus_bringup.git
-``` 
-- patchworkpp
-``` r
-git clone https://github.com/url-kaist/patchwork-plusplus-ros.git -b ROS2
-``` 
-
-
-## waypointok betöltése
-
-```r
-ros2 run wayp_plan_tools waypoint_loader --ros-args -p file_name:=sim_waypoints3.csv -p file_dir:=$HOME/ros2_ws/src/sim_wayp_plan_tools/csv -r __ns:=/sim1
-```
-
-##  build
-
+Ellenőrizük, hogy megvannak-e a következő packagek, ha nincsenek klónozuk le őket a workspacebe. Amenyiben megvannak a git pull parancsal frissítsük őket:
+ - **wayp_plan_tools :** 
 ``` r
 cd ~/ros2_ws/src
+git clone https://github.com/jkk-research/wayp_plan_tools.git
 ``` 
+vagy
 ``` r
-cd sim_wayp_plan_tools
+cd ~/ros2_ws/src/wayp_plan_tools
+git pull
 ``` 
+- **sim_wayp_plan_tools**
 ``` r
-git checkout gamma
+cd ~/ros2_ws/src
+git clone https://github.com/jkk-research/sim_wayp_plan_tools.git
 ``` 
+vagy
 ``` r
-cd ~/ros2_ws/
+cd ~/ros2_ws/src/sim_wayp_plan_tools
+git pull
+```
+- **arj_packages**
+``` r
+cd ~/ros2_ws/src
+git clone https://github.com/sze-info/arj_packages.git
 ``` 
+vagy
 ``` r
-pip install setuptools==59.6.0
+cd ~/ros2_ws/src/arj_packages
+git pull
 ``` 
 
+- **lidar_cluster_ros2**
 ``` r
-colcon build --symlink-install --packages-select gammasim_application gammasim_bringup gammasim_description gammasim_gazebo joint_attribute_publisher
+cd ~/ros2_ws/src
+git clone https://github.com/jkk-research/lidar_cluster_ros2.git
 ``` 
+vagy
+``` r
+cd ~/ros2_ws/src/lidar_cluster_ros2
+git pull
+``` 
+## branch váltás és buildelés
+
+A szimuláció indításhoz a két packeges-ben váltsunk branchet és buildeljük a workspaceünket
+``` r
+cd ~/ros2_ws/src/sim_wayp_plan_tools
+```
+``` r
+git checkout gamma
+```
+``` r
+cd ~/ros2_ws/src/wayp_plan_tools
+```
+``` r
+git checkout gamma
+```
+``` r
+cd ~/ros2_ws
+```
+``` r
+colcon build --symlink-install
+```
+
+
 
 ## Szimuláció indiítása
 ``` r
@@ -115,7 +142,30 @@ ros2 launch gammasim_bringup gamma.launch.py
 A gazebo szimulátor bal alsó sarkában nyojunk rá a play gombra
 
 
-## Filterek indítása
+## waypointok betöltése
+
+```r
+ros2 run wayp_plan_tools waypoint_loader --ros-args -p file_name:=sim_waypoints3.csv -p file_dir:=$HOME/ros2_ws/src/sim_wayp_plan_tools/csv -r __ns:=/sim1
+```
+## tf indítása
+```r
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 /map /map_gamma
+```
+
+**Rvizben a láthatóvá válik a szimulált Lidar és a betöltött waypointok**
+![](abrak/gamma_rviz_lidar_waypoint.PNG)
+
+**Pakoljunk pár akadályt az autó elé!**
+
+![](abrak/gamma_akadaly_sim.PNG)
+
+
+## Lokalizáció indítása
+```r
+ros2 run wayp_plan_tools current_pose
+```
+
+## Talajszűrő indítása
 ```r
 ros2 launch arj_simple_perception filter_a.launch.py \
     cloud_topic:=/gamma/points  \
@@ -123,14 +173,8 @@ ros2 launch arj_simple_perception filter_a.launch.py \
     minZ:=-1.5 \
     minX:=0.5
 ```
-## tf illetve lokalizáció indítása
-```r
-ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 /map /map_gamma
-```
 
-```r
- ros2 run lexus_bringup current_pose_from_tf --ros-args -p output_topic:=/gamma/current_pose -p frame_id:=map -p child_frame_id:=base_link
-```
+
 
 ## A klaszterező indítása
 
@@ -141,6 +185,8 @@ ros2 launch lidar_cluster euclidean_grid.launch.py topic:=lidar_filter_output
 ```r
 ros2 launch wayp_plan_tools obstacle_avoidance_trapezoid.launch.py
 ```
+**A végeredmény:**
+![](abrak/gamma_akadalykerules.PNG)
 
 ```r
 ros2 run rqt_reconfigure 
