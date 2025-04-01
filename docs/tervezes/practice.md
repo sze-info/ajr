@@ -66,6 +66,7 @@ Ezt az egyszerű tervezőt használhatjuk pl. mozgó célpontra (másik jármű,
 Az akadály elkerülési algoritmus bemutatása szimuláció segítségével
 
 Ellenőrizük, hogy megvannak-e a következő packagek, ha nincsenek klónozuk le őket a workspacebe. Amenyiben megvannak a git pull parancsal frissítsük őket:
+
  - **wayp_plan_tools :** 
 ``` r
 cd ~/ros2_ws/src
@@ -76,6 +77,7 @@ vagy
 cd ~/ros2_ws/src/wayp_plan_tools
 git pull
 ``` 
+
 - **sim_wayp_plan_tools**
 ``` r
 cd ~/ros2_ws/src
@@ -86,6 +88,7 @@ vagy
 cd ~/ros2_ws/src/sim_wayp_plan_tools
 git pull
 ```
+
 - **arj_packages**
 ``` r
 cd ~/ros2_ws/src
