@@ -66,6 +66,12 @@ Nézzünk egy példát, ami a Zoox önvezető robotaxit mutaja be működés kö
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2sGf_3cAwjA?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+Nézzük meg, hogyan akadályoz meg a Google Waymo önvezető robotaxija különböző baleseteket:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nAuna_qzf6k?si=km2nSToaOVL3MU7r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Bővebben: [waymo.com/blog/2025/05/waymo-making-streets-safer-for-vru](https://waymo.com/blog/2025/05/waymo-making-streets-safer-for-vru)
+
 # Kódsorok
 
 Az alábbi ábrából látszik, hogy egy mai átlagos (vezetéstámogatással rendelkező) személyautó igen komplex szoftvermérnöki munka eredménye, azonban az is világos, hogy a jövőben az önvezető járművek még ennél is összetettebb megoldásokat fognak igényelni.

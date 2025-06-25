@@ -146,3 +146,10 @@ Szabályzás: zárthurkú modellezett jármű, szabályzó építése (pl PID va
 </center>
 
 <br><br><br>
+<center>
+<h1><a href="https://go.sze.hu/ajr">go.sze.hu/ajr</a></h1>
+</center>
+
+
+
+<br><br><br>
