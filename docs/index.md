@@ -37,11 +37,36 @@ További karrierrel kapcsolatos érdekességek például a [statista](https://ww
 <center> 
 
 
-Oktatók | | | .
------|-----|-----|-----
-<img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_he01.png" width="80px"/> | Dr. Horváth Ernő <br/> <i>Tárgyfelelős</i> <br/>[github.com/horverno](http://github.com/horverno) | <img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_ba01.png" width="80px"/>| Dr. Ballagi Áron <br/> <i>Tematika, nem oktat</i><br/> [github.com/aronball](http://github.com/aronball)
-<img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_kr01.png" width="80px"/> | Krecht Rudolf <br/> <i>Szimuláció, robotika</i> <br/> [github.com/rudolfkrecht](http://github.com/rudolfkrecht) | <img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_um01.png" width="80px"/> | Unger Miklós <br/> <i>Környezetérzékelés</i> <br/> [github.com/umiklos](http://github.com/umiklos)
-<img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_ig01.png" width="80px"/>| Ignéczi Gergő <br/> <i>Szabályozástechnika</i> <br/> [github.com/gfigneczi1](http://github.com/gfigneczi1)|<img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_mn01.png" width="80px"/> | Markó Norbert <br/> <i>AI, neurális hálók</i>  <br/> [github.com/norbertmarko](http://github.com/norbertmarko)
+<table>
+  <thead>
+    <tr>
+      <th>Oktatók</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_he01.png" width="80px"/></td>
+      <td>Dr. Horváth Ernő <br/><i>Tárgyfelelős</i> <br/><a href="http://github.com/horverno">github.com/horverno</a></td>
+      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_ba01.png" width="80px"/></td>
+      <td>Dr. Ballagi Áron <br/><i>Tematika, nem oktat</i><br/><a href="http://github.com/aronball">github.com/aronball</a></td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_kr01.png" width="80px"/></td>
+      <td>Krecht Rudolf <br/><i>Szimuláció, robotika</i> <br/><a href="http://github.com/rudolfkrecht">github.com/rudolfkrecht</a></td>
+      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_um01.png" width="80px"/></td>
+      <td>Unger Miklós <br/><i>Környezetérzékelés</i> <br/><a href="http://github.com/umiklos">github.com/umiklos</a></td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_ig01.png" width="80px"/></td>
+      <td>Ignéczi Gergő <br/><i>Szabályozástechnika</i> <br/><a href="http://github.com/gfigneczi1">github.com/gfigneczi1</a></td>
+      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_mn01.png" width="80px"/></td>
+      <td>Markó Norbert <br/><i>AI, neurális hálók</i> <br/><a href="http://github.com/norbertmarko">github.com/norbertmarko</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
 </center>
@@ -52,21 +77,103 @@ Előzetesen a következő időtervet követjük, de a pontos dátumokat mindig e
 
 <center> 
 
-Óra | Dátum Ő | Dátum T | Tananyag | Megj.
------:|---:|---:|:-----|:-----
-1 | szept. 9-10. | feb. 6. | Bevezetés | 
-2 | szept. 16-17. | feb. 13. | ROS 2 alap, telepítés | 
-3 | szept. 23-24. | feb. 20. | Érzékelés |  Beadandó 🔴 Aláírás megtagadás mulasztás esetén!
-4 | szept. 30-okt. 1. | feb. 27. | ROS 2 haladó | 
-5 | okt. 7-8. | márc. 6. | Transzformációk | Beadandó 🔴 Kis beadandó véglegestése
-6 | okt. 14-15. | márc. 13. | Észlelés | Féléves feladat választás
-7 | okt. 21. | márc. 20. | Szimuláció | 
-8 | okt. 28-29. | márc. 27. | Tervezés | ZH 1?
-9 | nov. 4-5. | ápr. 3. | Szabályozás | 
-10 | nov. 11-12. | ápr. 10. | AI | 
-+1 | nov. 19.? | ápr. 17. | | ZH 2?
-+2 | - | - | | Pót ZH?
-
+<table>
+  <thead>
+    <tr>
+      <th>Óra</th>
+      <th>Dátum Ő</th>
+      <th>Dátum T</th>
+      <th>Tananyag</th>
+      <th>Megj.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>szept. 9-10.</td>
+      <td>feb. 6.</td>
+      <td>Bevezetés</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>szept. 16-17.</td>
+      <td>feb. 13.</td>
+      <td>ROS 2 alap, telepítés</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>szept. 23-24.</td>
+      <td>feb. 20.</td>
+      <td>Érzékelés</td>
+      <td>Beadandó 🔴 Aláírás megtagadás mulasztás esetén!</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>szept. 30-okt. 1.</td>
+      <td>feb. 27.</td>
+      <td>ROS 2 haladó</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>okt. 7-8.</td>
+      <td>márc. 6.</td>
+      <td>Transzformációk</td>
+      <td>Beadandó 🔴 Kis beadandó véglegestése</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>okt. 14-15.</td>
+      <td>márc. 13.</td>
+      <td>Észlelés</td>
+      <td>Féléves feladat választás</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>okt. 21.</td>
+      <td>márc. 20.</td>
+      <td>Szimuláció</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>okt. 28-29.</td>
+      <td>márc. 27.</td>
+      <td>Tervezés</td>
+      <td>ZH 1?</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>nov. 4-5.</td>
+      <td>ápr. 3.</td>
+      <td>Szabályozás</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>nov. 11-12.</td>
+      <td>ápr. 10.</td>
+      <td>AI</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>+1</td>
+      <td>nov. 19.?</td>
+      <td>ápr. 17.</td>
+      <td></td>
+      <td>ZH 2?</td>
+    </tr>
+    <tr>
+      <td>+2</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td>Pót ZH?</td>
+    </tr>
+  </tbody>
+</table>
 </center>
 
 ## Elmélet
