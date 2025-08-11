@@ -4,7 +4,7 @@ site_author: 'sze'
 site_url: 'https://sze-info.github.io/ajr/' # Uncomment to set a canonical URL
 copyright: |
   &copy; Széchenyi István Egyetem 
-docs_dir: docs/
+docs_dir: docs
 
 repo_url: https://github.com/sze-info/ajr/
 nav:
@@ -16,6 +16,7 @@ nav:
       - bevezetes/gepterem.md
       - bevezetes/copilot.md
       - bevezetes/linux.md
+      - bevezetes/slides/slides_intro.md
     - 2. ROS 2 koncepciók, telepítés: 
       - bevezetes/ros2.md
       - bevezetes/ros2gyak.md
