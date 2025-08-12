@@ -1,6 +1,6 @@
 ---
 layout: default
-title: NN slides
+title: Intro slides
 icon: material/presentation
 ---
 
@@ -16,4 +16,6 @@ nav:
   - intro/03_overview.md
   - intro/04_overview.md
   - intro/05_overview.md
+  - intro/waymo.md
+  - intro/zoox.md
 ```
