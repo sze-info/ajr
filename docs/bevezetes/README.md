@@ -23,7 +23,26 @@ Irodalom: [[TU München](https://github.com/TUMFTM/Lecture_ADSE)], [[Autoware](h
 
 A fenti beosztás megfigyelhető nagyobb rendszerek, például az [Autoware összefoglaló rendszerábráján is](https://app.diagrams.net/?lightbox=1#Uhttps://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/node-diagram/overall-node-diagram-autoware-universe.drawio.svg). Robotikában ismeretes még a sense-think-act paradigma is. Itt a gondolkodás (think) foglalja össze az észlelést, a tervezést és valamennyire a szabályozást is.
 
+```slides
+title: NN Presentation
+url_stub: overview1
+nav:
+  - slides/intro/01_overview.md
+  - slides/intro/02_overview.md
+  - slides/intro/03_overview.md
+  - slides/intro/04_overview.md
+  - slides/intro/05_overview.md
+```
+
 Nézzünk minden részfeladatra egy szemléltetést, az egyetemünk egyik önvezető funkciókkal rendelkező autóján, a zalaegerszegi tesztpályán:
+
+<iframe 
+  width="560" height="315"
+  src="https://www.youtube.com/embed/dlljhM7CWtI?autoplay=0&loop=1&playlist=dlljhM7CWtI&mute=1" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen>
+</iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9eFqsei1J70?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -69,6 +88,15 @@ Nézzünk egy példát, ami a Zoox önvezető robotaxit mutaja be működés kö
 Nézzük meg, hogyan akadályoz meg a Google Waymo önvezető robotaxija különböző baleseteket:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nAuna_qzf6k?si=km2nSToaOVL3MU7r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Önvezető autó érzékelése a győri campuson:
+<iframe 
+  width="560" height="315" 
+  src="https://www.youtube.com/embed/FmAkOa9vDyY?autoplay=0&loop=1&playlist=FmAkOa9vDyY&mute=1" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen>
+</iframe>
 
 Bővebben: [waymo.com/blog/2025/05/waymo-making-streets-safer-for-vru](https://waymo.com/blog/2025/05/waymo-making-streets-safer-for-vru)
 
@@ -158,6 +186,14 @@ Az F1/10 verseny egy autonóm járművekkel kapcsolatos verseny, ahol a résztve
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k1tdeXjaJpk?si=_N7tOW_OVQDV6fZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Traffic Cone Manipulation Robot
+Szenzorok: Intel RealSense RGB-D camera, IMU, GPS(GNSS)
+
+<figure markdown="span">
+  ![Image title](https://jkk-research.github.io/assets/images_common/robot_traffic_cone01.png){ width="60%" }
+  <figcaption>Traffic Cone Manipulation Robot</figcaption>
+</figure>
 
 ## Segway Loomo (robot)
 Leírás [itt](https://github.com/jkk-research/loomo_base).

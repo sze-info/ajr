@@ -20,6 +20,14 @@ Az észlelés (perception) az érzékelt nyers adatokból történő informáci�
 - Mit jelent az érzékelés (sensing)? *(érzékelés témakör)*
 
 
+<iframe 
+  width="560" height="315"
+  src="https://www.youtube.com/embed/FmAkOa9vDyY?autoplay=0&loop=1&playlist=FmAkOa9vDyY&mute=1" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen>
+</iframe>
+
 ## Az észlelési feladatok csoportosítása
 
 ### Célok szerint

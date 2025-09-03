@@ -75,8 +75,9 @@ Jó tudni, hogy a fenti algoritmusokanak számos változata, továbbfejlesztése
 
 Ismertebb HD téképek és térképformátumok:
 
-- OpenDRIVE 
-- Lanelet2
+- Lanelet2 - [github.com/fzi-forschungszentrum-informatik/Lanelet2](https://github.com/fzi-forschungszentrum-informatik/Lanelet2)
+- OpenDRIVE - [www.asam.net/standards/detail/opendrive](https://www.asam.net/standards/detail/opendrive/)
+- CommonRoad - [commonroad.in.tum.de](https://commonroad.in.tum.de/)
 
 
 ```slides
@@ -88,6 +89,8 @@ nav:
   - slides/hd/mesh.md
   - slides/hd/map.md
 ```
+
+![alt text](/ajr/assets/images_common/common_road_scenario_gui01.png)
 
 További információ:
 

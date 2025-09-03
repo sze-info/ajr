@@ -9,7 +9,7 @@ icon: material/presentation
 
 ```slides
 title: NN Presentation
-url_stub: nn1
+url_stub: overview1
 nav:
   - intro/01_overview.md
   - intro/02_overview.md
@@ -18,4 +18,6 @@ nav:
   - intro/05_overview.md
   - intro/waymo.md
   - intro/zoox.md
+  - intro/sze_perception.md
+  - intro/sze_planning.md
 ```
