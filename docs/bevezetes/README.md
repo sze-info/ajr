@@ -46,7 +46,7 @@ Nézzünk minden részfeladatra egy szemléltetést, az egyetemünk egyik önvez
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9eFqsei1J70?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![Alt text](explain_video01.png)
+![Alt text](/ajr/assets/images_common/explain_video01.png)
 
 # Önvezetés vs. vezetéstámogatás
 ## SAE szintek
@@ -78,7 +78,7 @@ Ahogy láthattuk, önvezető (autonomous) járművekhez (L5) hasonló technológ
 
 | Robotok | Robotaxik |
 |---|---|
-| ![tx](robots01.png) | ![tx](robotaxis01.png) |
+| ![tx](/ajr/assets/images_common/robots01.png) | ![tx](/ajr/assets/images_common/robotaxis01.png) |
 | Nuro, Segway, Turtlebot, Clearpath, Starship  | Zoox, Cruise, Waymo, Navya, Sensible4 |
 
 Nézzünk egy példát, ami a Zoox önvezető robotaxit mutaja be működés közben:
@@ -137,7 +137,7 @@ Szenzorai: Ouster OS2-64 LIDAR, 2x OS1-32 LIDAR, Stereolabs Zed2i mélységkamer
 További információ [itt](https://github.com/szenergy/szenergy-public-resources/wiki/H-sensorset2021.L).
 
 <figure markdown="span">
-  ![Image title](vehcile_lexus01.png){ width="80%" }
+  ![Image title](/ajr/assets/images_common/vehcile_lexus01.png){ width="80%" }
   <figcaption>Lexus</figcaption>
 </figure>
 
@@ -146,7 +146,7 @@ Szenzorai: 2x Ouster OS1-64 LIDAR, 2x Velodyne VLP16 LIDAR, SICK LMS111 LIDAR, S
 További információ [itt](https://github.com/szenergy/szenergy-public-resources/wiki/H-sensorset2020.A).
 
 <figure markdown="span">
-  ![Image title](vehcile_leaf01.png){ width="80%" }
+  ![Image title](/ajr/assets/images_common/vehcile_leaf01.png){ width="80%" }
   <figcaption>Nissan Leaf</figcaption>
 </figure>
 
@@ -155,7 +155,7 @@ Szenzorai: Ouster OS1-128 LIDAR, SICK LMS111 LIDAR, Stereolabs Zed2i mélységka
 További információ [itt](https://www.youtube.com/szenergyteam).
 
 <figure markdown="span">
-  ![Image title](vehicle_szenergy01.png){ width="80%" }
+  ![Image title](/ajr/assets/images_common/vehicle_szenergy01.png){ width="80%" }
   <figcaption>Szenergy</figcaption>
 </figure>
 
@@ -199,7 +199,7 @@ Szenzorok: Intel RealSense RGB-D camera, IMU, GPS(GNSS)
 Leírás [itt](https://github.com/jkk-research/loomo_base).
 
 <figure markdown="span">
-  ![Image title](vehcile_segway01.png){ width="40%" }
+  ![Image title](/ajr/assets/images_common/vehcile_segway01.png){ width="40%" }
   <!-- <figcaption></figcaption> -->
 </figure>
 
@@ -208,7 +208,7 @@ Leírás [itt](https://github.com/jkk-research/loomo_base).
 Leírás [itt](https://husarion.com/manuals/rosbot/).
 
 <figure markdown="span">
-  ![Image title](vehcile_husarion01.png){ width="40%" }
+  ![Image title](/ajr/assets/images_common/vehcile_husarion01.png){ width="40%" }
   <!-- <figcaption></figcaption> -->
 </figure>
 
@@ -217,7 +217,7 @@ Leírás [itt](https://husarion.com/manuals/rosbot/).
 Leírás [itt](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/).
 
 <figure markdown="span">
-  ![Image title](vehcile_turtlebot01.png){ width="80%" }
+  ![Image title](/ajr/assets/images_common/vehcile_turtlebot01.png){ width="80%" }
   <!-- <figcaption></figcaption> -->
 </figure>
 
@@ -226,7 +226,7 @@ Szenzorai: Ouster OS1-64 LIDAR.
 További információ [itt](https://www.youtube.com/watch?v=In_6XPS6JAw).
 
 <figure markdown="span">
-  ![Image title](vehcile_dji01.png){ width="50%" }
+  ![Image title](/ajr/assets/images_common/vehcile_dji01.png){ width="50%" }
   <!-- <figcaption></figcaption> -->
 </figure>
 

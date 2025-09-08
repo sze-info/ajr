@@ -4,6 +4,6 @@
 - **Bold** and *italic* text
 - Bullet points and numbered lists
 
-![bb](../../mesterseges_intelligencia/ai02.png) 
+![bb](/ajr/mesterseges_intelligencia/assets/images/mesterseges_intelligencia/ai02.png) 
 
 > Perfect for technical content 

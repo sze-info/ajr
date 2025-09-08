@@ -116,8 +116,8 @@ Az `ROS` idő kezelésre a Unix-időt, vagy a POSIX-időt használja. Ez a UTC (
 
 Hátránya, hogy nem túl intuitív, nem olvasható az ember számára. Pl. a Foxglove Studio ezért is gyakran átalakítja olvashatóbb formátumra. 
 
-![foxglove_a](foxglove04.png#only-light)
-![foxglove_a](foxglove03.png#only-dark)
+![foxglove_a](/ajr/assets/images_common/foxglove04.png#only-light)
+![foxglove_a](/ajr/assets/images_common/foxglove03.png#only-dark)
 
 A másodpercek és nanoszekundumok a következőképp képzelhetők el:
 
@@ -179,4 +179,5 @@ ISO format:	2023-09-13T08:52:42.945887
 
 - [Szenzorok ROS-ben](https://docs.google.com/presentation/d/e/2PACX-1vQbXSe4cb-aYgWNNiUF1PHJBZrwl0keWantbFjTe94zm1A9cVGqmWKC4lHCSUr4y7vfq1PrJ2mP8XqP/pub?start=false&loop=false&delayms=3000) _(online google prezentáció magyarul)_
 - [docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html)
+- [autowarefoundation.github.io/autoware-documentation/main/reference-hw/](https://autowarefoundation.github.io/autoware-documentation/main/reference-hw/)
 

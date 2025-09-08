@@ -90,84 +90,84 @@ Előzetesen a következő időtervet követjük, de a pontos dátumokat mindig e
   <tbody>
     <tr>
       <td>1</td>
-      <td>szept. 9-10.</td>
+      <td>szept. 11.</td>
       <td>feb. 6.</td>
       <td>Bevezetés</td>
       <td></td>
     </tr>
     <tr>
       <td>2</td>
-      <td>szept. 16-17.</td>
+      <td>szept. 18.</td>
       <td>feb. 13.</td>
       <td>ROS 2 alap, telepítés</td>
       <td></td>
     </tr>
     <tr>
       <td>3</td>
-      <td>szept. 23-24.</td>
+      <td>szept. 25.</td>
       <td>feb. 20.</td>
       <td>Érzékelés</td>
       <td>Beadandó 🔴 Aláírás megtagadás mulasztás esetén!</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>szept. 30-okt. 1.</td>
+      <td>okt. 2.</td>
       <td>feb. 27.</td>
       <td>ROS 2 haladó</td>
       <td></td>
     </tr>
     <tr>
       <td>5</td>
-      <td>okt. 7-8.</td>
+      <td>okt. 9.</td>
       <td>márc. 6.</td>
       <td>Transzformációk</td>
       <td>Beadandó 🔴 Kis beadandó véglegestése</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>okt. 14-15.</td>
+      <td>okt. 16.</td>
       <td>márc. 13.</td>
       <td>Észlelés</td>
       <td>Féléves feladat választás</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>okt. 21.</td>
+      <td>okt. 30.</td>
       <td>márc. 20.</td>
       <td>Szimuláció</td>
       <td></td>
     </tr>
     <tr>
       <td>8</td>
-      <td>okt. 28-29.</td>
+      <td>nov. 6.</td>
       <td>márc. 27.</td>
       <td>Tervezés</td>
       <td>ZH 1?</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>nov. 4-5.</td>
+      <td>nov. 13.</td>
       <td>ápr. 3.</td>
       <td>Szabályozás</td>
       <td></td>
     </tr>
     <tr>
       <td>10</td>
-      <td>nov. 11-12.</td>
+      <td>nov. 20.</td>
       <td>ápr. 10.</td>
       <td>AI</td>
       <td></td>
     </tr>
     <tr>
       <td>+1</td>
-      <td>nov. 19.?</td>
+      <td>nov. 27.</td>
       <td>ápr. 17.</td>
       <td></td>
       <td>ZH 2?</td>
     </tr>
     <tr>
       <td>+2</td>
-      <td>-</td>
+      <td>dec. 4.</td>
       <td>-</td>
       <td></td>
       <td>Pót ZH?</td>

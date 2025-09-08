@@ -287,8 +287,8 @@ A Foxglove Studio egy nyílt forráskódú, robotikai adatokat vizualizáló és
 
 A natív robotikai eszközök (mint például az ROS ökoszisztéma részei) általában csak Linux rendszeren támogatottak, de a Studio asztali alkalmazás Linuxon, Windows-on és macOS-en is működik. Akár az ROS stack más operációs rendszeren fut, a Studio képes kommunikálni a robottal zökkenőmentesen.
 
-![foxglove_a](../bevezetes/foxglove04.png#only-light)
-![foxglove_a](../bevezetes/foxglove03.png#only-dark)
+![foxglove_a](/ajr/assets/images_common/foxglove04.png#only-light)
+![foxglove_a](/ajr/assets/images_common/foxglove03.png#only-dark)
 
 A Studio gazdag vizuális elemeket és hibakereső panelokat kínál - interaktív diagramoktól, 3D vizuális elemekig, kameraképektől, és diagnosztikai adatfolyamokig. Legyen szó valós idejű robotkövetésről, vagy `.bag` / `.mcap` fájlban történő hibakeresésről, ezek a panelok segítenek a különböző, általános robotikai feladatok megoldásában.
 

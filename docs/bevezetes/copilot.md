@@ -21,12 +21,12 @@ Az eszköz beépül a fejlesztői környezetekbe, például a Visual Studio Code
 
 Használata alapértelmezetten fizetős, de hallgató hozzáféréssel ingyenes: [education.github.com/benefits](https://education.github.com/benefits?type=student).
 
-![vs code alapok](vscodebasics01.png)
-![copilot chat](copilot01.png)
+![vs code alapok](/ajr/assets/images_common/vscodebasics01.png)
+![copilot chat](/ajr/assets/images_common/copilot01.png)
 
 Nézzük meg működés közben a copilot-ot:
 
-![copilot in action](copilot02.gif)
+![copilot in action](/ajr/assets/images_common/copilot02.gif)
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZfT2CXY5-Dc?si=g3PHKWyJ63N_18xB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

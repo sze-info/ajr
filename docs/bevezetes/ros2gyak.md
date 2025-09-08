@@ -129,7 +129,7 @@ A második ablakból publikáljunk egy parancsot, melynek hatására körbe ford
 ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.2}}'
 ```
 <figure markdown="span">
-  ![](turtlesim01.gif)
+  ![](/ajr/assets/images_common/turtlesim01.gif)
   <figcaption>Turtlesim animáció</figcaption>
 </figure>
 
@@ -330,7 +330,7 @@ ros2 run arj_intro_cpp cmd_gen_node
 A következőképp mozog most a teknős:
 
 <figure markdown="span">
-  ![Image title](turtlesim02.gif){ width="100%" }
+  ![Image title](/ajr/assets/images_common/turtlesim02.gif){ width="100%" }
   <figcaption>Turtle</figcaption>
 </figure>
 
@@ -372,7 +372,7 @@ ros2 launch arj_intro_cpp foxglove_bridge.launch.py
 
 Vizsgáljuk meg Foxglove Studio-val is WebSocketen keresztül (Open connection `ws://localhost:8765`):
 
-![foxglove](foxglove02.png)
+![foxglove](/ajr/assets/images_common/foxglove02.png)
 
 *Megjegyzés*: gépteremben fel van téve a `foxglove_bridge`, otthon `sudo apt install ros-humble-foxglove-bridge` paranccsal (előtte update) telepíthető.
 

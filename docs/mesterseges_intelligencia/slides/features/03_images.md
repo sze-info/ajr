@@ -2,7 +2,7 @@
 
 - Images and diagrams
 
-![aa](../../mesterseges_intelligencia/assets/images/segment.gif)
+![aa](/ajr/mesterseges_intelligencia/assets/images/segment.gif)
 
 - Embedded videos
 - Interactive elements
