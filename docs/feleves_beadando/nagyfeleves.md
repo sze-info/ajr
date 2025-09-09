@@ -101,10 +101,14 @@ C++ és Python nyelven is létrehoztunk egy úgynevezett template repo-t, amely 
 
 ### Meme
 
-<center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/feleves_beadando/meme01.jpg" width="60%" /></center>
-
+<figure markdown="span">
+  ![Image title](/ajr/assets/images_common/meme01.jpg){ width="60%" }
+  <figcaption></figcaption>
+</figure>
 Credit: [pycoders](https://www.instagram.com/pycoders/)
 
-<center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/feleves_beadando/meme02.jpg" width="60%" /></center>
-
+<figure markdown="span">
+  ![Image title](/ajr/assets/images_common/meme02.jpg){ width="60%" }
+  <figcaption></figcaption>
+</figure>
 Credit: [knowyourmeme](https://knowyourmeme.com/memes/but-its-honest-work)

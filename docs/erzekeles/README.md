@@ -13,7 +13,7 @@ icon: material/math-integral-box # elméleti tananyag
 
 Az érzékelés nyers adatok beolvasását jelenti.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview10.svg)
+![](/ajr/assets/images_common/overview10.svg)
 
 Érzékelés esetében fontos felhívi a figyelmet, hogy ez még nem jelent magas szintű adatfeldolgozást. Szenzorai lehetnek kamerák, mikrofonok, LIDAR-ok stb. Ahogy az ábra is mutatja a tananyagban az érzékeléssel együtt tárgyaljuk az aktuálást is.
 
@@ -35,7 +35,7 @@ A kamera az érzékelőjére (pl CCD CMOS szenzor) érkező fényt elektronikus 
 - *Jellemző interfész:* GigE, USB3
 - *Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/Image`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Image.msg), [`sensor_msgs/msg/CameraInfo`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/CameraInfo.msg)
 
-![cam](camera01.png)
+![cam](/ajr/assets/images_common/camera01.png)
 
 Mélységesztimáció:
 
@@ -55,11 +55,11 @@ A LIDAR (Light Detection and Ranging) szenzor egy olyan eszköz, amely lézerpul
 
 LIDAR gyártókat, dataseteket, algoritmusokat tartlamazó gyűjtemény: [github.com/szenergy/awesome-lidar](https://github.com/szenergy/awesome-lidar).
 
-![lidar](lidar01.png)
+![lidar](/ajr/assets/images_common/lidar01.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1IWXO0vvmO8?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![](lidar_camera01.svg)
+![](/ajr/assets/images_common/lidar_camera01.svg)
 
 ## Radar
 - *Jellemző gyártók:* Aptiv, Bosch, Continental,  Denso
@@ -80,7 +80,7 @@ Az IMU kis méretű elektromechanikus giroszkópokat és gyorsulásmérőket, va
 - *Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/Imu`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/Imu.msg), [`sensor_msgs/msg/MagneticField`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/MagneticField.msg)
 
 
-![imu](imu01.png)
+![imu](/ajr/assets/images_common/imu01.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6HxuGmd24u4?si=8QImJAkkbuxq7rNu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -92,7 +92,7 @@ A [GNSS](https://en.wikipedia.org/wiki/Satellite_navigation) (global navigation 
 - *Jellemző interfész:* GigE, CAN bus
 - *Jellemző `ROS 2` topic típusok:* [`sensor_msgs/msg/NavSatFix`](https://github.com/ros2/common_interfaces/blob/humble/sensor_msgs/msg/NavSatFix.msg), [`geometry_msgs/msg/PoseStamped`](https://github.com/ros2/common_interfaces/blob/humble/geometry_msgs/msg/PoseStamped.msg)
 
-![gnss](gps01.png)
+![gnss](/ajr/assets/images_common/gps01.png)
 
 Rövid, de jó leírás a GNSS pontosságról: [www.sbg-systems.com/news/mastering-accurac-gnss-and-its-errors-sources/](https://www.sbg-systems.com/news/mastering-accurac-gnss-and-its-errors-sources/)
 
@@ -106,7 +106,7 @@ A CAN bus (Controller Area Network) egy jellemően autóipari szabvány, mely le
 - Kormányszög adat lekérdezése, refencia jel
 - *Jellemző `ROS 2` topic típusok:* [`can_msgs/msg/Frame`](http://docs.ros.org/en/noetic/api/can_msgs/html/msg/Frame.html), [`geometry_msgs/msg/Twist`](https://github.com/ros2/common_interfaces/blob/humble/geometry_msgs/msg/Twist.msg)
 
-![can](can01.svg)
+![can](/ajr/assets/images_common/can01.svg)
 
 # `ROS 2` időkezelés
 
@@ -116,8 +116,7 @@ Az `ROS` idő kezelésre a Unix-időt, vagy a POSIX-időt használja. Ez a UTC (
 
 Hátránya, hogy nem túl intuitív, nem olvasható az ember számára. Pl. a Foxglove Studio ezért is gyakran átalakítja olvashatóbb formátumra. 
 
-![foxglove_a](/ajr/assets/images_common/foxglove04.png#only-light)
-![foxglove_a](/ajr/assets/images_common/foxglove03.png#only-dark)
+![foxglove_a](/ajr/assets/images_common/foxglove05.png)
 
 A másodpercek és nanoszekundumok a következőképp képzelhetők el:
 

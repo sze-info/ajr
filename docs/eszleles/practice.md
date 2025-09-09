@@ -158,7 +158,7 @@ Publishers:
 ros2 run rqt_graph rqt_graph
 ```
 
-![Alt text](rqt_graph02.svg)
+![Alt text](/ajr/docs/assets/images_common/rqt_graph02.svg)
 
 
 
@@ -173,7 +173,7 @@ code ~/ros2_ws/src/arj_packages/arj_simple_perception
 
 Hasnolítsuk össze a `lidar_filter_simple_param.cpp`-t a `lidar_filter_simple.cpp`-vel. Vs code jobb kilikk a fájlon `Select for compare` és `Compare with Selected`.
 
-![compare_vs_code01](compare_vs_code01.png)
+![compare_vs_code01](/ajr/docs/assets/images_common/compare_vs_code01.png)
 
 Az előző feladatban használt egyszerű filter minimum és maximum X,Y,Z értékeit dinamikusan változtassuk.
 
@@ -210,7 +210,7 @@ ros2 launch arj_simple_perception run_all.launch.py
 
 Nagyjából így fog kinézni az `rqt_reconfigure` meg az `rviz2`:
 
-![](rqt_rviz01.png)
+![](/ajr/docs/assets/images_common/rqt_rviz01.png)
 
 
 # Önálló feladat 1

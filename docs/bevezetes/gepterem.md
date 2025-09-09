@@ -62,7 +62,7 @@ A következő ábra egy **célszerű** (nem kötelező) géptermi elrendezést m
 
 ![](/ajr/assets/images_common/windows_terminal02.png)
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/telepites/wsl_overview01.svg)
+![](/ajr/docs/assets/images_common/wsl_overview01.svg)
 
 ## Foxglove / Lichtblick
 

@@ -19,7 +19,7 @@ A DDS (Data Distribution Service) az Object Management Group (OMG) által standa
 A DDS protokoll széles körben használt az ipari automatizálásban, a hálózatosított rendszerekben és más területeken, ahol az elosztott adatkommunikáció és a valós idejű adatfeldolgozás kiemelt fontossággal bír. DDS-átvitel rugalmasságából profitál veszteséges vezeték nélküli hálózatokkal rendelkező környezetekben, ahol a "legjobb erőfeszítés" (`best effort`) elv lenne megfelelőbb vagy valós idejű számítástechnikai rendszerekben, ahol pedig a megfelelő minőség. Az időzítések betartásához szükség van a szolgáltatási profilra.
 A QoS "házirendek" halmaza egy QoS "profilt" alkot. Tekintettel az adott forgatókönyvhöz megfelelő QoS-irányelvek kiválasztásának bonyolultságára, a kommunikáció előre definiált QoS-profilokat biztosít általános használati esetekre (pl. szenzoradatok). 
 
-![dds_zenoh](abstraction_dds_zenoh01.svg)
+![dds_zenoh](/ajr/docs/assets/images_common/abstraction_dds_zenoh01.svg)
 
 ## Szolgáltatásminőség (QoS)
 

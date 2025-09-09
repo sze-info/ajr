@@ -23,7 +23,7 @@ Ebből a 4 lehetőségből az első kettőt ajánljuk, de telmészetesen a több
 
 Az első három opció szemléltetése:
 
-![wsl áttekintés](wsl_overview01.svg)
+![wsl áttekintés](/ajr/docs/assets/images_common/wsl_overview01.svg)
 
 ## Telepítés
 

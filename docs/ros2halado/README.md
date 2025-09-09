@@ -294,7 +294,7 @@ A Studio gazdag vizuális elemeket és hibakereső panelokat kínál - interakt�
 
 Ezek a panelok ezután egyedi elrendezésekben konfigurálhatók és összeállíthatók a projekt egyedi igényeinek és munkafolyamatainak megfelelően.
 
-![foxglove_lichtblick_logo](../bevezetes/foxglove_lichtblick01.png)
+![foxglove_lichtblick_logo](/ajr/assets/images_common/foxglove_lichtblick01.pngg)
 
 <video width="100%" loop="" autoplay="" muted="" playsinline="" poster="https://cdn.prod.website-files.com/66a36245725199d12625c1d5/66dc638d81bf97e670aaf5fc_website-product-hero.webp">
   <source src="https://storage.googleapis.com/assets.foxglove.dev/website/website-product-hero.webm" type="video/mp4">
@@ -324,7 +324,7 @@ Az `Rviz2` a `ROS 2` natív, nyílt forráskódú, robotikai adatokat vizualizá
 ros2 run rviz2 rviz2
 ```
 
-![rviz](../erzekeles/rviz01.png)
+![rviz](/ajr/assets/images_common/foxglove_lichtblick01.png/rviz01.png)
 
 ```bash
 ros2 run rviz2 rviz2 --help
@@ -342,7 +342,7 @@ Az `rqt_graph` a node-ok és topic-ok vizualizációjára használható.
 ros2 run rqt_graph rqt_graph
 ```
 
-![rqt_reconfigure](../eszleles/rqt_graph02.svg)
+![rqt_reconfigure](/ajr/docs/assets/images_common/rqt_graph02.svg)
 
 ### rqt_console
 

@@ -5,7 +5,7 @@ icon: material/code-block-tags # kiegészítő tananyag
 
 # Windows WSL2
 
-![wsl](wsl01.svg){ align=right width="200" }
+![wsl](/ajr/docs/assets/images_common/wsl01.svg){ align=right width="200" }
 
 A **Windows Subsystem for Linux** egy kompatibilitási réteg Linux-alapú elemek natív futtatásához Windows 10, vagy Windows 11 alapú rendszereken. Akkor érdemes választani a WSL használatát, ha nem szeretnétek natív Ubuntu-t (pl 18.04 / 22.04) telepíteni a számítógépeitekre. A tantárgyban használható rendszer többféle módon is létrehozható:
 
@@ -35,7 +35,7 @@ wsl --import ajr1 .\ajr1\ .\ajr24a.tar
 ```
 5. VS code és WSL kiegészítő telepítése: 
 
-![wsl03](wsl03.png)
+![wsl03](/ajr/docs/assets/images_common/wsl03.png)
 
 !!! danger
     A `wsl -l -v` parancs listázza a telepített WSL verziókat. A `VERSION` oszlopnak 2-nek kell lennie, különben a WSL elavult verzióját telepítettük. Példa helyes kimenetre:
@@ -52,11 +52,11 @@ wsl --import ajr1 .\ajr1\ .\ajr24a.tar
 
 A Windows Terminal programban ajánlott beállítani a `Deafault Profile`-t az `ajr1`-re, hogy mindig ezzel induljon a program. Továbbá az `Open windows from previous session` beállítás is hasznos lehet, hogy a legutóbbi állapotban induljon a program (pl. több panellel).s
 
-![wsl04](wsl04.png)
+![wsl04](/ajr/docs/assets/images_common/wsl04.png)
 
 A paneleket ezután a `Alt`+`Shift`+`minus` vagy `Alt`+`Shift`+`plus` billentyűkombinációval lehet létrehozni. Ez szétosztja a terminál ablakot (`Split pane`) több részre vertikálisan vagy horizontálisan.
 
-![wsl05](wsl05.png)
+![wsl05](/ajr/docs/assets/images_common/wsl05.png)
 
 ## WSL telepítése és ROS installálása Script segítségével
 

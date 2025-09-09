@@ -15,7 +15,7 @@ Simultaneous localization and mapping (SLAM) és LIDAR-based odometry and or map
 
 Egy győri mérésből összeállított gobális pontfelhő:
 
-![](kossuthhid01.png)
+![](/ajr/docs/assets/images_common/kossuthhid01.png)
 
 ## Direct LIDAR-Inertial Odometry
 

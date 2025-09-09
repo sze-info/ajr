@@ -37,7 +37,7 @@ source ~/ros2_ws/install/setup.bash
 
 A mesheket Foxglove Studio-ban (vagy Lichtblick Suite) is megjeleníthetjük, csak állítsuk a package path-t a megfelelő helyre, pl:
 
-![alt text](foxglove05.png)
+![alt text](/ajr/docs/assets/images_common/foxglove07.png)
 
 ## Színek
 

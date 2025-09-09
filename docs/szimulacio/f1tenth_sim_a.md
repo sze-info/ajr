@@ -108,7 +108,7 @@ should print the line.
     Now the `ign gazebo` should work and the `ros2` commands should be available.
 
 
-![](https://sze-info.github.io/arj/szimulacio/ign_gazebo_02.png)
+![](/ajr/docs/assets/images_common/ign_gazebo_02.png)
 
 Try at least one of the following commands:
 
