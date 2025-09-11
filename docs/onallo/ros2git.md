@@ -27,7 +27,7 @@ parent: Önálló feladatok
 - `git checkout -- .`: Minden nem staged (unstaged) változás elvetése lokálisan. VS code-ban kb ez a "discard all changes" parancs. (Újabb git verziókban a `git restore .` is hasonló módon működik.)
 - `git merge <branch_name>`: a jelenlegi branch-be mergeli a branch-t
 
-<center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/gitworkflow01.gif" width="100%" /></center>
+<center><img src="/ajr/assets/images_common/gitworkflow01.gif" width="100%" /></center>
 
 *Forrás*: [link](https://www.linkedin.com/posts/chaima-haj-taher-1093881ba_git-softwaredevelopment-workflow-activity-7177685446787751936-atW_)
 

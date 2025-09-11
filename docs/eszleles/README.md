@@ -8,7 +8,7 @@ icon: material/math-integral-box # elméleti tananyag
 
 Az észlelés (perception) az érzékelt nyers adatokból történő információ kinyerése. 
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview11.svg)
+![](/ajr/assets/images_common/overview11.svg)
 
 
 ## Ellenőrző kérdések

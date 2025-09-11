@@ -48,21 +48,21 @@ További karrierrel kapcsolatos érdekességek például a [statista](https://ww
   </thead>
   <tbody>
     <tr>
-      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_he01.png" width="80px"/></td>
+      <td><img src="/ajr/assets/images_common/okt_he01.png" width="80px"/></td>
       <td>Dr. Horváth Ernő <br/><i>Tárgyfelelős</i> <br/><a href="http://github.com/horverno">github.com/horverno</a></td>
-      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_ba01.png" width="80px"/></td>
+      <td><img src="/ajr/assets/images_common/okt_ba01.png" width="80px"/></td>
       <td>Dr. Ballagi Áron <br/><i>Tematika, nem oktat</i><br/><a href="http://github.com/aronball">github.com/aronball</a></td>
     </tr>
     <tr>
-      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_kr01.png" width="80px"/></td>
+      <td><img src="/ajr/assets/images_common/okt_kr01.png" width="80px"/></td>
       <td>Krecht Rudolf <br/><i>Szimuláció, robotika</i> <br/><a href="http://github.com/rudolfkrecht">github.com/rudolfkrecht</a></td>
-      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_um01.png" width="80px"/></td>
+      <td><img src="/ajr/assets/images_common/okt_um01.png" width="80px"/></td>
       <td>Unger Miklós <br/><i>Környezetérzékelés</i> <br/><a href="http://github.com/umiklos">github.com/umiklos</a></td>
     </tr>
     <tr>
-      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_ig01.png" width="80px"/></td>
+      <td><img src="/ajr/assets/images_common/okt_ig01.png" width="80px"/></td>
       <td>Ignéczi Gergő <br/><i>Szabályozástechnika</i> <br/><a href="http://github.com/gfigneczi1">github.com/gfigneczi1</a></td>
-      <td><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/okt_mn01.png" width="80px"/></td>
+      <td><img src="/ajr/assets/images_common/okt_mn01.png" width="80px"/></td>
       <td>Markó Norbert <br/><i>AI, neurális hálók</i> <br/><a href="http://github.com/norbertmarko">github.com/norbertmarko</a></td>
     </tr>
   </tbody>
@@ -245,7 +245,7 @@ Szabályzás: zárthurkú modellezett jármű, szabályzó építése (pl PID va
 - Technológiai ismeretek: ROS 2	használata, újdonságai ROS-hez képest				
 - Projektmunka:	Egyéni projektfeladat bemutatása				
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/technology01.svg)
+![](/ajr/assets/images_common/technology01.svg)
 
 <br><br><br>
 <center>

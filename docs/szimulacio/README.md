@@ -9,7 +9,7 @@ icon: material/math-integral-box # elméleti tananyag
 
 A szimuláció során számítógépes modellen tanulmányozzuk a rendszer várható viselkedésését.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview12.svg)
+![](/ajr/assets/images_common/overview12.svg)
 
 A szimuláció lényege tehát, hogy a kezdeti, akár komoly tesztelés nélküli programkódunkat **ne** a való világban az önvezető autónkon / robotunkon kezdjük el kipróbálni. Ennek ugyanis értelemszerű hátrányai lehetnek. Fontos azonban megjegyezni, hogy a szimulátor mindig a valóság egyszerűsített modelljét szimulálja csupán, így a szimulátorban jól működő kód nem mindig fog teljesen működni a való életben is.
 

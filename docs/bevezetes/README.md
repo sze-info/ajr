@@ -12,7 +12,8 @@ icon: material/math-integral-box # elméleti tananyag
 Rendszerszinten az önvezetés a következő alfunkciók összegeként írható le:
 
 
-[![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview01.svg)](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview02.svg)
+[![](/ajr/assets/images_common/overview01.svg)](/ajr/assets/images_common/_images/overview02.svg)
+
 Irodalom: [[TU München](https://github.com/TUMFTM/Lecture_ADSE)], [[Autoware](https://github.com/autowarefoundation/autoware)], [[University of Texas at Dallas](https://nova-utd.github.io/navigator/system-overview.html)], [[ApolloAuto](https://github.com/ApolloAuto/apollo/blob/master/docs/02_Quick%20Start/demo_guide/images/Apollo_3_5_software_architecture.png)]
 
 1. **Érzékelés**: egyszerű driver-program szintű nyers adatok előállításával foglakozik, például egy kamera szenzorból a kép előállítása a rendszer számára.
@@ -88,6 +89,18 @@ Nézzünk egy példát, ami a Zoox önvezető robotaxit mutaja be működés kö
 Nézzük meg, hogyan akadályoz meg a Google Waymo önvezető robotaxija különböző baleseteket:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nAuna_qzf6k?si=km2nSToaOVL3MU7r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+Clearpath Husky Robot működés közben:
+
+<iframe 
+  width="560" height="315" 
+  src="https://www.youtube.com/embed/xIM0MXvQyGU?autoplay=0&loop=1&playlist=xIM0MXvQyGU&mute=1" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen>
+</iframe>
+
 
 Önvezető autó érzékelése a győri campuson:
 <iframe 
@@ -230,4 +243,4 @@ További információ [itt](https://www.youtube.com/watch?v=In_6XPS6JAw).
   <!-- <figcaption></figcaption> -->
 </figure>
 
-<center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/arj02.svg" width="90%" /></center>
+<center><img src="/ajr/assets/images_common/arj02.svg" width="90%" /></center>

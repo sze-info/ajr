@@ -37,7 +37,7 @@ A forráskezelő szoftvereket, mint például a Git, a következő okok miatt ha
 - Dokumentálás: A forráskezelő rendszerekben lehetőség van a módosításokhoz kapcsolódó üzenetek (commit message) rögzítésére, ami segíti a változtatások okainak és céljainak dokumentálását.
 - Integráció és folyamatos fejlesztés: Segítik az automatikus tesztelést és a folyamatos integrációs folyamatokat (CI/CD), mivel biztosítják, hogy minden változtatás könnyen kezelhető és nyomon követhető legyen.
 
-<center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/gitworkflow01.gif" width="100%" /></center>
+<center><img src="/ajr/assets/images_common/gitworkflow01.gif" width="100%" /></center>
 
 ## Git source control (forráskezelés) használata a VS Code-ban
 

@@ -16,7 +16,7 @@ icon: material/code-block-tags # kiegészítő tananyag
 A leírásban alapvető Linux ismeretek találhatók. 
 
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview16.svg)
+![](/ajr/assets/images_common/overview16.svg)
 
 Linuxban (ebben a leírásban értsd  Ubuntu, Raspbian) a legtöbb munkamenetet lehetséges, vagy épp célszerű terminálból végrehajtani.
 Ez a tutorial segít a linux terminál alapjainak megismertetésében.
@@ -147,7 +147,7 @@ A megszokott `ctrl`+`v`, `ctrl`+`c` helyett itt a `ctrl`+`shift`+`v`, `ctrl`+`sh
     A legtöbb művelet VS code-dal elvégezhető terminál nélkül is. [Erről bővebben itt lehet olvasni](https://sze-info.github.io/ajr/bevezetes/vscodegit).
 
 
-<center><img src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/gitworkflow01.gif" width="100%" /></center>
+<center><img src="/ajr/assets/images_common/gitworkflow01.gif" width="100%" /></center>
 
 *Forrás*: [link](https://www.linkedin.com/posts/chaima-haj-taher-1093881ba_git-softwaredevelopment-workflow-activity-7177685446787751936-atW_)
 

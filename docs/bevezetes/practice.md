@@ -20,7 +20,7 @@ Bevezetésképpen nézzük egy önvezető jármű jellemző adatait. Példaképp
 Órán a `K:\` meghajtóról (`\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása`), otthon a zöld gombot használva töltsük le a fent vizualizált rosbag `.bag` / `.mcap` fájlt és a Foxglove Studio layout-ot:
 
 [MCAP letöltése :material-download: 553 MB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1){ .md-button .md-button--primary}
-[Layout letöltése :material-auto-download:](https://raw.githubusercontent.com/sze-info/arj/main/docs/bevezetes/lexus01foxglove.json){ .md-button }
+[Layout letöltése :material-auto-download:](https://raw.githubusercontent.com/sze-info/ajr/main/docs/bevezetes/lexus01foxglove.json){ .md-button }
 
 
 

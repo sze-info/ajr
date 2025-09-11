@@ -14,7 +14,7 @@ icon: material/math-integral-box # elméleti tananyag
 
 A szabályozás célja a megtervezett trajektória kivitelezése.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview14.svg)
+![](/ajr/assets/images_common/overview14.svg)
 
 ## Ellenőrző kérdések
 
@@ -452,7 +452,7 @@ Ahol $L_w$ a jármű tengelytávja.
 
 Feltételezzük a modellben, hogy a jármű elsőkerék-kormányzású. A kapott szög az út-kerék szög, amely a kormánymű geometriájának függvényében átszámítható pl. szervó motor szöggé, és így közvetlenül megvalósítható.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/transzformaciok/vehicle_axes01.svg)
+![](/ajr/assets/images_common/vehicle_axes01.svg)
 ![](arj_control_18.svg)
 *19. Ábra: a pure pursuit szabályzó geometriai összefüggései.*
 
