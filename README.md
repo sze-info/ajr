@@ -3,10 +3,9 @@
 
 🚘 Autonóm járművek és robotok programozása || Autonomous vehicles and robots software engineering
 
-aaa
 
-hghh
 ## Acknowledgement
+There are many courses who inspired this lecture, some parts were referenced or cited in this course with proper open source licencing.  
 
 
 - We are grateful to our colleagues at the **MIT RACECAR** project for creating the F1/10 car model for Gazebo, and the F1/10 community for sharing insights on mapping, localization, and TEB-planner. [MIT license](https://choosealicense.com/licenses/mit/).
