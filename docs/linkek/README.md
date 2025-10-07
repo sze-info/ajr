@@ -269,6 +269,14 @@ ROS 2
 - [docs.ros.org/en/humble](https://docs.ros.org/en/humble/)
 - [docs.ros.org](https://docs.ros.org)
 
+### Digikey
+
+- [Introduction to ROS playlist](https://www.youtube.com/watch?v=HTIcxrauU8U&list=PLEBQazB0HUySWueUF2zNyrA8LSX3rDvE7)
+- [Introduction to ROS Part 1: What is the Robot Operating System?](https://www.youtube.com/watch?v=mjrxf8EFSb8&list=PLEBQazB0HUySWueUF2zNyrA8LSX3rDvE7&index=2)
+- [Introduction to ROS Part 2: Getting Started with ROS 2 Services and Topics](https://www.youtube.com/watch?v=HTIcxrauU8U&list=PLEBQazB0HUySWueUF2zNyrA8LSX3rDvE7&index=1)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mjrxf8EFSb8?si=nCC03CsSuyRFNw1q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Egyéb
 
 - VS code és ROS 2 ajánlott beállítások: [picknik.ai/vscode/docker/ros2/2024/01/23/ROS2-and-VSCode.html](https://picknik.ai/vscode/docker/ros2/2024/01/23/ROS2-and-VSCode.html)

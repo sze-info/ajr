@@ -217,7 +217,7 @@ Hogy kipróbáljuk az elindított rendszer működését, egy új terminálban h
 ros2 topic pub -r 1 /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"
 ```
 
-![Turtlesim](/ajr/docs/assets/images_common/turtlesim03.gif)
+![Turtlesim](/ajr/assets/images_common/turtlesim03.gif)
 
 
 A fent bemutatott direkt módon kívül egy launch fájl futtatható csomag által is:
@@ -275,7 +275,7 @@ cd ~/ros2_ws/src/example_launch_cpp
 code .
 ```
 <figure markdown="span">
-  ![Image title](/ajr/docs/assets/images_common/vscode06.png){ width="90%" }
+  ![Image title](/ajr/assets/images_common/vscode06.png){ width="90%" }
   <figcaption>VS code fájlok</figcaption>
 </figure>
 
@@ -293,7 +293,7 @@ install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
 ```
 
-Buildeljük a szokáso módon:
+Buildeljük a szokásos módon:
 
 ``` bash
 cd ~/ros2_ws
@@ -303,8 +303,7 @@ cd ~/ros2_ws
 colcon build --packages-select example_launch_cpp --symlink-install
 ```
 
-``` bash
-```
+A buildelés után source-oljuk a telepítést:
 
 ``` bash
 source ~/ros2_ws/install/setup.bash

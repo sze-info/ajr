@@ -23,6 +23,7 @@ Az alábbi példák nem feltétlenül féléves munkának készültek, de annak 
 - [github.com/jkk-research/wayp_plan_tools](https://github.com/jkk-research/wayp_plan_tools)
 - [github.com/jkk-research/sim_wayp_plan_tools](https://github.com/jkk-research/sim_wayp_plan_tools)
 - [github.com/jkk-research/pointcloud_to_grid](https://github.com/jkk-research/pointcloud_to_grid)
+- [github.com/jkk-research/foxglove-wheel](https://github.com/jkk-research/foxglove-wheel) JavaScript / TypeScript nyelvű fejlesztés
 - [github.com/jkk-research/urban_road_filter](https://github.com/jkk-research/urban_road_filter)
 - [github.com/dobaybalazs/curb_detection](https://github.com/dobaybalazs/curb_detection)
 - [github.com/kkira07/Szakdolgozat](https://github.com/kkira07/Szakdolgozat)

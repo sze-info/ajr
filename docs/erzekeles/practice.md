@@ -32,7 +32,7 @@ cd /mnt/kozos/script
 
 Az előző gyakorlaton megismerkedtünk a következő rosbag-gel (ROS 2-ben a formátum már `.mcap`):
 
-![foxglove01](/ajr/assets/images_common/foxglove01.png#only-light)
+![foxglove01](/ajr/assets/images_common/foxglove01.png)
 
 Előkészületként nézzük meg, hogy létezik-e a `C:\temp` könyvtár
 
