@@ -4,14 +4,14 @@ permalink: /transzformaciok/
 icon: material/math-integral-box # elméleti tananyag
 ---
 
-## Ellenőrző kérdések
+!!! question "Ellenőrző kérdések"
+    - Mik a launch fájlok és mire használjuk őket?
+    - Milyen nyelven írjuk a launch fájlokat?
+    - Mit jelenít meg az `rqt_tf_tree`, az `rviz` és az `rqt_graph`?
+    - Mit értünk pose (vagy póz / helyzet) alatt? (robotikában)
+    - Mi a különbség a transzláció és a rotáció között?
 
-- Mik a launch fájlok és mire használjuk őket?
-- Milyen nyelven írjuk a launch fájlokat?
-- Mit jelenít meg az `rqt_tf_tree`, az `rviz` és az `rqt_graph`?
-- Mit értünk pose (vagy póz / helyzet) alatt? (robotikában)
-
-
+    
 # Bevezetés
 
 ROS-ben (és álatalában robotikában) a transformok határozzák meg a hogy, mi merre található az adott vonatkozatási ponttól (frame). Több transzform leírhatja például egy robotkar mozgását vagy épp egy jármű és szenzorai helyzetét a térben.
@@ -258,6 +258,7 @@ Forrás: [Robotic Systems, University of Illinois](http://motion.cs.illinois.edu
 
 [matrixmultiplication.xyz](http://matrixmultiplication.xyz/){: .md-button .md-button-blue .mr-4 }
 
+
 [Python notebook](https://github.com/horverno/sze-academic-python/blob/master/eload/ealeshtranszfromaciok.ipynb){: .md-button .md-button-blue .mr-4 }
 
 
@@ -272,7 +273,11 @@ A homogén koordináták kényelmes reprezentációt nyújtanak a merevtest tran
 ## Quaternion (kvaterniók)
 A roll pitch yaw (Euler szögek) alternatívája, a komplex számokhoz hasonló kiterjesztéssel. 
 
-Demonstáció: [www.quaternions.online](https://quaternions.online/)
+Demonstáció: 
+
+[www.quaternions.online](https://quaternions.online/){: .md-button .md-button-blue .mr-4 }
+
+[beta.articulatedrobotics.xyz/tools/rotation-calculator](https://beta.articulatedrobotics.xyz/tools/rotation-calculator/){: .md-button .md-button-blue .mr-4 }
 
 Előnyei:
 
@@ -353,3 +358,5 @@ Eredmény:
 - [docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Tf2-Main.html](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Tf2-Main.html)
 - [docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Quaternion-Fundamentals.html](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Quaternion-Fundamentals.html)
 - [mathworld.wolfram.com/EulerAngles.html](https://mathworld.wolfram.com/EulerAngles.html)
+- [matrixmultiplication.xyz](http://matrixmultiplication.xyz/)
+- [beta.articulatedrobotics.xyz/tools/rotation-calculator](https://beta.articulatedrobotics.xyz/tools/rotation-calculator/)

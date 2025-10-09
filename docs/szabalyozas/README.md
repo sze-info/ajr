@@ -16,12 +16,11 @@ A szabályozás célja a megtervezett trajektória kivitelezése.
 
 ![](/ajr/assets/images_common/overview14.svg)
 
-## Ellenőrző kérdések
-
-- Mi a különbség az objektum detekció és a klasszifikáció között?
-- Mi a különbség az objektum detekció és a predikció között?
-- Mit értünk pose (vagy póz / helyzet) alatt? (robotikában)
-- Milyen mennyiségeket szokás mérni / szabályozni egy járműirányítási rendszerben? Ugyanez a kérdés robotikai rendszerek esetén.
+!!! question "Ellenőrző kérdések"
+    - Mi a különbség az objektum detekció és a klasszifikáció között?
+    - Mi a különbség az objektum detekció és a predikció között?
+    - Mit értünk pose (vagy póz / helyzet) alatt? (robotikában)
+    - Milyen mennyiségeket szokás mérni / szabályozni egy járműirányítási rendszerben? Ugyanez a kérdés robotikai rendszerek esetén.
 
 ## 1. Motiváció a zárthurkú szabályozás mögött - bevezetés
 

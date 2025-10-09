@@ -21,11 +21,11 @@ Az érzékelés nyers adatok beolvasását jelenti.
     Magyar nyelven könnyű összekeverni az érzékelés (sensing) és az észlelés (perception) foglamakat. Az érzékelés egyszerű driver szintű nyers adatok előállításával foglakozik.
 
 
-## Ellenőrző kérdések
-
-- Melyik ROS verziót használjuk a félévben? 
-- Mi a topic? Milyen típusú üzenetekről volt szó?
-- Mi a node?
+!!! question "Ellenőrző kérdések"
+    - Melyik ROS verziót használjuk a félévben? 
+    - Mi a topic? Milyen típusú üzenetekről volt szó?
+    - Mi a node?
+    - Mi a különbség a publisher és a subscriber között?
 
 ## Kamera
 

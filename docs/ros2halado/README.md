@@ -5,12 +5,12 @@ icon: material/math-integral-box # elméleti tananyag
 
 ## ROS 2 haladó funkciók
 
-## Ellenőrző kérdések
 
-- Melyik ROS verziót használjuk a félévben? 
-- Mi a node?
-- Mi a topic?
-- Milyen típusú adatokat küldhetünk a topicokon keresztül? (példák)
+!!! question "Ellenőrző kérdések"
+    - Melyik `ROS` verziót használjuk a félévben? 
+    - Mi a node?
+    - Mi a topic?
+    - Milyen típusú adatokat küldhetünk a topicokon keresztül? (példák)
 
 ## ROS 2 launch fájlok
 

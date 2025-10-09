@@ -11,13 +11,12 @@ Az észlelés (perception) az érzékelt nyers adatokból történő informáci�
 ![](/ajr/assets/images_common/overview11.svg)
 
 
-## Ellenőrző kérdések
-
-- Egy frame-nek hány szülője lehet? *(transzformációk témakör)* 
-- Mit értünk pose (vagy póz / helyzet) alatt (robotikában)? ROS-ben hogyan adhatjuk meg? *(transzformációk témakör)*
-- Mit jelenít meg az `rqt_tf_tree`, az `rviz` és az `rqt_graph`? *(ROS 2 alapfogalmak témakör)*
-- Mik a launch fájlok és mire használjuk őket? *(ROS 2 haladó témakör)*
-- Mit jelent az érzékelés (sensing)? *(érzékelés témakör)*
+!!! question "Ellenőrző kérdések"
+    - Egy frame-nek hány szülője lehet? *(transzformációk témakör)* 
+    - Mit értünk pose (vagy póz / helyzet) alatt (robotikában)? ROS-ben hogyan adhatjuk meg? *(transzformációk témakör)*
+    - Mit jelenít meg az `rqt_tf_tree`, az `rviz` és az `rqt_graph`? *(ROS 2 alapfogalmak témakör)*
+    - Mik a launch fájlok és mire használjuk őket? *(ROS 2 haladó témakör)*
+    - Mit jelent az érzékelés (sensing)? *(érzékelés témakör)*
 
 
 <iframe 
