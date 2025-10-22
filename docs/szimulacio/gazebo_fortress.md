@@ -62,13 +62,13 @@ Indítsuk el a Gazebo-t:
 ign gazebo
 ```
 
-![gazebo](/ajr/docs/assets/images_common/ign_gazebo_02.png)
+![gazebo](/ajr/assets/images_common/ign_gazebo_02.png)
 
 
 Nyissuk meg a `shapes.sdf` világot. Az SDF (Simulation Description Format) egy beépített  XML leírás. Akár egy parancsként is indítható: `ign gazebo shapes.sdf`.
 
-![](https://api.gazebosim.org/1.0/images/fortress/img/snap.gif)
-
+![gazebo GIF](/ajr/assets/images_common/ign_gazebo_03.gif)
+Forrás: [gazebosim.org](https://gazebosim.org/)
 
 # Példa: Ackermann robot
 
@@ -78,7 +78,7 @@ Ackermann robotnak a „személyautó-szerű”, hagyományos, elől két kormá
 ign gazebo -v 4 -r ackermann_steering.sdf
 ```
 
-![Alt text](/ajr/docs/assets/images_common/ign_gazebo_01.png)
+![Alt text](/ajr/assets/images_common/ign_gazebo_01.png)
 
 Az Ignition Gazebo ROS 2-től független, de jól támogatott, így `ros_gz_bridge` package segítségével indítható az a bridge, amin a szimmulációs topic-ok ROS 2 topic-ként látszanak, pl:
 

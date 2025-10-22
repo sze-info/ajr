@@ -17,7 +17,7 @@ Eddig egyedül a [Turtlesim](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI
 
 | 2D | 3D |
 |:---:|:---:|
-| <img src="https://docs.ros.org/en/foxy/_images/new_pen.png" width="50%"> | <img src="https://tier4.github.io/AWSIM/GettingStarted/QuickStartDemo/Image_0.png" width="50%">  |
+| <img src="https://docs.ros.org/en/foxy/_images/new_pen.png" width="80%"> | <img src="/ajr/assets/images_common/ign_gazebo_03.gif" width="80%">  |
 | Turtlesim  | Gazebo, Carla, SVL, AWSIM, MVsim |
 
 Az ROS-által leginkább támogatott szimulátor a Gazebo, de érdemes megemlíteni az [SVL](https://github.com/lgsvl/simulator)-t, ebből saját verziónk is van a [Nissan](https://github.com/szenergy/nissanleaf-lgsvl)-ra optimalizáva, a [Carla](https://github.com/carla-simulator)-t vagy a [CoppeliaSim](https://www.coppeliarobotics.com/)-et.

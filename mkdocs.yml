@@ -46,8 +46,8 @@ nav:
     - 7. Szimuláció:
       - szimulacio/README.md
       - szimulacio/gazebo_fortress.md
-      - szimulacio/gyakorlat.md
       - szimulacio/f1tenth_sim_a.md
+      - szimulacio/gyakorlat.md
     - 8. Tervezés:
       - tervezes/README.md
       - tervezes/practice.md
