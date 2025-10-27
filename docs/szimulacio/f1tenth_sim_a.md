@@ -5,7 +5,10 @@ icon: material/code-block-tags # kiegészítő tananyag
 
 # `ROS 2` Roboracer (korábbi nevén F1/10) és Wheeltec Roboworks Gazebo szimuláció
 
-A szimuláció ROS 2 kompatibilis: [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
+A szimuláció ROS 2 kompatibilis: 
+[![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
+[![Static Badge](https://img.shields.io/badge/ROS_2-Jazzy-34aec5)](https://docs.ros.org/en/jazzy/)
+[![Static Badge](https://img.shields.io/badge/Gazebo-Fortress-red)](https://gazebosim.org/docs/fortress/)
 
 ## Videó
 
@@ -108,6 +111,10 @@ cd ~/ros2_ws
 colcon build --symlink-install --packages-select robotverseny_application robotverseny_description robotverseny_bringup robotverseny_gazebo megoldas_sim24
 ```
 
+!!! note "Megjegyzés"
+    Ajánlott a ` --cmake-args -DCMAKE_BUILD_TYPE=Release` opció használata a buildelésnél a jobb teljesítmény érdekében. Erről a [Teljesítmény-problémák megoldása](#teljesitmeny-problemak-megoldasa) szekcióban olvashatsz bővebben.
+
+
 Opcionális, de érdemes feltenni az RViz 2D Overlay csomagot, amivel a debug szövegeket lehet megjeleníteni a RViz2-ben:
 
 ``` bash
@@ -117,7 +124,7 @@ sudo apt install ros-humble-rviz-2d-overlay*
 ## Szimuláció futtatása
 
 <details>
-<summary> Don't forget to source before ROS commands.</summary>
+<summary> Ne felejtsd el a source parancsot.</summary>
 
 ``` bash
 source ~/ros2_ws/install/setup.bash
@@ -128,12 +135,44 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch robotverseny_bringup roboworks.launch.py
 ```
 
+Ekkor a szimuláció elindul egy új ablakban, és a következőkhöz hasonló képet kell látnod:
+
+
+![](https://raw.githubusercontent.com/robotverseny/robotverseny_gazebo24/refs/heads/main/img/sim03.gif)
+
+![](https://raw.githubusercontent.com/robotverseny/robotverseny_gazebo24/refs/heads/main/img/sim04.png)
+
 ## Vezérlők futtatása
+
+Két megoldást is kipróbálhatsz a jármű vezérlésére: az egyik a `simple_pursuit`, a másik a `follow_the_gap`. Ezeket launch fájlként vagy node-ként is elindíthatod.
+
+Nézd meg mindegyik megoldás forráskódját a következő linkeken:
+
+- [simple_pursuit](https://github.com/robotverseny/megoldas_sim24/blob/main/megoldas_sim24/simple_pursuit.py)
+- [follow_the_gap](https://github.com/robotverseny/megoldas_sim24/blob/main/megoldas_sim24/follow_the_gap.py)
+- [megoldas1.launch.py](https://github.com/robotverseny/megoldas_sim24/blob/main/launch/megoldas1.launch.py)
+- [megoldas2.launch.py](https://github.com/robotverseny/megoldas_sim24/blob/main/launch/megoldas2.launch.py)
+
+
+```bash
+ros2 launch megoldas_sim24 megoldas1.launch.py # start simple_pursuit
+```
 
 ```bash
 ros2 run megoldas_sim24 simple_pursuit.py
+```
+
+```bash
+ros2 launch megoldas_sim24 megoldas2.launch.py # start follow_the_gap
+```
+
+```bash
 ros2 run megoldas_sim24 follow_the_gap.py
 ```
+
+Ekkor a jármű is mozogni kezd a szimulátorban, illetve a következőhöz hasonló képet kell látnod:
+
+![](https://raw.githubusercontent.com/jkk-research/jkk-research.github.io/refs/heads/master/docs/img/sim02.gif)
 
 ![](https://raw.githubusercontent.com/robotverseny/megoldas_sim24/refs/heads/main/img/sim01.png)
 
@@ -165,7 +204,7 @@ Topics:
 ros2 topic list
 ```
 <details>
-<summary> Here are the topics.</summary>
+<summary> A következők a topic-ok.</summary>
 
 ``` bash
 /clicked_point
@@ -218,7 +257,8 @@ You can visualize the frames with:
 ros2 run rqt_tf_tree rqt_tf_tree
 ```
 
-!!! danger
+!!! danger "Vigyázat"
+    Van több frame is, de most számunkara csak az említettek a fontosak.
 
 
 ## Teljesítmény-problémák megoldása
