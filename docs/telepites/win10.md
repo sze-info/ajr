@@ -48,6 +48,17 @@ wsl --import ajr1 .\ajr1\ .\ajr24a.tar
     ```
     Amennyiben a `VERSION` oszlopban `1`-es szerepel `wsl --update` paranccsal lehet a verziót frissíteni.
 
+## Megjegyzés a kollégiumi hálózatról
+
+A Windows Subsystem for Linux (WSL) használatához a kollégiumban végezd el az alábbi beállításokat annak érdekében, hogy ne tiltódj le-
+
+- Nyisd meg a WSL Settings programot (start menü, nem a WSL terminál)
+- Válaszd a Hálózatkezelés menüt (networking)
+- Az első, hálózati mód networking mode) beállításnál válaszd a **Mirrored** opciót (**nem Nat**)
+
+![wsl06](/ajr/assets/images_common/wsl06.png)
+
+
 ### További ajánlott beállítások
 
 A Windows Terminal programban ajánlott beállítani a `Deafault Profile`-t az `ajr1`-re, hogy mindig ezzel induljon a program. Továbbá az `Open windows from previous session` beállítás is hasznos lehet, hogy a legutóbbi állapotban induljon a program (pl. több panellel).s

@@ -80,6 +80,7 @@ nav:
     - ros2halado/pointcloud_to_grid.md
     - kalman_filter/README.md
     - kalman_filter/practice.md
+    - onallo/troubleshoot.md
   - linkek/README.md
   - Moodle: https://szelearning.sze.hu/course/view.php?id=13973
 theme:

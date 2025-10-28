@@ -26,6 +26,39 @@ A következő képernyőfelvétel bemutatja a szükséges lépéseket:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YJyczb53vrg?si=rqnKHgE7y70-5B3a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## `0. lépés` - Előfeltételek
+Mielőtt elkezdenénk, győződjünk meg arról, hogy a következő előfeltételek teljesülnek:
+
+- Van egy működő `ROS 2 Humble` telepítésünk
+- Van egy `ros2_ws` workspace-ünk
+- `pcl-ros` telepítve van
+
+=== "Humble"
+
+    ```bash
+    sudo apt install ros-humble-pcl-ros
+    ```
+
+=== "Jazzy"
+
+    ```bash
+    sudo apt install ros-jazzy-pcl-ros
+    ```
+
+=== "Általános"
+
+    ```bash
+    sudo apt install ros-$ROS_DISTRO-pcl-ros
+    ```
+
+Tanteremben futtassuk ezt a parancsot:
+
+
+``` bash
+/mnt/kozos/script/update_ros2_key.sh
+```
+
+További olvasnivaló a [Troubleshooting](/ajr/onallo/troubleshoot/) fejezetben.
 
 ## `1. lépés.` - Ha még nincs meg korábbról, töltsük le a nyers adatokat
 
