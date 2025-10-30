@@ -105,7 +105,7 @@ ign gazebo building_robot.sdf
 
 Indítást követően a leírtaknak megfelelő üres környezetet kell látnunk:
 
-![Alt text](/ajr/docs/assets/images_common/empty_world.png)
+![Alt text](/ajr/assets/images_common/empty_world.png)
 
 ## Robot modell létrehozása
 
@@ -203,7 +203,7 @@ ign gazebo building_robot.sdf
 
 Ezt követően a szimulátorban a robot karosszériáját kell látnunk:
 
-![Alt text](/ajr/docs/assets/images_common/chassis.png)
+![Alt text](/ajr/assets/images_common/chassis.png)
 
 - Jobb és bal kerék
 
@@ -416,7 +416,7 @@ ign gazebo building_robot.sdf
 
 Ezt követően a szimulátorban a robotot kell látnunk:
 
-![Alt text](/ajr/docs/assets/images_common/robot_gazebo01.png)
+![Alt text](/ajr/assets/images_common/robot_gazebo01.png)
 
 
 Az eddig bemutatottakat tartalmazó XML leíró fájl tartalma:

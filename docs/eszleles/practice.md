@@ -99,7 +99,8 @@ MAKEFLAGS="-j4" colcon build --packages-select arj_simple_perception --cmake-arg
 ```
 
 !!! tip
-    A klasszikus `colcon build --packages-select arj_simple_perception` is működik, csupán egy kicsit lassabb, ezért használjuk most a build flageket.
+    A klasszikus `colcon build --packages-select arj_simple_perception` is működik, csupán egy kicsit lassabb, ezért használjuk most a build flageket. 
+    További olvasnivaló a [Troubleshooting](/ajr/onallo/troubleshoot/) fejezetben.
 
 
 ``` r
@@ -158,9 +159,21 @@ Publishers:
 ros2 run rqt_graph rqt_graph
 ```
 
-![Alt text](/ajr/docs/assets/images_common/rqt_graph02.svg)
+![Alt text](/ajr/assets/images_common/rqt_graph02.svg)
 
+```mermaid
+graph TD;
 
+    rosbag2_player([ /rosbag2_player]):::light --> p1[ /lexus3/os_center/points<br/>sensor_msgs::PointCloud2]:::white 
+    p1 --> lidar_filter_simple([ /lidar_filter_simple]):::light
+    lidar_filter_simple --> p2[ /lidar_filter_output<br/>sensor_msgs::PointCloud2]:::white
+
+    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+    classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#15274
+    classDef dash fill:#ffffff,stroke:#152742,stroke-width:2px,color:#15274, stroke-dasharray: 5 5
+    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+```
 
 
 # `2.` feladat
@@ -173,7 +186,7 @@ code ~/ros2_ws/src/arj_packages/arj_simple_perception
 
 Hasnolítsuk össze a `lidar_filter_simple_param.cpp`-t a `lidar_filter_simple.cpp`-vel. Vs code jobb kilikk a fájlon `Select for compare` és `Compare with Selected`.
 
-![compare_vs_code01](/ajr/docs/assets/images_common/compare_vs_code01.png)
+![compare_vs_code01](/ajr/assets/images_common/compare_vs_code01.png)
 
 Az előző feladatban használt egyszerű filter minimum és maximum X,Y,Z értékeit dinamikusan változtassuk.
 
@@ -210,7 +223,7 @@ ros2 launch arj_simple_perception run_all.launch.py
 
 Nagyjából így fog kinézni az `rqt_reconfigure` meg az `rviz2`:
 
-![](/ajr/docs/assets/images_common/rqt_rviz01.png)
+![](/ajr/assets/images_common/rqt_rviz01.png)
 
 
 # Önálló feladat 1
@@ -219,6 +232,22 @@ Nagyjából így fog kinézni az `rqt_reconfigure` meg az `rviz2`:
 
 ``` r
 ros2 launch arj_simple_perception run_fliter_and_rviz.launch.py
+```
+
+```mermaid
+graph TD;
+
+    rosbag2_player([ /rosbag2_player]):::light --> p1[ /lexus3/os_center/points<br/>sensor_msgs::PointCloud2]:::white 
+    p1 --> lidar_filter_simple([ /lidar_filter_simple]):::light
+    lidar_filter_simple --> p2[ /lidar_filter_output<br/>sensor_msgs::PointCloud2]:::white
+    p2 --> rviz2([ /rviz2]):::light
+    p1--> rviz2
+
+    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+    classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#15274
+    classDef dash fill:#ffffff,stroke:#152742,stroke-width:2px,color:#15274, stroke-dasharray: 5 5
+    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
 ```
 
 # Önálló feladat 2

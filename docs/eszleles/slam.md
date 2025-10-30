@@ -34,9 +34,23 @@ Elérhető:
 
 Nézzük meg, hogy telepítve van-e a `pcl-ros`:
 
-``` bash
-sudo apt install ros-humble-pcl-ros
-```
+=== "Humble"
+
+    ```bash
+    sudo apt install ros-humble-pcl-ros
+    ```
+
+=== "Jazzy"
+
+    ```bash
+    sudo apt install ros-jazzy-pcl-ros
+    ```
+
+=== "Általános"
+
+    ```bash
+    sudo apt install ros-$ROS_DISTRO-pcl-ros
+    ```
 
 ``` bash
 cd ~/ros2_ws/src/

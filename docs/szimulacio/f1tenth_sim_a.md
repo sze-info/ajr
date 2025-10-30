@@ -46,9 +46,24 @@ source ~/.bashrc
 
 ## Opcionális: `rviz-2d-overlay` plugin telepítése
 
-```bash
-sudo apt install ros-humble-rviz-2d-overlay*
-```
+
+=== "Humble"
+
+    ```bash
+    sudo apt install ros-humble-rviz-2d-overlay*
+    ```
+
+=== "Jazzy"
+
+    ```bash
+    sudo apt install ros-jazzy-rviz-2d-overlay*
+    ```
+
+=== "Általános"
+
+    ```bash
+    sudo apt install ros-$ROS_DISTRO-rviz-2d-overlay*
+    ```
 
 
 ## Telepítés ellenőrzése

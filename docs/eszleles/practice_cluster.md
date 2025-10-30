@@ -173,10 +173,17 @@ cd ~/ros2_ws/src
 ```bash
 git clone https://github.com/jkk-research/patchwork-plusplus-ros
 ```
-or
+
+vagy az eredeti KAIST verzió `ROS2` branch-e (`-b` kapcsoló):
+
 ```bash
 git clone https://github.com/url-kaist/patchwork-plusplus-ros -b ROS2
 ```
+
+Linkek:
+
+- [github.com/jkk-research/patchwork-plusplus-ros](https://github.com/jkk-research/patchwork-plusplus-ros)
+- [github.com/url-kaist/patchwork-plusplus-ros (ROS2 branch)](https://github.com/url-kaist/patchwork-plusplus-ros/tree/ROS2)
 
 ### Clone `lidar_cluster` package
 
@@ -187,7 +194,9 @@ cd ~/ros2_ws/src
 ``` bash
 git clone https://github.com/jkk-research/lidar_cluster_ros2
 ```
+Link:
 
+- [github.com/jkk-research/lidar_cluster_ros2](https://github.com/jkk-research/lidar_cluster_ros2)
 
 ### Build
 
@@ -262,6 +271,16 @@ ros2 launch lidar_cluster rviz02.launch.py
 !!! success
     Ha minden a várt módon működik, hasonló rviz ablakot kell látnunk.
     ![lidar_cluster01](https://raw.githubusercontent.com/jkk-research/lidar_cluster_ros2/ros2/img/lidar_cluster01.png)
+
+## Forráskódok
+
+Vizsgáljuk meg a forráskódokat a `lidar_cluster` és a `patchworkpp` package-ben.
+
+- [`euclidean_grid_core.hpp`](https://github.com/jkk-research/lidar_cluster_ros2/blob/ros2/include/euclidean_grid_core.hpp)
+- [`dbscan_spatial.hpp`](https://github.com/jkk-research/lidar_cluster_ros2/blob/ros2/src/dbscan_spatial.cpp)
+- [`euclidean_grid.launch.py`](https://github.com/jkk-research/lidar_cluster_ros2/blob/ros2/launch/euclidean_grid.launch.py)
+- [`dbscan_spatial.launch.py`](https://github.com/jkk-research/lidar_cluster_ros2/blob/ros2/launch/dbscan_spatial.launch.py)
+- [`patchworkpp.hpp`](https://github.com/jkk-research/patchwork-plusplus-ros/blob/ROS2/include/patchworkpp/patchworkpp.hpp)
 
 ## Linkek
 - English version of clutering [jkk-research.github.io/workshops/clustering_a](https://jkk-research.github.io/workshops/clustering_a/)

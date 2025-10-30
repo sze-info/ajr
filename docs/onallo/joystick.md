@@ -42,6 +42,21 @@ ros2 topic echo /joy
 
 ## ROS 2 joy package
 
-```bash
-sudo apt install ros-humble-joy
-```
+
+=== "Humble"
+
+    ```bash
+    sudo apt install ros-humble-joy
+    ```
+
+=== "Jazzy"
+
+    ```bash
+    sudo apt install ros-jazzy-joy
+    ```
+
+=== "Általános"
+
+    ```bash
+    sudo apt install ros-$ROS_DISTRO-joy
+    ```

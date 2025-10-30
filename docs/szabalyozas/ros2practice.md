@@ -74,9 +74,23 @@ Ha esetleg nem lenne telepítve a bridge, a következő parancsok segítenek:
 sudo apt update
 ```
 
-``` bash
-sudo apt install ros-humble-ros-gz -y
-```
+=== "Humble"
+
+    ```bash
+    sudo apt install ros-humble-ros-gz -y
+    ```
+
+=== "Jazzy"
+
+    ```bash
+    sudo apt install ros-jazzy-ros-gz -y
+    ```
+
+=== "Általános"
+
+    ```bash
+    sudo apt install ros-$ROS_DISTRO-ros-gz -y
+    ```
 
 Tanteremben pedig:
 
@@ -475,9 +489,25 @@ ros2 topic pub -r 1  /set_point_topic std_msgs/msg/Float32 "data: 0.6"
 ### `Terminal 4` foxglove
 
 Ha esetleg eddig nem lett volna telepítve:
-```
-sudo apt install ros-humble-foxglove-bridge
-```
+
+=== "Humble"
+
+    ```bash
+    sudo apt install ros-humble-foxglove-bridge
+    ```
+
+=== "Jazzy"
+
+    ```bash
+    sudo apt install ros-jazzy-foxglove-bridge
+    ```
+
+=== "Általános"
+
+    ```bash
+    sudo apt install ros-$ROS_DISTRO-foxglove-bridge
+    ```
+
 Maga bridge így indítható:
 ```
 source ~/ros2_ws/install/local_setup.bash && source ~/ros2_ws/install/setup.bash
