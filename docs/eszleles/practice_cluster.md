@@ -272,6 +272,26 @@ ros2 launch lidar_cluster rviz02.launch.py
     Ha minden a várt módon működik, hasonló rviz ablakot kell látnunk.
     ![lidar_cluster01](https://raw.githubusercontent.com/jkk-research/lidar_cluster_ros2/ros2/img/lidar_cluster01.png)
 
+```mermaid
+graph TD;
+
+    p1[ /lexus3/os_center/points<br/>sensor_msgs::PointCloud2]:::white --> patchwork([ /patchwork_node]):::light
+    patchwork --> p2
+    p2[ /nonground<br/>sensor_msgs::PointCloud2]:::white --> cluster([ /cluster_node]):::light
+    cluster --> f1[ /clustered_points<br/>sensor_msgs::PointCloud2]:::white
+    cluster --> f2[ /clustered_marker<br/>visualization_msgs::MarkerArray]:::white
+    p1 -.-> rviz2([ /rviz2]):::light
+    p2 -.-> rviz2
+    f1 -.-> rviz2
+    f2 -.-> rviz2
+
+    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+    classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#15274
+    classDef dash fill:#ffffff,stroke:#152742,stroke-width:2px,color:#15274, stroke-dasharray: 5 5
+    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+```
+
 ## Forráskódok
 
 Vizsgáljuk meg a forráskódokat a `lidar_cluster` és a `patchworkpp` package-ben.
@@ -283,4 +303,4 @@ Vizsgáljuk meg a forráskódokat a `lidar_cluster` és a `patchworkpp` package-
 - [`patchworkpp.hpp`](https://github.com/jkk-research/patchwork-plusplus-ros/blob/ROS2/include/patchworkpp/patchworkpp.hpp)
 
 ## Linkek
-- English version of clutering [jkk-research.github.io/workshops/clustering_a](https://jkk-research.github.io/workshops/clustering_a/)
+- English version of clustering [jkk-research.github.io/workshops/clustering_a](https://jkk-research.github.io/workshops/clustering_a/)
