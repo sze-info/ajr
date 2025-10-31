@@ -136,6 +136,20 @@ ros2 topic type /lexus3/os_center/points
 
 Mindkét esetben `sensor_msgs/msg/PointCloud2` kell, hogy legyen.
 
+``` r
+ros2 topic echo /lexus3/os_center/points --once --field header
+```
+``` r
+stamp:
+  sec: 1712321465
+  nanosec: 957581201
+frame_id: lexus3/os_center_a_laser_data_frame
+---
+```
+
+!!! note
+    A `frame_id` lehet pl. `lexus3/os_center_a_laser_data_frame` vagy `lexus3/os_center_a`, stb. Ez RVIZ-ben fontos lehet.
+
 Vizsgáljuk meg közelebbről a node-ot.
 
 ``` r
@@ -228,10 +242,10 @@ Nagyjából így fog kinézni az `rqt_reconfigure` meg az `rviz2`:
 
 # Önálló feladat 1
 
-Írjunk egy launch fájlt, nevezzük `run_fliter_and_rviz.launch.py`-nak, ami a filtert és az rviz configot indítja. Így lehessen indítani:
+Írjunk egy launch fájlt, nevezzük `run_filter_and_rviz.launch.py`-nak, ami a filtert és az rviz configot indítja. Így lehessen indítani:
 
 ``` r
-ros2 launch arj_simple_perception run_fliter_and_rviz.launch.py
+ros2 launch arj_simple_perception run_filter_and_rviz.launch.py
 ```
 
 ```mermaid
@@ -260,6 +274,9 @@ Módosítsuk a `lidar_filter_simple_param.cpp`-t, úgy, hogy amennyiben a minimu
 if ...
 RCLCPP_WARN_STREAM(this->get_logger(), "Minimum is bigger than maximum, inverse usage.");
 ```
+
+!!! Tip
+    Szebb megoldás a `IncludeLaunchDescription` - `PythonLaunchDescriptionSource` használata. Példa lehet a [ros2launchmarker.md](/ajr/onallo/ros2launchmarker/#launch-fajl-letrehozasa) fejezetben található kódrészlet.
 
 # Utolsó lépések
 

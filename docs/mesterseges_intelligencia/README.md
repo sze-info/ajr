@@ -24,6 +24,23 @@ The essence of programming is taking some data and transforming it into the desi
    - **Human-Centric Modeling**: The relationship between input and output is modeled based on human intuition and expertise, rather than patterns discovered in data.
    - **Code-Heavy Implementation**: Much of the work involves writing detailed code to handle each aspect of the problem.
 
+```mermaid
+graph LR
+    %% Title
+    A[Software 1.0]:::white;
+
+      X1[X]:::light ---> CPU1[GPU]:::red
+      X2[f/X/]:::light ---> CPU1[CPU]:::red
+      CPU1 --> Y1[Y]:::light
+      HC[(Human coding)]:::white --> CPU1
+
+    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+    classDef white fill:#ffffff,stroke:#fff,stroke-width:2px,color:#152742
+    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+
+```
+
 ![Software 1.0](assets/images/software1_0.svg)
 
 The traditional approach depends on human-crafted rules and requires significant manual coding. It is effective for well-defined problems where the rules can be explicitly articulated.
@@ -39,6 +56,26 @@ The traditional approach depends on human-crafted rules and requires significant
 The machine learning approach relies on data-driven learning, reducing the need for explicitly defined rules. This makes it suitable for complex or variable problems where manually programming every possible scenario would be impractical.
 
 The latter approach is colloquially called **Software 2.0**.
+
+```mermaid
+graph LR
+    %% Title
+    A[Software 2.0]:::white;
+
+      X1[X]:::light ---> GPU1[GPU]:::red
+      Y1[Y]:::light ---> GPU1
+      GPU1 --> F[ f/x/ ]:::light
+      ML[(Machine Learning)]:::white --> GPU1
+      X2[X]:::light --> GPU2[GPU]:::red
+      F:::light --> GPU2
+      GPU2 --> Y2[Y]:::light
+
+    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+    classDef white fill:#ffffff,stroke:#fff,stroke-width:2px,color:#152742
+    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+
+```
 
 ![Software 2.0](assets/images/software2_0.svg)
 
@@ -123,9 +160,14 @@ Data flows in one direction, from inputs to output, through the graph.
 
 ```mermaid
 graph LR
-    input1[input₁] --> function[Function]
-    input2[input₂] --> function
-    function --> output[Output]
+    input1[input₁]:::light --> function[Function]:::light
+    input2[input₂]:::light --> function
+    function --> output[Output]:::light
+
+    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+    classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
 
 ```
 

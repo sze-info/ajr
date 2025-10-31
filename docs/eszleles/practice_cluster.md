@@ -217,7 +217,8 @@ colcon build --packages-select patchworkpp lidar_cluster --symlink-install
 ```mermaid
 graph TD;
 
-    p1[ /lexus3/os_center/points<br/>sensor_msgs::PointCloud2]:::white --> patchwork([ /patchwork_node]):::light
+    rosbag2_player([ /rosbag2_player]):::light --> p1[ /lexus3/os_center/points<br/>sensor_msgs::PointCloud2]:::white 
+    p1 --> patchwork([ /patchwork_node]):::light
     patchwork --> p
     p[ /nonground<br/>sensor_msgs::PointCloud2]:::white --> cluster([ /cluster_node]):::light
     cluster --> f1[ /clustered_points<br/>sensor_msgs::PointCloud2]:::white
