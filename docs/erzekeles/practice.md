@@ -118,10 +118,35 @@ A következőken a mérésadatfájlt visszajátsszuk és ellenőrizzük, hogy mi
 ``` r
 ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap --clock --loop
 ```
+
+!!! danger "Figyelem"
+    A statikus TF-ek miatt szükség lehet egy QoS profil fájlra a helyes TF megjelenítéshez. AErről később részletesen lesz szó. Most annyit elég tudni, hogy létrehozhatjuk a home könyvtárban a `qos_tf.yaml` fájlt a következőképp:
+    ```bash
+    cd ~; wget https://raw.githubusercontent.com/jkk-research/jkk_utils/refs/heads/ros2/qos_tf.yaml
+    ```
+    Ennek tartalma nagyjából a következő lesz:
+    ```yaml
+    # qos_tf.yaml
+    /tf_static:
+      durability: transient_local
+      reliability: reliable
+      history: keep_last
+      depth: 1
+    ``` 
+    Ezután a használhatjuk a `--qos-profile-overrides-path` kapcsolót.
+
+QoS override fájl használatával tehát:
+
+```bash
+ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap \
+--clock --loop \
+--qos-profile-overrides-path ~/qos_tf.yaml
+```
+
 Ugyanez, csak lassabban visszajátszva pl.:
 
 ``` r
-ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap --clock --loop --rate 0.2
+ros2 bag play /mnt/c/temp/lexus3-2024-04-05-gyor.mcap --clock --loop --rate 0.2 --qos-profile-overrides-path ~/qos_tf.yaml
 ```
 
 
