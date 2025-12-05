@@ -47,7 +47,7 @@ Nézzünk minden részfeladatra egy szemléltetést, az egyetemünk egyik önvez
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9eFqsei1J70?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![Alt text](/ajr/assets/images_common/explain_video01.png)
+[![](https://raw.githubusercontent.com/jkk-research/jkk-research.github.io/refs/heads/master/docs/assets/images_common/aw_sze02.png)](https://raw.githubusercontent.com/jkk-research/jkk-research.github.io/refs/heads/master/docs/assets/images_common/aw_sze03.png)
 
 # Önvezetés vs. vezetéstámogatás
 ## SAE szintek
