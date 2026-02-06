@@ -214,7 +214,7 @@ Előzetesen a következő időtervet követjük, de a pontos dátumokat mindig e
 - **Aláírás**: Kis beadandó teljesítése (egyszerű otthoni programozási feladat)
 - **1 (elégtelen)**: $0\% \leq ZH_{átlag} < 60\%$
 - **2 (elégséges)**: $60\% \leq ZH_{átlag} < 90\%$
-- **3 (közepes)**: $90\% \leq  ZH_{átlag} \leq 100\%$  
+- **3 (közepes)**: $90\% \leq  ZH_{átlag} \leq 100\%$, de csak abban az esetben, ha a kis beadandó is jó színvonalú
 - **4 (jó)**: Nagy féléves beadandó a [megadott irányelvek](https://sze-info.github.io/ajr/feleves_beadando/) mentén, nagyobb hibákkal teljesítve
 - **5 (jeles)**: Nagy féléves beadandó a [megadott irányelvek](https://sze-info.github.io/ajr/feleves_beadando/) mentén, csak néhány kisebb hibával teljesítve
 

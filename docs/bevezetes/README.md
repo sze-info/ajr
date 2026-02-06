@@ -12,7 +12,7 @@ icon: material/math-integral-box # elméleti tananyag
 Rendszerszinten az önvezetés a következő alfunkciók összegeként írható le:
 
 
-[![](/ajr/assets/images_common/overview01.svg)](/ajr/assets/images_common/_images/overview02.svg)
+[![](/ajr/assets/images_common/overview01.svg)](/ajr/assets/images_common/overview02.svg)
 
 Irodalom: [[TU München](https://github.com/TUMFTM/Lecture_ADSE)], [[Autoware](https://github.com/autowarefoundation/autoware)], [[University of Texas at Dallas](https://nova-utd.github.io/navigator/system-overview.html)], [[ApolloAuto](https://github.com/ApolloAuto/apollo/blob/master/docs/02_Quick%20Start/demo_guide/images/Apollo_3_5_software_architecture.png)]
 
