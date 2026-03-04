@@ -21,6 +21,8 @@ node` egy `/path_marker_topic`-ot hirdet, ami `visualization_msgs/marker_array` 
 Az alábbi példák nem feltétlenül féléves munkának készültek, de annak elfogadhatóak lennének:
 
 - [github.com/jkk-research/wayp_plan_tools](https://github.com/jkk-research/wayp_plan_tools)
+- [github.com/szepilot/niz_xvn_tsp](https://github.com/szepilot/niz_xvn_tsp)
+- [github.com/szepilot/var_kqt_feleves](https://github.com/szepilot/var_kqt_feleves)
 - [github.com/jkk-research/sim_wayp_plan_tools](https://github.com/jkk-research/sim_wayp_plan_tools)
 - [github.com/jkk-research/pointcloud_to_grid](https://github.com/jkk-research/pointcloud_to_grid)
 - [github.com/jkk-research/foxglove-wheel](https://github.com/jkk-research/foxglove-wheel) JavaScript / TypeScript nyelvű fejlesztés

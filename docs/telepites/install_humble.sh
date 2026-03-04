@@ -88,6 +88,8 @@ sudo apt install mc -y
 sudo apt install ros-humble-rosbag2-storage-mcap ros-humble-rosbag2 -y
 sudo apt install ros-humble-ros-gz -y
 
+cd ~; rm .bash_aliases; wget https://raw.githubusercontent.com/jkk-research/jkk_utils/ros2/.bash_aliases; exec bash
+
 echo "First arg: $1"
 if [ "$1" != "campus" ]
 then

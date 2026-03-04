@@ -142,7 +142,7 @@ Részletek: [docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-T
 
 # Otthoni / géptermi telepítés
 
-Gépteremben a [következő `install_humble.sh`](https://github.com/sze-info/arj/blob/main/docs/telepites/install_humble.sh) fájlt (shell scriptet) futtatuk minden gépen.
+Gépteremben a [következő `install_humble.sh`](https://github.com/sze-info/ajr/blob/main/docs/telepites/install_humble.sh) fájlt (shell scriptet) futtatuk minden gépen.
 
 ``` bash
 wget https://raw.githubusercontent.com/sze-info/ajr/main/docs/telepites/install_humble.sh
