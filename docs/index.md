@@ -58,7 +58,7 @@ További karrierrel kapcsolatos érdekességek például a [statista](https://ww
       <td><img src="/ajr/assets/images_common/okt_mn01.png" width="80px"/></td>
       <td>Markó Norbert <br/><i>AI, neurális hálók</i> <br/><a href="http://github.com/norbertmarko">github.com/norbertmarko</a></td>
       <td><img src="/ajr/assets/images_common/okt_jd01.png" width="80px"/></td>
-      <td>Józsa Dávid <br/><i>Jelenlegi oktató</i><br /><a href="https://github.com/anonymdavid">github.com/anonymdavid</a></td>
+      <td>Józsa Dávid <br/><i>Szenzorkalibráció</i><br /><a href="https://github.com/anonymdavid">github.com/anonymdavid</a></td>
     </tr>
   </tbody>
 </table>
