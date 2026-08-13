@@ -49,10 +49,10 @@ rsync -avzh --progress /mnt/kozos/measurement_files/lexus3sample04.mcap  /mnt/c/
 Otthon a következő linkről (zöld gomb), vagy parancsként `wget`-el lehet letölteni:
 
 ```r 
-wget  -O lexus3sample02.mcap https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w?download=1
+wget  -O lexus3sample02.mcap https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w?download=1
 ```
 
-[Rosbag letöltése 300 MB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w?download=1){: .md-button } 
+[Rosbag letöltése 300 MB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/EakTOhcjblNInqjRMfaGVmsB0diDv0SWpXw9rwo0MD7f3w?download=1){: .md-button } 
 
 
 # `1.` feladat

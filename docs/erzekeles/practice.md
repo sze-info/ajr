@@ -72,10 +72,10 @@ rsync -avzh --progress /mnt/kozos/measurement_files/lexus3-2024-04-05-gyor.mcap 
 Otthon a következő linkről (zöld gomb), vagy parancsként `wget`-el lehet letölteni:
 
 ```r 
-wget  -O lexus3-2024-04-05-gyor.mcap https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1
+wget  -O lexus3-2024-04-05-gyor.mcap https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1
 ```
 
-[MCAP letöltése :material-download: 553 MB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1){ .md-button }
+[MCAP letöltése :material-download: 553 MB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1){ .md-button }
 
 
 Listázzuk a **megfelelő** átmásolt `.mcap` fájl alap információit, hasonlóan:  

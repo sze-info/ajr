@@ -66,7 +66,7 @@ A LIDAR adatok klaszterezéséhez először – nem meglepő módon – LIDAR ad
 
 ### `A lehetőség`: MCAP letöltése az alábbi linkről
 
-[Download MCAP [~540MB] :material-download: ](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1){ .md-button }
+[Download MCAP [~540MB] :material-download: ](https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1){ .md-button }
 
 Példáinkban az `.mcap` fájl a `/mnt/c/bag/` mappába kerül mentésre. Ha másik könyvtárat szeretne használni, kérjük, módosítsad azt ennek megfelelően.
 
@@ -83,7 +83,7 @@ cd /mnt/c/bag/
 </details>
 
 ```
-wget https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1  -O lexus3-2024-04-05-gyor.mcap
+wget https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1  -O lexus3-2024-04-05-gyor.mcap
 ```
 Tanteremben ez így néz ki:
 ``` bash

@@ -6,9 +6,72 @@ parent: Bevezetés
 icon: material/code-block-tags # kiegészítő tananyag
 ---
 
-# Géptermi ismeretek (`C100`)
+# Gépterem (`C100` és `B2`)
+
+## Géptermi telepítés (`C100`)
+
+!!! warning "Fontos"
+    Amennyiben a géptermi telepítést korábban elvégezték, ez a lépés kihagyható.
+    Mindig használjuk a lehető legfrissebb telepítést a verziók (pl `sze24a.tar`, `sze26a.tar`) közül.
+
+### Tantermi WSL backup fájl letöltése
+
+=== "Parancssor"
+
+    ``` bash
+    cd /d C:\
+    if not exist temp mkdir temp
+    cd temp
+    robocopy "\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása\wsl_backup" C:\temp sze26a.tar /Z /R:3 /W:5
+    ```
+
+=== "Linux"
+
+    ``` bash
+    cd /mnt/c & mkdir temp & cd temp
+    rsync -avzh --progress /mnt/kozos/wsl_backup/sze26a.tar
+    ```
+
+=== "PowerShell"
+
+    ``` powershell
+    cd C:\ & mkdir temp & cd temp
+    Copy-Item "\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása\wsl_backup\sze26a.tar" -Destination "C:\temp\" -Recurse -Force
+    ```
+
+### WSL snapshot importálása
+
+**Megjegyzés:** A WSL alrendszer engedélyezéséről a [WSL telepítés](/ajr/telepites/win10/) oldalon található információ.
+
+A WSL import parancs szintaxisa a következő:
+```cpp
+wsl --import  <disztró neve>  <hova kerüljön a vhdx>  <melyik tar-ból>
+              ajr2            C:\temp\sze26a_folder   C:\temp\sze26a.tar
+```
+
+=== "Parancssor"
+
+    ```powershell
+    wsl --import ajr2 C:\temp\sze26a_folder C:\temp\sze26a.tar --version 2
+    ```
+=== "PowerShell"
+
+    ``` powershell
+    wsl --import ajr2 C:\temp\sze26a_folder C:\temp\sze26a.tar --version 2
+    ```
 
 ## Közös meghajtó (`K:\`)
+
+A közös meghajtó a `K:\` meghajtóként található meg Winodws Fájlkezelőben (File Explorer). Ha esetleg nem látszana, akkor szintén a Fájlkezelőben elérhető:
+
+```powershell
+\\fs-kab.eik.sze.hu\C100\kozos
+```
+
+
+## Géptermi ismeretek (`C100`)
+
+### Közös meghajtó (`K:\`)
 
 A közös meghajtó a `K:\` meghajtóként található meg Winodws Fájlkezelőben (File Explorer). Ha esetleg nem látszana, akkor szintén a Fájlkezelőben elérhető:
 
@@ -82,21 +145,3 @@ Telepítve van, az asztalon található ikonnal indítható. Ha mégse lenne tel
     cd /mnt/kozos/script/
     ./check_all.sh
     ```
-
-## Géptermi hasznos parancsok
-
-
-=== "Linux"
-
-    ``` bash
-    cd /mnt/c & mkdir temp & cd temp
-    rsync -avzh --progress /mnt/kozos/wsl_backup/sze24a.tar
-    ```
-
-=== "PowerShell"
-
-    ``` powershell
-    cd C:\ & mkdir temp & cd temp
-    Copy-Item "\\fs-kab.eik.sze.hu\C100\kozos\GKNB_AUTM078_Autonóm_robotok_és_járművek_programozása\wsl_backup\sze24a.tar" -Destination "C:\temp\" -Recurse -Force
-    ```
-

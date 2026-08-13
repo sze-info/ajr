@@ -20,7 +20,7 @@ A telepítést bemutató videó:
 
 A videó lépései szövegesen:
 
-1. WSL snapshot (backup fájl) letöltése: [WSL snapshot letöltése :material-download: ~2.5 GB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/EYxEY_oJa7ZEursLIBMZeZ4BWUvT_LbkHbOIsPToBgRxbg?download=1){ .md-button}
+1. WSL snapshot (backup fájl) letöltése: [WSL snapshot letöltése :material-download: ~2.5 GB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/EYxEY_oJa7ZEursLIBMZeZ4BWUvT_LbkHbOIsPToBgRxbg?download=1){ .md-button}
 2. Snapshot kicsomagolása `.zip` >> `.tar`
 3. Powershell (Admin) WSL feature bekapcsolása, majd WSL telepítése: 
 ``` powershell
