@@ -20,20 +20,29 @@ A telepítést bemutató videó:
 
 A videó lépései szövegesen:
 
-1. WSL snapshot (backup fájl) letöltése: [WSL snapshot letöltése :material-download: ~2.5 GB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/EYxEY_oJa7ZEursLIBMZeZ4BWUvT_LbkHbOIsPToBgRxbg?download=1){ .md-button}
-2. Snapshot kicsomagolása `.zip` >> `.tar`
-3. Powershell (Admin) WSL feature bekapcsolása, majd WSL telepítése: 
+### 1. WSL snapshot (backup fájl) letöltése: [WSL snapshot letöltése :material-download: ~2.5 GB](https://laesze-my.sharepoint.com/:u:/g/personal/herno_sze_hu/EYxEY_oJa7ZEursLIBMZeZ4BWUvT_LbkHbOIsPToBgRxbg?download=1){ .md-button}
+### 2. Snapshot kicsomagolása `.zip` >> `.tar`
+### 3. Powershell (Admin) WSL feature bekapcsolása, majd WSL telepítése: 
 ``` powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 ``` powershell
 wsl --install --no-distribution
 ```
-4. Powershell, WSL Snapshot fájl (tar) importálás: 
+### 4. Powershell, WSL Snapshot fájl (tar) importálás: 
 ``` powershell
-wsl --import ajr1 .\ajr1\ .\ajr24a.tar
+cd C:\ 
+mkdir temp
+wsl --import ajr2 C:\temp\sze26a_folder $env:USERPROFILE\Downloads\ajr26a\sze26a.tar --version 2
 ```
-5. VS code és WSL kiegészítő telepítése: 
+**Megjegyzés**: A WSL import parancs szintaxisa a következő:
+```cpp
+wsl --import  <disztró neve>  <hova kerüljön a vhdx>  <melyik tar-ból>
+wsl --import  ajr2            C:\temp\sze26a_folder   C:\downloads\sze26a.tar
+```
+Tehát a fenti parancsban a `<melyik tar-ból>` helyére a letöltött `.tar` fájl elérési útját kell beírni. A `$env:USERPROFILE\Downloads\ajr26a\sze26a.tar` a letöltött fájl elérési útja, ami a felhasználó `Downloads` mappájában található. A `ajr26a` mappa a letöltött `.zip` fájl kicsomagolásával jön létre, és tartalmazza a `sze26a.tar` fájlt, de ez csak az **alapértelmezett letöltési hely**. Ha máshová töltöttétek le a fájlt, akkor a parancsban a megfelelő elérési utat kell megadni.
+
+### 5. VS code és WSL kiegészítő telepítése: 
 
 ![wsl03](/ajr/assets/images_common/wsl03.png)
 
@@ -44,7 +53,7 @@ wsl --import ajr1 .\ajr1\ .\ajr24a.tar
     Ubuntu          Stopped         2
     Ubuntu-22.04    Stopped         2
     Ubuntu-24.04    Running         2
-    ajr1            Stopped         2
+    ajr2            Stopped         2
     ```
     Amennyiben a `VERSION` oszlopban `1`-es szerepel `wsl --update` paranccsal lehet a verziót frissíteni.
 
@@ -61,7 +70,7 @@ A Windows Subsystem for Linux (WSL) használatához a kollégiumban végezd el a
 
 ### További ajánlott beállítások
 
-A Windows Terminal programban ajánlott beállítani a `Deafault Profile`-t az `ajr1`-re, hogy mindig ezzel induljon a program. Továbbá az `Open windows from previous session` beállítás is hasznos lehet, hogy a legutóbbi állapotban induljon a program (pl. több panellel).s
+A Windows Terminal programban ajánlott beállítani a `Deafault Profile`-t az `ajr2`-re, hogy mindig ezzel induljon a program. Továbbá az `Open windows from previous session` beállítás is hasznos lehet, hogy a legutóbbi állapotban induljon a program (pl. több panellel).s
 
 ![wsl04](/ajr/assets/images_common/wsl04.png)
 
