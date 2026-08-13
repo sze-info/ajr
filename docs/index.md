@@ -34,24 +34,19 @@ További karrierrel kapcsolatos érdekességek például a [statista](https://ww
 !!! note 
     A tárgyban bemutatott ismeretekre alapozva diplomamunka, szakdolgozat, projektmunka, TDK dolgozat is készíthető, illetve van lehetőség a kötelező szakmai gyakorlat teljesítésére is.
 
-<center> 
+    A kurzusra ráépül két további tárgy is: `GKNB_ARTM002` Fundamentals of modern automotive software development (*Hungarian name*: Modern autóipari szoftverfejlesztés alapjai, MASWD) és `GKNM_ARTM003` Applied artificial intelligence in automotive software (*Hungarian name*: Alkalmazott mesterséges intelligencia az autóipari szoftverekben).
 
+<center>
+
+<h3>Jelenlegi oktatók</h3>
 
 <table>
-  <thead>
-    <tr>
-      <th>Oktatók</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td><img src="/ajr/assets/images_common/okt_he01.png" width="80px"/></td>
       <td>Dr. Horváth Ernő <br/><i>Tárgyfelelős</i> <br/><a href="http://github.com/horverno">github.com/horverno</a></td>
-      <td><img src="/ajr/assets/images_common/okt_ba01.png" width="80px"/></td>
-      <td>Dr. Ballagi Áron <br/><i>Tematika, nem oktat</i><br/><a href="http://github.com/aronball">github.com/aronball</a></td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td><img src="/ajr/assets/images_common/okt_kr01.png" width="80px"/></td>
@@ -60,18 +55,30 @@ További karrierrel kapcsolatos érdekességek például a [statista](https://ww
       <td>Unger Miklós <br/><i>Környezetérzékelés</i> <br/><a href="http://github.com/umiklos">github.com/umiklos</a></td>
     </tr>
     <tr>
-      <td><img src="/ajr/assets/images_common/okt_ig01.png" width="80px"/></td>
-      <td>Ignéczi Gergő <br/><i>Szabályozástechnika</i> <br/><a href="http://github.com/gfigneczi1">github.com/gfigneczi1</a></td>
       <td><img src="/ajr/assets/images_common/okt_mn01.png" width="80px"/></td>
       <td>Markó Norbert <br/><i>AI, neurális hálók</i> <br/><a href="http://github.com/norbertmarko">github.com/norbertmarko</a></td>
+      <td><img src="/ajr/assets/images_common/okt_jd01.png" width="80px"/></td>
+      <td>Józsa Dávid <br/><i>Jelenlegi oktató</i><br /><a href="https://github.com/anonymdavid">github.com/anonymdavid</a></td>
     </tr>
   </tbody>
 </table>
 
+<h3>Korábbi oktatók</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/ajr/assets/images_common/okt_ba01.png" width="80px"/></td>
+      <td>Dr. Ballagi Áron <br/><i>Tematika, nem oktat</i><br/><a href="http://github.com/aronball">github.com/aronball</a></td>
+      <td><img src="/ajr/assets/images_common/okt_ig01.png" width="80px"/></td>
+      <td>Ignéczi Gergő <br/><i>Szabályozástechnika</i> <br/><a href="http://github.com/gfigneczi1">github.com/gfigneczi1</a></td>
+    </tr>
+  </tbody>
+</table>
 
 </center>
 
-2024/25 tavaszi félévében az `B2`-es teremben, illetve a `C100`-as gépteremben tartunk órákat.
+2026/27 őszi félévében az `C301`-es teremben, illetve a `C100`-as gépteremben tartunk órákat.
 
 Előzetesen a következő időtervet követjük, de a pontos dátumokat mindig előre, neptun üzenetben közöljük.
 
@@ -90,84 +97,84 @@ Előzetesen a következő időtervet követjük, de a pontos dátumokat mindig e
   <tbody>
     <tr>
       <td>1</td>
-      <td>szept. 11.</td>
+      <td>szept. 9.</td>
       <td>feb. 6.</td>
       <td>Bevezetés</td>
       <td></td>
     </tr>
     <tr>
       <td>2</td>
-      <td>szept. 18.</td>
+      <td>szept. 16.</td>
       <td>feb. 13.</td>
       <td>ROS 2 alap, telepítés</td>
       <td></td>
     </tr>
     <tr>
       <td>3</td>
-      <td>szept. 25.</td>
+      <td>szept. 23.</td>
       <td>feb. 20.</td>
       <td>Érzékelés</td>
       <td>Beadandó 🔴 Aláírás megtagadás mulasztás esetén!</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>okt. 2.</td>
+      <td>szept. 30.</td>
       <td>feb. 27.</td>
       <td>ROS 2 haladó</td>
       <td></td>
     </tr>
     <tr>
       <td>5</td>
-      <td>okt. 9.</td>
+      <td>okt. 7.</td>
       <td>márc. 6.</td>
       <td>Transzformációk</td>
       <td>Beadandó 🔴 Kis beadandó véglegestése</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>okt. 16.</td>
+      <td>okt. 14.</td>
       <td>márc. 13.</td>
       <td>Észlelés</td>
       <td>Féléves feladat választás</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>okt. 30.</td>
+      <td>okt. 28.</td>
       <td>márc. 20.</td>
       <td>Szimuláció</td>
       <td></td>
     </tr>
     <tr>
       <td>8</td>
-      <td>nov. 6.</td>
+      <td>nov. 4.</td>
       <td>márc. 27.</td>
       <td>Tervezés</td>
       <td>ZH 1?</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>nov. 13.</td>
+      <td>nov. 11.</td>
       <td>ápr. 3.</td>
       <td>Szabályozás</td>
       <td></td>
     </tr>
     <tr>
       <td>10</td>
-      <td>nov. 20.</td>
+      <td>nov. 18.</td>
       <td>ápr. 10.</td>
       <td>AI</td>
       <td></td>
     </tr>
     <tr>
       <td>+1</td>
-      <td>nov. 27.</td>
+      <td>nov. 25.</td>
       <td>ápr. 17.</td>
       <td></td>
       <td>ZH 2?</td>
     </tr>
     <tr>
       <td>+2</td>
-      <td>dec. 4.</td>
+      <td>dec. 2.</td>
       <td>-</td>
       <td></td>
       <td>Pót ZH?</td>
