@@ -303,7 +303,7 @@ Ezek a panelok ezután egyedi elrendezésekben konfigurálhatók és összeáll�
 
 A Lichtblick Suite a Foxglove-hoz hasonló, egész pontosan a Foxglove `v1.87.0` verziójának folytatása, továbbra is nyílt forráskóddal. A Lichtblick a Foxglove-hoz hasonlóan asztali alkalmazásként futtatható, és a Studio-hoz hasonlóan támogatja a `.bag` / `.mcap` fájlokat, valamint a valós idejű adatvizualizációt.
 
-### Foxglove Studio / Lichtblick Suite telepítése
+#### Foxglove Studio / Lichtblick Suite telepítése
 
 [Foxglove 1.66.0 Win :material-download: 154 MB](https://drive.google.com/drive/folders/1TWLy6ZZb5ue9PcDmvdf5dDgKJOQUBzms?usp=drive_link){ .md-button .md-button}
 
@@ -314,6 +314,20 @@ A Lichtblick Suite a Foxglove-hoz hasonló, egész pontosan a Foxglove `v1.87.0`
 [Lichtblick Latest All platform:material-download:](https://github.com/Lichtblick-Suite/lichtblick/releases){ .md-button .md-button}
 
 
+### Rerun
+
+![rerun](/ajr/assets/images_common/rerun01.png){ align=right width="200" }
+A [Rerun.io](https://rerun.io) egy nyílt forráskódú, MIT / Apache-2.0 kettős licencű, Rust nyelven írt vizualizációs eszköz multimodális, időben változó adatokhoz. A Foxglove-hoz és az Rviz2-höz képest más filozófiát követ: nem a ROS üzenettípusaira épül, hanem saját, általános adatprimitíveket (ún. archetype-okat: pontfelhő, kép, transzformáció, idősor, tenzor stb.) definiál, és ezekbe kell „logolni" az adatokat. Emiatt bármilyen alkalmazásból használható (nem csak ROS-ból), viszont a ROS 2 támogatás nem natív.
+
+
+Fő jellemzők:
+
+- asztali alkalmazás Windows, Linux és MacOS rendszerre, valamint böngészős viewer ([app.rerun.io](https://app.rerun.io))
+- SDK Python, C++ és Rust nyelvhez, jupyter notebookba is beágyazható
+- saját, oszlopos .rrd fájlformátum, illetve beépített .mcap támogatás (a ROS 2 alapértelmezett bag formátuma)
+- SQL / dataframe lekérdezések a rögzített adatokon, PyTorch dataloader
+
+<iframe src="https://app.rerun.io/version/0.20.3/?url=https%3A%2F%2Fapp.rerun.io%2Fversion%2F0.20.3%2Fexamples%2Farkit_scenes.rrd&renderer=webgl" width="100%" height="400"></iframe>
 
 ### Rviz
 
