@@ -1,0 +1,333 @@
+{
+  "configById": {
+    "SourceInfo!4d7rfhe": {},
+    "DiagnosticSummary!msjvo7": {
+      "minLevel": 0,
+      "pinnedIds": [],
+      "hardwareIdFilter": "",
+      "topicToRender": "/diagnostics",
+      "sortByLevel": true
+    },
+    "RawMessages!tahvzj": {
+      "topicPath": "/lexus3/gps/duro/current_pose",
+      "diffTopicPath": "",
+      "diffMethod": "custom",
+      "diffEnabled": false,
+      "showFullMessageForDiff": false
+    },
+    "RawMessages!3jwh6ii": {
+      "topicPath": "/gps/nova/imu",
+      "diffTopicPath": "",
+      "diffMethod": "custom",
+      "diffEnabled": false,
+      "showFullMessageForDiff": false
+    },
+    "Plot!2vgsd7y": {
+      "paths": [
+        {
+          "value": "/vehicle_speed_kmph.data",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/wheel_angle_deg.data",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "minYValue": "",
+      "maxYValue": "",
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "title": "Plot"
+    },
+    "Image!1kw2k8": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/lexus3/zed2i/zed_node/left/image_rect_color/compressed",
+        "synchronize": false,
+        "rotation": 0,
+        "annotations": {}
+      }
+    },
+    "map!253zxmb": {
+      "disabledTopics": [],
+      "layer": "map",
+      "zoomLevel": 17,
+      "center": {
+        "lat": 47.69454828124264,
+        "lon": 17.627745866775516
+      },
+      "customTileUrl": "",
+      "followTopic": "",
+      "topicColors": {},
+      "maxNativeZoom": 18
+    },
+    "3D!36rb111": {
+      "followTf": "lexus3/os_center_a_laser_data_frame",
+      "followMode": "follow-position",
+      "cameraState": {
+        "perspective": true,
+        "distance": 33.719421274014195,
+        "phi": 62.958589079695265,
+        "thetaOffset": -71.5272082248467,
+        "targetOffset": [
+          -6.736080542800835,
+          -4.033738387454021,
+          1.5020116556647845e-15
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.01,
+        "far": 5000
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.2617993877991494
+      },
+      "topics": {
+        "/left_os1/os1_cloud_node/points": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 6.300534166098594
+        },
+        "/right_os1/os1_cloud_node/points": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 5.999514229592996
+        },
+        "/lexus3/os_center/points": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 2.04,
+          "stixelsEnabled": false
+        },
+        "/lexus3/os_left/points": {
+          "visible": true,
+          "colorField": "z",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 3.24,
+          "minValue": -0.0976
+        },
+        "/lexus3/zed2i/zed_node/left/image_rect_color/compressed": {
+          "visible": false
+        },
+        "/lexus3/os_right/points": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 1.87,
+          "explicitAlpha": 1
+        }
+      },
+      "scene": {},
+      "transforms": {
+        "frame:map": {
+          "visible": true
+        },
+        "frame:lexus3/gps": {
+          "visible": true
+        },
+        "frame:lexus3/_left_camera_frame": {
+          "visible": false
+        },
+        "frame:lexus3/duro_gps": {
+          "visible": false
+        },
+        "frame:lexus3/duro_gps_imu": {
+          "visible": false
+        },
+        "frame:lexus3/ground_link": {
+          "visible": false
+        },
+        "frame:lexus3/os_center_a": {
+          "visible": true
+        },
+        "frame:lexus3/os_center_a_imu_data_frame": {
+          "visible": false
+        },
+        "frame:lexus3/os_center_a_laser_data_frame": {
+          "visible": false
+        },
+        "frame:lexus3/os_left_a": {
+          "visible": false
+        },
+        "frame:lexus3/os_left_a_imu_data_frame": {
+          "visible": false
+        },
+        "frame:lexus3/os_left_a_laser_data_frame": {
+          "visible": false
+        },
+        "frame:lexus3/os_right_a": {
+          "visible": false
+        },
+        "frame:lexus3/os_right_a_imu_data_frame": {
+          "visible": false
+        },
+        "frame:lexus3/os_right_a_laser_data_frame": {
+          "visible": false
+        }
+      },
+      "layers": {
+        "7f211b70-5aec-4b56-bee3-c8656eae468a": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "7f211b70-5aec-4b56-bee3-c8656eae468a",
+          "layerId": "foxglove.Grid",
+          "frameId": "lexus3/ground_link",
+          "size": 40,
+          "divisions": 20,
+          "lineWidth": 1,
+          "color": "#248eff40",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 1
+        }
+      },
+      "imageMode": {}
+    },
+    "StateTransitions!2r7jguc": {
+      "paths": [
+        {
+          "value": "/lexus3/gps/duro/navsatfix.status.status",
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "",
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/gps/nova/fix.status.status",
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "isSynced": true
+    },
+    "Tab!2jrdgin": {
+      "activeTabIdx": 3,
+      "tabs": [
+        {
+          "title": "info",
+          "layout": {
+            "first": "SourceInfo!4d7rfhe",
+            "second": "DiagnosticSummary!msjvo7",
+            "direction": "row"
+          }
+        },
+        {
+          "title": "diagnostics",
+          "layout": {
+            "first": "RawMessages!tahvzj",
+            "second": "RawMessages!3jwh6ii",
+            "direction": "row"
+          }
+        },
+        {
+          "title": "debug",
+          "layout": "Plot!2vgsd7y"
+        },
+        {
+          "title": "perception",
+          "layout": {
+            "first": {
+              "first": "Image!1kw2k8",
+              "second": "map!253zxmb",
+              "direction": "column"
+            },
+            "second": {
+              "first": "3D!36rb111",
+              "second": "StateTransitions!2r7jguc",
+              "direction": "column",
+              "splitPercentage": 79.19540609220817
+            },
+            "direction": "row"
+          }
+        }
+      ]
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1,
+    "messageOrder": "receiveTime"
+  },
+  "layout": "Tab!2jrdgin"
+}
