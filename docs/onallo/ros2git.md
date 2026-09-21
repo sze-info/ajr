@@ -74,6 +74,8 @@ cd ~/ros2_ws/src/my_awesome_package
 code .
 ```
 
+`ctrl + shift + f` segítségével keresd meg a `ros2_cpp_template` kifejezést, és cseréld ki a package nevére, pl: `my_awesome_package`.
+
 1. `ros2_cpp_template` >> `my_awesome_package` 
 2. `sze-info` >> `mycoolusername`
 3. `todo` >> értelemszerűen
