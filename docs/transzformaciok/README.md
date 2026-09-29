@@ -308,8 +308,17 @@ További információ erről  [itt olvasható](https://docs.ros.org/en/humble/Tu
 
 ## Konvenciók
 
+`ROS 2`-ben a koordinátarendszerek és a transzformációk meghatározott konvenciók szerint működnek. Például az `X`, `Y`, `Z` tengelyeket következetesen piros (`R`), zöld (`G`) és kék (`B`) színekkel jelölik. A járművek és robotok esetében gyakran a `base_link` frame az alapértelmezett referenciapont, amelyhez képest a többi frame meghatározásra kerül. A right hand rule (jobbkéz-szabály) a koordinátarendszer irányát határozza meg. A jobb kéz hüvelykujját az `X` tengely irányába, a mutatóujjat az `Y` tengely irányába, a középső ujjat pedig az `Z` tengely irányába kell tartani. Ez a szabály biztosítja, hogy a koordinátarendszer konzisztens és egyértelmű legyen.
+
 ![rh](right_hand_rule01.svg)
+
+A `base_link` frame autók esetén a jármű hátsó tengelyének középpontjában található. Ebből következik, hogy a yaw (φ) a függőleges tengely körüli forgást jelenti, a pitch (θ) a vízszintes tengely körüli forgást, míg a roll (ψ) a hossztengely körüli forgást. 
+
 ![va](vehicle_axes01.svg)
+
+A yaw pozitív iránya az óramutató járásával ellentétes, tehát a jármű balra fordulásakor a yaw értéke pozitív. Továbbá mivel a két első kerék az Ackermann elrendezés miatt a jármű tengelyéhez képest eltérő szögben fordul, így a kerekek forgatása és a jármű tényleges iránya között is van eltérés. Ha csak egyszerűen `tire_angle`-t (kerék szög)értéket látunk, az gyakran a két kerék átlagos szögét jelenti. A jármű tengelye és a kerekek szöge közötti eltérés a kerekek elhelyezkedéséből adódik, és az Ackermann kormányzás elvén alapul. Ez azt jelenti, hogy a belső kerék nagyobb szögben fordul, mint a külső kerék, hogy biztosítsa a megfelelő ívben történő haladást. A jármű tényleges iránya (heading) és a kerekek szöge közötti különbség figyelembevétele fontos a pontos navigációhoz és irányítási algoritmusokhoz.
+
+![va](vehicle_axes02.svg)
 
 ## Koordinátarendszerek (GPS/GNSS)
 
