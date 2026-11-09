@@ -222,7 +222,8 @@ git pull
 Navigáljunk a workspace src mappájában a repo gyökérmappájába:
 
 ``` r
-cd ~ros2_ws/src/arj_packages
+cd ~/ros2_ws/src/arj_packages
+
 ```
 
 Vizsgáljuk meg a repository tartalmát:
@@ -274,7 +275,7 @@ private:
 
     // params
     float m {1350.0}; // kg
-    float A {1.5f}; // m^2
+    float A {1.5f}; // m^2 - frontal area
     float rho {1.0f}; // kg/m^3
     float c {0.33f}; // aerodynamic factor
     float b {0.1f}; // rolling friction, viscosous
@@ -291,7 +292,7 @@ void propulsion_callback(const std_msgs::msg::Float32 input_msg)
 
 Végezetül a loop() függvény, melyben először számítjuk az ellenállási erőket (légellenállás és viszkózus súrlódás), majd számítjuk az eredő erőt és ebből a jármű gyorsulását. A jármű gyorsulását integrálva kapjuk a jármű sebességét.
 
-``` r
+```cpp
 void loop()
 {
     // calculate new state based on load, prop force, mass and aerodynamic drag
@@ -311,6 +312,15 @@ void loop()
 }
 ```
 
+- `Faero`: légellenállás, $F_{\text{aero}} = \tfrac{1}{2} A \rho c v_x^2$
+- `Ffric`: sebességarányos súrlódás, $F_{\text{fric}} = b \, v_x$
+
+Gyorsulás, az eredő erőt elosztjuk a tömeggel:
+
+$$
+a_x = \frac{F_{\text{prop}} - F_{\text{fric}} - F_{\text{load}} - F_{\text{aero}}}{m}
+$$
+
 ### Szabályzó
 
 A speed_control.cpp-ben a jármű sebességének PID szabályzását láthatjuk.
@@ -318,7 +328,7 @@ A node neve "speed_control", feliratkozik a ```/vehicle/state``` topicra, melyet
 Ezen kívül hirdetjük a ```/vehicle/propulsion``` command topicot, egyúttal feliratkozunk a ```/vehicle/cmd``` célsebességet megadó topicra.
 A szabályzó lényege, hogy a user által megadott sebességet szabályozza úgy, hogy előállítja a járműhajtás számára a célerőt. A modell állapotától függően növeljük vagy csökkentjük a célerőt.
 
-``` r
+```cpp
 class SpeedControl : public rclcpp::Node
 {
 public:
@@ -340,32 +350,94 @@ public:
 
 A szabályzást a loop() függvényben láthatjuk. A P, I és D paraméterek ROS paraméterként állíthatók. A hajtó erő 3 tényezőből tevődik össze: a derivatív tagból (Fprop_D), az arányos tagból (Fprop_P) és az integrált tagból (Fprop_I). Ez egy párhuzamos PID struktúra, tehát a három tag összege adja ki a célerőt.
 
-``` r
-void loop()
+=== "C++"
+
+    ``` c++ linenums="1"
+    void loop()
     {
+        // PID parameters (can be changed at runtime)
         P = (float)this->get_parameter("/control/P").as_double();
         I = (float)this->get_parameter("/control/I").as_double();
         D = (float)this->get_parameter("/control/D").as_double();
-        // calculate new state based on load, prop force, mass and aerodynamic drag
-        float Fprop_D = D*((vSet-vx)-error)/0.1;
 
-        float error = vSet-vx;
-        float Fprop_P = P*error;
-        float Fprop_I = I*integrated_error;
+        // calculate propulsion force with a PID controller
+        float error = vSet - vx;
+        float Fprop_P = P * error;
+        float Fprop_I = I * integrated_error;
+        float Fprop_D = D * (error - prev_error) / 0.1f;  // 0.1 s time step
 
-        Fprop = Fprop_P+Fprop_I+Fprop_D;
+        Fprop = Fprop_P + Fprop_I + Fprop_D;
 
+        // saturation
         Fprop = std::min(std::max(-Fprop_max, Fprop), Fprop_max);
 
-        // Publish cmd
+        // publish cmd
         std_msgs::msg::Float32 cmd_msg;
         cmd_msg.data = Fprop;
-
         cmd_pub_->publish(cmd_msg);
 
-        integrated_error+= error*0.1f;
+        integrated_error += error * 0.1f;
+        prev_error = error;
     }
-```
+    ```
+
+=== "Python"
+
+    ``` py linenums="1"
+    def loop(self):
+        # PID parameters (can be changed at runtime)
+        self.P = self.get_parameter('/control/P').value
+        self.I = self.get_parameter('/control/I').value
+        self.D = self.get_parameter('/control/D').value
+
+        # calculate propulsion force with a PID controller
+        error = self.v_set - self.vx
+        Fprop_P = self.P * error
+        Fprop_I = self.I * self.integrated_error
+        Fprop_D = self.D * (error - self.prev_error) / 0.1  # 0.1 s time step
+
+        Fprop = Fprop_P + Fprop_I + Fprop_D
+
+        # saturation
+        self.Fprop = min(max(-self.Fprop_max, Fprop), self.Fprop_max)
+
+        # publish cmd
+        cmd_msg = Float32()
+        cmd_msg.data = float(self.Fprop)
+        self.cmd_pub_.publish(cmd_msg)
+
+        self.integrated_error += error * 0.1
+        self.prev_error = error
+    ```
+
+A modell a jármű hosszirányú mozgását írja le egy egyszerű, diszkrét idejű pontszerű tömegmodellel. Minden lépésben kiszámítja a járműre ható erőket, ezekből a gyorsulást, majd frissíti a sebességet.
+
+**Ható erők:**
+
+- **Hajtóerő** ($F_{\text{prop}}$): a hajtáslánc által kifejtett, előre mutató erő.
+- **Aerodinamikai ellenállás** ($F_{\text{aero}}$): a sebesség négyzetével arányos, ezért nagy sebességnél válik dominánssá.
+- **Súrlódás** ($F_{\text{fric}}$): viszkózus, a sebességgel lineárisan arányos veszteség (pl. gördülési és csapágysúrlódás egyszerűsített modellje).
+- **Terhelés** ($F_{\text{load}}$): külső terhelőerő, pl. emelkedő vagy vontatott teher hatása.
+
+$$
+F_{\text{aero}} = \tfrac{1}{2} \, A \, \rho \, c \, v_x^2, \qquad F_{\text{fric}} = b \, v_x
+$$
+
+**Gyorsulás** (Newton II. törvénye):
+
+$$
+a_x = \frac{F_{\text{prop}} - F_{\text{fric}} - F_{\text{load}} - F_{\text{aero}}}{m}
+$$
+
+**Sebességfrissítés** (explicit Euler-integrálás, $\Delta t = 0.1\ \text{s}$):
+
+$$
+v_x[k+1] = \max\!\left(0,\; v_x[k] + a_x[k] \, \Delta t\right)
+$$
+
+A $\max(0, \cdot)$ korlát megakadályozza, hogy a jármű hátrafelé induljon el, ha a fékező erők meghaladják a hajtóerőt.
+
+**Kimenet:** minden lépésben a $[v_x,\ a_x]$ állapotvektor kerül publikálásra (`Float32MultiArray`), m/s és m/s² mértékegységben.
 
 ### Teszt
 
