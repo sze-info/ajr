@@ -1,303 +1,462 @@
 ---
-title: Elmélet - Mesterséges intelligencia
+title: Elmélet - AI
 permalink: /mesterseges_intelligencia/
 icon: material/math-integral-box # elméleti tananyag
 ---
 
-# Mesterséges intelligencia
+# Artificial Intelligence Fundamentals
 
-Artificial Intelligence (AI) and Machine Learning (ML) have taken the world by storm over the past decade. These fields are vast and complex, requiring far more exploration than we can cover within the scope of this class. Therefore, we will focus on capturing the essence of ML, particularly as it relates to computer science and autonomous vehicles.
+## Lecture 1: From hand-written rules to machines that learn
 
-We’ll begin by examining AI and ML from a problem-solving perspective, followed by a brief overview of the field's current state. Next, we’ll dive into the core concepts of neural networks and explore how these elements work together. Finally, we’ll look at real-world examples of AI applications in autonomous driving.
+> **What this lecture is about.** Seventy years ago a machine the size of a wardrobe learned to tell circles from rectangles. Today, machines write code, hold conversations and drive cars through city traffic. This lecture tells the story of how we got from one to the other, and why the story is far from over. There are no formulas today. The goal is to understand the *ideas*, the people behind them, and the three ingredients that keep returning: **algorithms, data and computing power**.
 
-In our hands-on practice session, we will train a semantic segmentation model ourselves, providing a practical introduction to one of the key techniques in autonomous vehicle perception.
+![Timeline of the lecture: from the naming of AI in 1956 to large language models](figures/00-timeline.svg)
 
-### Problem-Solving Focused Approach
+**Contents**
 
-The essence of programming is taking some data and transforming it into the desired output. Building on this thought, problem-solving for a programmer always starts with defining what one wants to achieve with the input data. In other words, what is the desired output. With the advent of machine learning, there are two main approaches to this dilemma:
+1. [Two ways to make a computer do something](#1-two-ways-to-make-a-computer-do-something)
+2. [The birth of AI and the Perceptron](#2-the-birth-of-ai-and-the-perceptron)
+3. [Neural networks return: a van that learned to steer](#3-neural-networks-return-a-van-that-learned-to-steer)
+4. [ImageNet: the missing ingredient was data](#4-imagenet-the-missing-ingredient-was-data)
+5. [From one GPU to entire datacenters](#5-from-one-gpu-to-entire-datacenters)
+6. [From deep learning to generative AI and LLMs](#6-from-deep-learning-to-generative-ai-and-llms)
+7. [The new computing crisis](#7-the-new-computing-crisis)
+8. [AI becomes an infrastructure problem](#8-ai-becomes-an-infrastructure-problem)
+9. [The future of AI computing](#9-the-future-of-ai-computing)
+10. [AI in autonomous robots and vehicles](#10-ai-in-autonomous-robots-and-vehicles)
+11. [Questions](#11-questions)
 
-1. **Traditional Approach**
+---
 
-   In the traditional approach, we **manually define the rules** that determine how data is processed and transformed. This approach has a few distinct characteristics:
-   
-   - **Explicit Rules**: We explicitly program the steps required to manipulate and analyze data. This requires a deep understanding of the problem so that we can translate our knowledge into precise rules for the program to follow.
-   - **Human-Centric Modeling**: The relationship between input and output is modeled based on human intuition and expertise, rather than patterns discovered in data.
-   - **Code-Heavy Implementation**: Much of the work involves writing detailed code to handle each aspect of the problem.
+## 1. Two ways to make a computer do something
 
-```mermaid
-graph LR
-    %% Title
-    A[Software 1.0]:::white;
+Strip away the details and most software does two things: it **moves data** and it **processes data**. Moving data is plumbing. Processing data is where the interesting decisions are made, and there are two fundamentally different ways to build the part that makes them.
 
-      X1[X]:::light ---> CPU1[GPU]:::red
-      X2[f/X/]:::light ---> CPU1[CPU]:::red
-      CPU1 --> Y1[Y]:::light
-      HC[(Human coding)]:::white --> CPU1
+![Classical programming takes data and rules and produces answers; machine learning takes data and answers and produces rules](figures/01-rules-vs-learning.svg)
 
-    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
-    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
-    classDef white fill:#ffffff,stroke:#fff,stroke-width:2px,color:#152742
-    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+### Writing the rules by hand
 
-```
+In classical programming a human thinks hard about the problem and writes down the rules explicitly. The computer applies those rules to the data and produces answers.
 
-![Software 1.0](assets/images/software1_0.svg)
+*Example:* "If the pixel brightness along this line is above a threshold, mark it as a lane marking."
 
-The traditional approach depends on human-crafted rules and requires significant manual coding. It is effective for well-defined problems where the rules can be explicitly articulated.
+This works beautifully when we understand the problem well enough to state the logic. It is also transparent: when the program makes a mistake, we can read the rule that caused it and fix it.
 
-2. **Software 2.0 Approach**
+### Letting the machine find the rules
 
-   The machine learning approach shifts the focus from manually defining rules to **teaching an algorithm by example**. Instead of coding specific instructions, we provide data that illustrates the problem, allowing the algorithm to learn the rules indirectly. This approach has several key elements:
-   
-   - **Learning from Data**: We provide examples to an algorithm, enabling it to identify patterns and relationships within the data. The algorithm then uses these learned patterns to transform data and make predictions or decisions.
-   - **Indirect Modeling**: The model (function) that maps input to output is learned from data rather than manually defined. The algorithm constructs this mapping implicitly based on the training examples *(see backpropagation later)*.
-   - **Data Preparation**: The work primarily involves gathering and preparing high-quality examples, pre-processing data, and selecting or designing an appropriate learning algorithm.
+In machine learning we turn the arrangement around. We give the computer example inputs **together with the answers we want**, and an algorithm searches for the rules that connect them.
 
-The machine learning approach relies on data-driven learning, reducing the need for explicitly defined rules. This makes it suitable for complex or variable problems where manually programming every possible scenario would be impractical.
+Two things are worth noticing:
 
-The latter approach is colloquially called **Software 2.0**.
+- The learned "rules" are not sentences a person can read. They are **parameters**: numbers, often millions or billions of them, that together determine what the program does.
+- Nobody typed those numbers in. They were adjusted, step by step, until the program's answers matched the examples.
 
-```mermaid
-graph LR
-    %% Title
-    A[Software 2.0]:::white;
+*Example:* In 1989 a system called ALVINN learned to steer a van by watching a human drive. Nobody wrote a single lane-following rule for it. We will meet ALVINN properly in Section 3.
 
-      X1[X]:::light ---> GPU1[GPU]:::red
-      Y1[Y]:::light ---> GPU1
-      GPU1 --> F[ f/x/ ]:::light
-      ML[(Machine Learning)]:::white --> GPU1
-      X2[X]:::light --> GPU2[GPU]:::red
-      F:::light --> GPU2
-      GPU2 --> Y2[Y]:::light
+### When should we use which?
 
-    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
-    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
-    classDef white fill:#ffffff,stroke:#fff,stroke-width:2px,color:#152742
-    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+| | Hand-written rules | Learning from data |
+|---|---|---|
+| **Works well when** | the problem is well understood and the logic can be stated | the rules are too complex to write down, but examples are plentiful |
+| **Typical example** | computing a braking distance from speed | recognising a pedestrian in a camera image |
+| **Strength** | transparent, predictable, can come with guarantees | handles messy, real-world variety |
+| **Weakness** | breaks down when the world is too varied to enumerate | needs lots of data, and is harder to inspect |
 
-```
+Try to write down the rules for "this image contains a pedestrian". People can be near or far, facing any direction, partly hidden behind a car, carrying an umbrella, in sunlight or at night. Every rule you write has an exception. That is the kind of problem where learning wins.
 
-![Software 2.0](assets/images/software2_0.svg)
+In practice the choice is a **spectrum, not a switch**. A learning system still depends on human design decisions: which model to use, what to measure as "error", which data to collect. And most real systems, including autonomous vehicles (Section 10), combine both approaches.
 
-## Overview
-**A few key basic concepts worth knowing: (these are just conventions, their usage may vary):**
+### So what is machine learning?
 
-- Machine learning refers to the adjustment of free parameters in a multivariable (even millions or billions) function (in this case, a model) based on the examples provided in the dataset.
-- The structure whose parameters we adjust is called a model (e.g., neural network).
-- The process or algorithm used to adjust the model’s parameters is called the learning algorithm.
-- The model tuned by the learning algorithm is commonly referred to as a "trained model."
+A working definition for this course:
 
-Machine Learning is often categorized by the type of utilized learning algorithm. Below is a brief summary of machine learning techniques:
+> **Machine learning** is any algorithm that discovers a set of parameters consistent with the statistics of its training data.
 
-1. **Supervised Learning**: Trained on labeled data to predict outputs.
-   - *Examples*: Classification, Regression.
+The important word hides in what comes next. The goal is not to memorise the training examples. The goal is to **generalise**: to give good answers on *new* data that the system has never seen, as long as it resembles what it was trained on. A student who memorises last year's exam has fitted the data. A student who can solve this year's exam has generalised.
 
-2. **Unsupervised Learning**: Finds patterns in unlabeled data.
-   - *Examples*: Clustering, Dimensionality Reduction.
+Models can capture patterns at very different levels, from a simple straight-line relationship to deep neural networks that build up a hierarchy of increasingly abstract features (edges, then shapes, then objects).
 
-3. **Reinforcement Learning**: Learns by interacting with an environment and maximizing rewards.
-   - *Examples*: Game playing, Robotics.
+> **Pause and think.** Pick an app you used today. Which parts of it are probably hand-written rules, and which parts are probably learned?
 
-- **Deep Learning**: Uses deep neural networks to model complex patterns.
-   - *Examples*: CNNs for images, RNNs for sequences.
+---
 
-Other notable learning types:
-- **Semi-Supervised Learning**: Uses a mix of labeled and unlabeled data.
-   - *Example*: Text and image classification with limited labeled data.
-- **Self-Supervised Learning**: Generates labels from data structure itself.
-   - *Examples*: Language models (e.g., GPT), Image feature learning.
-- **Transfer Learning / Fine Tuning**: Adapts a model trained on one task for a related task.
-   - *Examples*: Fine-tuning pre-trained image and language models.
+## 2. The birth of AI and the Perceptron
 
-AI can also be categorized by the types of inputs (image processing, natural language processing) or by the field where they are utilized (autonomous driving, medical imaging, navigation etc.).
+The term **"Artificial Intelligence"** was coined in the mid-1950s for a summer workshop held at Dartmouth College in 1956. A small group of researchers believed that every aspect of intelligence could, in principle, be described precisely enough for a machine to simulate it. The optimism of that summer set the tone for the decades that followed.
 
-### Generative AI
-Generative Models, in a nutshell, identify the patterns and structures within existing data and model the data distribution to generate new samples. Generative AI models use neural networks to generate new and original content.
+### A machine modelled on the brain
 
-One of the breakthroughs with generative AI models is the ability to leverage different learning approaches, including unsupervised or semi-supervised learning for training. This has given large tech companies the ability to more easily and quickly leverage a large amount of unlabeled data to create foundation models.
-### Transformers
-Transformers are the backbone of generative AI. They were introduced in 2017.  
-Transformer model revolutionized natural language processing by [replacing recurrent neural networks with self-attention mechanisms](https://www.youtube.com/watch?v=dqoEU9Ac3ek&t=2398s). It vastly improved computational efficiency and enabled the model to capture long-range dependencies in text.
-### GPT
-GPT is an acronym that stands for "Generative Pre-trained Transformer" and refers to a family of [large language models (LLMs)](https://www.youtube.com/watch?v=wjZofJX0v4M) that can understand and generate text in natural language.
+In 1958 Frank Rosenblatt, a psychologist at Cornell, presented the **Perceptron**. His starting point was biology.
 
-Let's break down the acronym:
+A real neuron is a small decision-maker. It receives signals from many other neurons. Some connections encourage it to fire (excitatory), others discourage it (inhibitory). If the combined input is strong enough to cross a threshold, the neuron fires. Otherwise it stays silent. All or nothing: 1 or 0.
 
-- **Generative:** Capable of producing content, such as text and imagery. 
-    
-- **Pre-trained:** Pre-trained models are networks that have already been taught, using a large data set, to resolve a problem or accomplish a specific task.
-    
-- **Transformer:** A deep learning architecture that uses [self-attention mechanisms](https://www.youtube.com/watch?v=dqoEU9Ac3ek&t=2398s).
+Rosenblatt built this idea into hardware:
 
-Based on the definitions above, GPT is a **generative** AI technology that has been **previously trained** to **transform** its inputs into a different type of outputs.
+![A perceptron: each pixel is multiplied by a weight, everything is added up, and the neuron fires if the sum exceeds a threshold](figures/02-perceptron.svg)
 
-![NVIDIA H100](assets/images/nvidia-hgx-sxm5-h100.webp)
+- **The eye:** a 20 × 20 grid of 400 light sensors (photocells), each acting as one pixel.
+- **The connections:** every pixel was wired to an output neuron through an adjustable **weight**. A positive weight means "this pixel is evidence *for*", a negative weight means "evidence *against*".
+- **The decision:** multiply each pixel's value by its weight, add everything up, and check whether the total crosses the threshold.
 
-### Where To Start Learning AI
+That "multiply and add up" step has a name in mathematics, the *dot product*. Remember it. Seventy years later it is still the operation that AI hardware spends almost all of its time on.
 
-If there is generative AI, foundational models, and large language models (LLMs), why learn neural networks?
+### How it learned
 
-Understanding neural networks is crucial because they form the backbone of modern AI architectures. Nearly all cutting-edge AI models—whether it's a generative model, a foundational model, or an LLM—are built upon complex neural networks. By learning how neural networks work, you gain insight into the underlying principles of these advanced models, allowing you to grasp how they function and how they can be adapted to specific tasks.
+The learning rule is simple enough to say in one breath: **show an example; if the machine gets it wrong, nudge the weights in the direction that would have made it right; repeat.**
 
-In addition, neural networks are incredibly useful for developing your own applications, especially when building robots or systems that require intelligent behavior. Traditional algorithms often struggle with tasks like image recognition, language understanding, or autonomous navigation, whereas neural networks can excel. By mastering neural networks, you can gather your own data, train models tailored to your needs, and deploy them in your own systems, all independently. This independence and flexibility empower you to create customized AI solutions that outperform traditional approaches.
+After enough examples the weights settle, and the machine can separate, for example, circles from rectangles. Nobody told it what a circle is. It found weights that work.
 
-Training massive models like LLMs and foundational models on your own, however, is prohibitively expensive. These models require substantial computational power, often needing cutting-edge GPUs such as the NVIDIA H100, and in some cases, entire server rooms of high-performance GPUs running for months. For instance, training a state-of-the-art model like LLaMA 3 from scratch would be out of reach for most individuals and even smaller companies due to the extreme resource demands.
+<!-- Photo: Frank Rosenblatt with the Mark I Perceptron (U.S. Navy photo, public domain, via Wikimedia Commons) -->
+![Frank Rosenblatt with the Mark I Perceptron](https://commons.wikimedia.org/wiki/Special:FilePath/330-PSA-80-60%20%28USN%20710739%29%20%2820897323365%29.jpg?width=900)
+*Frank Rosenblatt with the Mark I Perceptron. Photo: U.S. Navy, public domain, via Wikimedia Commons.*
 
-However, if you want to dive into LLMs without the need to train them from scratch, you can learn to fine-tune pre-existing models for your specific use cases. Fine-tuning allows you to leverage the knowledge of a large, pre-trained model and adapt it to perform well on your unique data or tasks, providing a practical entry point into working with powerful AI without the prohibitive cost of full-scale training.
+### Hype, and the first AI winter
 
-## Neural Network Basics
-The main focus of this class is neural networks. This part is mainly taken from https://mlu-explain.github.io/neural-networks/, which is an excellent interactive resource, so we use it to learn the basic concepts. Please use the website to get a grasp on the basics. A more print friendly version with minor modifications can be seen below for easier learning.
+The Perceptron could classify simple shapes and letters. The claims made about it went much further. Rosenblatt suggested it would soon tell cats from dogs and show something like original thought, and in 1958 *The New York Times* reported the Navy's expectation that such a machine would one day walk, talk, see and be conscious of its own existence.
 
-Neural networks have revolutionized the field of artificial intelligence and are the backbone of popular algorithms today, such as ChatGPT, Stable-Diffusion, and many others. In this introduction, we'll journey through the fundamentals of feed-forward neural networks, starting from their essential components, understanding their learning mechanisms, and even getting hands-on experience by interacting with one ourselves.
+Reality caught up in 1969. Marvin Minsky and Seymour Papert at MIT published *Perceptrons*, a careful mathematical analysis showing that a single layer of these neurons has strict limits: there are simple patterns it can never learn, no matter how long it trains. The book is widely credited with helping to drain funding and interest from the field. This period became known as the first **"AI winter"**.
 
-Neural networks are networks - that much is clear. _But what is a "network"?_ A network is a structure consisting of interconnected computational nodes, or 'neurons', arranged in layers. These nodes perform mathematical operations on input data, learning some underlying patterns in the data, before producing some output based on those patterns. If this sounds confusing, don't worry, we'll make it clear soon enough.
+It is a pattern worth remembering, because it repeats: a real result, inflated promises, disappointment, retreat.
 
-To build up our intuition, we'll build a basic computational graph into a Neural Network.
-## Building Blocks: Computational Graphs
-A computational graph has an input node where data is fed into the graph, a function node where the input data is processed (this can contain any type of calculation), and an output node where the result of the computation is produced.  
-  
-Data flows in one direction, from inputs to output, through the graph.
+The first three chapters of this lecture follow the first half of this video, which is an excellent companion:
 
-```mermaid
-graph LR
-    input1[input₁]:::light --> function[Function]:::light
-    input2[input₂]:::light --> function
-    function --> output[Output]:::light
+<iframe width="720" height="405" src="https://www.youtube.com/embed/GVsUOuSjvcg" title="Future Computers Will Be Radically Different (Analog Computing) - Veritasium" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
-    classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
-    classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
-    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+*Video: [Future Computers Will Be Radically Different (Analog Computing)](https://www.youtube.com/watch?v=GVsUOuSjvcg), Veritasium, 2022.*
 
-```
+---
 
-## Linear Regression
-We can represent all sorts of algorithms with computational graphs. For example, we can easily represent [Linear Regression](https://mlu-explain.github.io/linear-regression/) as a computational graph (can be described with the equation of a line, hence the word linear):
+## 3. Neural networks return: a van that learned to steer
 
-$$y = w_0 + w_1 X_1$$
-To do so, we need only change two things:
-1. Add weights to each edge connecting the input nodes to the function nodes.
-2. Update our function node to represent a linear function of a weighted sum:
-$$\text{linear} = \sum_{i=1}^{n} w_i X_i$$
+The limits Minsky and Papert described applied to a *single* layer. What if we stack several?
 
-With these modifications, we have a computational graph for linear regression. 
+### Hidden layers
 
-The model is outputting predictions along a diagonal line based on the input data. 
-As we build up a more complex model for different applications, we will see this linear output change to reflect the state of the corresponding model.
+In the 1980s researchers showed how to train networks with an intermediate **hidden layer** between input and output. The hidden neurons are free to become detectors for whatever intermediate patterns turn out to be useful. The training method that made this practical is called **backpropagation**: after each mistake, the error is passed backwards through the network so that every weight learns how much it contributed and in which direction it should change.
 
-## Perceptrons
-Our computational graph setup makes it trivial to model different algorithms. For example, if we want to model a Perceptron instead of logistic regression, we only need to switch our logistic function to a step function:
-$$
-\text{step} = 
-\begin{cases} 
-+1, & \text{if } w_i X_i \geq 0 \\ 
--1, & \text{if } w_i X_i < 0 
-\end{cases}
-$$
+### ALVINN
 
-In a neural network, this function node we're changing is very special - we call it an artificial neuron.
+The most memorable demonstration came from Carnegie Mellon University: **ALVINN**, the *Autonomous Land Vehicle in a Neural Network*, built by Dean Pomerleau around 1989.
 
-An artificial neuron is a fundamental computational element that receives inputs, performs a weighted operation on these inputs, and passes the result through a function. In neural networks, these functions _must_ be non-linear, and are referred to as activation functions.
+- **Input:** a tiny 30 × 32 pixel image of the road ahead, 960 numbers.
+- **Hidden layer:** just 4 neurons.
+- **Output:** 30 neurons, each standing for a steering direction from "sharp left" to "sharp right". The most active one wins.
 
-## Neural Networks
-Nothing is stopping us from chaining multiple artificial neurons together, feeding one to another. This is all a neural network is!
-  
-In fact, the original neural networks were called multilayer perceptrons because they were composed of layers of perceptrons (artificial neurons with step functions) feeding one into another! 
+To train it, a person simply drove. The network watched the camera image and the steering wheel, and backpropagation adjusted the weights until the network's steering matched the human's. After a few minutes of driving, ALVINN could take over. When researchers later looked at the weights of the hidden neurons, they could see what the network had taught itself to look for: road edges and lane markings.
 
-*Here is an interesting early attempt to drive with the usage of multilayer perceptrons from 1986:*
+Getting from one layer to the next means multiplying a whole table of weights by a whole list of activations. This is **matrix multiplication**, which is simply the perceptron's "multiply and add up" done many times at once.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ntIczNQKfjQ" title="NavLab 1 (1986) : Carnegie Mellon : Robotics Institute History of Self-Driving Cars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- IMAGE SLOT: CMU Navlab / ALVINN vehicle photo, or a frame of the ALVINN weight visualisation from the Veritasium video (around the ALVINN segment) -->
 
-## Architecture
-In general, a neural network architecture consists of three layer types: 
-- input layer: A layer with a node for each network input. 
-- hidden layer(s): A layer full of artificial neurons.
-- output layer: A layer representing the network's output.
+### The second lull
 
-There should only be one input and one output layer, but there may be an arbitrary number of hidden layers.
+ALVINN worked, and it exposed the next obstacle. Its first versions crawled along at walking pace, because the computers of the day needed most of a second to push one image through the network. (With faster hardware, later versions reached highway speeds on real roads in the early 1990s, a remarkable result for a network with four hidden neurons.)
 
-Designing a neural network architecture is more of an art than a science. The input and output layer will be selected for the specific problem, but the hidden layer is fairly arbitrary.   
-  
-Neural networks can be wide: having many neurons in a given hidden layer, or deep: having many hidden layers in the network. [Balancing neuron count](https://mlu-explain.github.io/bias-variance/) optimizes performance; more neurons enable complex learning, at the cost of the risk of overfitting and more computational cost.
+More broadly, neural networks still could not handle everyday vision. Telling a cat from a dog remained out of reach. Through the 1990s and early 2000s the field went quiet again, and researchers argued about the cause. Were the algorithms wrong? Or were the computers simply too slow?
 
-As you can see, neural networks are not so complicated! They are just computational graphs, channeling inputs through successive layers of computation to generate outputs. This process of inference, whereby inputs are fed through the network to produce output predictions, is called the forward pass. Let's talk more about those layers of computation, the activation functions.
+As it turned out, a third possibility had been overlooked.
 
-## Activation Functions
-Activation functions are at the heart of artificial neurons in a neural network. These crucial components **introduce non-linearity into the model**, transforming the weighted inputs to generate an output. 
+*Optional viewing for the curious, a visual explanation of what layers and weights do:*
 
-**Simply put, an activation function decides how much signal to pass onto the next layer based on the input it receives. The core idea is that this passing does not have to be linear. This is how non-linearity is introduced.** 
-This idea of chaining many weighted signals together is what allows neural networks to learn very complex relationships.
-  
-The non-linear nature of these functions is essential for neural networks to learn from complex data. If we only used linear activation functions, no matter how many layers we stacked, the network would behave just like a single-layer perceptron because the composition of linear functions is still a linear function. This limits the complexity of tasks the network can learn. Non-linear activation functions, on the other hand, enable the network to learn complex patterns and solve intricate problems by adding layers of abstraction.  
+<iframe width="720" height="405" src="https://www.youtube.com/embed/aircAruvnKk" title="But what is a neural network? - 3Blue1Brown" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-There's a diverse range of activation functions utilized in neural networks, each with its unique benefits and applications. Here are four popular activation functions:
+*Video: [But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk), 3Blue1Brown.*
 
-| Name                        | Plot              | Function                                                  | Description                                    |
-|-----------------------------|-------------------|-----------------------------------------------------------|------------------------------------------------|
-| Sigmoid (logistic)          | <img src="assets/images/sigmoid_plot.png" width="50px"> | $f(x) = \frac{1}{1 + e^{-x}}$                          | Squashes input to (0, 1).                      |
-| Hyperbolic Tangent (tanh)   | <img src="assets/images/tanh_plot.png" width="50px">     | $f(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$             | Squashes input to (-1, 1).                     |
-| Rectified Linear Unit (ReLU) | <img src="assets/images/relu_plot.png" width="50px">     | $f(x) = \begin{cases} 0, & x < 0 \\ x, & x \geq 0 \end{cases}$ | Only keeps positive values.                    |
-| Step Function (Perceptron)  | <img src="assets/images/step_plot.png" width="50px">     | $f(x) = \begin{cases} +1, & x \geq 0 \\ -1, & x < 0 \end{cases}$ | Returns only -1 or 1 (neuron fires or doesn't fire). |
+---
 
-The sigmoid (or logistic) function, which ranges from 0 to 1, is particularly useful in the output layer of binary classification models, representing the probability of a binary event. However, it can suffer from the vanishing gradients problem during backpropagation.  
-  
-The hyperbolic tangent (or 'tanh') function, which ranges from -1 to 1, provides a zero-centered output designed to make learning for the next layer easier. Yet, like sigmoid, it also faces the vanishing gradients issue.   
-  
-The Rectified Linear Unit (or 'ReLU') function is a popular choice in hidden layers due to its efficiency. It activates a node if its input is positive, otherwise, it outputs zero. This simplicity reduces computational cost and mitigates the vanishing gradients problem, but it can lead to dead neurons where some neurons never activate.
-  
-Despite their simplicity, chaining these functions together in a neural network can have magical results. That said, it's crucial to remember that there's no one-size-fits-all solution when it comes to choosing activation functions. The best choice often depends on the specific characteristics of the problem at hand, the nature of the input and output data, and the architecture of the network. Thus, understanding these functions and their implications is key to building effective and efficient neural networks.
+## 4. ImageNet: the missing ingredient was data
 
-## Backpropagation: How Networks Learn
-Now that we've grasped the concept of activation functions and their role in neural networks, it's time to understand how these networks learn. The magic behind this learning process is a technique known as backpropagation.  
-  
-Backpropagation is an algorithm used during the training of neural networks. The goal of backpropagation is to update the weights so that the Neural Network makes better predictions. Specifically, backpropagation will calculate the gradient of the loss function with respect to the weights of the network, updating the weights layer-by-layer to minimize the network's prediction error.  
+### A different diagnosis
 
-To make the process as clear as possible, let's go step-by-step.
+In the mid-2000s **Fei-Fei Li** proposed that the theory behind neural networks was not the problem. The networks were starving. A child sees millions of images in their first years of life; the networks of the time were trained on a few thousand.
 
-### Forward Pass
-During the forward pass, input data is fed through a neural network's layers to produce a prediction. This process involves calculating the weighted sums and applying activation functions for each neuron in each layer.  
-### Error
-The error, also known as loss, measures the difference between the neural network's predicted output and the actual target values. By minimizing this error, the neural network learns to improve its predictions during training.  
+So she set out to build the dataset that did not exist. Between roughly 2006 and 2009 her team assembled **ImageNet**: millions of photographs collected from the internet, each labelled by people. The full collection grew to about 14 million images. The best-known part of it, used for the annual competition, contains about **1.2 million training images in 1,000 object categories**.
 
-**The goal of backpropagation is to update the model's weights so that it learns to predict with less error.**
-### Backward Pass
-In the backward pass, the error is propagated back through the network, starting from the output layer, to adjust the weights and biases of each neuron. This weight adjustment process, guided by the gradients of the error with respect to the weights, aims to minimize the overall error of the network. (This process uses the Chain Rule from calculus to update the weights layer-by-layer, but we won't go into detail here.)
-### Backpropagation
+<iframe width="720" height="405" src="https://www.youtube.com/embed/40riCqvRoMs" title="How we teach computers to understand pictures - Fei-Fei Li, TED" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-**Predictions flow forward through the network in the forward pass, and errors flow backwards through the network, adjusting weights along the way. This process is know as Backpropagation.**  
-  
-Backpropagation is a supervised learning algorithm used in neural networks that optimizes their weights and biases through iterative forward and backward passes. By computing the gradients of the error with respect to the weights, backpropagation enables the network to learn and improve its predictions.
+*Video: [How we teach computers to understand pictures](https://www.youtube.com/watch?v=40riCqvRoMs), Fei-Fei Li, TED.*
 
-Backpropagation doesn't occur just once! For a typical neural network, backpropagation is repeated hundreds, if not thousands, of times. To keep things simple, we animate only a couple more runs of backprop here.  
-  
-The key thing to note is that, at each run, the network's weights are updated in a manner that improves our model's performance!
+### The competition
 
-We just went over backpropagation, the process by which Neural Networks try to find the optimal weights for the given prediction task (optimal here meaning the weights that result in the lowest error value).  
-  
-It's important to note that this process is not perfect! Many issues may occur when training a neural network, even a network as simple as above.
-## Going Forward: Other Neural Network Architectures
-Up to this point, we've described a specific neural network architecture where values flow forward linearly through a network, and gradients flow linearly backwards through a network. These are often referred to as feed forward neural networks, or artificial neural networks (ANN's). You may even see them referred to as Multilayer Perceptrons, a callback to the early Neural Network compositions of Perceptrons.
+From 2010 to 2017 research groups competed every year on ImageNet. The score was the **top-5 error rate**: the model may make five guesses for each image, and it counts as an error only if the correct label is not among them.
 
-However, this is just the tip of the iceberg when it comes to the field of neural networks. While feed forward neural networks have been incredibly successful in a wide range of applications, many other types of neural network architectures exist that can be used to solve different types of problems. To get you started on your journey into the world of neural network's, and to up your buzzword game in today's world of AI obsession, the most popular architectures are listed and briefly explained below.
+![Bar chart of the winning top-5 error rate in the ImageNet challenge from 2010 to 2017](figures/03-imagenet-error.svg)
 
-**Recurrent Neural Networks (RNNs):** Recurrent Neural Networks (RNNs) differ from feed-forward neural networks as they have a built-in memory, allowing them to process sequences of data. This makes RNNs well-suited for tasks like natural language processing and time series prediction. They can learn patterns in sequences by connecting the output from one time step to the input of the next, remembering previous information (the _recurrence_ in the namesake).
+In 2010 and 2011 the winners used carefully hand-engineered image features and landed at about 28% and 26% error. Progress was slow and incremental.
 
-**Convolutional Neural Networks (CNNs):** Convolutional Neural Networks (CNNs) are specifically designed for processing spatial data, such as images. Unlike feed-forward networks, CNNs use special convolutional layers to scan and identify local patterns within the input. Imagine a grid sliding across an image, identifying patterns. This makes them more efficient for image recognition, object detection, and other computer vision tasks, where spatial information is crucial. They are also used for sequential tasks, such as time-series applications.
+Then, in 2012, a team from the University of Toronto (Alex Krizhevsky, Ilya Sutskever and Geoffrey Hinton) entered a neural network now known as **AlexNet**. It scored 16.4%. In a competition where a one-point improvement was a good year, it won by almost ten.
 
-**Generative Adversarial Networks (GANs):** Generative Adversarial Networks (GANs) consist of two distinct neural networks, a generator and a discriminator, that compete against each other. The generator tries to create a data sample, and the discriminator tries to determine if that data sample came from the training data or the generator. By optimizing against each other, GANs learn to generate new data samples by capturing the distribution of the training data. They are widely used for tasks such as image synthesis, style transfer, and data augmentation.
+### Why AlexNet succeeded
 
-**Graph Neural Networks:** Graph Neural Networks are a type of neural network that operate on graph-structured data, which is not easily handled by feed-forward networks. They are designed to learn and encode the relationships between nodes in a graph, making them useful for tasks such as social network analysis, molecular property prediction, and recommendation systems.
+Three things came together:
 
-**Transformer Architectures:** Transformer architectures differ from feed-forward networks as they rely on a self-attention mechanism to process input data, allowing them to handle long-range dependencies more effectively. These models are massive, and actually incorporate feed forward neural networks in parts of their architecture. They have been especially successful in natural language processing tasks, such as machine translation and text summarization, due to their ability to capture contextual information across large sequences. Most of the currently hyped AI models, such as the GPT family, are variants of transformers.
+- **A bigger, deeper network.** 8 learned layers and about 60 million parameters. Compare that with ALVINN's 4 hidden neurons.
+- **Enough data.** Over a million labelled examples from ImageNet.
+- **A new kind of computer.** AlexNet was trained on two NVIDIA GTX 580 graphics cards: hardware designed for video games. A GPU performs huge numbers of simple multiply-and-add operations in parallel, which is exactly what a neural network needs.
 
-This is not an exhaustive list of network architectures. Rather, these are high-level architectures with many variants - more are developed every day! But it's a great starting point to send you forward on your journey into neural networks and deep learning.
+Within three years, much deeper networks had pushed the error rate below that of a careful human on the same task.
 
-## AI in Autonomous Driving
+The lesson that the field took away shaped everything that followed: **neural networks improve dramatically when algorithms, data and computing power are scaled up together.** None of the three is enough alone.
 
-![Semantic Segmentation](assets/images/segment.gif)
+---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NZZIPcBBAc8?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## 5. From one GPU to entire datacenters
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mTcrA6HYsMM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+### Why GPUs?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lajDCnVG7vQ" title="Tesla AI FINALLY drives on Highways (First Impressions)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+A **CPU** is a generalist. It is built to handle complicated, varied tasks one after another, very quickly. A **GPU** is a specialist. It was designed to compute the colour of millions of pixels at once, so it performs an enormous number of *similar, simple* calculations in parallel.
+
+A useful picture: a CPU is a handful of brilliant mathematicians; a GPU is a stadium full of people who can each do one multiplication. For the matrix multiplications inside a neural network, the stadium wins easily.
+
+This is how a product built for gaming became one of the key enabling technologies of modern AI. Later, chips designed specifically for neural networks appeared as well, such as Google's TPUs.
+
+### Beyond a single machine
+
+AlexNet needed two graphics cards. As models and datasets kept growing, one machine was no longer enough, and training spread across many GPUs, then many servers, then whole buildings. There are three basic ways to share the work:
+
+- **Data parallelism:** every GPU holds a copy of the model and works through a different portion of the training examples.
+- **Model parallelism:** the model is too big for one GPU, so different parts of it live on different GPUs.
+- **Pipeline parallelism:** the layers are arranged like an assembly line, with each device handling one stage and passing its result to the next.
+
+Once thousands of chips have to cooperate, the connections *between* them matter almost as much as the chips themselves. A fast processor that waits for its neighbour is a slow processor.
+
+<!-- IMAGE SLOT: photo of a GPU next to a datacenter aisle / GPU rack, to show the jump in scale -->
+
+### The convergence
+
+By the late 2010s, three ingredients had reached a scale nobody had seen before:
+
+- **Data:** the internet had produced an ocean of digital text, images and video.
+- **Compute:** GPU clusters and datacenters could train ever larger models.
+- **Architecture:** new network designs could make efficient use of both.
+
+That third ingredient is the subject of the next section.
+
+---
+
+## 6. From deep learning to generative AI and LLMs
+
+### The scaling era
+
+After 2012 the recipe was clear, and researchers followed it with enthusiasm: more parameters, more data, more compute. Networks grew from tens of millions of parameters to billions, and then to hundreds of billions.
+
+### The Transformer
+
+In 2017 a new architecture called the **Transformer** arrived. Its central idea is **attention**: when the model processes one element of a sequence, such as a word in a sentence, it can look at all the other elements and decide which ones matter for understanding this one. In "The trophy did not fit in the suitcase because **it** was too big", attention is what lets a model connect "it" to "trophy".
+
+Just as important is a practical property. Earlier language models read text one word at a time, in order, which is hard to speed up. A Transformer processes the whole sequence at once, so the work can be split across many GPUs. It was an architecture built for the datacenter era, able to absorb as much data and compute as anyone could supply.
+
+### Predicting the next word
+
+Researchers then tried something simple and ambitious. Rather than training one model for translation, another for summarising and another for answering questions, they trained one very large Transformer on an enormous collection of text with a single objective:
+
+> **Predict the next token.** (A token is a word or a piece of a word.)
+
+"The capital of France is ___". To be reliably good at filling in blanks like this across billions of sentences, a model has to pick up grammar, facts, the style of different kinds of writing, and some of the relationships between concepts. Nobody programs these in. They emerge as the statistical structure the model needs in order to predict well.
+
+These models are called **generative** because they produce new content, where earlier systems mostly classified or analysed existing data. **Large Language Models (LLMs)** generate text and code. The same approach was developed for images, audio and video, and **multimodal** models now combine several of these in one system.
+
+Seen from a distance, this is the lesson of AlexNet again, at a thousand times the scale: a scalable architecture, internet-sized data and datacenter-sized compute.
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/wjZofJX0v4M" title="Transformers, the tech behind LLMs - 3Blue1Brown" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+*Video: [Transformers, the tech behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M), 3Blue1Brown. The first few minutes give the intuition; the rest goes deeper than we need today.*
+
+> **Pause and think.** An LLM is trained only to predict the next token. Why might that single task force it to learn so much about the world?
+
+---
+
+## 7. The new computing crisis
+
+For a decade, the way to get better AI has been to scale everything up. But a model is not an abstract idea floating in the cloud. It runs on physical machines, and physical machines have limits.
+
+### Compute
+
+Training a state-of-the-art model can occupy thousands of accelerators for weeks or months. And training is only the beginning. Once a model is released, answering the questions of millions of users (called **inference**) creates a workload that never stops.
+
+### Memory
+
+Every parameter has to be stored somewhere. A quick estimate: one parameter typically takes about 2 bytes, so a model with 1 billion parameters needs about 2 gigabytes. A model with 100 billion parameters needs about 200 gigabytes, just to hold the weights.
+
+Training needs considerably more, because the system also has to keep the intermediate results and the bookkeeping required to update each weight. This is why modern AI creates heavy demand for GPUs and also for a special kind of fast memory placed right next to them, called **high-bandwidth memory (HBM)**.
+
+### The memory wall
+
+Here is a subtle and important problem. Processors have become extremely fast at arithmetic. *Moving* numbers between memory and the processor has not improved at the same pace.
+
+![The von Neumann bottleneck: memory and processor are separate, and all data must travel between them](figures/04-von-neumann-bottleneck.svg)
+
+Almost every computer since the 1940s follows the same basic plan: data is kept in one place (memory) and calculated on in another (the processor). For a neural network, this means that huge tables of weights are constantly shuttled back and forth. More and more, the processor spends its time and energy waiting for data to arrive. This is known as the **von Neumann bottleneck**.
+
+Think of a superb chef in a kitchen where every ingredient has to be fetched from a storeroom at the end of a long corridor. Hiring a faster chef does not help.
+
+### Power and heat
+
+Nearly all the electrical energy a computer consumes ends up as heat. A rack of AI servers can draw as much power as dozens of households, and all of it has to be removed again by cooling systems. The design of a modern datacenter is therefore governed by questions that have little to do with software: Is there enough electricity here? Can the grid deliver it? How do we get the heat out?
+
+### The end of free improvement
+
+For fifty years, the industry could count on **Moore's Law**: transistors kept shrinking, so every couple of years the same money bought roughly twice the computing power. That trend is running into physical limits. Transistors are now only a few dozen atoms across, and each further step is harder and more expensive than the last.
+
+So the demand for computation is rising faster than ever at exactly the moment when the traditional source of cheap computation is slowing down. That is the crisis in the title.
+
+---
+
+## 8. AI becomes an infrastructure problem
+
+Put the previous section together and a surprising conclusion follows: progress in AI now depends heavily on **physical infrastructure**. Building AI capacity means building, or securing access to:
+
+- semiconductor fabrication plants,
+- GPUs and other accelerators,
+- high-bandwidth memory,
+- networking equipment,
+- datacenter buildings,
+- electricity generation and distribution,
+- cooling systems.
+
+**Supply and demand.** AI companies and cloud providers compete for a limited supply of advanced chips. That demand spreads down the supply chain to memory and other components, and it can affect the availability and price of ordinary computer hardware too.
+
+**Datacenter expansion.** Technology companies are investing enormous sums in new datacenters, and they are choosing locations based on access to large amounts of electricity, fast network connections and cooling.
+
+The consequence is that AI is no longer only a topic for computer scientists. It touches energy policy, manufacturing, construction and international trade. As engineers, whatever your specialisation, you are likely to meet it from one of these directions.
+
+---
+
+## 9. The future of AI computing
+
+### Can we keep scaling?
+
+Three facts from the last sections point in the same direction:
+
+- Smaller transistors are increasingly difficult and expensive to make.
+- A large share of the energy in today's AI systems goes into moving data, not computing with it.
+- The scale of datacenters is already constrained by power and cooling.
+
+When the usual path gets steep, it is worth asking whether there are other paths. Researchers are exploring several:
+
+| Direction | The idea in one sentence |
+|---|---|
+| **More specialised digital chips** | Design the processor for neural networks only, and remove everything else. |
+| **Lower-precision computation** | A network rarely needs sixteen decimal places; use small, cheap numbers instead. |
+| **Processing-in-memory** | Do the arithmetic where the data is stored, so it never has to travel. |
+| **Neuromorphic computing** | Build chips that work more like biological neurons, active only when something happens. |
+| **Optical computing** | Compute with light instead of electric current. |
+| **Analog computing** | Let physics do the multiplication directly. |
+
+### Analog matrix multiplication
+
+The last idea closes a circle in our story, so let us look at it more closely.
+
+A digital computer represents every number as a pattern of ones and zeros, and multiplying two numbers takes thousands of transistors switching in sequence. An analog circuit takes a shortcut. If a **voltage** represents one number and the **conductance** of a component represents another, then the **current** that flows is their product. Physics performs the multiplication for free. Connect many such components to one wire and the currents add up by themselves.
+
+Multiply, then add up. That is the perceptron's operation, and it is exactly what a neural network needs billions of times per second. An array of analog devices can, in principle, carry out an entire matrix multiplication in a single step, using a small fraction of the energy.
+
+The attraction is **enormous potential efficiency**. The price is everything that made the world go digital in the first place: analog signals are noisy, never perfectly accurate, harder to program and harder to manufacture consistently. Whether the tolerance of neural networks for small errors is enough to make this practical is an open and active question. The second half of the Veritasium video from Section 2 shows one company's attempt.
+
+It is a pleasing thought to end the computing story on: Rosenblatt's Perceptron of 1958 was itself an analog machine.
+
+---
+
+## 10. AI in autonomous robots and vehicles
+
+Everything so far has happened inside computers. The most demanding test of AI is to let it act in the physical world, where mistakes have consequences. Autonomous driving is the best-known example, and its history mirrors the whole lecture: it begins with hand-engineered rules and moves steadily towards learning from data.
+
+### From research prototypes to a field
+
+Early autonomous driving research relied mostly on classical robotics, computer vision and carefully engineered rules. ALVINN (Section 3) was the exception that showed a neural network could learn driving behaviour directly from data, twenty years before the hardware was ready to exploit the idea.
+
+The event that turned scattered research projects into a field was a series of competitions organised by the US research agency DARPA:
+
+- **2004, Grand Challenge:** drive about 230 km through the desert with no human on board. The best vehicle managed less than 12 km. Nobody finished.
+- **2005, Grand Challenge:** only a year and a half later, five vehicles completed the 212 km (132 mile) course. Stanford's **Stanley** finished first, in just under seven hours.
+- **2007, Urban Challenge:** the vehicles had to drive in a mock city among other traffic: obeying traffic rules, merging, parking and negotiating intersections.
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/Natbh3t6mHM" title="DARPA Grand Challenge 2005 - Stanley" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+*Video: [DARPA Grand Challenge 2005, Stanley](https://www.youtube.com/watch?v=Natbh3t6mHM), condensed footage of the winning run.*
+
+### The move to industry
+
+Many of the engineers from those desert races went on to found the industry. In **2009** Google started its **Self-Driving Car Project**, which became **Waymo** in 2016. The goal was fully autonomous driving on public roads, and through the 2010s the combination of better sensors, more computing power and deep learning made steadily more complex driving possible.
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/B8R148hFxPw" title="Waymo 360° Experience: A Fully Autonomous Driving Journey" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+*Video: [Waymo 360° Experience: A Fully Autonomous Driving Journey](https://www.youtube.com/watch?v=B8R148hFxPw), Waymo. Drag the picture to look around, and watch what the vehicle "sees".*
+
+### Tesla and learning from a fleet
+
+Tesla took a different route. It did not treat autonomy as a problem for a small number of specially equipped research vehicles. It put cameras and computers into mass-produced consumer cars and used the data from that fleet to develop its driver-assistance and self-driving software.
+
+Whatever one thinks of the competing strategies, this highlighted an important shift in modern AI:
+
+> **A large deployed system continuously generates real-world data, and that data can be used to improve the next version of the system.**
+
+This is Fei-Fei Li's insight about data, turned into an engine that keeps running.
+
+### What does AI actually do in an autonomous system?
+
+<!-- IMAGE / VIDEO SLOT ("SHOW IMAGES AND VIDEOS HERE"): perception output examples - object detection boxes, lane and drivable-space segmentation, depth estimation, trajectory prediction -->
+
+![The loop of an autonomous system: perceive, understand, predict, plan, act, and repeat](figures/05-autonomy-loop.svg)
+
+An autonomous system runs the same loop many times per second. AI can contribute to each stage:
+
+- **Perceive** the environment through cameras, lidar and radar.
+- **Recognise** what is there: vehicles, pedestrians, traffic signs, lanes and drivable space.
+- **Estimate** its own state and the 3D structure of its surroundings, including depth.
+- **Predict** how the scene will change: will that pedestrian step into the road?
+- **Select actions or plans** based on all of the above.
+
+Modern systems do **not** hand everything over to a neural network. They combine AI with classical robotics, control theory and dedicated safety mechanisms. Remember Section 1: rules where we need transparency and guarantees, learning where the world is too varied to enumerate.
+
+### Beyond cars
+
+The same ideas appear across many kinds of machine:
+
+- mobile robots in warehouses and factories,
+- delivery robots,
+- drones and other unmanned aerial vehicles,
+- agricultural and construction machines,
+- service robots,
+- autonomous road vehicles.
+
+The hardware and the environments differ enormously. The underlying questions are the same: *Where am I? What is around me? What will happen next? What should I do?*
+
+### The shift toward data-driven autonomy
+
+Over time, more and more of the loop above has moved from manually engineered rules to models learned from large datasets. Deep learning took over perception first. Learning-based methods are now increasingly used for prediction, planning and decision-making as well.
+
+The whole evolution, for robots and vehicles alike, fits on one line:
+
+> **hand-engineered rules → machine learning → deep learning → large-scale data-driven autonomy**
+
+### Where things are heading
+
+- **End-to-end learning.** One large network maps sensor input directly to driving decisions. This is ALVINN's idea from 1989, returning with vastly more data and compute.
+- **Multimodal models** that combine camera images, other sensors, maps and language in a single system.
+- **Agentic AI.** An emerging direction in which an AI system reasons about goals, uses tools and sensor information, plans multi-step actions and coordinates with the other components of the machine. This could enable more capable high-level behaviour, while conventional planning, control and safety mechanisms keep authority over safety-critical, low-level actions.
+
+A note of realism to finish: systems deployed today still largely combine AI with conventional software, safety mechanisms and classical low-level control. Remember the Perceptron headlines of 1958. Being excited about a technology and being precise about what it can currently do are both part of an engineer's job.
+
+---
+
+## 11. Questions
+
+1. Why can a system that fits its training data perfectly still fail in the real world?
+2. The Perceptron, ALVINN and AlexNet each lacked, or finally had, a different ingredient. Which one in each case?
+3. Why did a chip designed for video games become central to AI?
+4. If you were building an autonomous delivery robot, which parts would you want to be learned, and which parts would you insist on writing as explicit rules? Why?
+
+---
+
+### Sources and further viewing
+
+- Veritasium, [Future Computers Will Be Radically Different (Analog Computing)](https://www.youtube.com/watch?v=GVsUOuSjvcg), 2022.
+- F. Rosenblatt, "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain", *Psychological Review*, 1958.
+- M. Minsky and S. Papert, *Perceptrons*, MIT Press, 1969.
+- D. Pomerleau, [ALVINN: An Autonomous Land Vehicle in a Neural Network](https://proceedings.neurips.cc/paper/1988/hash/812b4ba287f5ee0bc9d43bbf5bbe87fb-Abstract.html), NIPS, 1989, and [Efficient Training of Artificial Neural Networks for Autonomous Navigation](https://courses.cs.washington.edu/courses/cse481c/11au/papers/Pomerleau.pdf), 1991.
+- A. Krizhevsky, I. Sutskever and G. Hinton, "ImageNet Classification with Deep Convolutional Neural Networks", NIPS, 2012.
+- O. Russakovsky et al., "ImageNet Large Scale Visual Recognition Challenge", *IJCV*, 2015.
+- A. Vaswani et al., "Attention Is All You Need", NIPS, 2017.
+- Stanford Racing Team, [Stanley](https://cs.stanford.edu/group/roadrunner/stanley.html).
+- 3Blue1Brown, [Neural networks](https://www.youtube.com/watch?v=aircAruvnKk) and [Transformers](https://www.youtube.com/watch?v=wjZofJX0v4M).

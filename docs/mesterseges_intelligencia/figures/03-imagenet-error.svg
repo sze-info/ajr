@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 440" width="910" height="440" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<rect width="910" height="440" fill="#fcfcfb"/>
+<text x="40" y="36" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >ImageNet challenge: error rate of each year's winner</text>
+<text x="40" y="58" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >Top-5 error, % (lower is better)</text>
+<line x1="70" y1="370.0" x2="800" y2="370.0" stroke="#d9d8d3" stroke-width="1"/>
+<text x="60" y="375.0" font-size="13" fill="#8a8984" text-anchor="end" font-weight="400" >0</text>
+<line x1="70" y1="273.33333333333337" x2="800" y2="273.33333333333337" stroke="#d9d8d3" stroke-width="1"/>
+<text x="60" y="278.33333333333337" font-size="13" fill="#8a8984" text-anchor="end" font-weight="400" >10</text>
+<line x1="70" y1="176.66666666666669" x2="800" y2="176.66666666666669" stroke="#d9d8d3" stroke-width="1"/>
+<text x="60" y="181.66666666666669" font-size="13" fill="#8a8984" text-anchor="end" font-weight="400" >20</text>
+<line x1="70" y1="80.0" x2="800" y2="80.0" stroke="#d9d8d3" stroke-width="1"/>
+<text x="60" y="85.0" font-size="13" fill="#8a8984" text-anchor="end" font-weight="400" >30</text>
+<path d="M93.625,370 V101.40000000000003 Q93.625,97.40000000000003 97.625,97.40000000000003 H133.625 Q137.625,97.40000000000003 137.625,101.40000000000003 V370 Z" fill="#b9b8b2"><title>2010: 28.2%</title></path>
+<text x="115.625" y="89.40000000000003" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >28.2</text>
+<text x="115.625" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2010</text>
+<path d="M184.875,370 V124.6 Q184.875,120.6 188.875,120.6 H224.875 Q228.875,120.6 228.875,124.6 V370 Z" fill="#b9b8b2"><title>2011: 25.8%</title></path>
+<text x="206.875" y="112.6" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >25.8</text>
+<text x="206.875" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2011</text>
+<path d="M276.125,370 V215.46666666666667 Q276.125,211.46666666666667 280.125,211.46666666666667 H316.125 Q320.125,211.46666666666667 320.125,215.46666666666667 V370 Z" fill="#2a78d6"><title>2012: 16.4%</title></path>
+<text x="298.125" y="203.46666666666667" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >16.4</text>
+<text x="298.125" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2012</text>
+<text x="298.125" y="183.46666666666667" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >AlexNet</text>
+<path d="M367.375,370 V260.9 Q367.375,256.9 371.375,256.9 H407.375 Q411.375,256.9 411.375,260.9 V370 Z" fill="#2a78d6"><title>2013: 11.7%</title></path>
+<text x="389.375" y="248.89999999999998" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >11.7</text>
+<text x="389.375" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2013</text>
+<path d="M458.625,370 V309.23333333333335 Q458.625,305.23333333333335 462.625,305.23333333333335 H498.625 Q502.625,305.23333333333335 502.625,309.23333333333335 V370 Z" fill="#2a78d6"><title>2014: 6.7%</title></path>
+<text x="480.625" y="297.23333333333335" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >6.7</text>
+<text x="480.625" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2014</text>
+<path d="M549.875,370 V339.2 Q549.875,335.2 553.875,335.2 H589.875 Q593.875,335.2 593.875,339.2 V370 Z" fill="#2a78d6"><title>2015: 3.6%</title></path>
+<text x="571.875" y="327.2" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >3.6</text>
+<text x="571.875" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2015</text>
+<path d="M641.125,370 V345.0 Q641.125,341.0 645.125,341.0 H681.125 Q685.125,341.0 685.125,345.0 V370 Z" fill="#2a78d6"><title>2016: 3.0%</title></path>
+<text x="663.125" y="333.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >3.0</text>
+<text x="663.125" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2016</text>
+<path d="M732.375,370 V351.76666666666665 Q732.375,347.76666666666665 736.375,347.76666666666665 H772.375 Q776.375,347.76666666666665 776.375,351.76666666666665 V370 Z" fill="#2a78d6"><title>2017: 2.3%</title></path>
+<text x="754.375" y="339.76666666666665" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >2.3</text>
+<text x="754.375" y="392" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >2017</text>
+<line x1="70" y1="320.7" x2="800" y2="320.7" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="810" y="317.7" font-size="13" fill="#52514e" text-anchor="start" font-weight="400" >a careful</text>
+<text x="810" y="334.7" font-size="13" fill="#52514e" text-anchor="start" font-weight="400" >human: ~5%</text>
+<rect x="400" y="92" width="14" height="14" rx="3" fill="#b9b8b2"/>
+<text x="422" y="104" font-size="13" fill="#52514e" text-anchor="start" font-weight="400" >hand-engineered features</text>
+<rect x="610" y="92" width="14" height="14" rx="3" fill="#2a78d6"/>
+<text x="632" y="104" font-size="13" fill="#52514e" text-anchor="start" font-weight="400" >deep neural networks</text>
+<text x="40" y="428" font-size="12" fill="#8a8984" text-anchor="start" font-weight="400" >Source: ILSVRC results (Russakovsky et al., 2015; image-net.org).</text>
+</svg>

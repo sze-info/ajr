@@ -1,10 +1,8 @@
 ---
-title: Gyakorlat - Mesterséges intelligencia
+title: Gyakorlat - AI
 icon: material/code-braces-box # gyakorlati tananyag
 ---
 
+# Gyakorlat - AI
 
-# Mesterséges intelligencia gyakorlat
-
-A kaggle fiókba való bejelentkezés után a notebook másolható (Edit) az alábbi linkről:
-[kaggle.com/code/norbertmarko/class-material-reference](https://www.kaggle.com/code/norbertmarko/class-material-reference)
+*Coming soon.* The practice material for this lecture will be published here.

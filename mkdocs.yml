@@ -57,8 +57,6 @@ nav:
     - 10. AI (mesterséges intelligencia):
       - mesterseges_intelligencia/README.md
       - mesterseges_intelligencia/practice.md
-      - mesterseges_intelligencia/kaggle_notebook.md
-      - mesterseges_intelligencia/slides/slides_nn.md
   - Nagy féléves, kis beadandó:
     - feleves_beadando/README.md
     - feleves_beadando/kisbeadando.md

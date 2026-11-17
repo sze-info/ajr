@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 315" width="860" height="315" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<rect width="860" height="315" fill="#fcfcfb"/>
+<text x="40" y="36" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >The von Neumann bottleneck</text>
+<text x="40" y="58" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >The numbers live in one place and the arithmetic happens in another</text>
+<rect x="60" y="100" width="250" height="150" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="185" y="150" font-size="18" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Memory</text>
+<text x="185" y="176" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >billions of weights</text>
+<text x="185" y="196" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >wait here</text>
+<rect x="550" y="100" width="250" height="150" rx="10" fill="#fde9df" stroke="#eb6834" stroke-width="1.5"/>
+<text x="675" y="150" font-size="18" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Processor (CPU / GPU)</text>
+<text x="675" y="176" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >multiplies and adds,</text>
+<text x="675" y="196" font-size="14" fill="#52514e" text-anchor="middle" font-weight="400" >extremely fast</text>
+<rect x="314" y="158" width="232" height="34" fill="#f0efec" stroke="#b9b8b2" stroke-width="1.5"/>
+<line x1="330" y1="168" x2="530" y2="168" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<line x1="530" y1="183" x2="330" y2="183" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<text x="430" y="145" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >narrow road</text>
+<text x="430" y="215" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400" >every weight travels across,</text>
+<text x="430" y="232" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400" >for every single computation</text>
+<text x="40" y="290" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >The processor often spends more time and energy waiting for data than computing with it.</text>
+</svg>
