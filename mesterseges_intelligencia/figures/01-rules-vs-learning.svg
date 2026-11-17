@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 400" width="840" height="400" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<rect width="840" height="400" fill="#fcfcfb"/>
+<text x="40" y="40" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >Classical programming</text>
+<text x="40" y="62" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >A human writes the rules</text>
+<rect x="40" y="85" width="150" height="44" rx="10" fill="#ffffff" stroke="#d9d8d3" stroke-width="1.5"/>
+<text x="115" y="113" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="400" >Data</text>
+<rect x="40" y="141" width="150" height="44" rx="10" fill="#ffffff" stroke="#d9d8d3" stroke-width="1.5"/>
+<text x="115" y="169" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="400" >Rules</text>
+<line x1="194" y1="107" x2="296" y2="128" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<line x1="194" y1="163" x2="296" y2="142" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="300" y="95" width="240" height="80" rx="10" fill="#f0efec" stroke="#b9b8b2" stroke-width="1.5"/>
+<text x="420" y="141" font-size="17" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Computer</text>
+<line x1="544" y1="135" x2="636" y2="135" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="640" y="110" width="160" height="50" rx="10" fill="#ffffff" stroke="#d9d8d3" stroke-width="1.5"/>
+<text x="720" y="141" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Answers</text>
+<text x="40" y="230" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >Machine learning</text>
+<text x="40" y="252" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >The rules are discovered from examples</text>
+<rect x="40" y="275" width="150" height="44" rx="10" fill="#ffffff" stroke="#d9d8d3" stroke-width="1.5"/>
+<text x="115" y="303" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="400" >Data</text>
+<rect x="40" y="331" width="150" height="44" rx="10" fill="#ffffff" stroke="#d9d8d3" stroke-width="1.5"/>
+<text x="115" y="359" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="400" >Answers</text>
+<line x1="194" y1="297" x2="296" y2="318" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<line x1="194" y1="353" x2="296" y2="332" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="300" y="285" width="240" height="80" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="420" y="331" font-size="17" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Learning algorithm</text>
+<line x1="544" y1="325" x2="636" y2="325" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="640" y="300" width="160" height="50" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="720" y="331" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Rules</text>
+<text x="720" y="360" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400" >(millions of numbers,</text>
+<text x="720" y="377" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400" >not readable logic)</text>
+</svg>

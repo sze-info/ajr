@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<rect width="1000" height="380" fill="#fcfcfb"/>
+<text x="40" y="36" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >Seventy years in one line</text>
+<line x1="60" y1="195" x2="940" y2="195" stroke="#b9b8b2" stroke-width="2"/>
+<rect x="280.0" y="188" width="196.84210526315786" height="14" fill="#f0efec"/>
+<text x="378.42105263157896" y="199" font-size="11" fill="#8a8984" text-anchor="middle" font-weight="400" >winter</text>
+<rect x="557.8947368421052" y="188" width="150.52631578947376" height="14" fill="#f0efec"/>
+<text x="633.1578947368421" y="199" font-size="11" fill="#8a8984" text-anchor="middle" font-weight="400" >lull</text>
+<text x="60.0" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >1950</text>
+<line x1="60.0" y1="191" x2="60.0" y2="199" stroke="#b9b8b2"/>
+<text x="175.78947368421052" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >1960</text>
+<line x1="175.78947368421052" y1="191" x2="175.78947368421052" y2="199" stroke="#b9b8b2"/>
+<text x="291.57894736842104" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >1970</text>
+<line x1="291.57894736842104" y1="191" x2="291.57894736842104" y2="199" stroke="#b9b8b2"/>
+<text x="407.36842105263156" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >1980</text>
+<line x1="407.36842105263156" y1="191" x2="407.36842105263156" y2="199" stroke="#b9b8b2"/>
+<text x="523.1578947368421" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >1990</text>
+<line x1="523.1578947368421" y1="191" x2="523.1578947368421" y2="199" stroke="#b9b8b2"/>
+<text x="638.9473684210527" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >2000</text>
+<line x1="638.9473684210527" y1="191" x2="638.9473684210527" y2="199" stroke="#b9b8b2"/>
+<text x="754.7368421052631" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >2010</text>
+<line x1="754.7368421052631" y1="191" x2="754.7368421052631" y2="199" stroke="#b9b8b2"/>
+<text x="870.5263157894736" y="364" font-size="12" fill="#8a8984" text-anchor="middle" font-weight="400" >2020</text>
+<line x1="870.5263157894736" y1="191" x2="870.5263157894736" y2="199" stroke="#b9b8b2"/>
+<line x1="129.4736842105263" y1="187" x2="129.4736842105263" y2="167" stroke="#d9d8d3"/>
+<text x="129.4736842105263" y="141" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >1956 · “Artificial Intelligence”</text>
+<text x="129.4736842105263" y="158" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >the field gets its name</text>
+<circle cx="129.4736842105263" cy="195" r="6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<line x1="152.6315789473684" y1="203" x2="152.6315789473684" y2="223" stroke="#d9d8d3"/>
+<text x="152.6315789473684" y="241" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >1958 · Perceptron</text>
+<text x="152.6315789473684" y="258" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >Rosenblatt</text>
+<circle cx="152.6315789473684" cy="195" r="6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<line x1="280.0" y1="187" x2="280.0" y2="115" stroke="#d9d8d3"/>
+<text x="280.0" y="89" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >1969 · First AI winter</text>
+<text x="280.0" y="106" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >Minsky &amp; Papert</text>
+<circle cx="280.0" cy="195" r="6" fill="#b9b8b2" stroke="#fcfcfb" stroke-width="2"/>
+<line x1="511.5789473684211" y1="187" x2="511.5789473684211" y2="167" stroke="#d9d8d3"/>
+<text x="511.5789473684211" y="141" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >1989 · ALVINN</text>
+<text x="511.5789473684211" y="158" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >a network drives a van</text>
+<circle cx="511.5789473684211" cy="195" r="6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<line x1="743.1578947368421" y1="203" x2="743.1578947368421" y2="223" stroke="#d9d8d3"/>
+<text x="743.1578947368421" y="241" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >2009 · ImageNet</text>
+<text x="743.1578947368421" y="258" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >big data arrives</text>
+<circle cx="743.1578947368421" cy="195" r="6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<line x1="777.8947368421052" y1="187" x2="777.8947368421052" y2="167" stroke="#d9d8d3"/>
+<text x="777.8947368421052" y="141" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >2012 · AlexNet</text>
+<text x="777.8947368421052" y="158" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >deep learning on GPUs</text>
+<circle cx="777.8947368421052" cy="195" r="6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<line x1="835.7894736842105" y1="203" x2="835.7894736842105" y2="275" stroke="#d9d8d3"/>
+<text x="835.7894736842105" y="293" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >2017 · Transformer</text>
+<text x="835.7894736842105" y="310" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >attention</text>
+<circle cx="835.7894736842105" cy="195" r="6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<line x1="893.6842105263157" y1="187" x2="893.6842105263157" y2="115" stroke="#d9d8d3"/>
+<text x="893.6842105263157" y="89" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600" >2022 · LLMs go mainstream</text>
+<text x="893.6842105263157" y="106" font-size="12" fill="#52514e" text-anchor="middle" font-weight="400" >generative AI</text>
+<circle cx="893.6842105263157" cy="195" r="6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+</svg>

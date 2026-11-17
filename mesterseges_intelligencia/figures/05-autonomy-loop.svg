@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 310" width="990" height="310" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<rect width="990" height="310" fill="#fcfcfb"/>
+<text x="40" y="36" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >What an autonomous system does, over and over</text>
+<rect x="40" y="90" width="160" height="84" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="120" y="126" font-size="17" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Perceive</text>
+<text x="120" y="150" font-size="12.5" fill="#52514e" text-anchor="middle" font-weight="400" >cameras, lidar, radar</text>
+<line x1="204" y1="132" x2="226" y2="132" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="230" y="90" width="160" height="84" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="310" y="126" font-size="17" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Understand</text>
+<text x="310" y="150" font-size="12.5" fill="#52514e" text-anchor="middle" font-weight="400" >objects, lanes, position</text>
+<line x1="394" y1="132" x2="416" y2="132" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="420" y="90" width="160" height="84" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="500" y="126" font-size="17" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Predict</text>
+<text x="500" y="150" font-size="12.5" fill="#52514e" text-anchor="middle" font-weight="400" >what will others do?</text>
+<line x1="584" y1="132" x2="606" y2="132" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="610" y="90" width="160" height="84" rx="10" fill="#dcf4ea" stroke="#1baf7a" stroke-width="1.5"/>
+<text x="690" y="126" font-size="17" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Plan</text>
+<text x="690" y="150" font-size="12.5" fill="#52514e" text-anchor="middle" font-weight="400" >choose a safe path</text>
+<line x1="774" y1="132" x2="796" y2="132" stroke="#52514e" stroke-width="2" marker-end="url(#a)"/>
+<rect x="800" y="90" width="160" height="84" rx="10" fill="#f0efec" stroke="#b9b8b2" stroke-width="1.5"/>
+<text x="880" y="126" font-size="17" fill="#0b0b0b" text-anchor="middle" font-weight="600" >Act</text>
+<text x="880" y="150" font-size="12.5" fill="#52514e" text-anchor="middle" font-weight="400" >steer, brake, accelerate</text>
+<path d="M910,178 V225 H120 V180" fill="none" stroke="#52514e" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<text x="515" y="246" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400" >the world changes → look again (many times per second)</text>
+<rect x="40" y="275" width="14" height="14" rx="3" fill="#e3eefb" stroke="#2a78d6"/>
+<text x="62" y="287" font-size="13" fill="#52514e" text-anchor="start" font-weight="400" >mostly learned from data today</text>
+<rect x="330" y="275" width="14" height="14" rx="3" fill="#dcf4ea" stroke="#1baf7a"/>
+<text x="352" y="287" font-size="13" fill="#52514e" text-anchor="start" font-weight="400" >mix of learning and engineered rules</text>
+<rect x="650" y="275" width="14" height="14" rx="3" fill="#f0efec" stroke="#b9b8b2"/>
+<text x="672" y="287" font-size="13" fill="#52514e" text-anchor="start" font-weight="400" >mostly classical control and safety logic</text>
+</svg>
